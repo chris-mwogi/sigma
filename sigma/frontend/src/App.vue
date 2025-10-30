@@ -96,8 +96,86 @@
             active-class="active"
             @click="closeSidebarOnMobile"
           >
-            <span class="sigma-sidebar-menu-icon">⚡</span>
+            <span class="sigma-sidebar-menu-icon">📊</span>
             <span>Risk Assessment</span>
+          </router-link>
+        </li>
+        <li class="sigma-sidebar-menu-item">
+          <router-link
+            to="/vehicle-management"
+            class="sigma-sidebar-menu-link"
+            active-class="active"
+            @click="closeSidebarOnMobile"
+          >
+            <span class="sigma-sidebar-menu-icon">🚗</span>
+            <span>Vehicle Management</span>
+          </router-link>
+        </li>
+        <li class="sigma-sidebar-menu-item">
+          <router-link
+            to="/visitor-management"
+            class="sigma-sidebar-menu-link"
+            active-class="active"
+            @click="closeSidebarOnMobile"
+          >
+            <span class="sigma-sidebar-menu-icon">👥</span>
+            <span>Visitor Management</span>
+          </router-link>
+        </li>
+        <li class="sigma-sidebar-menu-divider"></li>
+        <li class="sigma-sidebar-menu-item">
+          <router-link
+            to="/helpdesk"
+            class="sigma-sidebar-menu-link"
+            active-class="active"
+            @click="closeSidebarOnMobile"
+          >
+            <span class="sigma-sidebar-menu-icon">💬</span>
+            <span>Helpdesk</span>
+          </router-link>
+        </li>
+        <li class="sigma-sidebar-menu-item">
+          <router-link
+            to="/support"
+            class="sigma-sidebar-menu-link"
+            active-class="active"
+            @click="closeSidebarOnMobile"
+          >
+            <span class="sigma-sidebar-menu-icon">🆘</span>
+            <span>Support</span>
+          </router-link>
+        </li>
+        <li class="sigma-sidebar-menu-item">
+          <router-link
+            to="/telephony"
+            class="sigma-sidebar-menu-link"
+            active-class="active"
+            @click="closeSidebarOnMobile"
+          >
+            <span class="sigma-sidebar-menu-icon">☎️</span>
+            <span>Telephony</span>
+          </router-link>
+        </li>
+        <li class="sigma-sidebar-menu-item">
+          <router-link
+            to="/projects"
+            class="sigma-sidebar-menu-link"
+            active-class="active"
+            @click="closeSidebarOnMobile"
+          >
+            <span class="sigma-sidebar-menu-icon">📁</span>
+            <span>Projects</span>
+          </router-link>
+        </li>
+        <li class="sigma-sidebar-menu-item">
+          <router-link
+            to="/crm"
+            class="sigma-sidebar-menu-link"
+            active-class="active"
+            @click="closeSidebarOnMobile"
+          >
+            <span class="sigma-sidebar-menu-icon">👔</span>
+            <span>CRM</span>
           </router-link>
         </li>
       </ul>
@@ -337,6 +415,13 @@ export default {
   border-left-color: var(--kp-primary);
   color: var(--kp-primary);
   font-weight: 600;
+}
+
+.sigma-sidebar-menu-divider {
+  height: 1px;
+  background-color: var(--kp-border);
+  margin: 12px 0;
+  list-style: none;
 }
 
 .sigma-sidebar-menu-icon {

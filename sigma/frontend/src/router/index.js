@@ -13,6 +13,13 @@ import GuardMonitoring from '../views/guard-monitoring/GuardMonitoring.vue'
 import AssetList from '../views/assets/AssetList.vue'
 import AssetDetail from '../views/assets/AssetDetail.vue'
 import RiskAssessment from '../views/risk-assessment/RiskAssessment.vue'
+import HelpdeskDashboard from '../views/helpdesk/HelpdeskDashboard.vue'
+import SupportDashboard from '../views/support/SupportDashboard.vue'
+import TelephonyDashboard from '../views/telephony/TelephonyDashboard.vue'
+import ProjectsDashboard from '../views/projects/ProjectsDashboard.vue'
+import CRMDashboard from '../views/crm/CRMDashboard.vue'
+import VehicleManagementDashboard from '../views/vehicle-management/VehicleManagementDashboard.vue'
+import VisitorManagementDashboard from '../views/visitor-management/VisitorManagementDashboard.vue'
 import Login from '../views/Login.vue'
 
 const routes = [
@@ -86,6 +93,48 @@ const routes = [
     path: '/risk-assessment',
     name: 'RiskAssessment',
     component: RiskAssessment,
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/helpdesk',
+    name: 'HelpdeskDashboard',
+    component: HelpdeskDashboard,
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/support',
+    name: 'SupportDashboard',
+    component: SupportDashboard,
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/telephony',
+    name: 'TelephonyDashboard',
+    component: TelephonyDashboard,
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/projects',
+    name: 'ProjectsDashboard',
+    component: ProjectsDashboard,
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/crm',
+    name: 'CRMDashboard',
+    component: CRMDashboard,
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/vehicle-management',
+    name: 'VehicleManagementDashboard',
+    component: VehicleManagementDashboard,
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/visitor-management',
+    name: 'VisitorManagementDashboard',
+    component: VisitorManagementDashboard,
     meta: { requiresAuth: true }
   }
 ]
