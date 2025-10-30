@@ -1,0 +1,17 @@
+<div class="container">
+    <h2>Guard Monitoring Dashboard</h2>
+
+    <h3>Locations</h3>
+    <ul>
+        {% for loc in locations %}
+            <li>{{ loc.location_name }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Incidents</h3>
+    <ul>
+        {% for incident in incidents %}
+            <li>{{ incident.category }} at {{ incident.location }} on {{ incident.reported_on }}</li>
+        {% endfor %}
+    </ul>
+</div>

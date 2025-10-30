@@ -1,0 +1,61 @@
+{
+  "apps": [
+    "sigma"
+  ],
+  "category": "Security",
+  "color": "#4CAF50",
+  "description": "Comprehensive Visitor Management System with VMS Integration",
+  "developer": "Frappe Technologies Pvt. Ltd.",
+  "icon": "icon-users",
+  "label": "Visitor Management",
+  "links": [
+    {
+      "description": "Manage visitor records",
+      "icon": "icon-user",
+      "label": "Visitor",
+      "name": "Visitor"
+    },
+    {
+      "description": "Pre-register expected visitors",
+      "icon": "icon-clipboard",
+      "label": "Visitor Registration",
+      "name": "Visitor Registration"
+    },
+    {
+      "description": "Track visitor check-in and check-out",
+      "icon": "icon-sign-in",
+      "label": "Visitor Check-In/Check-Out",
+      "name": "Visitor Check-In/Check-Out"
+    },
+    {
+      "description": "View visitor access logs",
+      "icon": "icon-list",
+      "label": "Visitor Access Log",
+      "name": "Visitor Access Log"
+    },
+    {
+      "description": "Manage visitor badges",
+      "icon": "icon-credit",
+      "label": "Visitor Badge",
+      "name": "Visitor Badge"
+    },
+    {
+      "description": "VMS camera events",
+      "icon": "icon-video",
+      "label": "VMS Event",
+      "name": "VMS Event"
+    },
+    {
+      "description": "Track inter-station staff visits",
+      "icon": "icon-exchange",
+      "label": "Inter-Station Staff Visit",
+      "name": "Inter-Station Staff Visit"
+    }
+  ],
+  "module_name": "Sigma Visitor Management",
+  "name": "sigma_visitor_management",
+  "on_setup": "sigma.sigma_visitor_management.setup.setup_module",
+  "type": "module",
+  "version": "1.0.0"
+}
+

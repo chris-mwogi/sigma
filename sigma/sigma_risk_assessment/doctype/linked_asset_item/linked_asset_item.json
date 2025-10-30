@@ -1,0 +1,26 @@
+{
+  "doctype": "DocType",
+  "name": "Linked Asset Item",
+  "module": "Sigma Risk Assessment",
+  "custom": true,
+  "istable": true,
+  "fields": [
+    {
+      "fieldname": "asset",
+      "label": "Asset",
+      "fieldtype": "Link",
+      "options": "Asset"
+    },
+    {
+      "fieldname": "asset_name",
+      "label": "Asset Name",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "asset_category",
+      "label": "Asset Category",
+      "fieldtype": "Link",
+      "options": "Asset Category"
+    }
+  ]
+}

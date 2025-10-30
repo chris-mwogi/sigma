@@ -1,0 +1,21 @@
+{
+  "doctype": "DocType",
+  "name": "Location Subtype",
+  "module": "Sigma Guard Monitoring",
+  "autoname": "field:title",
+  "naming_rule": "By fieldname",
+  "engine": "InnoDB",
+  "quick_entry": 1,
+  "track_changes": 1,
+  "field_order": ["title", "location_type", "disabled"],
+  "fields": [
+    {"fieldname": "title", "label": "Subtype", "fieldtype": "Data", "reqd": 1, "unique": 1, "in_list_view": 1},
+    {"fieldname": "location_type", "label": "Location Type", "fieldtype": "Link", "options": "Location Type", "reqd": 1, "in_list_view": 1},
+    {"fieldname": "disabled", "label": "Disabled", "fieldtype": "Check", "default": "0"}
+  ],
+  "permissions": [
+    {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "share": 1},
+    {"role": "System User", "read": 1}
+  ]
+}
+

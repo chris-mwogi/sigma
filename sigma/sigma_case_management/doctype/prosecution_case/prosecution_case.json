@@ -1,0 +1,269 @@
+{
+  "doctype": "DocType",
+  "name": "Prosecution Case",
+  "module": "Sigma Case Management",
+  "custom": 0,
+  "is_submittable": 1,
+  "autoname": "PROS-{YYYY}-{####}",
+  "title_field": "case_title",
+  "fields": [
+    {
+      "fieldname": "case",
+      "fieldtype": "Link",
+      "label": "Related Case",
+      "options": "Case",
+      "reqd": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "case_title",
+      "fieldtype": "Data",
+      "label": "Case Title",
+      "reqd": 1,
+      "width": "100%"
+    },
+    {
+      "fieldname": "section_court_details",
+      "fieldtype": "Section Break",
+      "label": "Court Details"
+    },
+    {
+      "fieldname": "court_name",
+      "fieldtype": "Data",
+      "label": "Court Name",
+      "reqd": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "court_location",
+      "fieldtype": "Data",
+      "label": "Court Location",
+      "width": "50%"
+    },
+    {
+      "fieldname": "case_number",
+      "fieldtype": "Data",
+      "label": "Case Number",
+      "reqd": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "filing_date",
+      "fieldtype": "Date",
+      "label": "Filing Date",
+      "reqd": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "section_accused",
+      "fieldtype": "Section Break",
+      "label": "Accused Information"
+    },
+    {
+      "fieldname": "accused_name",
+      "fieldtype": "Data",
+      "label": "Accused Name",
+      "reqd": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "accused_id_number",
+      "fieldtype": "Data",
+      "label": "ID Number",
+      "width": "50%"
+    },
+    {
+      "fieldname": "accused_contact",
+      "fieldtype": "Data",
+      "label": "Contact Information",
+      "width": "50%"
+    },
+    {
+      "fieldname": "accused_address",
+      "fieldtype": "Text",
+      "label": "Address"
+    },
+    {
+      "fieldname": "section_charges",
+      "fieldtype": "Section Break",
+      "label": "Charges"
+    },
+    {
+      "fieldname": "charges_table",
+      "fieldtype": "Table",
+      "label": "Charges",
+      "fields": [
+        {
+          "fieldname": "charge_description",
+          "fieldtype": "Data",
+          "label": "Charge Description",
+          "reqd": 1
+        },
+        {
+          "fieldname": "charge_section",
+          "fieldtype": "Data",
+          "label": "Legal Section",
+          "reqd": 1
+        },
+        {
+          "fieldname": "penalty",
+          "fieldtype": "Data",
+          "label": "Penalty"
+        }
+      ]
+    },
+    {
+      "fieldname": "section_hearings",
+      "fieldtype": "Section Break",
+      "label": "Hearing Schedule"
+    },
+    {
+      "fieldname": "hearings_table",
+      "fieldtype": "Table",
+      "label": "Hearings",
+      "fields": [
+        {
+          "fieldname": "hearing_date",
+          "fieldtype": "Date",
+          "label": "Hearing Date",
+          "reqd": 1
+        },
+        {
+          "fieldname": "hearing_time",
+          "fieldtype": "Time",
+          "label": "Hearing Time"
+        },
+        {
+          "fieldname": "hearing_status",
+          "fieldtype": "Select",
+          "label": "Status",
+          "options": "Scheduled\nCompleted\nPostponed\nCancelled"
+        },
+        {
+          "fieldname": "hearing_notes",
+          "fieldtype": "Text",
+          "label": "Notes"
+        }
+      ]
+    },
+    {
+      "fieldname": "section_legal_docs",
+      "fieldtype": "Section Break",
+      "label": "Legal Documents"
+    },
+    {
+      "fieldname": "legal_documents",
+      "fieldtype": "Attach",
+      "label": "Legal Documents (PDF/DOC)"
+    },
+    {
+      "fieldname": "section_evidence_handover",
+      "fieldtype": "Section Break",
+      "label": "Evidence Handover"
+    },
+    {
+      "fieldname": "evidence_handover_table",
+      "fieldtype": "Table",
+      "label": "Evidence Handover Log",
+      "fields": [
+        {
+          "fieldname": "evidence",
+          "fieldtype": "Link",
+          "label": "Evidence",
+          "options": "Case Evidence"
+        },
+        {
+          "fieldname": "handover_date",
+          "fieldtype": "Date",
+          "label": "Handover Date",
+          "reqd": 1
+        },
+        {
+          "fieldname": "handed_over_by",
+          "fieldtype": "Link",
+          "label": "Handed Over By",
+          "options": "User"
+        },
+        {
+          "fieldname": "received_by",
+          "fieldtype": "Data",
+          "label": "Received By"
+        },
+        {
+          "fieldname": "receipt_signature",
+          "fieldtype": "Attach",
+          "label": "Receipt Signature"
+        }
+      ]
+    },
+    {
+      "fieldname": "section_outcome",
+      "fieldtype": "Section Break",
+      "label": "Case Outcome"
+    },
+    {
+      "fieldname": "case_status",
+      "fieldtype": "Select",
+      "label": "Case Status",
+      "options": "Pending\nIn Progress\nConvicted\nAcquitted\nDismissed\nSettled",
+      "default": "Pending",
+      "width": "50%"
+    },
+    {
+      "fieldname": "verdict_date",
+      "fieldtype": "Date",
+      "label": "Verdict Date",
+      "width": "50%"
+    },
+    {
+      "fieldname": "verdict_details",
+      "fieldtype": "Text Editor",
+      "label": "Verdict Details"
+    },
+    {
+      "fieldname": "section_financial",
+      "fieldtype": "Section Break",
+      "label": "Financial Details"
+    },
+    {
+      "fieldname": "compensation_awarded",
+      "fieldtype": "Currency",
+      "label": "Compensation Awarded",
+      "width": "50%"
+    },
+    {
+      "fieldname": "currency",
+      "fieldtype": "Link",
+      "label": "Currency",
+      "options": "Currency",
+      "width": "50%"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "perm_read": 1,
+      "perm_write": 1,
+      "perm_create": 1,
+      "perm_delete": 1,
+      "perm_submit": 1
+    },
+    {
+      "role": "Legal Officer",
+      "perm_read": 1,
+      "perm_write": 1,
+      "perm_create": 1,
+      "perm_submit": 1
+    },
+    {
+      "role": "Lead Investigator",
+      "perm_read": 1,
+      "perm_write": 1
+    },
+    {
+      "role": "Security Manager",
+      "perm_read": 1
+    }
+  ]
+}
+

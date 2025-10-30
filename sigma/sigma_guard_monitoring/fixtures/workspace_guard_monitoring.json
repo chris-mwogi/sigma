@@ -1,0 +1,10 @@
+[
+  {
+    "doctype": "Workspace",
+    "label": "Guard Monitoring",
+    "module": "Sigma Guard Monitoring",
+    "is_hidden": 0,
+    "public": 1,
+    "content": "[{\"type\": \"shortcut\", \"label\": \"Incidents\", \"link_to\": \"List/Case Incident\"}, {\"type\": \"shortcut\", \"label\": \"Locations\", \"link_to\": \"List/Location\"}, {\"type\": \"shortcut\", \"label\": \"Site Allocations\", \"link_to\": \"List/Site Allocation\"}, {\"type\": \"shortcut\", \"label\": \"Suppliers\", \"link_to\": \"List/Supplier\"}]"
+  }
+]

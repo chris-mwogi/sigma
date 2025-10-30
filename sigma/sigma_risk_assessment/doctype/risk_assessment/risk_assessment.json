@@ -1,0 +1,129 @@
+{
+  "doctype": "DocType",
+  "name": "Risk Assessment",
+  "module": "Sigma Risk Assessment",
+  "custom": true,
+  "fields": [
+    {
+      "fieldname": "assessment_title",
+      "label": "Assessment Title",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "assessment_type",
+      "label": "Assessment Type",
+      "fieldtype": "Select",
+      "options": "Location-Based\\nCorporate",
+      "reqd": 1
+    },
+    {
+      "fieldname": "description",
+      "label": "Description",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "risk_category",
+      "label": "Risk Category",
+      "fieldtype": "Select",
+      "options": "Operational\\nSafety\\nEnvironmental\\nFinancial\\nCompliance\\nStrategic\\nICT\\nHR"
+    },
+    {
+      "fieldname": "likelihood",
+      "label": "Likelihood",
+      "fieldtype": "Select",
+      "options": "Rare\\nUnlikely\\nPossible\\nLikely\\nAlmost Certain"
+    },
+    {
+      "fieldname": "impact",
+      "label": "Impact",
+      "fieldtype": "Select",
+      "options": "Insignificant\\nMinor\\nModerate\\nMajor\\nCatastrophic"
+    },
+    {
+      "fieldname": "risk_score",
+      "label": "Risk Score",
+      "fieldtype": "Int",
+      "read_only": 1
+    },
+    {
+      "fieldname": "risk_level",
+      "label": "Risk Level",
+      "fieldtype": "Select",
+      "options": "Low\\nMedium\\nHigh\\nCritical",
+      "read_only": 1
+    },
+    {
+      "fieldname": "assessment_date",
+      "label": "Assessment Date",
+      "fieldtype": "Date",
+      "default": "Today"
+    },
+    {
+      "fieldname": "review_date",
+      "label": "Review Date",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "risk_owner",
+      "label": "Risk Owner",
+      "fieldtype": "Link",
+      "options": "Employee"
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Open\\nMitigated\\nClosed\\nIn Progress",
+      "default": "Open"
+    },
+    {
+      "fieldname": "responsible_department",
+      "label": "Responsible Department",
+      "fieldtype": "Link",
+      "options": "Department"
+    },
+    {
+      "fieldname": "linked_location",
+      "label": "Linked Location",
+      "fieldtype": "Link",
+      "options": "Location"
+    },
+    {
+      "fieldname": "linked_assets",
+      "label": "Linked Assets",
+      "fieldtype": "Table",
+      "options": "Linked Asset Item"
+    },
+    {
+      "fieldname": "mitigation_actions",
+      "label": "Mitigation Actions",
+      "fieldtype": "Table",
+      "options": "Risk Mitigation Action"
+    },
+    {
+      "fieldname": "residual_risk_level",
+      "label": "Residual Risk Level",
+      "fieldtype": "Select",
+      "options": "Low\\nMedium\\nHigh\\nCritical"
+    },
+    {
+      "fieldname": "remarks",
+      "label": "Remarks",
+      "fieldtype": "Small Text"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Employee",
+      "read": 1
+    }
+  ]
+}

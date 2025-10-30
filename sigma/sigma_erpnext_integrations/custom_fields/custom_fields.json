@@ -1,0 +1,303 @@
+[
+  {
+    "doctype": "Custom Field",
+    "dt": "Item",
+    "fieldname": "sigma_asset",
+    "label": "Sigma Asset",
+    "fieldtype": "Link",
+    "options": "Asset",
+    "insert_after": "item_name",
+    "read_only": 1,
+    "description": "Linked Sigma Security Asset"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Item",
+    "fieldname": "sigma_asset_category",
+    "label": "Sigma Asset Category",
+    "fieldtype": "Data",
+    "insert_after": "sigma_asset",
+    "read_only": 1
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Item",
+    "fieldname": "sigma_location",
+    "label": "Sigma Location",
+    "fieldtype": "Link",
+    "options": "Location",
+    "insert_after": "sigma_asset_category"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Item",
+    "fieldname": "sigma_is_security_asset",
+    "label": "Is Security Asset",
+    "fieldtype": "Check",
+    "insert_after": "sigma_location",
+    "default": "0"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Asset",
+    "fieldname": "sigma_integration_section",
+    "label": "ERPNext Integration",
+    "fieldtype": "Section Break",
+    "insert_after": "status",
+    "collapsible": 1
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Asset",
+    "fieldname": "sigma_item_code",
+    "label": "Stock Item Code",
+    "fieldtype": "Link",
+    "options": "Item",
+    "insert_after": "sigma_integration_section",
+    "read_only": 1
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Asset",
+    "fieldname": "sigma_maintenance_schedule",
+    "label": "Maintenance Schedule",
+    "fieldtype": "Link",
+    "options": "Maintenance Schedule",
+    "insert_after": "sigma_item_code",
+    "read_only": 1
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Asset",
+    "fieldname": "sigma_purchase_request",
+    "label": "Purchase Request",
+    "fieldtype": "Link",
+    "options": "Material Request",
+    "insert_after": "sigma_maintenance_schedule",
+    "read_only": 1
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Asset",
+    "fieldname": "sigma_purchase_receipt",
+    "label": "Purchase Receipt",
+    "fieldtype": "Link",
+    "options": "Purchase Receipt",
+    "insert_after": "sigma_purchase_request",
+    "read_only": 1
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Asset",
+    "fieldname": "sigma_disposal_order",
+    "label": "Disposal Order",
+    "fieldtype": "Link",
+    "options": "Sales Order",
+    "insert_after": "sigma_purchase_receipt",
+    "read_only": 1
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Asset",
+    "fieldname": "sigma_column_break",
+    "fieldtype": "Column Break",
+    "insert_after": "sigma_disposal_order"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Asset",
+    "fieldname": "sigma_last_stock_sync",
+    "label": "Last Stock Sync",
+    "fieldtype": "Datetime",
+    "insert_after": "sigma_column_break",
+    "read_only": 1
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Asset",
+    "fieldname": "sigma_last_support_sync",
+    "label": "Last Support Sync",
+    "fieldtype": "Datetime",
+    "insert_after": "sigma_last_stock_sync",
+    "read_only": 1
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Asset",
+    "fieldname": "requires_maintenance",
+    "label": "Requires Maintenance",
+    "fieldtype": "Check",
+    "insert_after": "sigma_last_support_sync",
+    "default": "1"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Asset",
+    "fieldname": "maintenance_frequency",
+    "label": "Maintenance Frequency",
+    "fieldtype": "Select",
+    "options": "Weekly\nMonthly\nQuarterly\nYearly",
+    "insert_after": "requires_maintenance",
+    "default": "Monthly"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Maintenance Schedule",
+    "fieldname": "sigma_asset",
+    "label": "Sigma Asset",
+    "fieldtype": "Link",
+    "options": "Asset",
+    "insert_after": "item_name",
+    "read_only": 1
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Maintenance Schedule",
+    "fieldname": "sigma_asset_location",
+    "label": "Asset Location",
+    "fieldtype": "Link",
+    "options": "Location",
+    "insert_after": "sigma_asset"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Maintenance Schedule",
+    "fieldname": "sigma_asset_category",
+    "label": "Asset Category",
+    "fieldtype": "Data",
+    "insert_after": "sigma_asset_location"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Maintenance Visit",
+    "fieldname": "sigma_asset",
+    "label": "Sigma Asset",
+    "fieldtype": "Link",
+    "options": "Asset",
+    "insert_after": "customer"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Maintenance Visit",
+    "fieldname": "sigma_incident",
+    "label": "Related Incident",
+    "fieldtype": "Link",
+    "options": "Incident Report",
+    "insert_after": "sigma_asset"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Maintenance Visit",
+    "fieldname": "sigma_incident_type",
+    "label": "Incident Type",
+    "fieldtype": "Data",
+    "insert_after": "sigma_incident",
+    "read_only": 1
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Maintenance Visit",
+    "fieldname": "sigma_priority",
+    "label": "Priority",
+    "fieldtype": "Select",
+    "options": "Low\nMedium\nHigh\nCritical",
+    "insert_after": "sigma_incident_type",
+    "default": "Medium"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Purchase Receipt Item",
+    "fieldname": "sigma_is_security_asset",
+    "label": "Is Security Asset",
+    "fieldtype": "Check",
+    "insert_after": "item_name",
+    "default": "0"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Purchase Receipt Item",
+    "fieldname": "sigma_asset",
+    "label": "Created Asset",
+    "fieldtype": "Link",
+    "options": "Asset",
+    "insert_after": "sigma_is_security_asset",
+    "read_only": 1
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Purchase Receipt Item",
+    "fieldname": "sigma_asset_category",
+    "label": "Asset Category",
+    "fieldtype": "Data",
+    "insert_after": "sigma_asset"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Purchase Receipt Item",
+    "fieldname": "sigma_location",
+    "label": "Asset Location",
+    "fieldtype": "Link",
+    "options": "Location",
+    "insert_after": "sigma_asset_category"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Visitor",
+    "fieldname": "sigma_contact",
+    "label": "CRM Contact",
+    "fieldtype": "Link",
+    "options": "Contact",
+    "insert_after": "email",
+    "read_only": 1
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Contact",
+    "fieldname": "sigma_visitor",
+    "label": "Sigma Visitor",
+    "fieldtype": "Link",
+    "options": "Visitor",
+    "insert_after": "first_name",
+    "read_only": 1
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Contact",
+    "fieldname": "sigma_visitor_type",
+    "label": "Visitor Type",
+    "fieldtype": "Data",
+    "insert_after": "sigma_visitor",
+    "read_only": 1
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Case Record",
+    "fieldname": "sigma_ticket",
+    "label": "Helpdesk Ticket",
+    "fieldtype": "Link",
+    "options": "HD Ticket",
+    "insert_after": "status",
+    "read_only": 1
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Case Record",
+    "fieldname": "sigma_project",
+    "label": "Project",
+    "fieldtype": "Link",
+    "options": "Project",
+    "insert_after": "sigma_ticket",
+    "read_only": 1
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Incident Report",
+    "fieldname": "sigma_maintenance_visit",
+    "label": "Maintenance Visit",
+    "fieldtype": "Link",
+    "options": "Maintenance Visit",
+    "insert_after": "status",
+    "read_only": 1
+  }
+]
+

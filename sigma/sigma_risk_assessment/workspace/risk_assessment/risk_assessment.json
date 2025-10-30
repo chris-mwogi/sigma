@@ -1,0 +1,93 @@
+{
+ "app": "sigma",
+ "charts": [],
+ "content": "[{\"id\": \"hdr_risk_assessment\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\">Risk Assessment</span>\", \"col\": 12}}, {\"id\": \"nc_total_risk_assessments\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Total Risk Assessments\", \"col\": 4}}, {\"id\": \"nc_high_risk_assessments\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"High Risk Assessments\", \"col\": 4}}, {\"id\": \"nc_active_mitigation_actions\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Active Mitigation Actions\", \"col\": 4}}, {\"id\": \"sp_risk_assessment_nc\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"sc_new_risk_assessment\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"New Risk Assessment\", \"col\": 3}}, {\"id\": \"sc_mitigation_actions\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Mitigation Actions\", \"col\": 3}}, {\"id\": \"sc_linked_assets\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Linked Assets\", \"col\": 3}}, {\"id\": \"sp_risk_assessment_sc\", \"type\": \"spacer\", \"data\": {\"col\": 12}}]",
+ "creation": "2025-10-29 02:29:59.274419",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "alert-triangle",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Risk Assessment",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Assessments",
+   "link_count": 0,
+   "link_to": "Risk Assessment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Mitigation Actions",
+   "link_count": 0,
+   "link_to": "Risk Mitigation Action",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Linked Assets",
+   "link_count": 0,
+   "link_to": "Linked Asset Item",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-10-30 16:25:44.365334",
+ "modified_by": "Administrator",
+ "module": "Sigma Risk Assessment",
+ "name": "Risk Assessment",
+ "number_cards": [
+  {
+   "label": "Total Risk Assessments",
+   "number_card_name": "Total Risk Assessments"
+  },
+  {
+   "label": "High Risk Assessments",
+   "number_card_name": "High Risk Assessments"
+  },
+  {
+   "label": "Active Mitigation Actions",
+   "number_card_name": "Active Mitigation Actions"
+  }
+ ],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 5.0,
+ "shortcuts": [
+  {
+   "color": "red",
+   "label": "New Risk Assessment",
+   "link_to": "Risk Assessment",
+   "type": "DocType"
+  },
+  {
+   "color": "orange",
+   "label": "Mitigation Actions",
+   "link_to": "Risk Mitigation Action",
+   "type": "DocType"
+  },
+  {
+   "color": "yellow",
+   "label": "Linked Assets",
+   "link_to": "Linked Asset Item",
+   "type": "DocType"
+  }
+ ],
+ "title": "Risk Assessment",
+ "type": "Workspace"
+}

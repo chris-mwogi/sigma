@@ -1,0 +1,32 @@
+[
+  {
+    "doctype": "Custom Field",
+    "name": "Supplier-is_guarding_supplier",
+    "dt": "Supplier",
+    "fieldname": "is_guarding_supplier",
+    "fieldtype": "Check",
+    "label": "Is Guarding Supplier",
+    "insert_after": "supplier_group"
+  },
+  {
+    "doctype": "Custom Field",
+    "name": "Location-location_type",
+    "dt": "Location",
+    "fieldname": "location_type",
+    "label": "Location Type",
+    "fieldtype": "Link",
+    "options": "Location Type",
+    "insert_after": "parent_location",
+    "reqd": 1
+  },
+  {
+    "doctype": "Custom Field",
+    "name": "Location-location_subtype",
+    "dt": "Location",
+    "fieldname": "location_subtype",
+    "label": "Location Subtype",
+    "fieldtype": "Link",
+    "options": "Location Subtype",
+    "insert_after": "location_type"
+  }
+]

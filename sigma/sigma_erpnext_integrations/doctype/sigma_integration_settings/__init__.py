@@ -1,0 +1,2 @@
+# Sigma Integration Settings
+

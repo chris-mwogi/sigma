@@ -1,0 +1,11 @@
+{
+  "doctype": "DocType",
+  "name": "Incident Report",
+  "module": "Sigma Case Management",
+  "fields": [
+    {"fieldname": "incident_type", "fieldtype": "Select", "label": "Incident Type", "options": "Accident\nFire\nFire Drill"},
+    {"fieldname": "description", "fieldtype": "Text", "label": "Description"},
+    {"fieldname": "action_taken", "fieldtype": "Text Editor", "label": "Immediate Action Taken"},
+    {"fieldname": "related_case", "fieldtype": "Link", "options": "Case", "label": "Linked Case"}
+  ]
+}

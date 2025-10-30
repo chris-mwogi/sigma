@@ -1,0 +1,23 @@
+{
+ "aggregate_function_based_on": "",
+ "creation": "2025-10-27 00:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Vehicle Pass",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[[\"Vehicle Pass\",\"expiry_date\",\"Between\",[\"Today\",\"Today+7\"]],[\"Vehicle Pass\",\"status\",\"=\",\"Active\"]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Vehicle Passes Expiring Soon",
+ "modified": "2025-10-27 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Vehicle Management",
+ "name": "Vehicle Passes Expiring Soon",
+ "owner": "Administrator",
+ "show_percentage_stats": 0,
+ "stats_time_interval": "Daily",
+ "type": "Document Type"
+}
+

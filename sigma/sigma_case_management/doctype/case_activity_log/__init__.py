@@ -1,0 +1,2 @@
+# Case Activity Log DocType
+

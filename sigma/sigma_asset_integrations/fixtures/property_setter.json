@@ -1,0 +1,20 @@
+[
+    {
+        "doctype": "Property Setter",
+        "doctype_or_field": "DocField",
+        "doc_type": "Asset",
+        "property": "reqd",
+        "property_type": "Check",
+        "value": "0",
+        "field_name": "custom_last_seen"
+    },
+    {
+        "doctype": "Property Setter",
+        "doctype_or_field": "DocField",
+        "doc_type": "Asset Category",
+        "property": "fieldtype",
+        "property_type": "Data",
+        "value": "Attach Image",
+        "field_name": "custom_category_icon"
+    }
+]

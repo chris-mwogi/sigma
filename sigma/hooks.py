@@ -1,9 +1,60 @@
+# sigma/sigma/hooks.py
+from . import __version__ as app_version
+
+# -----------------------------
+# App Metadata
+# -----------------------------
 app_name = "sigma"
 app_title = "Sigma"
 app_publisher = "Prismod Technologies Limited"
-app_description = "Security Integrated System"
+app_description = "Security Management & Control Systems"
 app_email = "info@prismod.co.ke"
-app_license = "mit"
+app_license = "MIT"
+app_version = app_version
+
+# -----------------------------
+# Modules and desktop
+# -----------------------------
+# modules.txt defines all the Python modules to sync
+# desktop.py defines how modules appear on ERPNext Desk
+# Include all modules
+modules = [
+    "Sigma Home",
+    "Sigma Access Control",
+    "Sigma Case Management",
+    "Sigma Guard Monitoring",
+    "Sigma Asset Integrations",
+    "Sigma Risk Assessment",
+    "Sigma Visitor Management",
+    "sigma Vehicle Management",
+    "Sigma ERPNext Integrations"
+]
+
+# Desk icon registration
+# No global desktop_js here; module icons are configured via config/desktop.py in each module for Frappe 16.
+# If using ERPNext 14+, desktop config is automatically picked from config/desktop.py
+
+# -----------------------------
+# Documentation
+# -----------------------------
+# App docs shown in Developer > Documentation
+docs = "config/docs.py"
+
+# -----------------------------
+# Fixtures
+# -----------------------------
+
+fixtures = [
+    "Custom Field",
+    "Property Setter",
+    "Workspace",
+    "Role",
+    "Client Script",
+    {"dt": "Module Def", "filters": [["app_name", "=", "sigma"]]},
+    {"dt": "Location Type"},
+    {"dt": "Substation Type"},
+    {"dt": "Location Subtype"}
+]
 
 # Apps
 # ------------------
@@ -27,6 +78,8 @@ app_license = "mit"
 # include js, css files in header of desk.html
 # app_include_css = "/assets/sigma/css/sigma.css"
 # app_include_js = "/assets/sigma/js/sigma.js"
+app_include_js = []
+app_include_css = []
 
 # include js, css files in header of web template
 # web_include_css = "/assets/sigma/css/sigma.css"
@@ -39,14 +92,33 @@ app_license = "mit"
 # webform_include_js = {"doctype": "public/js/doctype.js"}
 # webform_include_css = {"doctype": "public/css/doctype.css"}
 
+website_route_rules = [
+    {"from_route": "/sigma-home", "to_route": "sigma-home"},
+    {"from_route": "/sigma-dashboard", "to_route": "sigma-home"}  # Redirect old URL
+]
+
+portal_menu_items = [
+    {"title": "Sigma Home", "route": "/sigma-home", "reference_doctype": "Sigma Dashboard"}
+]
+
 # include js in page
 # page_js = {"page" : "public/js/file.js"}
+
+page_js = {
+    "sigma-desk": "public/js/pages/index.js"
+}
+
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
+
+# Override Asset tree view with location hierarchy
+doctype_tree_js = {
+	"Asset": "public/js/asset_tree_override.js"
+}
 
 # Svg Icons
 # ------------------
@@ -70,6 +142,9 @@ app_license = "mit"
 # automatically create page for each record of this doctype
 # website_generators = ["Web Page"]
 
+# automatically load and sync documents of this doctype from downstream apps
+# importable_doctypes = [doctype_1]
+
 # Jinja
 # ----------
 
@@ -83,7 +158,8 @@ app_license = "mit"
 # ------------
 
 # before_install = "sigma.install.before_install"
-# after_install = "sigma.install.after_install"
+after_install = "sigma.sigma_erpnext_integrations.install.after_install"
+after_migrate = "sigma.sigma_erpnext_integrations.install.after_migrate"
 
 # Uninstallation
 # ------------
@@ -125,51 +201,105 @@ app_license = "mit"
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
 
-# DocType Class
-# ---------------
-# Override standard doctype classes
-
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
-
 # Document Events
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"Case Record": {
+		"on_update": [
+			"sigma.api.hooks_automation.auto_escalate_overdue_cases",
+			"sigma.api.realtime.RealtimeEvents.emit_case_update_event",
+			"sigma.api.realtime.SLAManager.send_escalation_notification",
+			"sigma.sigma_erpnext_integrations.api.helpdesk_integration_hooks.sync_case_to_ticket",
+			"sigma.sigma_erpnext_integrations.api.projects_integration_hooks.sync_case_to_project",
+		],
+		"after_insert": [
+			"sigma.sigma_erpnext_integrations.api.helpdesk_integration_hooks.sync_case_to_ticket",
+			"sigma.sigma_erpnext_integrations.api.projects_integration_hooks.sync_case_to_project",
+		],
+	},
+	"Risk Assessment": {
+		"on_update": "sigma.api.hooks_automation.auto_create_mitigation_from_risk",
+	},
+	"Access Event": {
+		"on_insert": [
+			"sigma.api.hooks_automation.auto_notify_access_violation",
+			"sigma.api.realtime.RealtimeEvents.emit_access_event",
+		],
+	},
+	"Guard Shift": {
+		"on_update": "sigma.api.hooks_automation.auto_check_in_guard_shift",
+	},
+	"Guard Activity": {
+		"on_insert": "sigma.api.realtime.RealtimeEvents.emit_guard_location_update",
+	},
+	"Risk Heatmap": {
+		"on_update": "sigma.api.hooks_automation.auto_calculate_risk_score",
+	},
+	# ERPNext Integration Hooks
+	# Using wrapper functions to work with Frappe's hook system
+	"Asset": {
+		"after_insert": [
+			"sigma.sigma_erpnext_integrations.api.stock_integration_hooks.sync_asset_to_item",
+			"sigma.sigma_erpnext_integrations.api.support_integration_hooks.sync_asset_maintenance",
+		],
+		"on_update": [
+			"sigma.sigma_erpnext_integrations.api.stock_integration_hooks.sync_asset_to_item",
+			"sigma.sigma_erpnext_integrations.api.support_integration_hooks.sync_asset_maintenance",
+		],
+	},
+	"Item": {
+		"on_update": "sigma.sigma_erpnext_integrations.api.stock_integration_hooks.sync_item_to_asset",
+	},
+	"Purchase Receipt": {
+		"on_submit": "sigma.sigma_erpnext_integrations.api.buying_integration.BuyingIntegration.create_asset_from_purchase_receipt",
+	},
+	"Maintenance Visit": {
+		"on_submit": "sigma.sigma_erpnext_integrations.api.support_integration_hooks.update_asset_from_maintenance_visit",
+		"on_update": "sigma.sigma_erpnext_integrations.api.support_integration_hooks.update_asset_from_maintenance_visit",
+	},
+	"Incident Report": {
+		"after_insert": "sigma.sigma_erpnext_integrations.api.support_integration_hooks.create_maintenance_visit_from_incident",
+	},
+	"Visitor": {
+		"after_insert": "sigma.sigma_erpnext_integrations.api.crm_integration.CRMIntegration.sync_visitor_to_contact",
+		"on_update": "sigma.sigma_erpnext_integrations.api.crm_integration.CRMIntegration.sync_visitor_to_contact",
+	},
+}
 
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"sigma.tasks.all"
-# 	],
-# 	"daily": [
-# 		"sigma.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"sigma.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"sigma.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"sigma.tasks.monthly"
-# 	],
-# }
+# Scheduled Tasks
+# ---------------
+
+scheduler_events = {
+	"hourly": [
+		"sigma.api.integrations.refresh_dashboard_cache",
+		"sigma.api.integrations.poll_vendor_apis",
+		"sigma.sigma_erpnext_integrations.sync_handlers.scheduled_sync.sync_pending_assets",
+		"sigma.sigma_erpnext_integrations.sync_handlers.scheduled_sync.sync_maintenance_schedules",
+	],
+	"daily": [
+		"sigma.api.integrations.generate_reports",
+		"sigma.sigma_erpnext_integrations.sync_handlers.scheduled_sync.sync_all_integrations",
+		"sigma.sigma_erpnext_integrations.sync_handlers.scheduled_sync.cleanup_old_logs",
+	],
+}
 
 # Testing
 # -------
 
 # before_tests = "sigma.install.before_tests"
+
+# Extend DocType Class
+# ------------------------------
+#
+# Specify custom mixins to extend the standard doctype controller.
+# extend_doctype_class = {
+# 	"Task": "sigma.custom.task.CustomTaskMixin"
+# }
 
 # Overriding Methods
 # ------------------------------

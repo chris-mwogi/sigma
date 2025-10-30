@@ -1,0 +1,10 @@
+[
+  {
+    "doctype": "Role",
+    "role_name": "Access Control Officer"
+  },
+  {
+    "doctype": "Role",
+    "role_name": "Access Auditor"
+  }
+]

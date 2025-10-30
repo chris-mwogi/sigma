@@ -1,0 +1,224 @@
+{
+ "app": "sigma",
+ "charts": [],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h3\\\"><b>Guard Monitoring Hub</b></span>\",\"col\":12}},{\"type\":\"paragraph\",\"data\":{\"text\":\"<p>Comprehensive guard and patrol management system for monitoring security personnel, shifts, and patrol activities.</p>\",\"col\":12}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Active Guard Shifts\",\"col\":3}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Patrol Schedules Today\",\"col\":3}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Patrol Verifications This Week\",\"col\":3}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Active Checkpoints\",\"col\":3}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quick Actions</b></span>\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Guard Shift\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Patrol Schedule\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Patrol Verifications\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Guard Activities\",\"col\":3}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Guard Monitoring</b></span>\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Guard Management\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Patrol Management\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Resource Management\",\"col\":4}}]",
+ "creation": "2025-10-26 00:00:00",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "user-shield",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Guard Monitoring",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Guard Management",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Guard Shift",
+   "link_count": 0,
+   "link_to": "Guard Shift",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Guard Activity",
+   "link_count": 0,
+   "link_to": "Guard Activity",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Compliance Notice",
+   "link_count": 0,
+   "link_to": "Compliance Notice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Patrol Management",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Patrol Schedule",
+   "link_count": 0,
+   "link_to": "Patrol Schedule",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Patrol Checkpoint",
+   "link_count": 0,
+   "link_to": "Patrol Checkpoint",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Patrol Verification Record",
+   "link_count": 0,
+   "link_to": "Patrol Verification Record",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Discrepancy Report",
+   "link_count": 0,
+   "link_to": "Discrepancy Report",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Resource Management",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Resource Deployment",
+   "link_count": 0,
+   "link_to": "Resource Deployment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Resource Availability",
+   "link_count": 0,
+   "link_to": "Resource Availability",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Resource Certification",
+   "link_count": 0,
+   "link_to": "Resource Certification",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Emergency Evacuation Tracking",
+   "link_count": 0,
+   "link_to": "Emergency Evacuation Tracking",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-10-30 14:41:43.873456",
+ "modified_by": "Administrator",
+ "module": "Sigma Guard Monitoring",
+ "name": "Guard Monitoring",
+ "number_cards": [
+  {
+   "label": "Active Guard Shifts",
+   "number_card_name": "Active Guard Shifts"
+  },
+  {
+   "label": "Patrol Schedules Today",
+   "number_card_name": "Patrol Schedules Today"
+  },
+  {
+   "label": "Patrol Verifications This Week",
+   "number_card_name": "Patrol Verifications This Week"
+  },
+  {
+   "label": "Active Checkpoints",
+   "number_card_name": "Active Checkpoints"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 8.0,
+ "shortcuts": [
+  {
+   "color": "#29CD42",
+   "format": "{} Active",
+   "icon": "clock",
+   "label": "New Guard Shift",
+   "link_to": "Guard Shift",
+   "stats_filter": "{\"docstatus\": 1}",
+   "type": "DocType"
+  },
+  {
+   "color": "#667eea",
+   "icon": "route",
+   "label": "New Patrol Schedule",
+   "link_to": "Patrol Schedule",
+   "type": "DocType"
+  },
+  {
+   "color": "#4C51BF",
+   "icon": "check-circle",
+   "label": "Patrol Verifications",
+   "link_to": "Patrol Verification Record",
+   "type": "DocType"
+  },
+  {
+   "color": "#F56565",
+   "icon": "list",
+   "label": "Guard Activities",
+   "link_to": "Guard Activity",
+   "type": "DocType"
+  }
+ ],
+ "title": "Guard Monitoring",
+ "type": "Workspace"
+}

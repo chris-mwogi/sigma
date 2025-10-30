@@ -1,0 +1,12 @@
+[
+  {"doctype": "Location Type", "name": "Region", "title": "Region", "disabled": 0},
+  {"doctype": "Location Type", "name": "County", "title": "County", "disabled": 0},
+  {"doctype": "Location Type", "name": "Branch", "title": "Branch", "disabled": 0},
+  {"doctype": "Location Type", "name": "Office", "title": "Office", "disabled": 0},
+  {"doctype": "Location Type", "name": "Store", "title": "Store", "disabled": 0},
+  {"doctype": "Location Type", "name": "Substation", "title": "Substation", "has_subtype": 1, "disabled": 0},
+  {"doctype": "Location Type", "name": "Off-grid Station", "title": "Off-grid Station", "disabled": 0},
+  {"doctype": "Location Type", "name": "Pole Yard", "title": "Pole Yard", "disabled": 0},
+  {"doctype": "Location Type", "name": "Transport", "title": "Transport", "disabled": 0}
+]
+

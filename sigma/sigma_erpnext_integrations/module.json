@@ -1,0 +1,19 @@
+{
+ "app": "sigma",
+ "category": "",
+ "creation": "2025-10-27 00:00:00.000000",
+ "description": "ERPNext Integration Layer for Sigma Security Management Platform",
+ "docstatus": 0,
+ "doctype": "Module Def",
+ "idx": 0,
+ "label": "Sigma ERPNext Integrations",
+ "modified": "2025-10-27 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module_name": "Sigma ERPNext Integrations",
+ "name": "Sigma ERPNext Integrations",
+ "owner": "Administrator",
+ "package": "sigma",
+ "restrict_to_domain": "",
+ "type": "module"
+}
+

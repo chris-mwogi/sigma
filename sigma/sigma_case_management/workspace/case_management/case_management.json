@@ -1,0 +1,226 @@
+{
+ "app": "sigma",
+ "charts": [],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h3\\\"><b>Case Management Hub</b></span>\",\"col\":12}},{\"type\":\"paragraph\",\"data\":{\"text\":\"<p>Comprehensive case tracking and management system for incidents, investigations, and legal proceedings.</p>\",\"col\":12}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Cases\",\"col\":3}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Open Cases\",\"col\":3}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Incident Reports This Month\",\"col\":3}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Active Legal Cases\",\"col\":3}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quick Actions</b></span>\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Case\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Incident Report\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Case List\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Legal Cases\",\"col\":3}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Case Management</b></span>\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Cases\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Incidents\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Legal & Prosecution\",\"col\":4}}]",
+ "creation": "2025-10-26 00:00:00",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "folder-open",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Case Management",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Cases",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Case",
+   "link_count": 0,
+   "link_to": "Case",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Case Assignment",
+   "link_count": 0,
+   "link_to": "Case Assignment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Case Activity Log",
+   "link_count": 0,
+   "link_to": "Case Activity Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Case Discussion",
+   "link_count": 0,
+   "link_to": "Case Discussion",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Case Evidence",
+   "link_count": 0,
+   "link_to": "Case Evidence",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Incidents",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Incident Report",
+   "link_count": 0,
+   "link_to": "Incident Report",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Theft",
+   "link_count": 0,
+   "link_to": "Asset Theft",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Illegal Connection",
+   "link_count": 0,
+   "link_to": "Illegal Connection",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Legal & Prosecution",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Legal Case",
+   "link_count": 0,
+   "link_to": "Legal Case",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Prosecution Case",
+   "link_count": 0,
+   "link_to": "Prosecution Case",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Case External Communication",
+   "link_count": 0,
+   "link_to": "Case External Communication",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-10-30 14:41:43.625231",
+ "modified_by": "Administrator",
+ "module": "Sigma Case Management",
+ "name": "Case Management",
+ "number_cards": [
+  {
+   "label": "Total Cases",
+   "number_card_name": "Total Cases"
+  },
+  {
+   "label": "Open Cases",
+   "number_card_name": "Open Cases"
+  },
+  {
+   "label": "Incident Reports This Month",
+   "number_card_name": "Incident Reports This Month"
+  },
+  {
+   "label": "Active Legal Cases",
+   "number_card_name": "Active Legal Cases"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 7.0,
+ "shortcuts": [
+  {
+   "color": "#29CD42",
+   "format": "{} Open",
+   "icon": "folder",
+   "label": "New Case",
+   "link_to": "Case",
+   "stats_filter": "{\"docstatus\": 0}",
+   "type": "DocType"
+  },
+  {
+   "color": "#F56565",
+   "icon": "exclamation-triangle",
+   "label": "New Incident Report",
+   "link_to": "Incident Report",
+   "type": "DocType"
+  },
+  {
+   "color": "#4C51BF",
+   "icon": "list",
+   "label": "Case List",
+   "link_to": "Case",
+   "type": "DocType"
+  },
+  {
+   "color": "#667eea",
+   "format": "{} Active",
+   "icon": "gavel",
+   "label": "Legal Cases",
+   "link_to": "Legal Case",
+   "stats_filter": "{\"docstatus\": 1}",
+   "type": "DocType"
+  }
+ ],
+ "title": "Case Management",
+ "type": "Workspace"
+}

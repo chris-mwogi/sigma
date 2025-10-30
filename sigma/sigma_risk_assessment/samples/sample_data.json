@@ -1,0 +1,30 @@
+[
+  {
+    "doctype": "Risk Assessment",
+    "assessment_title": "Kisumu Substation - Transformer Oil Leak",
+    "assessment_type": "Location-Based",
+    "description": "Potential oil leak from transformer leading to fire risk and environmental contamination.",
+    "risk_category": "Safety",
+    "likelihood": "Possible",
+    "impact": "Major",
+    "assessment_date": "2025-10-01",
+    "review_date": "2026-04-01",
+    "risk_owner": "employee@example.com",
+    "status": "Open",
+    "linked_location": "Kisumu Substation"
+  },
+  {
+    "doctype": "Risk Assessment",
+    "assessment_title": "Revenue Leak - Nonpayment by Large Consumers",
+    "assessment_type": "Corporate",
+    "description": "Significant risk of revenue loss due to delayed or non-payment by industrial customers.",
+    "risk_category": "Financial",
+    "likelihood": "Likely",
+    "impact": "Major",
+    "assessment_date": "2025-09-15",
+    "review_date": "2026-03-15",
+    "risk_owner": "employee@example.com",
+    "status": "Open",
+    "responsible_department": "Billing"
+  }
+]

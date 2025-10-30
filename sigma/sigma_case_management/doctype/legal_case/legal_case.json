@@ -1,0 +1,12 @@
+{
+  "doctype": "DocType",
+  "name": "Legal Case",
+  "module": "Sigma Case Management",
+  "fields": [
+    {"fieldname": "court_name", "fieldtype": "Data", "label": "Court Name"},
+    {"fieldname": "case_number", "fieldtype": "Data", "label": "Court Case Number"},
+    {"fieldname": "status", "fieldtype": "Select", "options": "Filed\nIn Court\nJudgement\nClosed"},
+    {"fieldname": "offender_name", "fieldtype": "Data", "label": "Offender Name"},
+    {"fieldname": "related_case", "fieldtype": "Link", "options": "Case", "label": "Related Case"}
+  ]
+}

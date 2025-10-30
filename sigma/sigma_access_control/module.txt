@@ -1,0 +1,6 @@
+module_name: Sigma Access Control
+category: Modules
+label: Sigma Access Control
+description: Physical access management, device events, and control logs
+icon: octicon octicon-lock
+color: blue

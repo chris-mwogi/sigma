@@ -1,0 +1,23 @@
+{
+ "aggregate_function_based_on": "",
+ "creation": "2025-10-27 00:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Parking Space",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[[\"Parking Space\",\"status\",\"=\",\"Available\"]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Available Parking Spaces",
+ "modified": "2025-10-27 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Vehicle Management",
+ "name": "Available Parking Spaces",
+ "owner": "Administrator",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Daily",
+ "type": "Document Type"
+}
+

@@ -1,0 +1,282 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:VEH-{license_plate}-{####}",
+ "creation": "2025-10-27 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_information_section",
+  "license_plate",
+  "license_plate_state",
+  "license_plate_country",
+  "column_break_basic",
+  "vehicle_type",
+  "make",
+  "model",
+  "year",
+  "color",
+  "status",
+  "ownership_section",
+  "owner_type",
+  "owner_name",
+  "owner_contact",
+  "owner_email",
+  "company_vehicle_section",
+  "assignment_type",
+  "assigned_to_driver",
+  "assigned_to_office",
+  "column_break_company",
+  "company_asset_id",
+  "department",
+  "requires_pass",
+  "has_reserved_parking",
+  "reserved_parking_space",
+  "usage_tracking_section",
+  "current_odometer",
+  "last_service_date",
+  "next_service_due",
+  "column_break_usage",
+  "fuel_card_number",
+  "notes_section",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "license_plate",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "License Plate",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "license_plate_state",
+   "fieldtype": "Data",
+   "label": "License Plate State/Province"
+  },
+  {
+   "fieldname": "license_plate_country",
+   "fieldtype": "Link",
+   "label": "License Plate Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "column_break_basic",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vehicle_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Vehicle Type",
+   "options": "Car\nMotorcycle\nTruck\nVan\nBus\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "make",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Make"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "fieldname": "year",
+   "fieldtype": "Int",
+   "label": "Year"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Data",
+   "label": "Color"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nSuspended\nBlacklisted\nInactive",
+   "reqd": 1,
+   "default": "Active"
+  },
+  {
+   "fieldname": "ownership_section",
+   "fieldtype": "Section Break",
+   "label": "Ownership Information"
+  },
+  {
+   "fieldname": "owner_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Owner Type",
+   "options": "Local Staff\nVisiting Staff\nExternal Visitor\nContractor\nVendor\nCompany Vehicle",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.owner_type != 'Company Vehicle'",
+   "fieldname": "owner_name",
+   "fieldtype": "Data",
+   "label": "Owner Name"
+  },
+  {
+   "depends_on": "eval:doc.owner_type != 'Company Vehicle'",
+   "fieldname": "owner_contact",
+   "fieldtype": "Data",
+   "label": "Owner Contact"
+  },
+  {
+   "depends_on": "eval:doc.owner_type != 'Company Vehicle'",
+   "fieldname": "owner_email",
+   "fieldtype": "Data",
+   "label": "Owner Email"
+  },
+  {
+   "depends_on": "eval:doc.owner_type == 'Company Vehicle'",
+   "fieldname": "company_vehicle_section",
+   "fieldtype": "Section Break",
+   "label": "Company Vehicle Details"
+  },
+  {
+   "depends_on": "eval:doc.owner_type == 'Company Vehicle'",
+   "fieldname": "assignment_type",
+   "fieldtype": "Select",
+   "label": "Assignment Type",
+   "options": "Driver-Assigned\nOffice-Assigned\nPool Vehicle"
+  },
+  {
+   "depends_on": "eval:doc.owner_type == 'Company Vehicle' && doc.assignment_type == 'Driver-Assigned'",
+   "fieldname": "assigned_to_driver",
+   "fieldtype": "Data",
+   "label": "Assigned to Driver (User ID)"
+  },
+  {
+   "depends_on": "eval:doc.owner_type == 'Company Vehicle' && doc.assignment_type == 'Office-Assigned'",
+   "fieldname": "assigned_to_office",
+   "fieldtype": "Data",
+   "label": "Assigned to Office/Position"
+  },
+  {
+   "depends_on": "eval:doc.owner_type == 'Company Vehicle'",
+   "fieldname": "column_break_company",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.owner_type == 'Company Vehicle'",
+   "fieldname": "company_asset_id",
+   "fieldtype": "Data",
+   "label": "Company Asset ID"
+  },
+  {
+   "depends_on": "eval:doc.owner_type == 'Company Vehicle'",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.owner_type == 'Company Vehicle'",
+   "fieldname": "requires_pass",
+   "fieldtype": "Check",
+   "label": "Requires Vehicle Pass"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.owner_type == 'Company Vehicle'",
+   "fieldname": "has_reserved_parking",
+   "fieldtype": "Check",
+   "label": "Has Reserved Parking"
+  },
+  {
+   "depends_on": "eval:doc.owner_type == 'Company Vehicle' && doc.has_reserved_parking == 1",
+   "fieldname": "reserved_parking_space",
+   "fieldtype": "Data",
+   "label": "Reserved Parking Space"
+  },
+  {
+   "depends_on": "eval:doc.owner_type == 'Company Vehicle'",
+   "fieldname": "usage_tracking_section",
+   "fieldtype": "Section Break",
+   "label": "Usage Tracking"
+  },
+  {
+   "depends_on": "eval:doc.owner_type == 'Company Vehicle'",
+   "fieldname": "current_odometer",
+   "fieldtype": "Float",
+   "label": "Current Odometer (km)"
+  },
+  {
+   "depends_on": "eval:doc.owner_type == 'Company Vehicle'",
+   "fieldname": "last_service_date",
+   "fieldtype": "Date",
+   "label": "Last Service Date"
+  },
+  {
+   "depends_on": "eval:doc.owner_type == 'Company Vehicle'",
+   "fieldname": "next_service_due",
+   "fieldtype": "Date",
+   "label": "Next Service Due"
+  },
+  {
+   "depends_on": "eval:doc.owner_type == 'Company Vehicle'",
+   "fieldname": "column_break_usage",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.owner_type == 'Company Vehicle'",
+   "fieldname": "fuel_card_number",
+   "fieldtype": "Data",
+   "label": "Fuel Card Number"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-27 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Vehicle Management",
+ "name": "Vehicle",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+

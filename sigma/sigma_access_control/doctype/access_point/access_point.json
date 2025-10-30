@@ -1,0 +1,42 @@
+{
+  "doctype": "DocType",
+  "name": "Access Point",
+  "module": "Sigma Access Control",
+  "custom": false,
+  "fields": [
+    {
+      "fieldname": "access_point_name",
+      "label": "Access Point Name",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "location",
+      "label": "Location",
+      "fieldtype": "Link",
+      "options": "Location"
+    },
+    {
+      "fieldname": "device",
+      "label": "Device (Asset)",
+      "fieldtype": "Link",
+      "options": "Asset"
+    },
+    {
+      "fieldname": "active_hours",
+      "label": "Active Hours",
+      "fieldtype": "Data"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Access Control Officer",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Access Auditor",
+      "read": 1
+    }
+  ]
+}

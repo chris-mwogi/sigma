@@ -1,0 +1,136 @@
+{
+ "actions": [],
+ "creation": "2025-10-27 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "enable_integrations_section",
+  "enable_stock_integration",
+  "enable_buying_integration",
+  "enable_selling_integration",
+  "enable_support_integration",
+  "column_break_5",
+  "enable_crm_integration",
+  "enable_projects_integration",
+  "enable_helpdesk_integration",
+  "sync_settings_section",
+  "auto_sync",
+  "sync_interval",
+  "column_break_11",
+  "last_sync",
+  "sync_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "enable_integrations_section",
+   "fieldtype": "Section Break",
+   "label": "Enable Integrations"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_stock_integration",
+   "fieldtype": "Check",
+   "label": "Enable Stock Integration"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_buying_integration",
+   "fieldtype": "Check",
+   "label": "Enable Buying Integration"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_selling_integration",
+   "fieldtype": "Check",
+   "label": "Enable Selling Integration"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_support_integration",
+   "fieldtype": "Check",
+   "label": "Enable Support/Maintenance Integration"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_crm_integration",
+   "fieldtype": "Check",
+   "label": "Enable CRM Integration"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_projects_integration",
+   "fieldtype": "Check",
+   "label": "Enable Projects Integration"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_helpdesk_integration",
+   "fieldtype": "Check",
+   "label": "Enable Helpdesk Integration"
+  },
+  {
+   "fieldname": "sync_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Sync Settings"
+  },
+  {
+   "default": "1",
+   "fieldname": "auto_sync",
+   "fieldtype": "Check",
+   "label": "Enable Auto Sync"
+  },
+  {
+   "default": "3600",
+   "description": "Sync interval in seconds (default: 3600 = 1 hour)",
+   "fieldname": "sync_interval",
+   "fieldtype": "Int",
+   "label": "Sync Interval (seconds)"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_sync",
+   "fieldtype": "Datetime",
+   "label": "Last Sync",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sync_status",
+   "fieldtype": "Data",
+   "label": "Sync Status",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-10-27 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma ERPNext Integrations",
+ "name": "Sigma Integration Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+

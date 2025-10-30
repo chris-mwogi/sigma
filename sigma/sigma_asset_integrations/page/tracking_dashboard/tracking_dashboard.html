@@ -1,0 +1,55 @@
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"/>
+
+<div class="tracking-dashboard">
+  <div class="dashboard-header flex items-center justify-between">
+    <h2>Unified Asset Tracking Dashboard</h2>
+    <small>Live telemetry and alerts overview</small>
+  </div>
+
+  <div class="tabs" id="asset-category-tabs">
+    <!-- Tabs populated by JS -->
+  </div>
+
+  <div id="asset-maps" class="asset-maps mt-4">
+    <!-- Category-specific map panels -->
+  </div>
+</div>
+
+<style>
+.tracking-dashboard {
+  padding: 16px;
+}
+
+.dashboard-header h2 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tabs button {
+  background: #f1f5f9;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  background: #2563eb;
+  color: white;
+}
+
+.map-container {
+  height: 500px;
+  margin-top: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+</style>

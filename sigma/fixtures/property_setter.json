@@ -1,0 +1,23 @@
+[
+  {
+    "doctype": "Property Setter",
+    "name": "Asset--is_tree",
+    "doc_type": "Asset",
+    "doctype_or_field": "DocType",
+    "field_name": null,
+    "property": "is_tree",
+    "value": "1",
+    "property_type": "Check"
+  },
+  {
+    "doctype": "Property Setter",
+    "name": "Asset--nsm_parent_field",
+    "doc_type": "Asset",
+    "doctype_or_field": "DocType",
+    "field_name": null,
+    "property": "nsm_parent_field",
+    "value": "parent_asset",
+    "property_type": "Data"
+  }
+]
+

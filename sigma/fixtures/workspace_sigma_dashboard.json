@@ -1,0 +1,12 @@
+[
+  {
+    "doctype": "Workspace",
+    "name": "Sigma Home",
+    "label": "Sigma Home",
+    "title": "Sigma Home",
+    "type": "Workspace",
+    "public": 1,
+    "module": "Sigma Home",
+    "content": "[{\"type\": \"shortcut\", \"label\": \"Helpdesk Tickets\", \"link_to\": \"List/HD Ticket\"}]"
+  }
+]

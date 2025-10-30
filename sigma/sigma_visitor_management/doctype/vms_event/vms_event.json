@@ -1,0 +1,259 @@
+{
+  "autoname": "VME-{YYYY}-{####}",
+  "creation": "2025-10-24 00:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "Document",
+  "engine": "InnoDB",
+  "field_order": [
+    "vms_platform",
+    "event_type",
+    "column_break_2",
+    "event_time",
+    "event_id",
+    "section_break_3",
+    "location",
+    "camera_id",
+    "column_break_5",
+    "camera_name",
+    "access_point",
+    "section_break_6",
+    "visitor",
+    "facial_recognition_confidence",
+    "column_break_8",
+    "visitor_status",
+    "is_registered",
+    "section_break_9",
+    "video_clip_url",
+    "snapshot_url",
+    "column_break_11",
+    "video_duration_seconds",
+    "snapshot_timestamp",
+    "section_break_12",
+    "linked_checkin_checkout",
+    "linked_access_log",
+    "column_break_14",
+    "processed",
+    "processing_notes",
+    "section_break_15",
+    "raw_event_data"
+  ],
+  "fields": [
+    {
+      "fieldname": "vms_platform",
+      "fieldtype": "Select",
+      "label": "VMS Platform",
+      "options": "Genetec\nHikvision\nOther",
+      "reqd": 1
+    },
+    {
+      "fieldname": "event_type",
+      "fieldtype": "Select",
+      "label": "Event Type",
+      "options": "Entry\nExit\nFacial Recognition\nRestricted Area Access\nAlarm\nOther",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "event_time",
+      "fieldtype": "Datetime",
+      "label": "Event Time",
+      "reqd": 1
+    },
+    {
+      "fieldname": "event_id",
+      "fieldtype": "Data",
+      "label": "Event ID",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "section_break_3",
+      "fieldtype": "Section Break",
+      "label": "Location & Camera"
+    },
+    {
+      "fieldname": "location",
+      "fieldtype": "Link",
+      "label": "Location",
+      "options": "Location",
+      "reqd": 1
+    },
+    {
+      "fieldname": "camera_id",
+      "fieldtype": "Data",
+      "label": "Camera ID",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_5",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "camera_name",
+      "fieldtype": "Data",
+      "label": "Camera Name"
+    },
+    {
+      "fieldname": "access_point",
+      "fieldtype": "Data",
+      "label": "Access Point"
+    },
+    {
+      "fieldname": "section_break_6",
+      "fieldtype": "Section Break",
+      "label": "Visitor Information"
+    },
+    {
+      "fieldname": "visitor",
+      "fieldtype": "Link",
+      "label": "Visitor",
+      "options": "Visitor"
+    },
+    {
+      "fieldname": "facial_recognition_confidence",
+      "fieldtype": "Percent",
+      "label": "Facial Recognition Confidence"
+    },
+    {
+      "fieldname": "column_break_8",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "visitor_status",
+      "fieldtype": "Select",
+      "label": "Visitor Status",
+      "options": "Registered\nUnregistered\nBlacklisted\nUnknown"
+    },
+    {
+      "fieldname": "is_registered",
+      "fieldtype": "Check",
+      "label": "Is Registered",
+      "default": 0
+    },
+    {
+      "fieldname": "section_break_9",
+      "fieldtype": "Section Break",
+      "label": "Media"
+    },
+    {
+      "fieldname": "video_clip_url",
+      "fieldtype": "Data",
+      "label": "Video Clip URL"
+    },
+    {
+      "fieldname": "snapshot_url",
+      "fieldtype": "Attach Image",
+      "label": "Snapshot"
+    },
+    {
+      "fieldname": "column_break_11",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "video_duration_seconds",
+      "fieldtype": "Int",
+      "label": "Video Duration (Seconds)"
+    },
+    {
+      "fieldname": "snapshot_timestamp",
+      "fieldtype": "Datetime",
+      "label": "Snapshot Timestamp"
+    },
+    {
+      "fieldname": "section_break_12",
+      "fieldtype": "Section Break",
+      "label": "Linking"
+    },
+    {
+      "fieldname": "linked_checkin_checkout",
+      "fieldtype": "Data",
+      "label": "Linked Check-In/Check-Out"
+    },
+    {
+      "fieldname": "linked_access_log",
+      "fieldtype": "Data",
+      "label": "Linked Access Log"
+    },
+    {
+      "fieldname": "column_break_14",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "processed",
+      "fieldtype": "Check",
+      "label": "Processed",
+      "default": 0
+    },
+    {
+      "fieldname": "processing_notes",
+      "fieldtype": "Small Text",
+      "label": "Processing Notes"
+    },
+    {
+      "fieldname": "section_break_15",
+      "fieldtype": "Section Break",
+      "label": "Raw Data"
+    },
+    {
+      "fieldname": "raw_event_data",
+      "fieldtype": "Code",
+      "label": "Raw Event Data",
+      "options": "JSON"
+    }
+  ],
+  "links": [],
+  "modified": "2025-10-24 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sigma Visitor Management",
+  "name": "VMS Event",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "submit": 0,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 0,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Security Manager",
+      "share": 0,
+      "submit": 0,
+      "write": 1
+    },
+    {
+      "create": 0,
+      "delete": 0,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Guard",
+      "share": 0,
+      "submit": 0,
+      "write": 0
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1
+}
+

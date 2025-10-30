@@ -1,0 +1,205 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:VREG-{YYYY}-{#####}",
+ "creation": "2025-10-27 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "registration_section",
+  "registration_date",
+  "license_plate",
+  "vehicle_type",
+  "column_break_reg",
+  "make",
+  "model",
+  "color",
+  "owner_section",
+  "owner_type",
+  "owner_name",
+  "owner_contact",
+  "visit_details_section",
+  "expected_arrival_date",
+  "expected_arrival_time",
+  "duration",
+  "column_break_visit",
+  "purpose_of_visit",
+  "approval_section",
+  "approval_status",
+  "approved_by",
+  "column_break_approval",
+  "linked_visitor_registration",
+  "notes_section",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "registration_section",
+   "fieldtype": "Section Break",
+   "label": "Registration Information"
+  },
+  {
+   "default": "Today",
+   "fieldname": "registration_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Registration Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "license_plate",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "License Plate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vehicle_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Vehicle Type",
+   "options": "Car\nMotorcycle\nTruck\nVan\nBus\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_reg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "make",
+   "fieldtype": "Data",
+   "label": "Make"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Data",
+   "label": "Color"
+  },
+  {
+   "fieldname": "owner_section",
+   "fieldtype": "Section Break",
+   "label": "Owner Information"
+  },
+  {
+   "fieldname": "owner_type",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Owner Type",
+   "options": "Local Staff\nVisiting Staff\nExternal Visitor\nContractor\nVendor\nCompany Vehicle",
+   "reqd": 1
+  },
+  {
+   "fieldname": "owner_name",
+   "fieldtype": "Data",
+   "label": "Owner Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "owner_contact",
+   "fieldtype": "Data",
+   "label": "Owner Contact"
+  },
+  {
+   "fieldname": "visit_details_section",
+   "fieldtype": "Section Break",
+   "label": "Visit Details"
+  },
+  {
+   "fieldname": "expected_arrival_date",
+   "fieldtype": "Date",
+   "label": "Expected Arrival Date"
+  },
+  {
+   "fieldname": "expected_arrival_time",
+   "fieldtype": "Time",
+   "label": "Expected Arrival Time"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Select",
+   "label": "Duration",
+   "options": "Single Day\nMultiple Days\nPermanent"
+  },
+  {
+   "fieldname": "column_break_visit",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "purpose_of_visit",
+   "fieldtype": "Text",
+   "label": "Purpose of Visit"
+  },
+  {
+   "fieldname": "approval_section",
+   "fieldtype": "Section Break",
+   "label": "Approval"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Approval Status",
+   "options": "Pending\nApproved\nRejected"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_approval",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "linked_visitor_registration",
+   "fieldtype": "Data",
+   "label": "Linked Visitor Registration"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-27 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Vehicle Management",
+ "name": "Vehicle Registration",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+
