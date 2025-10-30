@@ -1,0 +1,157 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:VAL-{YYYY}-{#####}",
+ "creation": "2025-10-27 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "log_section",
+  "timestamp",
+  "event_type",
+  "license_plate",
+  "vehicle_record",
+  "column_break_log",
+  "location",
+  "guard",
+  "reference_section",
+  "linked_checkin",
+  "linked_pass",
+  "column_break_ref",
+  "vms_event",
+  "camera_id",
+  "snapshot",
+  "details_section",
+  "description",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "log_section",
+   "fieldtype": "Section Break",
+   "label": "Log Information"
+  },
+  {
+   "default": "Now",
+   "fieldname": "timestamp",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Timestamp",
+   "reqd": 1
+  },
+  {
+   "fieldname": "event_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Event Type",
+   "options": "Check-In\nCheck-Out\nPass Issued\nPass Revoked\nParking Assigned\nParking Released\nAccess Denied\nIncident",
+   "reqd": 1
+  },
+  {
+   "fieldname": "license_plate",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "License Plate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vehicle_record",
+   "fieldtype": "Data",
+   "label": "Vehicle Record"
+  },
+  {
+   "fieldname": "column_break_log",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Location"
+  },
+  {
+   "fieldname": "guard",
+   "fieldtype": "Link",
+   "label": "Guard",
+   "options": "User"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "References"
+  },
+  {
+   "fieldname": "linked_checkin",
+   "fieldtype": "Data",
+   "label": "Linked Checkin"
+  },
+  {
+   "fieldname": "linked_pass",
+   "fieldtype": "Data",
+   "label": "Linked Pass"
+  },
+  {
+   "fieldname": "column_break_ref",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vms_event",
+   "fieldtype": "Data",
+   "label": "VMS Event"
+  },
+  {
+   "fieldname": "camera_id",
+   "fieldtype": "Data",
+   "label": "Camera ID"
+  },
+  {
+   "fieldname": "snapshot",
+   "fieldtype": "Attach Image",
+   "label": "Snapshot"
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-27 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Vehicle Management",
+ "name": "Vehicle Access Log",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+

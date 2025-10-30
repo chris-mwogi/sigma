@@ -1,0 +1,303 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:VCHK-{YYYY}-{#####}",
+ "creation": "2025-10-27 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_section",
+  "license_plate",
+  "vehicle_record",
+  "check_in_time",
+  "check_out_time",
+  "column_break_basic",
+  "entry_gate",
+  "exit_gate",
+  "guard_in",
+  "guard_out",
+  "status",
+  "driver_visitor_section",
+  "visitor_type",
+  "driver_name",
+  "driver_contact",
+  "column_break_driver",
+  "passenger_count",
+  "purpose",
+  "company_vehicle_section",
+  "is_company_vehicle",
+  "current_driver",
+  "column_break_company_veh",
+  "odometer_in",
+  "odometer_out",
+  "distance_traveled",
+  "integration_section",
+  "linked_visitor_checkin",
+  "linked_staff_visit",
+  "column_break_integration",
+  "vehicle_pass_number",
+  "parking_space_assigned",
+  "vms_section",
+  "vms_entry_event",
+  "vms_exit_event",
+  "entry_camera",
+  "exit_camera",
+  "column_break_vms",
+  "entry_snapshot",
+  "exit_snapshot",
+  "notes_section",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "license_plate",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "License Plate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vehicle_record",
+   "fieldtype": "Data",
+   "label": "Vehicle Record"
+  },
+  {
+   "default": "Now",
+   "fieldname": "check_in_time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Check-In Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "check_out_time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Check-Out Time"
+  },
+  {
+   "fieldname": "column_break_basic",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "entry_gate",
+   "fieldtype": "Data",
+   "label": "Entry Gate"
+  },
+  {
+   "fieldname": "exit_gate",
+   "fieldtype": "Data",
+   "label": "Exit Gate"
+  },
+  {
+   "fieldname": "guard_in",
+   "fieldtype": "Link",
+   "label": "Guard (Check-In)",
+   "options": "User"
+  },
+  {
+   "fieldname": "guard_out",
+   "fieldtype": "Link",
+   "label": "Guard (Check-Out)",
+   "options": "User"
+  },
+  {
+   "default": "Checked In",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Checked In\nChecked Out\nOverstayed"
+  },
+  {
+   "fieldname": "driver_visitor_section",
+   "fieldtype": "Section Break",
+   "label": "Driver/Visitor Information"
+  },
+  {
+   "fieldname": "visitor_type",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Visitor Type",
+   "options": "Local Staff\nVisiting Staff\nExternal Visitor\nContractor\nVendor\nCompany Vehicle"
+  },
+  {
+   "fieldname": "driver_name",
+   "fieldtype": "Data",
+   "label": "Driver Name"
+  },
+  {
+   "fieldname": "driver_contact",
+   "fieldtype": "Data",
+   "label": "Driver Contact"
+  },
+  {
+   "fieldname": "column_break_driver",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "passenger_count",
+   "fieldtype": "Int",
+   "label": "Passenger Count"
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Text",
+   "label": "Purpose"
+  },
+  {
+   "depends_on": "eval:doc.is_company_vehicle == 1",
+   "fieldname": "company_vehicle_section",
+   "fieldtype": "Section Break",
+   "label": "Company Vehicle Details"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_company_vehicle",
+   "fieldtype": "Check",
+   "label": "Is Company Vehicle"
+  },
+  {
+   "depends_on": "eval:doc.is_company_vehicle == 1",
+   "fieldname": "current_driver",
+   "fieldtype": "Data",
+   "label": "Current Driver (User ID)"
+  },
+  {
+   "depends_on": "eval:doc.is_company_vehicle == 1",
+   "fieldname": "column_break_company_veh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.is_company_vehicle == 1",
+   "fieldname": "odometer_in",
+   "fieldtype": "Float",
+   "label": "Odometer In (km)"
+  },
+  {
+   "depends_on": "eval:doc.is_company_vehicle == 1",
+   "fieldname": "odometer_out",
+   "fieldtype": "Float",
+   "label": "Odometer Out (km)"
+  },
+  {
+   "depends_on": "eval:doc.is_company_vehicle == 1",
+   "fieldname": "distance_traveled",
+   "fieldtype": "Float",
+   "label": "Distance Traveled (km)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "integration_section",
+   "fieldtype": "Section Break",
+   "label": "Integration References"
+  },
+  {
+   "fieldname": "linked_visitor_checkin",
+   "fieldtype": "Data",
+   "label": "Linked Visitor Checkin"
+  },
+  {
+   "fieldname": "linked_staff_visit",
+   "fieldtype": "Data",
+   "label": "Linked Staff Visit"
+  },
+  {
+   "fieldname": "column_break_integration",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vehicle_pass_number",
+   "fieldtype": "Data",
+   "label": "Vehicle Pass Number"
+  },
+  {
+   "fieldname": "parking_space_assigned",
+   "fieldtype": "Data",
+   "label": "Parking Space Assigned"
+  },
+  {
+   "fieldname": "vms_section",
+   "fieldtype": "Section Break",
+   "label": "VMS Integration"
+  },
+  {
+   "fieldname": "vms_entry_event",
+   "fieldtype": "Data",
+   "label": "VMS Entry Event"
+  },
+  {
+   "fieldname": "vms_exit_event",
+   "fieldtype": "Data",
+   "label": "VMS Exit Event"
+  },
+  {
+   "fieldname": "entry_camera",
+   "fieldtype": "Data",
+   "label": "Entry Camera"
+  },
+  {
+   "fieldname": "exit_camera",
+   "fieldtype": "Data",
+   "label": "Exit Camera"
+  },
+  {
+   "fieldname": "column_break_vms",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "entry_snapshot",
+   "fieldtype": "Attach Image",
+   "label": "Entry Snapshot"
+  },
+  {
+   "fieldname": "exit_snapshot",
+   "fieldtype": "Attach Image",
+   "label": "Exit Snapshot"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-27 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Vehicle Management",
+ "name": "Vehicle Checkin Checkout",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+

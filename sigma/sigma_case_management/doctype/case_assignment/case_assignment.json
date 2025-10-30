@@ -1,0 +1,151 @@
+{
+  "doctype": "DocType",
+  "name": "Case Assignment",
+  "module": "Sigma Case Management",
+  "custom": 0,
+  "is_submittable": 0,
+  "autoname": "ASSIGN-{YYYY}-{####}",
+  "fields": [
+    {
+      "fieldname": "case",
+      "fieldtype": "Link",
+      "label": "Case",
+      "options": "Case",
+      "reqd": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "investigator",
+      "fieldtype": "Link",
+      "label": "Investigator",
+      "options": "User",
+      "reqd": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "role",
+      "fieldtype": "Select",
+      "label": "Role",
+      "reqd": 1,
+      "options": "Lead Investigator\nSupporting Investigator",
+      "width": "50%"
+    },
+    {
+      "fieldname": "assignment_date",
+      "fieldtype": "Datetime",
+      "label": "Assignment Date",
+      "reqd": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "assigned_by",
+      "fieldtype": "Link",
+      "label": "Assigned By",
+      "options": "User",
+      "reqd": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "section_workload",
+      "fieldtype": "Section Break",
+      "label": "Workload Information"
+    },
+    {
+      "fieldname": "current_workload",
+      "fieldtype": "Int",
+      "label": "Current Workload (Active Cases)",
+      "read_only": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "max_workload",
+      "fieldtype": "Int",
+      "label": "Max Workload Capacity",
+      "width": "50%"
+    },
+    {
+      "fieldname": "section_escalation",
+      "fieldtype": "Section Break",
+      "label": "Escalation Rules"
+    },
+    {
+      "fieldname": "escalation_threshold_hours",
+      "fieldtype": "Int",
+      "label": "Escalation Threshold (Hours)",
+      "default": 24,
+      "width": "50%"
+    },
+    {
+      "fieldname": "sla_overdue_threshold_percent",
+      "fieldtype": "Int",
+      "label": "SLA Overdue Threshold (%)",
+      "default": 50,
+      "width": "50%"
+    },
+    {
+      "fieldname": "section_reassignment",
+      "fieldtype": "Section Break",
+      "label": "Reassignment History"
+    },
+    {
+      "fieldname": "reassignment_count",
+      "fieldtype": "Int",
+      "label": "Reassignment Count",
+      "read_only": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "last_reassignment_date",
+      "fieldtype": "Datetime",
+      "label": "Last Reassignment Date",
+      "read_only": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "reassignment_reason",
+      "fieldtype": "Text",
+      "label": "Reassignment Reason"
+    },
+    {
+      "fieldname": "section_status",
+      "fieldtype": "Section Break",
+      "label": "Assignment Status"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Active\nCompleted\nReassigned\nCancelled",
+      "default": "Active",
+      "width": "50%"
+    },
+    {
+      "fieldname": "completion_date",
+      "fieldtype": "Datetime",
+      "label": "Completion Date",
+      "width": "50%"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "perm_read": 1,
+      "perm_write": 1,
+      "perm_create": 1,
+      "perm_delete": 1
+    },
+    {
+      "role": "Security Manager",
+      "perm_read": 1,
+      "perm_write": 1,
+      "perm_create": 1
+    },
+    {
+      "role": "Lead Investigator",
+      "perm_read": 1,
+      "perm_write": 1,
+      "perm_create": 1
+    }
+  ]
+}
+

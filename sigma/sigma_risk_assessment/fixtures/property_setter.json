@@ -1,0 +1,20 @@
+[
+  {
+    "doctype": "Property Setter",
+    "name": "Risk Assessment-status-read_only",
+    "doctype_or_field": "DocField",
+    "doc_type": "Risk Assessment",
+    "field_name": "status",
+    "property": "read_only",
+    "value": "0"
+  },
+  {
+    "doctype": "Property Setter",
+    "name": "Risk Assessment-risk_score-read_only",
+    "doctype_or_field": "DocField",
+    "doc_type": "Risk Assessment",
+    "field_name": "risk_score",
+    "property": "read_only",
+    "value": "1"
+  }
+]

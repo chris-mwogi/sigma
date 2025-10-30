@@ -1,0 +1,60 @@
+{
+  "doctype": "DocType",
+  "name": "Access Log",
+  "module": "Sigma Access Control",
+  "custom": 0,
+  "is_tree": 0,
+  "track_changes": 1,
+  "allow_rename": 0,
+  "allow_copy": 0,
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "fields": [
+    {
+      "fieldname": "access_point",
+      "label": "Access Point",
+      "fieldtype": "Link",
+      "options": "Access Point"
+    },
+    {
+      "fieldname": "card_id",
+      "label": "Card/Badge ID",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "employee",
+      "label": "Employee",
+      "fieldtype": "Link",
+      "options": "Employee"
+    },
+    {
+      "fieldname": "timestamp",
+      "label": "Timestamp",
+      "fieldtype": "Datetime"
+    },
+    {
+      "fieldname": "result",
+      "label": "Access Result",
+      "fieldtype": "Select",
+      "options": "\nGranted\nDenied\nPending"
+    },
+    {
+      "fieldname": "notes",
+      "label": "Notes",
+      "fieldtype": "Small Text"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Access Control Officer",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Access Auditor",
+      "read": 1
+    }
+  ]
+}

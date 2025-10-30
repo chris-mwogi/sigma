@@ -1,0 +1,11 @@
+{
+  "doctype": "DocType",
+  "name": "Illegal Connection",
+  "module": "Sigma Case Management",
+  "fields": [
+    {"fieldname": "detected_by", "fieldtype": "Link", "options": "Employee", "label": "Detected By"},
+    {"fieldname": "connection_status", "fieldtype": "Select", "options": "Disconnected\nPending\nRegularized", "label": "Connection Status"},
+    {"fieldname": "related_case", "fieldtype": "Link", "options": "Case", "label": "Related Case"},
+    {"fieldname": "evidence_attachment", "fieldtype": "Attach", "label": "Evidence Attachment"}
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "doctype": "DocType",
+  "name": "Case",
+  "module": "Sigma Case Management",
+  "custom": 0,
+  "is_submittable": 1,
+  "autoname": "CASE-{YYYY}-{####}",
+  "title_field": "case_title",
+  "fields": [
+    {
+      "fieldname": "case_title",
+      "fieldtype": "Data",
+      "label": "Case Title",
+      "reqd": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "case_type",
+      "fieldtype": "Select",
+      "label": "Case Type",
+      "reqd": 1,
+      "options": "Asset Theft\nIndiscipline\nStaff Complaint\nIoT Alert\nProsecution\nIncident\nCompliance Violation",
+      "width": "50%"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "reqd": 1,
+      "options": "Reported\nUnder Review\nAssigned\nInvestigation\nEvidence Collection\nResolution Pending\nClosed\nArchived",
+      "default": "Reported",
+      "width": "50%"
+    },
+    {
+      "fieldname": "severity",
+      "fieldtype": "Select",
+      "label": "Severity",
+      "reqd": 1,
+      "options": "Critical\nHigh\nMedium\nLow",
+      "width": "50%"
+    },
+    {
+      "fieldname": "section_basic_info",
+      "fieldtype": "Section Break",
+      "label": "Basic Information"
+    },
+    {
+      "fieldname": "incident_date",
+      "fieldtype": "Datetime",
+      "label": "Date of Incident",
+      "reqd": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "reported_date",
+      "fieldtype": "Datetime",
+      "label": "Date Reported",
+      "reqd": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "reported_by",
+      "fieldtype": "Link",
+      "label": "Reported By",
+      "options": "User",
+      "reqd": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "location",
+      "fieldtype": "Link",
+      "label": "Location/Station",
+      "options": "Location",
+      "reqd": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "section_investigation",
+      "fieldtype": "Section Break",
+      "label": "Investigation Details"
+    },
+    {
+      "fieldname": "lead_investigator",
+      "fieldtype": "Link",
+      "label": "Lead Investigator",
+      "options": "User",
+      "width": "50%"
+    },
+    {
+      "fieldname": "investigation_status",
+      "fieldtype": "Select",
+      "label": "Investigation Status",
+      "options": "Not Started\nIn Progress\nOn Hold\nCompleted",
+      "width": "50%"
+    },
+    {
+      "fieldname": "sla_deadline",
+      "fieldtype": "Datetime",
+      "label": "SLA Deadline",
+      "width": "50%"
+    },
+    {
+      "fieldname": "section_details",
+      "fieldtype": "Section Break",
+      "label": "Case Details"
+    },
+    {
+      "fieldname": "incident_details",
+      "fieldtype": "Text Editor",
+      "label": "Incident Details",
+      "reqd": 1
+    },
+    {
+      "fieldname": "section_financial",
+      "fieldtype": "Section Break",
+      "label": "Financial Impact"
+    },
+    {
+      "fieldname": "financial_impact",
+      "fieldtype": "Currency",
+      "label": "Financial Impact (Amount)",
+      "width": "50%"
+    },
+    {
+      "fieldname": "currency",
+      "fieldtype": "Link",
+      "label": "Currency",
+      "options": "Currency",
+      "width": "50%"
+    },
+    {
+      "fieldname": "section_links",
+      "fieldtype": "Section Break",
+      "label": "Related Records"
+    },
+    {
+      "fieldname": "related_asset",
+      "fieldtype": "Link",
+      "label": "Related Asset",
+      "options": "Asset",
+      "width": "50%"
+    },
+    {
+      "fieldname": "related_employee",
+      "fieldtype": "Link",
+      "label": "Related Employee",
+      "options": "Employee",
+      "width": "50%"
+    },
+    {
+      "fieldname": "related_visitor",
+      "fieldtype": "Link",
+      "label": "Related Visitor",
+      "options": "Visitor",
+      "width": "50%"
+    },
+    {
+      "fieldname": "related_iot_event",
+      "fieldtype": "Link",
+      "label": "Related IoT Event",
+      "options": "IoT Event Log",
+      "width": "50%"
+    },
+    {
+      "fieldname": "related_helpdesk_issue",
+      "fieldtype": "Link",
+      "label": "Related Helpdesk Issue",
+      "options": "Issue",
+      "width": "50%"
+    },
+    {
+      "fieldname": "section_resolution",
+      "fieldtype": "Section Break",
+      "label": "Resolution"
+    },
+    {
+      "fieldname": "resolution_date",
+      "fieldtype": "Datetime",
+      "label": "Resolution Date",
+      "width": "50%"
+    },
+    {
+      "fieldname": "resolution_notes",
+      "fieldtype": "Text Editor",
+      "label": "Resolution Notes"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "perm_read": 1,
+      "perm_write": 1,
+      "perm_create": 1,
+      "perm_delete": 1,
+      "perm_submit": 1,
+      "perm_amend": 1
+    },
+    {
+      "role": "Security Manager",
+      "perm_read": 1,
+      "perm_write": 1,
+      "perm_create": 1,
+      "perm_submit": 1,
+      "perm_amend": 1
+    },
+    {
+      "role": "Lead Investigator",
+      "perm_read": 1,
+      "perm_write": 1,
+      "perm_create": 1,
+      "perm_submit": 1,
+      "perm_amend": 1
+    },
+    {
+      "role": "Investigator",
+      "perm_read": 1,
+      "perm_write": 1,
+      "perm_create": 1
+    },
+    {
+      "role": "Legal Officer",
+      "perm_read": 1,
+      "perm_write": 1
+    }
+  ]
+}
+

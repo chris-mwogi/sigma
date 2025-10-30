@@ -1,0 +1,290 @@
+{
+  "autoname": "VIS-{YYYY}-{####}",
+  "creation": "2025-10-24 00:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "Document",
+  "engine": "InnoDB",
+  "field_order": [
+    "visitor_type",
+    "first_name",
+    "last_name",
+    "column_break_3",
+    "email",
+    "phone",
+    "section_break_5",
+    "identification_type",
+    "identification_number",
+    "column_break_7",
+    "date_of_birth",
+    "gender",
+    "section_break_8",
+    "company_name",
+    "designation",
+    "column_break_10",
+    "department",
+    "purpose_of_visit",
+    "section_break_11",
+    "photo",
+    "identification_document",
+    "column_break_13",
+    "vms_facial_id",
+    "vms_platform",
+    "section_break_14",
+    "status",
+    "is_blacklisted",
+    "blacklist_reason",
+    "column_break_16",
+    "created_by_guard",
+    "created_at_location",
+    "section_break_17",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "visitor_type",
+      "fieldtype": "Select",
+      "label": "Visitor Type",
+      "options": "External Visitor\nInter-Station Staff\nContractor\nVendor",
+      "reqd": 1,
+      "description": "Classification of visitor"
+    },
+    {
+      "fieldname": "first_name",
+      "fieldtype": "Data",
+      "label": "First Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "last_name",
+      "fieldtype": "Data",
+      "label": "Last Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "email",
+      "fieldtype": "Email",
+      "label": "Email"
+    },
+    {
+      "fieldname": "phone",
+      "fieldtype": "Phone",
+      "label": "Phone"
+    },
+    {
+      "fieldname": "section_break_5",
+      "fieldtype": "Section Break",
+      "label": "Identification"
+    },
+    {
+      "fieldname": "identification_type",
+      "fieldtype": "Select",
+      "label": "Identification Type",
+      "options": "Passport\nDriver License\nNational ID\nCompany ID\nOther",
+      "description": "Type of identification document"
+    },
+    {
+      "fieldname": "identification_number",
+      "fieldtype": "Data",
+      "label": "Identification Number"
+    },
+    {
+      "fieldname": "column_break_7",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "date_of_birth",
+      "fieldtype": "Date",
+      "label": "Date of Birth"
+    },
+    {
+      "fieldname": "gender",
+      "fieldtype": "Select",
+      "label": "Gender",
+      "options": "Male\nFemale\nOther\nPrefer Not to Say"
+    },
+    {
+      "fieldname": "section_break_8",
+      "fieldtype": "Section Break",
+      "label": "Organization Details"
+    },
+    {
+      "fieldname": "company_name",
+      "fieldtype": "Data",
+      "label": "Company/Organization Name"
+    },
+    {
+      "fieldname": "designation",
+      "fieldtype": "Data",
+      "label": "Designation/Title"
+    },
+    {
+      "fieldname": "column_break_10",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "department",
+      "fieldtype": "Data",
+      "label": "Department"
+    },
+    {
+      "fieldname": "purpose_of_visit",
+      "fieldtype": "Small Text",
+      "label": "Purpose of Visit"
+    },
+    {
+      "fieldname": "section_break_11",
+      "fieldtype": "Section Break",
+      "label": "Media & VMS"
+    },
+    {
+      "fieldname": "photo",
+      "fieldtype": "Attach Image",
+      "label": "Photo"
+    },
+    {
+      "fieldname": "identification_document",
+      "fieldtype": "Attach",
+      "label": "Identification Document"
+    },
+    {
+      "fieldname": "column_break_13",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "vms_facial_id",
+      "fieldtype": "Data",
+      "label": "VMS Facial Recognition ID",
+      "read_only": 1,
+      "description": "ID from VMS facial recognition system"
+    },
+    {
+      "fieldname": "vms_platform",
+      "fieldtype": "Select",
+      "label": "VMS Platform",
+      "options": "Genetec\nHikvision\nOther",
+      "read_only": 1
+    },
+    {
+      "fieldname": "section_break_14",
+      "fieldtype": "Section Break",
+      "label": "Status & Compliance"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Active\nInactive\nArchived",
+      "default": "Active"
+    },
+    {
+      "fieldname": "is_blacklisted",
+      "fieldtype": "Check",
+      "label": "Is Blacklisted",
+      "default": 0
+    },
+    {
+      "fieldname": "blacklist_reason",
+      "fieldtype": "Small Text",
+      "label": "Blacklist Reason",
+      "depends_on": "eval:doc.is_blacklisted == 1"
+    },
+    {
+      "fieldname": "column_break_16",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "created_by_guard",
+      "fieldtype": "Link",
+      "label": "Created By Guard",
+      "options": "Security Resource",
+      "read_only": 1
+    },
+    {
+      "fieldname": "created_at_location",
+      "fieldtype": "Link",
+      "label": "Created At Location",
+      "options": "Location",
+      "read_only": 1
+    },
+    {
+      "fieldname": "section_break_17",
+      "fieldtype": "Section Break",
+      "label": "Additional Information"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text Editor",
+      "label": "Notes"
+    }
+  ],
+  "links": [],
+  "modified": "2025-10-24 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sigma Visitor Management",
+  "name": "Visitor",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "submit": 0,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 0,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Security Manager",
+      "share": 0,
+      "submit": 0,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 0,
+      "email": 0,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Guard",
+      "share": 0,
+      "submit": 0,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 0,
+      "email": 0,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Receptionist",
+      "share": 0,
+      "submit": 0,
+      "write": 1
+    }
+  ],
+  "quick_entry": 1,
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1
+}
+

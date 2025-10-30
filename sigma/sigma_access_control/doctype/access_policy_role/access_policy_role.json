@@ -1,0 +1,35 @@
+{
+  "doctype": "DocType",
+  "name": "Access Policy Role",
+  "module": "Sigma Access Control",
+  "custom": 0,
+  "istable": 1,
+  "editable_grid": 1,
+  "track_changes": 0,
+  "allow_copy": 0,
+  "allow_rename": 0,
+  "is_tree": 0,
+  "fields": [
+    {
+      "fieldname": "role",
+      "label": "Role",
+      "fieldtype": "Link",
+      "options": "Role",
+      "reqd": 1
+    },
+    {
+      "fieldname": "access_level",
+      "label": "Access Level",
+      "fieldtype": "Select",
+      "options": "\nFull Access\nLimited Access\nNo Access",
+      "reqd": 1
+    },
+    {
+      "fieldname": "remarks",
+      "label": "Remarks",
+      "fieldtype": "Small Text"
+    }
+  ],
+  "permissions": [],
+  "engine": "InnoDB"
+}

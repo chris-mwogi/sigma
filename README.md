@@ -1,6 +1,6 @@
 ### Sigma
 
-Security Management & Control System
+Security Integrated System
 
 ### Installation
 
@@ -27,6 +27,7 @@ Pre-commit is configured to use the following tools for checking and formatting 
 - eslint
 - prettier
 - pyupgrade
+
 ### CI
 
 This app can use GitHub Actions for CI. The following workflows are configured:

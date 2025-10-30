@@ -1,0 +1,141 @@
+{
+  "doctype": "DocType",
+  "name": "Asset Event Log",
+  "module": "Sigma Asset Integrations",
+  "custom": 0,
+  "is_submittable": 0,
+  "autoname": "ASSETEVT-{YYYY}-{####}",
+  "fields": [
+    {
+      "fieldname": "asset",
+      "fieldtype": "Link",
+      "label": "Asset",
+      "options": "Asset",
+      "reqd": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "event_type",
+      "fieldtype": "Select",
+      "label": "Event Type",
+      "reqd": 1,
+      "options": "GPS Update\nNetwork Event\nComponent Change\nStatus Change\nAlert\nOther",
+      "width": "50%"
+    },
+    {
+      "fieldname": "event_timestamp",
+      "fieldtype": "Datetime",
+      "label": "Event Timestamp",
+      "reqd": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "source",
+      "fieldtype": "Data",
+      "label": "Source",
+      "help": "e.g., Traccar, Teltonika, Manual, System",
+      "width": "50%"
+    },
+    {
+      "fieldname": "section_location",
+      "fieldtype": "Section Break",
+      "label": "Location Information"
+    },
+    {
+      "fieldname": "latitude",
+      "fieldtype": "Float",
+      "label": "Latitude",
+      "width": "33%"
+    },
+    {
+      "fieldname": "longitude",
+      "fieldtype": "Float",
+      "label": "Longitude",
+      "width": "33%"
+    },
+    {
+      "fieldname": "altitude",
+      "fieldtype": "Float",
+      "label": "Altitude (meters)",
+      "width": "33%"
+    },
+    {
+      "fieldname": "speed",
+      "fieldtype": "Float",
+      "label": "Speed (km/h)",
+      "width": "50%"
+    },
+    {
+      "fieldname": "heading",
+      "fieldtype": "Float",
+      "label": "Heading (degrees)",
+      "width": "50%"
+    },
+    {
+      "fieldname": "section_payload",
+      "fieldtype": "Section Break",
+      "label": "Event Data"
+    },
+    {
+      "fieldname": "event_data",
+      "fieldtype": "Code",
+      "label": "Event Data (JSON)",
+      "options": "json",
+      "help": "Structured event data in JSON format"
+    },
+    {
+      "fieldname": "raw_data",
+      "fieldtype": "Code",
+      "label": "Raw Data",
+      "options": "json",
+      "help": "Raw webhook payload for debugging"
+    },
+    {
+      "fieldname": "section_processing",
+      "fieldtype": "Section Break",
+      "label": "Processing Status"
+    },
+    {
+      "fieldname": "processed",
+      "fieldtype": "Check",
+      "label": "Processed",
+      "default": 0
+    },
+    {
+      "fieldname": "processing_date",
+      "fieldtype": "Datetime",
+      "label": "Processing Date",
+      "read_only": 1
+    },
+    {
+      "fieldname": "processing_notes",
+      "fieldtype": "Text",
+      "label": "Processing Notes"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "perm_read": 1,
+      "perm_write": 1,
+      "perm_create": 1,
+      "perm_delete": 1
+    },
+    {
+      "role": "Security Manager",
+      "perm_read": 1,
+      "perm_write": 1,
+      "perm_create": 1
+    },
+    {
+      "role": "Lead Investigator",
+      "perm_read": 1,
+      "perm_write": 1
+    },
+    {
+      "role": "Investigator",
+      "perm_read": 1
+    }
+  ]
+}
+

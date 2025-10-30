@@ -1,0 +1,103 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "autoname": "RD-{YYYY}-{####}",
+  "creation": "2025-10-24 10:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "Document",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "deployment_date",
+    "location",
+    "service_contract",
+    "resources_section",
+    "resources_table",
+    "notes_section",
+    "deployment_notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "deployment_date",
+      "fieldtype": "Date",
+      "label": "Deployment Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "location",
+      "fieldtype": "Link",
+      "label": "Location",
+      "options": "Location",
+      "reqd": 1
+    },
+    {
+      "fieldname": "service_contract",
+      "fieldtype": "Link",
+      "label": "Service Contract",
+      "options": "Service Contract"
+    },
+    {
+      "fieldname": "resources_section",
+      "fieldtype": "Section Break",
+      "label": "Deployed Resources"
+    },
+    {
+      "fieldname": "resources_table",
+      "fieldtype": "Table",
+      "label": "Resources",
+      "options": "Resource Deployment Item"
+    },
+    {
+      "fieldname": "notes_section",
+      "fieldtype": "Section Break",
+      "label": "Notes"
+    },
+    {
+      "fieldname": "deployment_notes",
+      "fieldtype": "Text",
+      "label": "Deployment Notes"
+    }
+  ],
+  "idx": 1,
+  "is_submittable": 1,
+  "links": [],
+  "modified": "2025-10-24 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sigma Guard Monitoring",
+  "name": "Resource Deployment",
+  "naming_rule": "NAMING_SERIES",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Compliance Officer",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    }
+  ],
+  "quick_entry": 1,
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1
+}
+

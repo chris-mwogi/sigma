@@ -1,0 +1,23 @@
+[
+  {
+    "doctype": "Workflow",
+    "workflow_name": "Case Workflow",
+    "document_type": "Case",
+    "is_active": 1,
+    "send_email_alert": 1,
+    "workflow_state_field": "status",
+    "states": [
+      {"state": "Open", "doc_status": 0, "allow_edit": "Security Officer"},
+      {"state": "In Investigation", "doc_status": 0, "allow_edit": "Security Officer"},
+      {"state": "Awaiting Legal", "doc_status": 0, "allow_edit": "Case Supervisor"},
+      {"state": "Resolved", "doc_status": 1, "allow_edit": "Security Officer"},
+      {"state": "Closed", "doc_status": 1, "allow_edit": "Legal Officer"}
+    ],
+    "transitions": [
+      {"state": "Open", "action": "Start Investigation", "next_state": "In Investigation", "allowed": "Security Officer"},
+      {"state": "In Investigation", "action": "Forward to Legal", "next_state": "Awaiting Legal", "allowed": "Case Supervisor"},
+      {"state": "Awaiting Legal", "action": "Resolve", "next_state": "Resolved", "allowed": "Legal Officer"},
+      {"state": "Resolved", "action": "Close Case", "next_state": "Closed", "allowed": "Case Supervisor"}
+    ]
+  }
+]

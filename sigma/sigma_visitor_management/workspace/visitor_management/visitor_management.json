@@ -1,0 +1,182 @@
+{
+ "app": "sigma",
+ "charts": [],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h3\\\"><b>Visitor Management Hub</b></span>\",\"col\":12}},{\"type\":\"paragraph\",\"data\":{\"text\":\"<p>Comprehensive visitor tracking and management system for monitoring facility access, registrations, and visitor activities.</p>\",\"col\":12}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Visitors\",\"col\":3}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Visitors Today\",\"col\":3}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Active Visitor Badges\",\"col\":3}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Visitor Registrations This Month\",\"col\":3}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quick Actions</b></span>\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Visitor\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Visitor Registration\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Check In/Out\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Visitor Badges\",\"col\":3}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Visitor Management</b></span>\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Visitors\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Registration & Access\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Staff Visits\",\"col\":4}}]",
+ "creation": "2025-10-26 00:00:00",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "users",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Visitor Management",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Visitors",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Visitor",
+   "link_count": 0,
+   "link_to": "Visitor",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Visitor Badge",
+   "link_count": 0,
+   "link_to": "Visitor Badge",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "VMS Event",
+   "link_count": 0,
+   "link_to": "VMS Event",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Registration & Access",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Visitor Registration",
+   "link_count": 0,
+   "link_to": "Visitor Registration",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Visitor Checkin Checkout",
+   "link_count": 0,
+   "link_to": "Visitor Checkin Checkout",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Visitor Access Log",
+   "link_count": 0,
+   "link_to": "Visitor Access Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Staff Visits",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Inter Station Staff Visit",
+   "link_count": 0,
+   "link_to": "Inter Station Staff Visit",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-10-30 14:41:43.916747",
+ "modified_by": "Administrator",
+ "module": "Sigma Visitor Management",
+ "name": "Visitor Management",
+ "number_cards": [
+  {
+   "label": "Total Visitors",
+   "number_card_name": "Total Visitors"
+  },
+  {
+   "label": "Visitors Today",
+   "number_card_name": "Visitors Today"
+  },
+  {
+   "label": "Active Visitor Badges",
+   "number_card_name": "Active Visitor Badges"
+  },
+  {
+   "label": "Visitor Registrations This Month",
+   "number_card_name": "Visitor Registrations This Month"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 10.0,
+ "shortcuts": [
+  {
+   "color": "#29CD42",
+   "format": "{} New",
+   "icon": "user-plus",
+   "label": "New Visitor",
+   "link_to": "Visitor",
+   "stats_filter": "{\"docstatus\": 0}",
+   "type": "DocType"
+  },
+  {
+   "color": "#667eea",
+   "icon": "clipboard",
+   "label": "Visitor Registration",
+   "link_to": "Visitor Registration",
+   "type": "DocType"
+  },
+  {
+   "color": "#4C51BF",
+   "icon": "sign-in",
+   "label": "Check In/Out",
+   "link_to": "Visitor Checkin Checkout",
+   "type": "DocType"
+  },
+  {
+   "color": "#F56565",
+   "format": "{} Active",
+   "icon": "id-badge",
+   "label": "Visitor Badges",
+   "link_to": "Visitor Badge",
+   "stats_filter": "{\"status\": \"Active\"}",
+   "type": "DocType"
+  }
+ ],
+ "title": "Visitor Management",
+ "type": "Workspace"
+}

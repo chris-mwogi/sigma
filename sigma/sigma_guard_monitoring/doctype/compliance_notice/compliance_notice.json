@@ -1,0 +1,179 @@
+{
+  "autoname": "CN-{YYYY}-{####}",
+  "creation": "2025-10-24 00:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "Document",
+  "engine": "InnoDB",
+  "field_order": [
+    "notice_date",
+    "supplier",
+    "service_contract",
+    "column_break_4",
+    "status",
+    "compliance_record",
+    "section_break_6",
+    "violation_type",
+    "description",
+    "section_break_7",
+    "response_deadline",
+    "provider_response",
+    "response_date",
+    "section_break_8",
+    "surcharge_applicable",
+    "surcharge_record",
+    "section_break_9",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "notice_date",
+      "fieldtype": "Date",
+      "label": "Notice Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "supplier",
+      "fieldtype": "Link",
+      "label": "Supplier",
+      "options": "Supplier",
+      "reqd": 1
+    },
+    {
+      "fieldname": "service_contract",
+      "fieldtype": "Link",
+      "label": "Service Contract",
+      "options": "Contract",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_4",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Pending\nResponded\nResolved\nEscalated",
+      "default": "Pending"
+    },
+    {
+      "fieldname": "compliance_record",
+      "fieldtype": "Link",
+      "label": "Compliance Record",
+      "options": "SLA Compliance Record"
+    },
+    {
+      "fieldname": "section_break_6",
+      "fieldtype": "Section Break",
+      "label": "Violation Details"
+    },
+    {
+      "fieldname": "violation_type",
+      "fieldtype": "Select",
+      "label": "Violation Type",
+      "options": "Resource Shortfall\nLate Arrival\nEarly Departure\nAbsence\nQuality Issue\nOther",
+      "reqd": 1
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Text Editor",
+      "label": "Description"
+    },
+    {
+      "fieldname": "section_break_7",
+      "fieldtype": "Section Break",
+      "label": "Response"
+    },
+    {
+      "fieldname": "response_deadline",
+      "fieldtype": "Date",
+      "label": "Response Deadline",
+      "reqd": 1
+    },
+    {
+      "fieldname": "provider_response",
+      "fieldtype": "Text Editor",
+      "label": "Provider Response"
+    },
+    {
+      "fieldname": "response_date",
+      "fieldtype": "Date",
+      "label": "Response Date",
+      "read_only": 1
+    },
+    {
+      "fieldname": "section_break_8",
+      "fieldtype": "Section Break",
+      "label": "Financial Impact"
+    },
+    {
+      "fieldname": "surcharge_applicable",
+      "fieldtype": "Check",
+      "label": "Surcharge Applicable"
+    },
+    {
+      "fieldname": "surcharge_record",
+      "fieldtype": "Link",
+      "label": "Surcharge Record",
+      "options": "Surcharge Record",
+      "read_only": 1
+    },
+    {
+      "fieldname": "section_break_9",
+      "fieldtype": "Section Break",
+      "label": "Notes"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text Editor",
+      "label": "Notes"
+    }
+  ],
+  "is_submittable": 1,
+  "links": [],
+  "modified": "2025-10-24 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sigma Guard Monitoring",
+  "name": "Compliance Notice",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Compliance Officer",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Service Provider"
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1
+}
+

@@ -1,0 +1,53 @@
+{
+  "doctype": "DocType",
+  "name": "Access Event",
+  "module": "Sigma Access Control",
+  "custom": false,
+  "fields": [
+    {
+      "fieldname": "access_point",
+      "label": "Access Point",
+      "fieldtype": "Link",
+      "options": "Access Point"
+    },
+    {
+      "fieldname": "card_id",
+      "label": "Card/Badge ID",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "employee",
+      "label": "Employee",
+      "fieldtype": "Link",
+      "options": "Employee"
+    },
+    {
+      "fieldname": "timestamp",
+      "label": "Timestamp",
+      "fieldtype": "Datetime"
+    },
+    {
+      "fieldname": "result",
+      "label": "Result",
+      "fieldtype": "Select",
+      "options": "\nGranted\nDenied\nPending"
+    },
+    {
+      "fieldname": "notes",
+      "label": "Notes",
+      "fieldtype": "Text"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Access Control Officer",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Access Auditor",
+      "read": 1
+    }
+  ]
+}

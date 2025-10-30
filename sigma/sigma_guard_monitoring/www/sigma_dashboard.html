@@ -1,0 +1,806 @@
+{% extends "templates/web.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block page_content %}
+<div id="sigma-dashboard" class="sigma-dashboard">
+	<div class="dashboard-header">
+		<h1>Sigma Guard Monitoring Dashboard</h1>
+		<div class="dashboard-controls">
+			<button class="btn btn-primary" onclick="dashboardInstance.refreshDashboard()">
+				<i class="icon-refresh"></i> Refresh
+			</button>
+			<button class="btn btn-default" onclick="dashboardInstance.exportDashboard()">
+				<i class="icon-download"></i> Export
+			</button>
+		</div>
+	</div>
+
+	<!-- Key Performance Indicators Section -->
+	<div class="dashboard-section kpi-section">
+		<h2>Key Performance Indicators</h2>
+		<div class="kpi-cards" id="kpi-cards">
+			<!-- KPI cards will be populated by JavaScript -->
+		</div>
+	</div>
+
+	<!-- Resource Management Section -->
+	<div class="dashboard-section">
+		<h2>Resource Management</h2>
+		<div class="charts-row">
+			<div class="chart-container">
+				<canvas id="resourceDeploymentChart"></canvas>
+			</div>
+			<div class="chart-container">
+				<canvas id="resourceAvailabilityChart"></canvas>
+			</div>
+		</div>
+	</div>
+
+	<!-- Compliance & SLA Section -->
+	<div class="dashboard-section">
+		<h2>Compliance & SLA</h2>
+		<div class="charts-row">
+			<div class="chart-container">
+				<canvas id="complianceTrendChart"></canvas>
+			</div>
+			<div class="chart-container">
+				<canvas id="complianceStatusChart"></canvas>
+			</div>
+		</div>
+	</div>
+
+	<!-- Patrol & Verification Section -->
+	<div class="dashboard-section">
+		<h2>Patrol & Verification</h2>
+		<div class="charts-row">
+			<div class="chart-container">
+				<canvas id="patrolCompletionChart"></canvas>
+			</div>
+			<div class="chart-container">
+				<canvas id="discrepancySeverityChart"></canvas>
+			</div>
+		</div>
+	</div>
+
+	<!-- Financial Metrics Section -->
+	<div class="dashboard-section">
+		<h2>Financial Metrics</h2>
+		<div class="charts-row">
+			<div class="chart-container">
+				<canvas id="surchargesChart"></canvas>
+			</div>
+			<div class="chart-container">
+				<canvas id="surchargeMethodChart"></canvas>
+			</div>
+		</div>
+	</div>
+
+	<!-- Visitor Management Section -->
+	<div class="dashboard-section">
+		<h2>Visitor Management</h2>
+		<div class="charts-row">
+			<div class="chart-container">
+				<canvas id="visitorAssignmentChart"></canvas>
+			</div>
+			<div class="chart-container">
+				<canvas id="evacuationStatusChart"></canvas>
+			</div>
+		</div>
+	</div>
+
+	<!-- Quick Links Section -->
+	<div class="dashboard-section quick-links-section">
+		<h2>Quick Links</h2>
+		<div class="quick-links">
+			<a href="/app/security-resource" class="quick-link">
+				<i class="icon-users"></i>
+				<span>Security Resources</span>
+			</a>
+			<a href="/app/resource-deployment" class="quick-link">
+				<i class="icon-check"></i>
+				<span>Deployments</span>
+			</a>
+			<a href="/app/sla-compliance-record" class="quick-link">
+				<i class="icon-check-circle"></i>
+				<span>Compliance Records</span>
+			</a>
+			<a href="/app/compliance-notice" class="quick-link">
+				<i class="icon-alert"></i>
+				<span>Compliance Notices</span>
+			</a>
+			<a href="/app/patrol-schedule" class="quick-link">
+				<i class="icon-map"></i>
+				<span>Patrol Schedules</span>
+			</a>
+			<a href="/app/patrol-verification-record" class="quick-link">
+				<i class="icon-check"></i>
+				<span>Verifications</span>
+			</a>
+			<a href="/app/visitor-guard-assignment" class="quick-link">
+				<i class="icon-users"></i>
+				<span>Visitor Assignments</span>
+			</a>
+			<a href="/app/emergency-evacuation-tracking" class="quick-link">
+				<i class="icon-warning"></i>
+				<span>Evacuations</span>
+			</a>
+		</div>
+	</div>
+</div>
+
+<style>
+.sigma-dashboard {
+	padding: 20px;
+	background-color: #f5f5f5;
+}
+
+.dashboard-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 30px;
+	background: white;
+	padding: 20px;
+	border-radius: 4px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.dashboard-header h1 {
+	margin: 0;
+	font-size: 28px;
+	color: #333;
+}
+
+.dashboard-controls {
+	display: flex;
+	gap: 10px;
+}
+
+.dashboard-section {
+	background: white;
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 4px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.dashboard-section h2 {
+	margin-top: 0;
+	margin-bottom: 20px;
+	font-size: 18px;
+	color: #333;
+	border-bottom: 2px solid #007bff;
+	padding-bottom: 10px;
+}
+
+.kpi-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 20px;
+}
+
+.kpi-card {
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	color: white;
+	padding: 20px;
+	border-radius: 8px;
+	text-align: center;
+	box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+	transition: transform 0.3s ease;
+}
+
+.kpi-card:hover {
+	transform: translateY(-5px);
+}
+
+.kpi-label {
+	font-size: 12px;
+	opacity: 0.9;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.kpi-value {
+	font-size: 32px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.kpi-unit {
+	font-size: 12px;
+	opacity: 0.8;
+	margin-bottom: 10px;
+}
+
+.kpi-trend {
+	font-size: 12px;
+	padding: 5px 10px;
+	background: rgba(255,255,255,0.2);
+	border-radius: 4px;
+	display: inline-block;
+}
+
+.kpi-trend.positive {
+	color: #4caf50;
+}
+
+.kpi-trend.negative {
+	color: #f44336;
+}
+
+.charts-row {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	gap: 20px;
+	margin-bottom: 20px;
+}
+
+.chart-container {
+	background: white;
+	padding: 15px;
+	border-radius: 4px;
+	border: 1px solid #e0e0e0;
+	position: relative;
+	height: 300px;
+}
+
+.quick-links {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: 15px;
+}
+
+.quick-link {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	color: white;
+	text-decoration: none;
+	border-radius: 8px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.quick-link:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+	color: white;
+}
+
+.quick-link i {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.quick-link span {
+	font-size: 12px;
+	text-align: center;
+}
+
+@media (max-width: 768px) {
+	.charts-row {
+		grid-template-columns: 1fr;
+	}
+	
+	.kpi-cards {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+</style>
+
+<!-- Load Chart.js library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+
+<!-- Load dashboard JavaScript -->
+<script>
+// Global dashboard instance
+let dashboardInstance = null;
+
+// Wait for Frappe to be ready
+frappe.ready(function() {
+	// Load the dashboard module
+	frappe.call({
+		method: 'frappe.client.get_list',
+		args: {
+			doctype: 'DocType',
+			filters: { name: 'Security Resource' },
+			limit_page_length: 1
+		},
+		callback: function(r) {
+			if (r.message && r.message.length > 0) {
+				// Dashboard module is available, initialize it
+				if (typeof sigma !== 'undefined' && sigma.dashboard && sigma.dashboard.Dashboard) {
+					dashboardInstance = new sigma.dashboard.Dashboard();
+				} else {
+					console.error('Dashboard module not loaded');
+				}
+			}
+		}
+	});
+});
+</script>
+
+<!-- Inline dashboard initialization script -->
+<script>
+frappe.provide('sigma.dashboard');
+
+sigma.dashboard.Dashboard = class {
+	constructor() {
+		this.charts = {};
+		this.data = {};
+		this.init();
+	}
+
+	init() {
+		this.loadDashboardData();
+		this.initializeCharts();
+		this.setupRefreshInterval();
+	}
+
+	loadDashboardData() {
+		// Load all dashboard data
+		frappe.call({
+			method: 'sigma.sigma_guard_monitoring.dashboard_sources.get_provider_performance_data',
+			callback: (r) => {
+				if (r.message) {
+					this.data.provider_performance = r.message;
+					this.updateProviderCharts();
+				}
+			},
+			error: (r) => {
+				console.error('Error loading provider performance data:', r);
+			}
+		});
+
+		frappe.call({
+			method: 'sigma.sigma_guard_monitoring.dashboard_sources.get_sla_compliance_trends',
+			callback: (r) => {
+				if (r.message) {
+					this.data.compliance_trends = r.message;
+					this.updateComplianceCharts();
+				}
+			},
+			error: (r) => {
+				console.error('Error loading compliance trends:', r);
+			}
+		});
+
+		frappe.call({
+			method: 'sigma.sigma_guard_monitoring.dashboard_sources.get_financial_impact_data',
+			callback: (r) => {
+				if (r.message) {
+					this.data.financial_impact = r.message;
+					this.updateFinancialCharts();
+				}
+			},
+			error: (r) => {
+				console.error('Error loading financial impact data:', r);
+			}
+		});
+
+		frappe.call({
+			method: 'sigma.sigma_guard_monitoring.dashboard_sources.get_patrol_summary_data',
+			callback: (r) => {
+				if (r.message) {
+					this.data.patrol_summary = r.message;
+					this.updatePatrolCharts();
+				}
+			},
+			error: (r) => {
+				console.error('Error loading patrol summary:', r);
+			}
+		});
+
+		frappe.call({
+			method: 'sigma.sigma_guard_monitoring.dashboard_sources.get_resource_deployment_data',
+			callback: (r) => {
+				if (r.message) {
+					this.data.resource_deployment = r.message;
+					this.updateResourceCharts();
+				}
+			},
+			error: (r) => {
+				console.error('Error loading resource deployment data:', r);
+			}
+		});
+
+		frappe.call({
+			method: 'sigma.sigma_guard_monitoring.dashboard_sources.get_visitor_management_data',
+			callback: (r) => {
+				if (r.message) {
+					this.data.visitor_management = r.message;
+					this.updateVisitorCharts();
+				}
+			},
+			error: (r) => {
+				console.error('Error loading visitor management data:', r);
+			}
+		});
+	}
+
+	initializeCharts() {
+		// Initialize Chart.js instances for all charts
+		this.createResourceDeploymentChart();
+		this.createResourceAvailabilityChart();
+		this.createComplianceTrendChart();
+		this.createComplianceStatusChart();
+		this.createPatrolCompletionChart();
+		this.createDiscrepancySeverityChart();
+		this.createSurchargesChart();
+		this.createSurchargeMethodChart();
+		this.createVisitorAssignmentChart();
+		this.createEvacuationStatusChart();
+	}
+
+	createResourceDeploymentChart() {
+		const ctx = document.getElementById('resourceDeploymentChart');
+		if (!ctx) return;
+
+		this.charts.resourceDeployment = new Chart(ctx, {
+			type: 'doughnut',
+			data: {
+				labels: ['Guard', 'K9', 'Vehicle', 'Equipment', 'Station'],
+				datasets: [{
+					data: [0, 0, 0, 0, 0],
+					backgroundColor: [
+						'#FF6384',
+						'#36A2EB',
+						'#FFCE56',
+						'#4BC0C0',
+						'#9966FF'
+					]
+				}]
+			},
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,
+				plugins: {
+					title: {
+						display: true,
+						text: 'Resource Deployment by Type'
+					}
+				}
+			}
+		});
+	}
+
+	createResourceAvailabilityChart() {
+		const ctx = document.getElementById('resourceAvailabilityChart');
+		if (!ctx) return;
+
+		this.charts.resourceAvailability = new Chart(ctx, {
+			type: 'bar',
+			data: {
+				labels: ['Guard', 'K9', 'Vehicle', 'Equipment', 'Station'],
+				datasets: [
+					{
+						label: 'Active',
+						data: [0, 0, 0, 0, 0],
+						backgroundColor: '#4CAF50'
+					},
+					{
+						label: 'Inactive',
+						data: [0, 0, 0, 0, 0],
+						backgroundColor: '#F44336'
+					}
+				]
+			},
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,
+				plugins: {
+					title: {
+						display: true,
+						text: 'Resource Availability'
+					}
+				},
+				scales: {
+					x: { stacked: true },
+					y: { stacked: true }
+				}
+			}
+		});
+	}
+
+	createComplianceTrendChart() {
+		const ctx = document.getElementById('complianceTrendChart');
+		if (!ctx) return;
+
+		this.charts.complianceTrend = new Chart(ctx, {
+			type: 'line',
+			data: {
+				labels: [],
+				datasets: [{
+					label: 'Compliance Score',
+					data: [],
+					borderColor: '#007bff',
+					backgroundColor: 'rgba(0, 123, 255, 0.1)',
+					tension: 0.4,
+					fill: true
+				}]
+			},
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,
+				plugins: {
+					title: {
+						display: true,
+						text: 'SLA Compliance Trend (30 Days)'
+					}
+				},
+				scales: {
+					y: {
+						beginAtZero: true,
+						max: 100
+					}
+				}
+			}
+		});
+	}
+
+	createComplianceStatusChart() {
+		const ctx = document.getElementById('complianceStatusChart');
+		if (!ctx) return;
+
+		this.charts.complianceStatus = new Chart(ctx, {
+			type: 'pie',
+			data: {
+				labels: ['Compliant', 'Non-Compliant'],
+				datasets: [{
+					data: [0, 0],
+					backgroundColor: ['#4CAF50', '#F44336']
+				}]
+			},
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,
+				plugins: {
+					title: {
+						display: true,
+						text: 'Compliance Status Distribution'
+					}
+				}
+			}
+		});
+	}
+
+	createPatrolCompletionChart() {
+		const ctx = document.getElementById('patrolCompletionChart');
+		if (!ctx) return;
+
+		this.charts.patrolCompletion = new Chart(ctx, {
+			type: 'doughnut',
+			data: {
+				labels: ['Completed', 'In Progress', 'Scheduled', 'Cancelled'],
+				datasets: [{
+					data: [0, 0, 0, 0],
+					backgroundColor: ['#4CAF50', '#2196F3', '#FFC107', '#F44336']
+				}]
+			},
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,
+				plugins: {
+					title: {
+						display: true,
+						text: 'Patrol Schedule Status'
+					}
+				}
+			}
+		});
+	}
+
+	createDiscrepancySeverityChart() {
+		const ctx = document.getElementById('discrepancySeverityChart');
+		if (!ctx) return;
+
+		this.charts.discrepancySeverity = new Chart(ctx, {
+			type: 'bar',
+			data: {
+				labels: ['Low', 'Medium', 'High', 'Critical'],
+				datasets: [{
+					label: 'Discrepancies',
+					data: [0, 0, 0, 0],
+					backgroundColor: ['#FFC107', '#FF9800', '#F44336', '#9C27B0']
+				}]
+			},
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,
+				plugins: {
+					title: {
+						display: true,
+						text: 'Discrepancies by Severity'
+					}
+				}
+			}
+		});
+	}
+
+	createSurchargesChart() {
+		const ctx = document.getElementById('surchargesChart');
+		if (!ctx) return;
+
+		this.charts.surcharges = new Chart(ctx, {
+			type: 'line',
+			data: {
+				labels: [],
+				datasets: [{
+					label: 'Surcharges',
+					data: [],
+					borderColor: '#F44336',
+					backgroundColor: 'rgba(244, 67, 54, 0.1)',
+					tension: 0.4,
+					fill: true
+				}]
+			},
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,
+				plugins: {
+					title: {
+						display: true,
+						text: 'Surcharges Over Time'
+					}
+				}
+			}
+		});
+	}
+
+	createSurchargeMethodChart() {
+		const ctx = document.getElementById('surchargeMethodChart');
+		if (!ctx) return;
+
+		this.charts.surchargeMethod = new Chart(ctx, {
+			type: 'pie',
+			data: {
+				labels: [],
+				datasets: [{
+					data: [],
+					backgroundColor: [
+						'#FF6384',
+						'#36A2EB',
+						'#FFCE56',
+						'#4BC0C0'
+					]
+				}]
+			},
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,
+				plugins: {
+					title: {
+						display: true,
+						text: 'Surcharges by Method'
+					}
+				}
+			}
+		});
+	}
+
+	createVisitorAssignmentChart() {
+		const ctx = document.getElementById('visitorAssignmentChart');
+		if (!ctx) return;
+
+		this.charts.visitorAssignment = new Chart(ctx, {
+			type: 'doughnut',
+			data: {
+				labels: ['Active', 'Checked Out'],
+				datasets: [{
+					data: [0, 0],
+					backgroundColor: ['#2196F3', '#4CAF50']
+				}]
+			},
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,
+				plugins: {
+					title: {
+						display: true,
+						text: 'Visitor Assignment Status'
+					}
+				}
+			}
+		});
+	}
+
+	createEvacuationStatusChart() {
+		const ctx = document.getElementById('evacuationStatusChart');
+		if (!ctx) return;
+
+		this.charts.evacuationStatus = new Chart(ctx, {
+			type: 'bar',
+			data: {
+				labels: ['Completed', 'In Progress', 'Initiated'],
+				datasets: [{
+					label: 'Evacuations',
+					data: [0, 0, 0],
+					backgroundColor: ['#4CAF50', '#2196F3', '#FFC107']
+				}]
+			},
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,
+				plugins: {
+					title: {
+						display: true,
+						text: 'Evacuation Status'
+					}
+				}
+			}
+		});
+	}
+
+	updateProviderCharts() {
+		// Update provider performance charts
+		if (this.data.provider_performance) {
+			// Update charts with provider data
+		}
+	}
+
+	updateComplianceCharts() {
+		// Update compliance charts
+		if (this.data.compliance_trends && this.charts.complianceTrend) {
+			// Update charts with compliance data
+		}
+	}
+
+	updateFinancialCharts() {
+		// Update financial charts
+		if (this.data.financial_impact) {
+			// Update charts with financial data
+		}
+	}
+
+	updatePatrolCharts() {
+		// Update patrol charts
+		if (this.data.patrol_summary && this.charts.patrolCompletion) {
+			// Update charts with patrol data
+		}
+	}
+
+	updateResourceCharts() {
+		// Update resource charts
+		if (this.data.resource_deployment) {
+			// Update charts with resource data
+		}
+	}
+
+	updateVisitorCharts() {
+		// Update visitor charts
+		if (this.data.visitor_management) {
+			// Update charts with visitor data
+		}
+	}
+
+	refreshDashboard() {
+		this.loadDashboardData();
+	}
+
+	exportDashboard() {
+		// Export dashboard data to CSV/PDF
+		frappe.msgprint('Dashboard export functionality coming soon');
+	}
+
+	setupRefreshInterval() {
+		// Auto-refresh dashboard every 5 minutes
+		setInterval(() => {
+			this.refreshDashboard();
+		}, 5 * 60 * 1000);
+	}
+};
+
+// Initialize dashboard when page loads
+frappe.ready(() => {
+	if (document.getElementById('sigma-dashboard')) {
+		dashboardInstance = new sigma.dashboard.Dashboard();
+	}
+});
+</script>
+{% endblock %}
+

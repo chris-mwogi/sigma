@@ -1,0 +1,264 @@
+[
+ {
+  "charts": [],
+  "content": "[]",
+  "creation": "2025-10-28 00:00:00.000000",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "octicon octicon-home",
+  "idx": 0,
+  "is_hidden": 0,
+  "label": "Sigma Home",
+  "type": "Workspace",
+  "links": [
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Case Management",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break",
+    "link_type": null,
+    "link_to": null
+   },
+   {
+    "dependencies": "",
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Cases",
+    "link_count": 0,
+    "link_to": "Case",
+    "link_type": "DocType",
+    "onboard": 0,
+    "type": "Link"
+   },
+   {
+    "dependencies": "",
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Incident Reports",
+    "link_count": 0,
+    "link_to": "Incident Report",
+    "link_type": "DocType",
+    "onboard": 0,
+    "type": "Link"
+   },
+   {
+    "dependencies": "",
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Legal Cases",
+    "link_count": 0,
+    "link_to": "Legal Case",
+    "link_type": "DocType",
+    "onboard": 0,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Access Control",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break",
+    "link_type": null,
+    "link_to": null
+   },
+   {
+    "dependencies": "",
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Access Events",
+    "link_count": 0,
+    "link_to": "Access Event",
+    "link_type": "DocType",
+    "onboard": 0,
+    "type": "Link"
+   },
+   {
+    "dependencies": "",
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Access Points",
+    "link_count": 0,
+    "link_to": "Access Point",
+    "link_type": "DocType",
+    "onboard": 0,
+    "type": "Link"
+   },
+   {
+    "dependencies": "",
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Access Policies",
+    "link_count": 0,
+    "link_to": "Access Policy",
+    "link_type": "DocType",
+    "onboard": 0,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Guard Monitoring",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break",
+    "link_type": null,
+    "link_to": null
+   },
+   {
+    "dependencies": "",
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Guard Shifts",
+    "link_count": 0,
+    "link_to": "Guard Shift",
+    "link_type": "DocType",
+    "onboard": 0,
+    "type": "Link"
+   },
+   {
+    "dependencies": "",
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Patrol Checkpoints",
+    "link_count": 0,
+    "link_to": "Patrol Checkpoint",
+    "link_type": "DocType",
+    "onboard": 0,
+    "type": "Link"
+   },
+   {
+    "dependencies": "",
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Guard Activities",
+    "link_count": 0,
+    "link_to": "Guard Activity",
+    "link_type": "DocType",
+    "onboard": 0,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Asset Management",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break",
+    "link_type": null,
+    "link_to": null
+   },
+   {
+    "dependencies": "",
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Assets",
+    "link_count": 0,
+    "link_to": "Asset",
+    "link_type": "DocType",
+    "onboard": 0,
+    "type": "Link"
+   },
+   {
+    "dependencies": "",
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Locations",
+    "link_count": 0,
+    "link_to": "Location",
+    "link_type": "DocType",
+    "onboard": 0,
+    "type": "Link"
+   },
+   {
+    "dependencies": "",
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Asset Maintenance",
+    "link_count": 0,
+    "link_to": "Asset Maintenance",
+    "link_type": "DocType",
+    "onboard": 0,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Risk Assessment",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break",
+    "link_type": null,
+    "link_to": null
+   },
+   {
+    "dependencies": "",
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Risk Assessments",
+    "link_count": 0,
+    "link_to": "Risk Assessment",
+    "link_type": "DocType",
+    "onboard": 0,
+    "type": "Link"
+   }
+  ],
+  "modified": "2025-10-28 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sigma Home",
+  "name": "Sigma Home",
+  "number_cards": [],
+  "owner": "Administrator",
+  "parent_page": "",
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": "",
+  "roles": [],
+  "sequence_id": 1.0,
+  "shortcuts": [
+   {
+    "color": "red",
+    "label": "New Case",
+    "link_to": "Case",
+    "type": "DocType"
+   },
+   {
+    "color": "orange",
+    "label": "New Incident",
+    "link_to": "Incident Report",
+    "type": "DocType"
+   },
+   {
+    "color": "blue",
+    "label": "Access Events",
+    "link_to": "Access Event",
+    "type": "DocType"
+   },
+   {
+    "color": "green",
+    "label": "Guard Shifts",
+    "link_to": "Guard Shift",
+    "type": "DocType"
+   },
+   {
+    "color": "purple",
+    "label": "Assets",
+    "link_to": "Asset",
+    "type": "DocType"
+   },
+   {
+    "color": "yellow",
+    "label": "Risk Assessments",
+    "link_to": "Risk Assessment",
+    "type": "DocType"
+   }
+  ],
+  "title": "Sigma Home"
+ }
+]
+

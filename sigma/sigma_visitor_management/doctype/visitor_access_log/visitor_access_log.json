@@ -1,0 +1,184 @@
+{
+  "autoname": "VAL-{YYYY}-{####}",
+  "creation": "2025-10-24 00:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "Document",
+  "engine": "InnoDB",
+  "field_order": [
+    "visitor",
+    "location",
+    "column_break_2",
+    "activity_type",
+    "timestamp",
+    "section_break_3",
+    "guard",
+    "escort_guard",
+    "column_break_5",
+    "check_in_checkout_record",
+    "vms_event",
+    "section_break_6",
+    "access_point",
+    "camera_id",
+    "column_break_8",
+    "access_granted",
+    "access_reason",
+    "section_break_9",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "visitor",
+      "fieldtype": "Link",
+      "label": "Visitor",
+      "options": "Visitor",
+      "reqd": 1
+    },
+    {
+      "fieldname": "location",
+      "fieldtype": "Link",
+      "label": "Location",
+      "options": "Location",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "activity_type",
+      "fieldtype": "Select",
+      "label": "Activity Type",
+      "options": "Check-In\nCheck-Out\nArea Access\nRestricted Area Access\nIncident\nOther",
+      "reqd": 1
+    },
+    {
+      "fieldname": "timestamp",
+      "fieldtype": "Datetime",
+      "label": "Timestamp",
+      "reqd": 1
+    },
+    {
+      "fieldname": "section_break_3",
+      "fieldtype": "Section Break",
+      "label": "Guard Information"
+    },
+    {
+      "fieldname": "guard",
+      "fieldtype": "Link",
+      "label": "Guard",
+      "options": "Security Resource"
+    },
+    {
+      "fieldname": "escort_guard",
+      "fieldtype": "Link",
+      "label": "Escort Guard",
+      "options": "Security Resource"
+    },
+    {
+      "fieldname": "column_break_5",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "check_in_checkout_record",
+      "fieldtype": "Data",
+      "label": "Check-In/Check-Out Record"
+    },
+    {
+      "fieldname": "vms_event",
+      "fieldtype": "Data",
+      "label": "VMS Event"
+    },
+    {
+      "fieldname": "section_break_6",
+      "fieldtype": "Section Break",
+      "label": "Access Details"
+    },
+    {
+      "fieldname": "access_point",
+      "fieldtype": "Data",
+      "label": "Access Point"
+    },
+    {
+      "fieldname": "camera_id",
+      "fieldtype": "Data",
+      "label": "Camera ID"
+    },
+    {
+      "fieldname": "column_break_8",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "access_granted",
+      "fieldtype": "Check",
+      "label": "Access Granted",
+      "default": 1
+    },
+    {
+      "fieldname": "access_reason",
+      "fieldtype": "Data",
+      "label": "Access Reason"
+    },
+    {
+      "fieldname": "section_break_9",
+      "fieldtype": "Section Break",
+      "label": "Additional Information"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text Editor",
+      "label": "Notes"
+    }
+  ],
+  "links": [],
+  "modified": "2025-10-24 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sigma Visitor Management",
+  "name": "Visitor Access Log",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 0,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "submit": 0,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 0,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Security Manager",
+      "share": 0,
+      "submit": 0,
+      "write": 0
+    },
+    {
+      "create": 1,
+      "delete": 0,
+      "email": 0,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Guard",
+      "share": 0,
+      "submit": 0,
+      "write": 0
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1
+}
+

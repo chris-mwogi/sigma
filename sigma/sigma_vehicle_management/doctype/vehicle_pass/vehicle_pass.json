@@ -1,0 +1,194 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:VP-{YYYY}-{#####}",
+ "creation": "2025-10-27 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "pass_section",
+  "pass_number",
+  "pass_type",
+  "license_plate",
+  "vehicle_record",
+  "column_break_pass",
+  "issue_date",
+  "expiry_date",
+  "status",
+  "issued_section",
+  "issued_to_name",
+  "issued_to_contact",
+  "column_break_issued",
+  "issued_by_guard",
+  "authorization_section",
+  "authorized_areas",
+  "parking_zone",
+  "revocation_section",
+  "revoked_by",
+  "revocation_reason",
+  "notes_section",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "pass_section",
+   "fieldtype": "Section Break",
+   "label": "Pass Information"
+  },
+  {
+   "fieldname": "pass_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Pass Number",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "pass_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Pass Type",
+   "options": "Daily\nWeekly\nMonthly\nPermanent\nTemporary",
+   "reqd": 1
+  },
+  {
+   "fieldname": "license_plate",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "License Plate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vehicle_record",
+   "fieldtype": "Data",
+   "label": "Vehicle Record"
+  },
+  {
+   "fieldname": "column_break_pass",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "issue_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Issue Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expiry Date"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nExpired\nRevoked\nSuspended"
+  },
+  {
+   "fieldname": "issued_section",
+   "fieldtype": "Section Break",
+   "label": "Issued To"
+  },
+  {
+   "fieldname": "issued_to_name",
+   "fieldtype": "Data",
+   "label": "Issued to Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "issued_to_contact",
+   "fieldtype": "Data",
+   "label": "Issued to Contact"
+  },
+  {
+   "fieldname": "column_break_issued",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "issued_by_guard",
+   "fieldtype": "Link",
+   "label": "Issued by Guard",
+   "options": "User"
+  },
+  {
+   "fieldname": "authorization_section",
+   "fieldtype": "Section Break",
+   "label": "Authorization"
+  },
+  {
+   "fieldname": "authorized_areas",
+   "fieldtype": "Text",
+   "label": "Authorized Areas"
+  },
+  {
+   "fieldname": "parking_zone",
+   "fieldtype": "Data",
+   "label": "Parking Zone"
+  },
+  {
+   "depends_on": "eval:doc.status == 'Revoked'",
+   "fieldname": "revocation_section",
+   "fieldtype": "Section Break",
+   "label": "Revocation Details"
+  },
+  {
+   "depends_on": "eval:doc.status == 'Revoked'",
+   "fieldname": "revoked_by",
+   "fieldtype": "Link",
+   "label": "Revoked By",
+   "options": "User"
+  },
+  {
+   "depends_on": "eval:doc.status == 'Revoked'",
+   "fieldname": "revocation_reason",
+   "fieldtype": "Text",
+   "label": "Revocation Reason"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-27 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Vehicle Management",
+ "name": "Vehicle Pass",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+

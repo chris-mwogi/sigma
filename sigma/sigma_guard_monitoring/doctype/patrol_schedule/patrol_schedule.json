@@ -1,0 +1,126 @@
+{
+  "autoname": "PS-{YYYY}-{####}",
+  "creation": "2025-10-24 00:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "Document",
+  "engine": "InnoDB",
+  "field_order": [
+    "location",
+    "patrol_date",
+    "patrol_officer",
+    "column_break_4",
+    "status",
+    "service_contract",
+    "section_break_6",
+    "checkpoints",
+    "section_break_7",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "location",
+      "fieldtype": "Link",
+      "label": "Location",
+      "options": "Location",
+      "reqd": 1
+    },
+    {
+      "fieldname": "patrol_date",
+      "fieldtype": "Date",
+      "label": "Patrol Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "patrol_officer",
+      "fieldtype": "Link",
+      "label": "Patrol Officer",
+      "options": "Security Resource",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_4",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Scheduled\nIn Progress\nCompleted\nCancelled",
+      "default": "Scheduled"
+    },
+    {
+      "fieldname": "service_contract",
+      "fieldtype": "Link",
+      "label": "Service Contract",
+      "options": "Contract"
+    },
+    {
+      "fieldname": "section_break_6",
+      "fieldtype": "Section Break",
+      "label": "Checkpoints"
+    },
+    {
+      "fieldname": "checkpoints",
+      "fieldtype": "Table",
+      "label": "Checkpoints",
+      "options": "Patrol Schedule Item"
+    },
+    {
+      "fieldname": "section_break_7",
+      "fieldtype": "Section Break",
+      "label": "Notes"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text Editor",
+      "label": "Notes"
+    }
+  ],
+  "is_submittable": 1,
+  "links": [],
+  "modified": "2025-10-24 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sigma Guard Monitoring",
+  "name": "Patrol Schedule",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Compliance Officer",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Service Provider"
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1
+}
+

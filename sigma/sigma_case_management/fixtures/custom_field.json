@@ -1,0 +1,11 @@
+[
+  {
+    "doctype": "Custom Field",
+    "dt": "Case",
+    "fieldname": "asset_link",
+    "label": "Related Asset",
+    "fieldtype": "Link",
+    "options": "Asset",
+    "insert_after": "description"
+  }
+]

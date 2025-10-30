@@ -1,0 +1,236 @@
+{
+  "doctype": "DocType",
+  "name": "Asset Theft",
+  "module": "Sigma Case Management",
+  "custom": 0,
+  "is_submittable": 1,
+  "autoname": "THEFT-{YYYY}-{####}",
+  "title_field": "asset_description",
+  "fields": [
+    {
+      "fieldname": "case",
+      "fieldtype": "Link",
+      "label": "Related Case",
+      "options": "Case",
+      "reqd": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "asset_type",
+      "fieldtype": "Select",
+      "label": "Asset Type",
+      "reqd": 1,
+      "options": "KPLC Meter\nTransformer\nVehicle\nEquipment\nTools\nOther",
+      "width": "50%"
+    },
+    {
+      "fieldname": "asset_description",
+      "fieldtype": "Data",
+      "label": "Asset Description",
+      "reqd": 1,
+      "width": "100%"
+    },
+    {
+      "fieldname": "section_asset_details",
+      "fieldtype": "Section Break",
+      "label": "Asset Details"
+    },
+    {
+      "fieldname": "serial_number",
+      "fieldtype": "Data",
+      "label": "Serial Number",
+      "reqd": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "asset_owner",
+      "fieldtype": "Data",
+      "label": "Asset Owner",
+      "width": "50%"
+    },
+    {
+      "fieldname": "owner_contact",
+      "fieldtype": "Data",
+      "label": "Owner Contact",
+      "width": "50%"
+    },
+    {
+      "fieldname": "asset_value",
+      "fieldtype": "Currency",
+      "label": "Asset Value",
+      "width": "50%"
+    },
+    {
+      "fieldname": "currency",
+      "fieldtype": "Link",
+      "label": "Currency",
+      "options": "Currency",
+      "width": "50%"
+    },
+    {
+      "fieldname": "section_theft_details",
+      "fieldtype": "Section Break",
+      "label": "Theft Details"
+    },
+    {
+      "fieldname": "theft_location",
+      "fieldtype": "Link",
+      "label": "Theft Location",
+      "options": "Location",
+      "reqd": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "theft_gps_coordinates",
+      "fieldtype": "Data",
+      "label": "Theft GPS Coordinates",
+      "width": "50%"
+    },
+    {
+      "fieldname": "theft_date",
+      "fieldtype": "Date",
+      "label": "Theft Date",
+      "reqd": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "discovery_date",
+      "fieldtype": "Date",
+      "label": "Discovery Date",
+      "reqd": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "theft_details",
+      "fieldtype": "Text Editor",
+      "label": "Theft Details"
+    },
+    {
+      "fieldname": "section_police_report",
+      "fieldtype": "Section Break",
+      "label": "Police Report"
+    },
+    {
+      "fieldname": "police_report_filed",
+      "fieldtype": "Check",
+      "label": "Police Report Filed",
+      "default": 0
+    },
+    {
+      "fieldname": "ob_number",
+      "fieldtype": "Data",
+      "label": "OB Number",
+      "width": "50%"
+    },
+    {
+      "fieldname": "police_station",
+      "fieldtype": "Data",
+      "label": "Police Station",
+      "width": "50%"
+    },
+    {
+      "fieldname": "police_report_date",
+      "fieldtype": "Date",
+      "label": "Police Report Date",
+      "width": "50%"
+    },
+    {
+      "fieldname": "section_recovery",
+      "fieldtype": "Section Break",
+      "label": "Recovery Information"
+    },
+    {
+      "fieldname": "recovery_status",
+      "fieldtype": "Select",
+      "label": "Recovery Status",
+      "options": "Not Recovered\nPartially Recovered\nFully Recovered",
+      "default": "Not Recovered",
+      "width": "50%"
+    },
+    {
+      "fieldname": "recovery_date",
+      "fieldtype": "Date",
+      "label": "Recovery Date",
+      "width": "50%"
+    },
+    {
+      "fieldname": "recovered_by",
+      "fieldtype": "Link",
+      "label": "Recovered By",
+      "options": "User",
+      "width": "50%"
+    },
+    {
+      "fieldname": "recovery_location",
+      "fieldtype": "Data",
+      "label": "Recovery Location",
+      "width": "50%"
+    },
+    {
+      "fieldname": "recovery_notes",
+      "fieldtype": "Text Editor",
+      "label": "Recovery Notes"
+    },
+    {
+      "fieldname": "section_financial",
+      "fieldtype": "Section Break",
+      "label": "Financial Impact"
+    },
+    {
+      "fieldname": "financial_loss",
+      "fieldtype": "Currency",
+      "label": "Financial Loss",
+      "width": "50%"
+    },
+    {
+      "fieldname": "insurance_claim_filed",
+      "fieldtype": "Check",
+      "label": "Insurance Claim Filed",
+      "default": 0
+    },
+    {
+      "fieldname": "insurance_claim_amount",
+      "fieldtype": "Currency",
+      "label": "Insurance Claim Amount",
+      "width": "50%"
+    },
+    {
+      "fieldname": "insurance_claim_status",
+      "fieldtype": "Select",
+      "label": "Insurance Claim Status",
+      "options": "Not Filed\nPending\nApproved\nRejected\nPaid",
+      "width": "50%"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "perm_read": 1,
+      "perm_write": 1,
+      "perm_create": 1,
+      "perm_delete": 1,
+      "perm_submit": 1
+    },
+    {
+      "role": "Security Manager",
+      "perm_read": 1,
+      "perm_write": 1,
+      "perm_create": 1,
+      "perm_submit": 1
+    },
+    {
+      "role": "Lead Investigator",
+      "perm_read": 1,
+      "perm_write": 1,
+      "perm_create": 1,
+      "perm_submit": 1
+    },
+    {
+      "role": "Investigator",
+      "perm_read": 1,
+      "perm_write": 1,
+      "perm_create": 1
+    }
+  ]
+}
+

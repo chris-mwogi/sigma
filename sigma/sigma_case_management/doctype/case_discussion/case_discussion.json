@@ -1,0 +1,128 @@
+{
+  "doctype": "DocType",
+  "name": "Case Discussion",
+  "module": "Sigma Case Management",
+  "custom": 0,
+  "is_submittable": 0,
+  "autoname": "DISC-{YYYY}-{####}",
+  "fields": [
+    {
+      "fieldname": "case",
+      "fieldtype": "Link",
+      "label": "Case",
+      "options": "Case",
+      "reqd": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "discussion_type",
+      "fieldtype": "Select",
+      "label": "Discussion Type",
+      "reqd": 1,
+      "options": "Internal Note\nDiscussion Thread\nDecision Log\nEscalation Note",
+      "default": "Internal Note",
+      "width": "50%"
+    },
+    {
+      "fieldname": "title",
+      "fieldtype": "Data",
+      "label": "Title",
+      "width": "100%"
+    },
+    {
+      "fieldname": "content",
+      "fieldtype": "Text Editor",
+      "label": "Content",
+      "reqd": 1
+    },
+    {
+      "fieldname": "section_mentions",
+      "fieldtype": "Section Break",
+      "label": "Mentions & Attachments"
+    },
+    {
+      "fieldname": "mentions",
+      "fieldtype": "Table",
+      "label": "Mentions",
+      "fields": [
+        {
+          "fieldname": "user",
+          "fieldtype": "Link",
+          "label": "User",
+          "options": "User",
+          "reqd": 1
+        },
+        {
+          "fieldname": "mention_type",
+          "fieldtype": "Select",
+          "label": "Mention Type",
+          "options": "For Review\nFor Action\nFor Information\nFor Approval"
+        }
+      ]
+    },
+    {
+      "fieldname": "attachments",
+      "fieldtype": "Attach",
+      "label": "Attachments"
+    },
+    {
+      "fieldname": "section_metadata",
+      "fieldtype": "Section Break",
+      "label": "Metadata"
+    },
+    {
+      "fieldname": "created_by",
+      "fieldtype": "Link",
+      "label": "Created By",
+      "options": "User",
+      "read_only": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "created_date",
+      "fieldtype": "Datetime",
+      "label": "Created Date",
+      "read_only": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "is_private",
+      "fieldtype": "Check",
+      "label": "Private (Only visible to creator and case lead)",
+      "default": 0
+    },
+    {
+      "fieldname": "is_pinned",
+      "fieldtype": "Check",
+      "label": "Pin to Top",
+      "default": 0
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "perm_read": 1,
+      "perm_write": 1,
+      "perm_create": 1,
+      "perm_delete": 1
+    },
+    {
+      "role": "Security Manager",
+      "perm_read": 1,
+      "perm_write": 1,
+      "perm_create": 1
+    },
+    {
+      "role": "Lead Investigator",
+      "perm_read": 1,
+      "perm_write": 1,
+      "perm_create": 1
+    },
+    {
+      "role": "Investigator",
+      "perm_read": 1,
+      "perm_create": 1
+    }
+  ]
+}
+

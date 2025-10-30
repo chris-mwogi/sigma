@@ -1,0 +1,72 @@
+{ "doctype": "DocType", 
+"name": "Case", 
+"module": "Sigma Case Management", 
+"custom": 0, 
+"is_submittable": 0, 
+"fields": [ 
+    {"fieldname": "case_id","fieldtype": "Data", "label": "Case ID", "reqd": 1, "unique": 1}, 
+    {"fieldname": "case_type", "fieldtype": "Select", "label": "Case Type", "options": "\nTheft\nIncident\nFire Drill\nAccident\nIllegal Connection"}, 
+    {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "\nOpen\nIn Investigation\nInvestigation Complete\nAwaiting Legal\nProsecution Initiated\nResolved\nClosed", "default": "Open"}, 
+    {"fieldname": "priority", "fieldtype": "Select", "label": "Priority", "options": "Low\nMedium\nHigh\nCritical"}, 
+    {"fieldname": "location", "fieldtype": "Link", "label": "Location", "options": "Location"}, 
+    {"fieldname": "incident_date", "fieldtype": "Datetime", "label": "Date of Incident"}, 
+    {"fieldname": "reported_by", "fieldtype": "Link", "label": "Reported By", "options": "Employee"}, 
+    {"fieldname": "assigned_department", "fieldtype": "Select", "label": "Assigned Department", "options": "Security\nLegal\nOperations\nHR"}, 
+    {"fieldname": "assigned_officer", "fieldtype": "Link", "label": "Assigned Officer", "options": "Employee"}, 
+    {"fieldname": "related_asset", "fieldtype": "Link", "label": "Related Asset", "options": "Asset"}, 
+    {"fieldname": "incident_details", "fieldtype": "Text Editor", "label": "Details"},
+    {"fieldname": "attachments", "fieldtype": "Attach", "label": "Evidence Attachment"}
+    ],
+"permissions": [
+    {
+        "role": "System Manager",
+        "read": 1,
+        "write": 1,
+        "create": 1,
+        "delete": 1,
+        "submit": 0,
+        "cancel": 0,
+        "amend": 0
+    },
+    {
+        "role": "Security Manager",
+        "read": 1,
+        "write": 1,
+        "create": 1,
+        "delete": 1,
+        "submit": 0,
+        "cancel": 0,
+        "amend": 0
+    },
+    {
+        "role": "Lead Investigator",
+        "read": 1,
+        "write": 1,
+        "create": 1,
+        "delete": 0,
+        "submit": 0,
+        "cancel": 0,
+        "amend": 0
+    },
+    {
+        "role": "Investigator",
+        "read": 1,
+        "write": 1,
+        "create": 1,
+        "delete": 0,
+        "submit": 0,
+        "cancel": 0,
+        "amend": 0
+    },
+    {
+        "role": "Legal Officer",
+        "read": 1,
+        "write": 1,
+        "create": 0,
+        "delete": 0,
+        "submit": 0,
+        "cancel": 0,
+        "amend": 0
+    }
+]
+}

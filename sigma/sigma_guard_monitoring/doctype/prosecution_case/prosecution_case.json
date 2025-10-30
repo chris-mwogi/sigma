@@ -1,0 +1,39 @@
+{
+ "doctype": "DocType",
+ "name": "Prosecution Case",
+ "module": "Sigma Guard Monitoring",
+ "fields": [
+  {
+   "fieldname": "case_incident",
+   "label": "Case Incident",
+   "fieldtype": "Link",
+   "options": "Case Incident",
+   "reqd": 1
+  },
+  {
+   "fieldname": "court_name",
+   "label": "Court Name",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "case_status",
+   "label": "Case Status",
+   "fieldtype": "Select",
+   "options": "Pending\nIn Progress\nClosed"
+  },
+  {
+   "fieldname": "remarks",
+   "label": "Remarks",
+   "fieldtype": "Small Text"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  }
+ ]
+}

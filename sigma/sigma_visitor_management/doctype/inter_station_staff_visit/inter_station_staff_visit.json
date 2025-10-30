@@ -1,0 +1,189 @@
+{
+  "autoname": "ISSV-{YYYY}-{####}",
+  "creation": "2025-10-24 00:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "Document",
+  "engine": "InnoDB",
+  "field_order": [
+    "employee",
+    "home_location",
+    "column_break_2",
+    "visiting_location",
+    "visit_date",
+    "section_break_3",
+    "check_in_time",
+    "check_out_time",
+    "column_break_5",
+    "duration_hours",
+    "purpose_of_visit",
+    "section_break_6",
+    "check_in_guard",
+    "check_out_guard",
+    "column_break_8",
+    "status",
+    "badge_number",
+    "section_break_9",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "employee",
+      "fieldtype": "Link",
+      "label": "Employee",
+      "options": "Employee",
+      "reqd": 1
+    },
+    {
+      "fieldname": "home_location",
+      "fieldtype": "Link",
+      "label": "Home Location",
+      "options": "Location",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "visiting_location",
+      "fieldtype": "Link",
+      "label": "Visiting Location",
+      "options": "Location",
+      "reqd": 1
+    },
+    {
+      "fieldname": "visit_date",
+      "fieldtype": "Date",
+      "label": "Visit Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "section_break_3",
+      "fieldtype": "Section Break",
+      "label": "Visit Timeline"
+    },
+    {
+      "fieldname": "check_in_time",
+      "fieldtype": "Datetime",
+      "label": "Check-In Time",
+      "reqd": 1
+    },
+    {
+      "fieldname": "check_out_time",
+      "fieldtype": "Datetime",
+      "label": "Check-Out Time"
+    },
+    {
+      "fieldname": "column_break_5",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "duration_hours",
+      "fieldtype": "Float",
+      "label": "Duration (Hours)",
+      "read_only": 1
+    },
+    {
+      "fieldname": "purpose_of_visit",
+      "fieldtype": "Small Text",
+      "label": "Purpose of Visit"
+    },
+    {
+      "fieldname": "section_break_6",
+      "fieldtype": "Section Break",
+      "label": "Guard Information"
+    },
+    {
+      "fieldname": "check_in_guard",
+      "fieldtype": "Link",
+      "label": "Check-In Guard",
+      "options": "Security Resource",
+      "reqd": 1
+    },
+    {
+      "fieldname": "check_out_guard",
+      "fieldtype": "Link",
+      "label": "Check-Out Guard",
+      "options": "Security Resource"
+    },
+    {
+      "fieldname": "column_break_8",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Checked In\nChecked Out\nNo-Show\nCancelled",
+      "default": "Checked In"
+    },
+    {
+      "fieldname": "badge_number",
+      "fieldtype": "Data",
+      "label": "Badge Number"
+    },
+    {
+      "fieldname": "section_break_9",
+      "fieldtype": "Section Break",
+      "label": "Additional Information"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text Editor",
+      "label": "Notes"
+    }
+  ],
+  "links": [],
+  "modified": "2025-10-24 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sigma Visitor Management",
+  "name": "Inter Station Staff Visit",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "submit": 0,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 0,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Security Manager",
+      "share": 0,
+      "submit": 0,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 0,
+      "email": 0,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Guard",
+      "share": 0,
+      "submit": 0,
+      "write": 1
+    }
+  ],
+  "quick_entry": 1,
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1
+}
+

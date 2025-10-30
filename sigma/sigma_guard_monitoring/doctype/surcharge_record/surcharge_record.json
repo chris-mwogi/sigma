@@ -1,0 +1,167 @@
+{
+  "autoname": "SR-{YYYY}-{####}",
+  "creation": "2025-10-24 00:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "Document",
+  "engine": "InnoDB",
+  "field_order": [
+    "compliance_notice",
+    "supplier",
+    "service_contract",
+    "column_break_4",
+    "surcharge_date",
+    "status",
+    "section_break_6",
+    "calculation_method",
+    "contract_value",
+    "surcharge_percentage",
+    "surcharge_amount",
+    "section_break_7",
+    "debit_note",
+    "debit_note_date",
+    "section_break_8",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "compliance_notice",
+      "fieldtype": "Link",
+      "label": "Compliance Notice",
+      "options": "Compliance Notice",
+      "reqd": 1
+    },
+    {
+      "fieldname": "supplier",
+      "fieldtype": "Link",
+      "label": "Supplier",
+      "options": "Supplier",
+      "reqd": 1
+    },
+    {
+      "fieldname": "service_contract",
+      "fieldtype": "Link",
+      "label": "Service Contract",
+      "options": "Contract",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_4",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "surcharge_date",
+      "fieldtype": "Date",
+      "label": "Surcharge Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Pending\nInvoiced\nPaid\nDisputed",
+      "default": "Pending"
+    },
+    {
+      "fieldname": "section_break_6",
+      "fieldtype": "Section Break",
+      "label": "Calculation"
+    },
+    {
+      "fieldname": "calculation_method",
+      "fieldtype": "Select",
+      "label": "Calculation Method",
+      "options": "Percentage of Contract\nFixed Amount\nPer Day Rate",
+      "reqd": 1
+    },
+    {
+      "fieldname": "contract_value",
+      "fieldtype": "Currency",
+      "label": "Contract Value"
+    },
+    {
+      "fieldname": "surcharge_percentage",
+      "fieldtype": "Percent",
+      "label": "Surcharge Percentage"
+    },
+    {
+      "fieldname": "surcharge_amount",
+      "fieldtype": "Currency",
+      "label": "Surcharge Amount",
+      "reqd": 1
+    },
+    {
+      "fieldname": "section_break_7",
+      "fieldtype": "Section Break",
+      "label": "Financial"
+    },
+    {
+      "fieldname": "debit_note",
+      "fieldtype": "Link",
+      "label": "Debit Note",
+      "options": "Debit Note"
+    },
+    {
+      "fieldname": "debit_note_date",
+      "fieldtype": "Date",
+      "label": "Debit Note Date",
+      "read_only": 1
+    },
+    {
+      "fieldname": "section_break_8",
+      "fieldtype": "Section Break",
+      "label": "Notes"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text Editor",
+      "label": "Notes"
+    }
+  ],
+  "is_submittable": 1,
+  "links": [],
+  "modified": "2025-10-24 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sigma Guard Monitoring",
+  "name": "Surcharge Record",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Compliance Officer",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Service Provider"
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1
+}
+

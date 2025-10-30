@@ -1,0 +1,35 @@
+{
+  "doctype": "DocType",
+  "name": "Access Policy",
+  "module": "Sigma Access Control",
+  "custom": false,
+  "fields": [
+    {
+      "fieldname": "policy_name",
+      "label": "Policy Name",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "allowed_roles",
+      "label": "Allowed Roles",
+      "fieldtype": "Table",
+      "options": "Access Policy Role"
+    },
+    {
+      "fieldname": "time_restrictions",
+      "label": "Time Restrictions",
+      "fieldtype": "Data"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Access Control Officer",
+      "read": 1,
+      "write": 1
+    },
+    {
+      "role": "Access Auditor",
+      "read": 1
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "doctype": "Role",
+    "role_name": "Security Officer"
+  },
+  {
+    "doctype": "Role",
+    "role_name": "Legal Officer"
+  },
+  {
+    "doctype": "Role",
+    "role_name": "Case Supervisor"
+  }
+]

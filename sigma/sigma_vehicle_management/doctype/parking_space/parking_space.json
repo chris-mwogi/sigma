@@ -1,0 +1,156 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:space_number",
+ "creation": "2025-10-27 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "space_section",
+  "space_number",
+  "parking_zone",
+  "space_type",
+  "column_break_space",
+  "floor_level",
+  "building",
+  "status",
+  "current_section",
+  "current_vehicle",
+  "current_checkin",
+  "reservation_section",
+  "reserved_for",
+  "reservation_type",
+  "notes_section",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "space_section",
+   "fieldtype": "Section Break",
+   "label": "Space Information"
+  },
+  {
+   "fieldname": "space_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Space Number",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "parking_zone",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Parking Zone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "space_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Space Type",
+   "options": "Standard\nCompact\nHandicapped\nEV Charging\nMotorcycle\nTruck",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_space",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "floor_level",
+   "fieldtype": "Data",
+   "label": "Floor Level"
+  },
+  {
+   "fieldname": "building",
+   "fieldtype": "Data",
+   "label": "Building"
+  },
+  {
+   "default": "Available",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Available\nOccupied\nReserved\nMaintenance\nOut of Service"
+  },
+  {
+   "depends_on": "eval:doc.status == 'Occupied'",
+   "fieldname": "current_section",
+   "fieldtype": "Section Break",
+   "label": "Current Occupancy"
+  },
+  {
+   "depends_on": "eval:doc.status == 'Occupied'",
+   "fieldname": "current_vehicle",
+   "fieldtype": "Data",
+   "label": "Current Vehicle (License Plate)"
+  },
+  {
+   "depends_on": "eval:doc.status == 'Occupied'",
+   "fieldname": "current_checkin",
+   "fieldtype": "Data",
+   "label": "Current Checkin Record"
+  },
+  {
+   "depends_on": "eval:doc.status == 'Reserved'",
+   "fieldname": "reservation_section",
+   "fieldtype": "Section Break",
+   "label": "Reservation Details"
+  },
+  {
+   "depends_on": "eval:doc.status == 'Reserved'",
+   "fieldname": "reserved_for",
+   "fieldtype": "Data",
+   "label": "Reserved For"
+  },
+  {
+   "depends_on": "eval:doc.status == 'Reserved'",
+   "fieldname": "reservation_type",
+   "fieldtype": "Select",
+   "label": "Reservation Type",
+   "options": "Permanent\nTemporary\nNone"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-27 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Vehicle Management",
+ "name": "Parking Space",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+
