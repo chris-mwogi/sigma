@@ -160,7 +160,7 @@ const handleLogin = async () => {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, #003d7a 0%, #0052a3 50%, #003d7a 100%);
+  background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 50%, #f5f7fa 100%);
   z-index: 1;
 }
 
@@ -171,8 +171,8 @@ const handleLogin = async () => {
   right: 0;
   bottom: 0;
   background-image:
-    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    radial-gradient(circle at 25% 25%, rgba(0, 61, 122, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(0, 61, 122, 0.03) 0%, transparent 50%);
   background-size: 100px 100px;
   animation: float 20s ease-in-out infinite;
 }
@@ -197,6 +197,7 @@ const handleLogin = async () => {
   align-items: center;
   justify-content: center;
   padding: 60px 40px;
+  background: linear-gradient(135deg, #003d7a 0%, #0052a3 100%);
 }
 
 .login-brand {
@@ -261,7 +262,7 @@ const handleLogin = async () => {
   align-items: center;
   justify-content: center;
   padding: 60px 40px;
-  background: rgba(255, 255, 255, 0.95);
+  background: #ffffff;
 }
 
 .login-card {
@@ -270,7 +271,8 @@ const handleLogin = async () => {
   padding: 48px;
   width: 100%;
   max-width: 420px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e8e8e8;
 }
 
 .card-header {
@@ -303,19 +305,19 @@ const handleLogin = async () => {
 
 .form-input .el-input__wrapper {
   border-radius: 8px;
-  box-shadow: 0 0 0 1px #e4e7ed;
-  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 0 1px #e8e8e8;
+  background: #ffffff;
   transition: all 0.3s ease;
 }
 
 .form-input .el-input__wrapper:hover {
-  box-shadow: 0 0 0 1px #c0c4cc;
-  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 0 1px #d0d0d0;
+  background: #ffffff;
 }
 
 .form-input .el-input__wrapper.is-focus {
   box-shadow: 0 0 0 2px #003d7a;
-  background: rgba(255, 255, 255, 1);
+  background: #ffffff;
 }
 
 .login-button {
@@ -344,14 +346,14 @@ const handleLogin = async () => {
   text-align: center;
   margin-top: 24px;
   padding-top: 24px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #e8e8e8;
 }
 
 .card-footer p {
-  color: #6c757d;
+  color: #999999;
   font-size: 13px;
   margin: 0;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 @media (max-width: 1024px) {

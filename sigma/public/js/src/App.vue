@@ -39,9 +39,9 @@
               router
               class="sidebar-menu"
               :collapse="!showSidebar"
-              background-color="#1a3a52"
-              text-color="#ecf0f1"
-              active-text-color="#4a9eff"
+              background-color="#f5f7fa"
+              text-color="#333333"
+              active-text-color="#003d7a"
             >
               <el-menu-item index="/">
                 <el-icon><House /></el-icon>
@@ -313,11 +313,11 @@ html, body {
 
 /* Table header theme */
 .el-table th, .el-table__header th {
-  background-color: #154D71 !important;
-  color: #FFF9AF !important;
+  background-color: #f5f7fa !important;
+  color: #333333 !important;
 }
 .el-table thead .cell {
-  color: #FFF9AF !important;
+  color: #333333 !important;
 }
 </style>
 
@@ -330,15 +330,16 @@ html, body {
 }
 
 .app-header {
-  background: linear-gradient(135deg, #003d7a 0%, #0052a3 100%);
-  color: white;
+  background: white;
+  color: #333;
   display: flex;
   align-items: center;
   padding: 0 20px;
   flex-shrink: 0;
   z-index: 100;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   height: 60px;
+  border-bottom: 1px solid #e8e8e8;
 }
 
 .header-content {
@@ -371,7 +372,7 @@ html, body {
   margin: 0;
   font-size: 20px;
   font-weight: 600;
-  color: #FFF9AF;
+  color: #003d7a;
   letter-spacing: 0.3px;
 }
 
@@ -385,14 +386,16 @@ html, body {
   align-items: center;
   gap: 8px;
   cursor: pointer;
-  color: white;
+  color: #333;
   padding: 8px 12px;
   border-radius: 6px;
   transition: background-color 0.2s;
+  border: 1px solid #e8e8e8;
 }
 
 .user-info:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #f5f7fa;
+  border-color: #003d7a;
 }
 
 .app-body {
@@ -403,7 +406,7 @@ html, body {
 }
 
 .app-sidebar {
-  background-color: #1a3a52;
+  background-color: #f5f7fa;
   transition: width .2s ease;
   overflow-y: auto;
   overflow-x: hidden;
@@ -411,6 +414,7 @@ html, body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  border-right: 1px solid #e8e8e8;
 }
 
 .app-sidebar.collapsed {
@@ -429,30 +433,30 @@ html, body {
 }
 
 .version-display {
-  background-color: #0f2a3d;
+  background-color: #ffffff;
   padding: 12px 0;
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid #e8e8e8;
   flex-shrink: 0;
 }
 
 .version-display-expanded {
-  background-color: #0f2a3d;
+  background-color: #ffffff;
   padding: 12px 20px;
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid #e8e8e8;
   flex-shrink: 0;
 }
 
 .version-text {
-  color: #95a5a6;
+  color: #999999;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.5px;
 }
 
 .app-main {
-  background-color: #f5f7fa;
+  background-color: #ffffff;
   padding: 0;
   width: 100%;
   box-sizing: border-box;
