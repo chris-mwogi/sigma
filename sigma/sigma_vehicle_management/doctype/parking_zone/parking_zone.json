@@ -1,0 +1,248 @@
+{
+ "actions": [],
+ "autoname": "field:zone_name",
+ "creation": "2025-11-19 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "zone_information_section",
+  "zone_name",
+  "zone_code",
+  "column_break_3",
+  "location",
+  "status",
+  "capacity_section",
+  "capacity",
+  "current_occupancy",
+  "column_break_8",
+  "utilization_percentage",
+  "available_spaces",
+  "vehicle_restrictions_section",
+  "allowed_vehicle_types",
+  "hazmat_approved",
+  "column_break_13",
+  "max_vehicle_length",
+  "max_vehicle_height",
+  "iot_integration_section",
+  "sensor_iot_id",
+  "last_sensor_update",
+  "column_break_18",
+  "sensor_status",
+  "auto_update_occupancy",
+  "additional_information_section",
+  "description",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "zone_information_section",
+   "fieldtype": "Section Break",
+   "label": "Zone Information"
+  },
+  {
+   "fieldname": "zone_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Zone Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "zone_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Zone Code"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Location"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nInactive\nMaintenance\nFull",
+   "reqd": 1
+  },
+  {
+   "fieldname": "capacity_section",
+   "fieldtype": "Section Break",
+   "label": "Capacity Management"
+  },
+  {
+   "fieldname": "capacity",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Total Capacity",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "current_occupancy",
+   "fieldtype": "Int",
+   "label": "Current Occupancy",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "utilization_percentage",
+   "fieldtype": "Percent",
+   "label": "Utilization %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "available_spaces",
+   "fieldtype": "Int",
+   "label": "Available Spaces",
+   "read_only": 1
+  },
+  {
+   "fieldname": "vehicle_restrictions_section",
+   "fieldtype": "Section Break",
+   "label": "Vehicle Restrictions"
+  },
+  {
+   "fieldname": "allowed_vehicle_types",
+   "fieldtype": "Table",
+   "label": "Allowed Vehicle Types",
+   "options": "Allowed Vehicle Type"
+  },
+  {
+   "default": "0",
+   "fieldname": "hazmat_approved",
+   "fieldtype": "Check",
+   "label": "Hazmat Approved (Dangerous Goods)"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Maximum vehicle length in meters",
+   "fieldname": "max_vehicle_length",
+   "fieldtype": "Float",
+   "label": "Max Vehicle Length (m)",
+   "precision": "2"
+  },
+  {
+   "description": "Maximum vehicle height in meters",
+   "fieldname": "max_vehicle_height",
+   "fieldtype": "Float",
+   "label": "Max Vehicle Height (m)",
+   "precision": "2"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "iot_integration_section",
+   "fieldtype": "Section Break",
+   "label": "IoT Integration"
+  },
+  {
+   "description": "IoT sensor ID for real-time occupancy tracking",
+   "fieldname": "sensor_iot_id",
+   "fieldtype": "Data",
+   "label": "Sensor IoT ID"
+  },
+  {
+   "fieldname": "last_sensor_update",
+   "fieldtype": "Datetime",
+   "label": "Last Sensor Update",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Not Connected",
+   "fieldname": "sensor_status",
+   "fieldtype": "Select",
+   "label": "Sensor Status",
+   "options": "Not Connected\nConnected\nError\nMaintenance",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "description": "Automatically update occupancy from IoT sensors",
+   "fieldname": "auto_update_occupancy",
+   "fieldtype": "Check",
+   "label": "Auto Update Occupancy"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "additional_information_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-19 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Vehicle Management",
+ "name": "Parking Zone",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Security Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Security Officer",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+

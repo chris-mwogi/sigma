@@ -1,10 +1,18 @@
 # sigma/sigma/modules.txt
-Sigma Home
+Sigma
 Sigma Access Control
+Sigma Assets
 Sigma Case Management
+Sigma Erpnext Integrations
 Sigma Guard Monitoring
-Sigma Asset Integrations
+Sigma Human Tracking
+Sigma Personnel
 Sigma Risk Assessment
-Sigma Visitor Management
 Sigma Vehicle Management
-Sigma ERPNext Integrations
+Sigma Visitor Management
+Sigma CRM
+Sigma Helpdesk
+Sigma Projects
+Sigma Quality
+Sigma Support
+Sigma Telephony

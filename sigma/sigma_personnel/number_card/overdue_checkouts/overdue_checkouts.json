@@ -1,0 +1,25 @@
+{
+ "aggregate_function_based_on": "",
+ "creation": "2025-01-21 10:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Personnel Check-In",
+ "dynamic_filters_json": "[[\"Personnel Check-In\",\"docstatus\",\"=\",1,false],[\"Personnel Check-In\",\"timestamp_in\",\"<\",\"frappe.utils.add_to_date(frappe.utils.now_datetime(), hours=-12)\",false],[\"Personnel Check-In\",\"name\",\"not in\",\"frappe.db.get_all('Personnel Check-Out', filters={'docstatus': 1}, pluck='related_check_in')\",false]]",
+ "filters_json": "[]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Overdue Checkouts",
+ "modified": "2025-01-21 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Personnel",
+ "name": "Overdue Checkouts",
+ "owner": "Administrator",
+ "report_function": "Count",
+ "show_percentage_stats": 0,
+ "stats_time_interval": "Daily",
+ "type": "Document Type",
+ "color": "Red"
+}
+

@@ -1,0 +1,129 @@
+{
+ "actions": [],
+ "creation": "2025-11-18 18:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Other",
+ "editable_grid": 0,
+ "engine": "InnoDB",
+ "field_order": [
+  "sla_settings_section",
+  "default_sla_hours",
+  "sla_reminder_hours_before",
+  "auto_escalation_enabled",
+  "column_break_1",
+  "require_approval_for_closure",
+  "notification_email_template",
+  "evidence_settings_section",
+  "evidence_hash_algorithm",
+  "enable_chain_of_custody",
+  "column_break_2",
+  "max_file_size_mb",
+  "allowed_file_types"
+ ],
+ "fields": [
+  {
+   "fieldname": "sla_settings_section",
+   "fieldtype": "Section Break",
+   "label": "SLA Settings"
+  },
+  {
+   "default": "72",
+   "fieldname": "default_sla_hours",
+   "fieldtype": "Int",
+   "label": "Default SLA (Hours)",
+   "reqd": 1
+  },
+  {
+   "default": "24",
+   "fieldname": "sla_reminder_hours_before",
+   "fieldtype": "Int",
+   "label": "SLA Reminder (Hours Before Due)"
+  },
+  {
+   "default": "1",
+   "fieldname": "auto_escalation_enabled",
+   "fieldtype": "Check",
+   "label": "Enable Auto-Escalation"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "require_approval_for_closure",
+   "fieldtype": "Check",
+   "label": "Require Approval for Case Closure"
+  },
+  {
+   "fieldname": "notification_email_template",
+   "fieldtype": "Link",
+   "label": "Notification Email Template",
+   "options": "Email Template"
+  },
+  {
+   "fieldname": "evidence_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Evidence Settings"
+  },
+  {
+   "default": "SHA256",
+   "fieldname": "evidence_hash_algorithm",
+   "fieldtype": "Select",
+   "label": "Evidence Hash Algorithm",
+   "options": "SHA256\nSHA512\nMD5",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_chain_of_custody",
+   "fieldtype": "Check",
+   "label": "Enable Chain of Custody Tracking"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "50",
+   "fieldname": "max_file_size_mb",
+   "fieldtype": "Int",
+   "label": "Max File Size (MB)"
+  },
+  {
+   "default": "pdf,doc,docx,xls,xlsx,jpg,jpeg,png,mp4,mp3,zip",
+   "fieldname": "allowed_file_types",
+   "fieldtype": "Data",
+   "label": "Allowed File Types (comma-separated)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-11-18 18:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Case Management",
+ "name": "Case Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Case Manager",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+

@@ -1,0 +1,2 @@
+# Asset Category Sigma DocType
+

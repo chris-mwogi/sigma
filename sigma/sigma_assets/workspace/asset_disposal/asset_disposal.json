@@ -1,0 +1,153 @@
+{
+ "app": "sigma",
+ "charts": [],
+ "content": "[{\"id\":\"header-main\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h3\\\"><b>Disposal (Selling)</b></span>\",\"col\":12}},{\"id\":\"para-main\",\"type\":\"paragraph\",\"data\":{\"text\":\"<p>Manage asset disposal, sales orders, and customer relationships.</p>\",\"col\":12}},{\"id\":\"spacer-1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"header-shortcuts\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quick Actions</b></span>\",\"col\":12}},{\"id\":\"shortcut-so\",\"type\":\"shortcut\",\"data\":{\"col\":3,\"shortcut_name\":\"Sales Order\"}},{\"id\":\"shortcut-customer\",\"type\":\"shortcut\",\"data\":{\"col\":3,\"shortcut_name\":\"Customer\"}},{\"id\":\"shortcut-quotation\",\"type\":\"shortcut\",\"data\":{\"col\":3,\"shortcut_name\":\"Quotation\"}},{\"id\":\"shortcut-si\",\"type\":\"shortcut\",\"data\":{\"col\":3,\"shortcut_name\":\"Sales Invoice\"}},{\"id\":\"spacer-2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"header-cards\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Sales & Disposal</b></span>\",\"col\":12}},{\"id\":\"card-selling\",\"type\":\"card\",\"data\":{\"card_name\":\"Selling\",\"col\":4}},{\"id\":\"card-customers\",\"type\":\"card\",\"data\":{\"card_name\":\"Customers\",\"col\":4}},{\"id\":\"card-reports\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}}]",
+ "creation": "2025-11-14 10:00:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "selling",
+ "idx": 0,
+ "indicator_color": "red",
+ "is_hidden": 0,
+ "label": "Disposal (Selling)",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Selling",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Order",
+   "link_count": 0,
+   "link_to": "Sales Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Quotation",
+   "link_count": 0,
+   "link_to": "Quotation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Invoice",
+   "link_count": 0,
+   "link_to": "Sales Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Delivery Note",
+   "link_count": 0,
+   "link_to": "Delivery Note",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Customers",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Customer",
+   "link_count": 0,
+   "link_to": "Customer",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Order Trends",
+   "link_count": 0,
+   "link_to": "Sales Order Trends",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Analytics",
+   "link_count": 0,
+   "link_to": "Sales Analytics",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-11-14 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Assets",
+ "name": "Asset Disposal",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "Asset Management",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 3.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "format": "{} Open",
+   "label": "Sales Order",
+   "link_to": "Sales Order",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "label": "Customer",
+   "link_to": "Customer",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "label": "Quotation",
+   "link_to": "Quotation",
+   "type": "DocType"
+  },
+  {
+   "color": "Purple",
+   "label": "Sales Invoice",
+   "link_to": "Sales Invoice",
+   "type": "DocType"
+  }
+ ],
+ "title": "Disposal"
+}
+

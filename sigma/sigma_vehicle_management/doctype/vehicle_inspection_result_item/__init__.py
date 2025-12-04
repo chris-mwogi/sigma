@@ -1,0 +1,2 @@
+# Vehicle Inspection Result Item
+

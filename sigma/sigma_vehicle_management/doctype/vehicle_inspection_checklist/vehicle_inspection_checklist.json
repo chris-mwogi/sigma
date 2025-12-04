@@ -1,0 +1,200 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:VINSP-.{YYYY}.-.{####}",
+ "creation": "2025-11-19 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "vehicle_details_section",
+  "license_plate",
+  "vehicle_type",
+  "make_model",
+  "column_break_1",
+  "inspection_date",
+  "inspector",
+  "inspection_template",
+  "section_break_2",
+  "inspection_result",
+  "overall_status",
+  "column_break_3",
+  "dangerous_goods_present",
+  "dangerous_goods_class",
+  "section_break_4",
+  "inspection_results",
+  "section_break_5",
+  "remarks",
+  "action_required"
+ ],
+ "fields": [
+  {
+   "fieldname": "vehicle_details_section",
+   "fieldtype": "Section Break",
+   "label": "Vehicle Details"
+  },
+  {
+   "fieldname": "license_plate",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "License Plate",
+   "options": "Vehicle",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "license_plate.vehicle_type",
+   "fieldname": "vehicle_type",
+   "fieldtype": "Data",
+   "label": "Vehicle Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "make_model",
+   "fieldtype": "Data",
+   "label": "Make/Model",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "inspection_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Inspection Date",
+   "reqd": 1
+  },
+  {
+   "default": "user",
+   "fieldname": "inspector",
+   "fieldtype": "Link",
+   "label": "Inspector",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "inspection_template",
+   "fieldtype": "Link",
+   "label": "Inspection Template",
+   "options": "Vehicle Inspection Template"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Inspection Summary"
+  },
+  {
+   "fieldname": "inspection_result",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Inspection Result",
+   "options": "\nPass\nFail\nConditional Pass",
+   "reqd": 1
+  },
+  {
+   "fieldname": "overall_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Overall Status",
+   "options": "\nPending\nIn Progress\nCompleted\nFailed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fetch_from": "license_plate.dangerous_goods_flag",
+   "fieldname": "dangerous_goods_present",
+   "fieldtype": "Check",
+   "label": "Dangerous Goods Present"
+  },
+  {
+   "depends_on": "eval:doc.dangerous_goods_present==1",
+   "fetch_from": "license_plate.dangerous_goods_class",
+   "fieldname": "dangerous_goods_class",
+   "fieldtype": "Data",
+   "label": "Dangerous Goods Class",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Inspection Results"
+  },
+  {
+   "fieldname": "inspection_results",
+   "fieldtype": "Table",
+   "label": "Inspection Results",
+   "options": "Vehicle Inspection Result Item"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "action_required",
+   "fieldtype": "Text",
+   "label": "Action Required"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-19 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Vehicle Management",
+ "name": "Vehicle Inspection Checklist",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Security Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Security Supervisor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guard",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+

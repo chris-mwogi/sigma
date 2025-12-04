@@ -1,0 +1,180 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:CAP-{YYYY}-{#####}",
+ "creation": "2025-11-18 21:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "action_title",
+  "linked_case",
+  "linked_investigation",
+  "action_type",
+  "priority",
+  "status",
+  "column_break_1",
+  "assigned_to",
+  "due_date",
+  "completion_date",
+  "section_break_2",
+  "action_description",
+  "section_break_3",
+  "expected_outcome",
+  "actual_outcome",
+  "section_break_4",
+  "completion_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "action_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Action Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "linked_case",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Linked Case",
+   "options": "Case",
+   "reqd": 1
+  },
+  {
+   "fieldname": "linked_investigation",
+   "fieldtype": "Link",
+   "label": "Linked Investigation",
+   "options": "Case Investigation"
+  },
+  {
+   "fieldname": "action_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Action Type",
+   "options": "Corrective Action\nPreventive Action\nDisciplinary Action\nProcess Improvement\nPolicy Update\nTraining\nSystem Enhancement\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Critical\nHigh\nMedium\nLow",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Planned\nIn Progress\nCompleted\nCancelled\nOn Hold",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned To",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "completion_date",
+   "fieldtype": "Date",
+   "label": "Completion Date"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Action Details"
+  },
+  {
+   "fieldname": "action_description",
+   "fieldtype": "Text Editor",
+   "label": "Action Description"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "Outcome"
+  },
+  {
+   "fieldname": "expected_outcome",
+   "fieldtype": "Text Editor",
+   "label": "Expected Outcome"
+  },
+  {
+   "fieldname": "actual_outcome",
+   "fieldtype": "Text Editor",
+   "label": "Actual Outcome"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Completion"
+  },
+  {
+   "fieldname": "completion_notes",
+   "fieldtype": "Text Editor",
+   "label": "Completion Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-18 21:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Case Management",
+ "name": "Case Action Plan",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Case Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Investigator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+

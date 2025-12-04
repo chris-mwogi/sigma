@@ -1,0 +1,145 @@
+{
+  "actions": [],
+  "autoname": "format:KPLC-CHECKIN-{YYYY}-{#####}",
+  "creation": "2025-01-20 00:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "Document",
+  "engine": "InnoDB",
+  "is_submittable": 1,
+  "field_order": [
+    "human",
+    "timestamp_in",
+    "entry_gate",
+    "column_break_3",
+    "method",
+    "device_id",
+    "initial_zone",
+    "section_break_ppe",
+    "ppe_verification_status",
+    "ppe_items_verified",
+    "column_break_ppe",
+    "escort_required",
+    "escort_assigned",
+    "section_break_purpose",
+    "purpose_of_visit"
+  ],
+  "fields": [
+    {
+      "fieldname": "human",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Human Profile",
+      "options": "Human Profile",
+      "reqd": 1
+    },
+    {
+      "fieldname": "timestamp_in",
+      "fieldtype": "Datetime",
+      "in_list_view": 1,
+      "label": "Check-In Time",
+      "reqd": 1,
+      "default": "now"
+    },
+    {
+      "fieldname": "entry_gate",
+      "fieldtype": "Data",
+      "label": "Entry Gate",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "method",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Check-In Method",
+      "options": "RFID\nBiometric\nMobile App\nManual\nBLE\nNFC",
+      "reqd": 1
+    },
+    {
+      "fieldname": "device_id",
+      "fieldtype": "Link",
+      "label": "Device Used",
+      "options": "Tracking Device"
+    },
+    {
+      "fieldname": "initial_zone",
+      "fieldtype": "Link",
+      "label": "Initial Zone",
+      "options": "Zone Configuration",
+      "reqd": 1
+    },
+    {
+      "fieldname": "section_break_ppe",
+      "fieldtype": "Section Break",
+      "label": "PPE Verification (ISO 45001)"
+    },
+    {
+      "fieldname": "ppe_verification_status",
+      "fieldtype": "Select",
+      "label": "PPE Verification Status",
+      "options": "Not Required\nVerified\nFailed\nPartial",
+      "default": "Not Required"
+    },
+    {
+      "fieldname": "ppe_items_verified",
+      "fieldtype": "Small Text",
+      "label": "PPE Items Verified"
+    },
+    {
+      "fieldname": "column_break_ppe",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "escort_required",
+      "fieldtype": "Check",
+      "label": "Escort Required"
+    },
+    {
+      "fieldname": "escort_assigned",
+      "fieldtype": "Link",
+      "label": "Escort Assigned",
+      "options": "Human Profile"
+    },
+    {
+      "fieldname": "section_break_purpose",
+      "fieldtype": "Section Break",
+      "label": "Purpose"
+    },
+    {
+      "fieldname": "purpose_of_visit",
+      "fieldtype": "Small Text",
+      "label": "Purpose of Visit"
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "links": [],
+  "modified": "2025-01-20 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sigma Personnel",
+  "name": "Personnel Check-In",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1
+}
+

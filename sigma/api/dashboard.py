@@ -16,7 +16,7 @@ def safe_count(doctype: str, filters=None) -> int:
             return 0
         return frappe.db.count(doctype, filters or {})
     except Exception:
-        frappe.log_error(f"Failed to count records for {doctype}", "Sigma Home")
+        frappe.log_error(f"Failed to count records for {doctype}", "Sigma Dashboard")
         return 0
 
 
@@ -36,7 +36,7 @@ def safe_grouped_data(doctype: str, group_field: str, label_field: str = None):
         )
         return [{"label": r.label or "Unspecified", "count": r.count} for r in records]
     except Exception:
-        frappe.log_error(f"Failed to group data for {doctype}", "Sigma Home")
+        frappe.log_error(f"Failed to group data for {doctype}", "Sigma Dashboard")
         return []
 
 
@@ -94,7 +94,7 @@ def get_dashboard_data():
             values.append(d.get("count", 0))
         data["call_chart"] = {"labels": labels, "values": values}
     except Exception:
-        frappe.log_error("Failed to build call_chart", "Sigma Home")
+        frappe.log_error("Failed to build call_chart", "Sigma Dashboard")
         data["call_chart"] = {"labels": [], "values": []}
 
     # --- Chart: Case Status Distribution

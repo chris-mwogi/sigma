@@ -1,0 +1,234 @@
+[
+  {
+    "workspace": "Settings",
+    "block_index": 5,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "Monitoring Settings",
+    "suggestions": []
+  },
+  {
+    "workspace": "Asset Management",
+    "block_index": 14,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "Asset Tree Viewer",
+    "suggestions": []
+  },
+  {
+    "workspace": "Asset Management",
+    "block_index": 15,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "Asset List",
+    "suggestions": []
+  },
+  {
+    "workspace": "Asset Management",
+    "block_index": 18,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "Active Alerts",
+    "suggestions": []
+  },
+  {
+    "workspace": "Asset Management",
+    "block_index": 19,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "Recent Telemetry",
+    "suggestions": []
+  },
+  {
+    "workspace": "Asset Management",
+    "block_index": 20,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "Monitoring Settings",
+    "suggestions": []
+  },
+  {
+    "workspace": "Projects",
+    "block_index": 3,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "7ubp9090u4",
+    "suggestions": []
+  },
+  {
+    "workspace": "Projects",
+    "block_index": 4,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "7ubiaat731",
+    "suggestions": []
+  },
+  {
+    "workspace": "Projects",
+    "block_index": 5,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "7ubirknjpd",
+    "suggestions": []
+  },
+  {
+    "workspace": "Quality",
+    "block_index": 3,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "7uarp1ge0k",
+    "suggestions": []
+  },
+  {
+    "workspace": "Quality",
+    "block_index": 4,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "7uajovag60",
+    "suggestions": []
+  },
+  {
+    "workspace": "Quality",
+    "block_index": 5,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "7uai5fuudb",
+    "suggestions": []
+  },
+  {
+    "workspace": "Support",
+    "block_index": 3,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "7ua4a3gf07",
+    "suggestions": []
+  },
+  {
+    "workspace": "Support",
+    "block_index": 4,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "7ua2qtrrnc",
+    "suggestions": []
+  },
+  {
+    "workspace": "Support",
+    "block_index": 5,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "7ua77hv8lc",
+    "suggestions": []
+  },
+  {
+    "workspace": "CRM",
+    "block_index": 3,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "7u928qkm3j",
+    "suggestions": []
+  },
+  {
+    "workspace": "CRM",
+    "block_index": 4,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "7u9vgslpu9",
+    "suggestions": []
+  },
+  {
+    "workspace": "CRM",
+    "block_index": 5,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "7u9h9l70ms",
+    "suggestions": []
+  },
+  {
+    "workspace": "CRM",
+    "block_index": 6,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "7u9haubfl5",
+    "suggestions": []
+  },
+  {
+    "workspace": "Helpdesk",
+    "block_index": 3,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "7u8dc4c39n",
+    "suggestions": []
+  },
+  {
+    "workspace": "Helpdesk",
+    "block_index": 4,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "7u8hv62ncb",
+    "suggestions": []
+  },
+  {
+    "workspace": "Helpdesk",
+    "block_index": 5,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "7u929jak0g",
+    "suggestions": []
+  },
+  {
+    "workspace": "Helpdesk",
+    "block_index": 6,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "7u9pha0q2n",
+    "suggestions": []
+  },
+  {
+    "workspace": "Telephony",
+    "block_index": 3,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "7u8iqfabhi",
+    "suggestions": []
+  },
+  {
+    "workspace": "Telephony",
+    "block_index": 4,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "7u8im4rplh",
+    "suggestions": []
+  },
+  {
+    "workspace": "Telephony",
+    "block_index": 5,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "7u8prb0svm",
+    "suggestions": []
+  },
+  {
+    "workspace": "Acquisition (Buying)",
+    "block_index": 3,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "RFQ",
+    "suggestions": []
+  },
+  {
+    "workspace": "Case Management",
+    "block_index": 11,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "Case List",
+    "suggestions": []
+  },
+  {
+    "workspace": "Guard Monitoring",
+    "block_index": 11,
+    "block_type": "shortcut",
+    "field": "unresolved_shortcut_name",
+    "unresolved_name": "Patrol Verifications",
+    "suggestions": []
+  }
+]

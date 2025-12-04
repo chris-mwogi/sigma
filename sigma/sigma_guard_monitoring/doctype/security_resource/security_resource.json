@@ -16,7 +16,6 @@
     "guard_details",
     "employee_id",
     "certifications",
-    "skills",
     "k9_details",
     "breed",
     "handler",
@@ -36,7 +35,7 @@
       "fieldname": "resource_type",
       "fieldtype": "Select",
       "label": "Resource Type",
-      "options": "Guard\nGuard Dog\nSecurity Vehicle\nSecurity Equipment\nStations",
+      "options": "Security Guard\nSecurity Supervisor\nGuard Dog\nSecurity Vehicle\nSecurity Equipment\nStations",
       "reqd": 1,
       "description": "Type of security resource"
     },
@@ -57,8 +56,8 @@
       "fieldname": "status",
       "fieldtype": "Select",
       "label": "Status",
-      "options": "Active\nInactive\nMaintenance\nRetired",
-      "default": "Active"
+      "options": "Available\nDeployed\nOn Leave\nInactive\nMaintenance\nRetired",
+      "default": "Available"
     },
     {
       "fieldname": "resource_details_section",
@@ -69,28 +68,21 @@
       "fieldname": "guard_details",
       "fieldtype": "Section Break",
       "label": "Guard Details",
-      "depends_on": "resource_type == 'Guard'"
+      "depends_on": "eval:['Security Guard', 'Security Supervisor'].includes(doc.resource_type)"
     },
     {
       "fieldname": "employee_id",
       "fieldtype": "Link",
       "label": "Employee ID",
       "options": "Employee",
-      "depends_on": "resource_type == 'Guard'"
+      "depends_on": "eval:['Security Guard', 'Security Supervisor'].includes(doc.resource_type)"
     },
     {
       "fieldname": "certifications",
       "fieldtype": "Table",
       "label": "Certifications",
       "options": "Resource Certification",
-      "depends_on": "resource_type == 'Guard'"
-    },
-    {
-      "fieldname": "skills",
-      "fieldtype": "Table MultiSelect",
-      "label": "Skills",
-      "options": "Guard Skill",
-      "depends_on": "resource_type == 'Guard'"
+      "depends_on": "eval:['Security Guard', 'Security Supervisor'].includes(doc.resource_type)"
     },
     {
       "fieldname": "k9_details",

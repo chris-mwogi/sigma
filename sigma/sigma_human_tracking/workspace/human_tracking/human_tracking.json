@@ -1,0 +1,577 @@
+{
+ "app": "sigma",
+ "charts": [],
+ "content": "[{\"id\": \"header-main\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h3\\\"><b>Human Tracking</b></span>\", \"col\": 12}}, {\"id\": \"para-main\", \"type\": \"paragraph\", \"data\": {\"text\": \"<p>Unified human tracking and monitoring workspace for real-time personnel location, zone management, visitor tracking, and safety compliance.</p>\", \"col\": 12}}, {\"id\": \"spacer-1\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"number-card-block\", \"type\": \"number_card\", \"data\": {\"col\": 12}}, {\"id\": \"spacer-2\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"shortcut-block\", \"type\": \"shortcut\", \"data\": {\"col\": 12}}, {\"id\": \"spacer-3\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"card-block-1\", \"type\": \"card\", \"data\": {\"card_name\": \"Realtime Monitoring\", \"col\": 4}}, {\"id\": \"card-block-2\", \"type\": \"card\", \"data\": {\"card_name\": \"Identity & Profiles\", \"col\": 4}}, {\"id\": \"card-block-3\", \"type\": \"card\", \"data\": {\"card_name\": \"Movement Logs\", \"col\": 4}}, {\"id\": \"card-block-4\", \"type\": \"card\", \"data\": {\"card_name\": \"Alerts & Incidents\", \"col\": 4}}, {\"id\": \"card-block-5\", \"type\": \"card\", \"data\": {\"card_name\": \"Configuration\", \"col\": 4}}, {\"id\": \"card-block-6\", \"type\": \"card\", \"data\": {\"card_name\": \"Policy & Compliance\", \"col\": 4}}, {\"id\": \"card-block-7\", \"type\": \"card\", \"data\": {\"card_name\": \"Related Workspaces\", \"col\": 4}}, {\"id\": \"card-block-8\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports & Analytics\", \"col\": 4}}]",
+ "creation": "2025-12-01 14:04:46.704317",
+ "custom_blocks": [
+  {
+   "label": "Overview"
+  },
+  {
+   "label": "Key Features"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "map-pin",
+ "idx": 0,
+ "indicator_color": "blue",
+ "is_hidden": 0,
+ "label": "Human Tracking",
+ "link_type": "DocType",
+ "links": [
+  {
+   "description": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Realtime Monitoring",
+   "link_count": 0,
+   "link_to": "",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Card Break"
+  },
+  {
+   "description": "View who is currently present in each zone",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Zone Presence",
+   "link_count": 0,
+   "link_to": "Zone Presence",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "description": "Monitor and manage lone worker safety alerts",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lone Worker Alert",
+   "link_count": 0,
+   "link_to": "Lone Worker Alert",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "description": "Real-time location events and movement tracking",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Human Location Event",
+   "link_count": 0,
+   "link_to": "Human Location Event",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "description": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Identity & Profiles",
+   "link_count": 0,
+   "link_to": "",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Card Break"
+  },
+  {
+   "description": "Central repository of all human profiles",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Human Profile",
+   "link_count": 0,
+   "link_to": "Human Profile",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "description": "Visitor profiles and information",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Visitor",
+   "link_count": 0,
+   "link_to": "Visitor",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "description": "Contractor information and credentials management",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contractor Profiles",
+   "link_count": 0,
+   "link_to": "Contractor Profiles",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "description": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Movement Logs",
+   "link_count": 0,
+   "link_to": "",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Card Break"
+  },
+  {
+   "description": "Visitor check-in and check-out records",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Visitor Registration",
+   "link_count": 0,
+   "link_to": "Visitor Registration",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "description": "Vehicle entry and exit logs",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Vehicle Checkin Checkout",
+   "link_count": 0,
+   "link_to": "Vehicle Checkin Checkout",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "description": "Personnel assignments to locations, zones, and shifts",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Personnel Assignment",
+   "link_count": 0,
+   "link_to": "Personnel Assignment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "description": "Patrol activities and checkpoint records",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Patrol Logs",
+   "link_count": 0,
+   "link_to": "Patrol Logs",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "description": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Alerts & Incidents",
+   "link_count": 0,
+   "link_to": "",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Card Break"
+  },
+  {
+   "description": "Security incidents and cases",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Case",
+   "link_count": 0,
+   "link_to": "Case",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "description": "Unauthorized zone access alerts and tracking",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Zone Breach Alerts",
+   "link_count": 0,
+   "link_to": "Zone Breach Alerts",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "description": "Tailgating incident detection and logging",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Tailgating Alerts",
+   "link_count": 0,
+   "link_to": "Tailgating Alerts",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "description": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Configuration",
+   "link_count": 0,
+   "link_to": "",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Card Break"
+  },
+  {
+   "description": "Manage tracking devices and sensors",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Tracking Device",
+   "link_count": 0,
+   "link_to": "Tracking Device",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "description": "Configure zones and access rules",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Zone Configuration",
+   "link_count": 0,
+   "link_to": "Zone Configuration",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "description": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Policy & Compliance",
+   "link_count": 0,
+   "link_to": "",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Card Break"
+  },
+  {
+   "description": "Tracking policies and compliance rules",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Human Tracking Policy",
+   "link_count": 0,
+   "link_to": "Human Tracking Policy",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "description": "Data retention policies and auto-deletion rules",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Data Retention Settings",
+   "link_count": 0,
+   "link_to": "Data Retention Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "description": "Consent forms and templates for tracking",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Consent Templates",
+   "link_count": 0,
+   "link_to": "Consent Templates",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "description": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Related Workspaces",
+   "link_count": 0,
+   "link_to": "",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Card Break"
+  },
+  {
+   "description": "Personnel tracking and safety monitoring",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Personnel Management",
+   "link_count": 0,
+   "link_to": "personnel-management",
+   "link_type": "Page",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "description": "Visitor registration and access control",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Visitor Management",
+   "link_count": 0,
+   "link_to": "visitor-management",
+   "link_type": "Page",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "description": "Vehicle tracking and parking management",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Vehicle Management",
+   "link_count": 0,
+   "link_to": "vehicle-management",
+   "link_type": "Page",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "description": "Security case investigation and management",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Case Management",
+   "link_count": 0,
+   "link_to": "case-management",
+   "link_type": "Page",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "description": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports & Analytics",
+   "link_count": 0,
+   "link_to": "",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Card Break"
+  },
+  {
+   "description": "Zone occupancy statistics and trends",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Zone Occupancy Report",
+   "link_count": 0,
+   "link_to": "Zone Occupancy Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "description": "Zone occupancy trends and activity patterns",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Zone Activity Dashboard",
+   "link_count": 0,
+   "link_to": "Zone Activity Dashboard",
+   "link_type": "Report",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "description": "Vehicle entry/exit logs and parking analytics",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Vehicle Movement Report",
+   "link_count": 0,
+   "link_to": "Vehicle Movement Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "description": "Visitor check-in/check-out activity and statistics",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Visitor Activity Report",
+   "link_count": 0,
+   "link_to": "Visitor Activity Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "description": "Comprehensive lone worker safety monitoring",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Lone Worker Monitoring",
+   "link_count": 0,
+   "link_to": "Lone Worker Monitoring",
+   "link_type": "Report",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "description": "Historical location tracking and movement patterns",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Personnel Location History",
+   "link_count": 0,
+   "link_to": "Personnel Location History",
+   "link_type": "Report",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "description": "Personnel movement patterns and history",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Personnel Movement History",
+   "link_count": 0,
+   "link_to": "Personnel Movement History",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "Lone worker incident analysis and reporting",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Lone Worker Incidents Report",
+   "link_count": 0,
+   "link_to": "Lone Worker Incidents Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "PPE compliance tracking and reporting",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "PPE Compliance Report",
+   "link_count": 0,
+   "link_to": "PPE Compliance Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-12-01 17:39:51.037029",
+ "modified_by": "Administrator",
+ "module": "Sigma Human Tracking",
+ "name": "Human Tracking",
+ "number_cards": [
+  {
+   "number_card_name": "Active Human Profiles"
+  },
+  {
+   "number_card_name": "Location Events Today"
+  },
+  {
+   "number_card_name": "Currently Present in Zones"
+  },
+  {
+   "number_card_name": "Active Lone Worker Alerts"
+  },
+  {
+   "number_card_name": "Active Visitors Today"
+  },
+  {
+   "number_card_name": "Vehicles On-Site Today"
+  }
+ ],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 0.0,
+ "shortcuts": [
+  {
+   "color": "blue",
+   "doc_view": "",
+   "format": "{} Active",
+   "label": "Human Profile",
+   "link_to": "Human Profile",
+   "stats_filter": "{\"status\": \"Active\"}",
+   "type": "DocType"
+  },
+  {
+   "color": "green",
+   "doc_view": "",
+   "format": "{} Today",
+   "label": "Human Location Event",
+   "link_to": "Human Location Event",
+   "stats_filter": "{\"event_timestamp\": [\"Timespan\", \"today\"]}",
+   "type": "DocType"
+  },
+  {
+   "color": "purple",
+   "doc_view": "",
+   "format": "{} Present",
+   "label": "Zone Presence",
+   "link_to": "Zone Presence",
+   "stats_filter": "{\"exit_time\": [\"is\", \"not set\"]}",
+   "type": "DocType"
+  },
+  {
+   "color": "red",
+   "doc_view": "",
+   "format": "{} Active",
+   "label": "Lone Worker Alert",
+   "link_to": "Lone Worker Alert",
+   "stats_filter": "{\"status\": \"Active\"}",
+   "type": "DocType"
+  },
+  {
+   "color": "cyan",
+   "doc_view": "",
+   "format": "{} Active",
+   "label": "Visitor",
+   "link_to": "Visitor",
+   "stats_filter": "{\"status\": \"Active\"}",
+   "type": "DocType"
+  },
+  {
+   "color": "orange",
+   "doc_view": "",
+   "format": "{} Onsite",
+   "label": "Vehicle Checkin Checkout",
+   "link_to": "Vehicle Checkin Checkout",
+   "stats_filter": "{\"checkout_time\": [\"is\", \"not set\"]}",
+   "type": "DocType"
+  }
+ ],
+ "title": "Human Tracking",
+ "type": "Workspace"
+}

@@ -53,7 +53,7 @@ def create_page():
         return {'status': 'exists'}
     page = frappe.new_doc('Page')
     page.page_name = name
-    page.module = 'Sigma Home'
+    page.module = 'Sigma'
     page.title = 'Sigma Desk'
     page.insert(ignore_permissions=True)
     return {'status': 'created', 'page': page.name}

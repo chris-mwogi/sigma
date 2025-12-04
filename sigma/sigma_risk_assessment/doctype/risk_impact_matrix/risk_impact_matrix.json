@@ -1,0 +1,122 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:impact_level",
+ "creation": "2025-11-18 16:30:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "impact_level",
+  "impact_score",
+  "column_break_1",
+  "color_code",
+  "financial_threshold",
+  "section_break_2",
+  "definition",
+  "section_break_3",
+  "examples"
+ ],
+ "fields": [
+  {
+   "fieldname": "impact_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Impact Level",
+   "options": "Low\nMedium\nHigh\nCritical\nCatastrophic",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "impact_score",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Impact Score",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "color_code",
+   "fieldtype": "Color",
+   "in_list_view": 1,
+   "label": "Color Code"
+  },
+  {
+   "fieldname": "financial_threshold",
+   "fieldtype": "Currency",
+   "label": "Financial Threshold"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Definition"
+  },
+  {
+   "fieldname": "definition",
+   "fieldtype": "Text Editor",
+   "label": "Definition"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "Examples"
+  },
+  {
+   "fieldname": "examples",
+   "fieldtype": "Text",
+   "label": "Examples"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-18 16:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Risk Assessment",
+ "name": "Risk Impact Matrix",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Risk Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Risk Owner",
+   "share": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "impact_score",
+ "sort_order": "ASC",
+ "states": [],
+ "track_changes": 1
+}
+

@@ -1,0 +1,127 @@
+{
+  "actions": [],
+  "autoname": "format:KPLC-LOC-{YYYY}-{#####}",
+  "creation": "2025-01-20 00:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "Document",
+  "engine": "InnoDB",
+  "field_order": [
+    "human",
+    "timestamp",
+    "zone",
+    "column_break_3",
+    "source_type",
+    "source_id",
+    "confidence",
+    "section_break_gps",
+    "latitude",
+    "longitude",
+    "column_break_gps",
+    "associated_vehicle",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "human",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Human Profile",
+      "options": "Human Profile",
+      "reqd": 1
+    },
+    {
+      "fieldname": "timestamp",
+      "fieldtype": "Datetime",
+      "in_list_view": 1,
+      "label": "Timestamp",
+      "reqd": 1,
+      "default": "now"
+    },
+    {
+      "fieldname": "zone",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Zone",
+      "options": "Zone Configuration"
+    },
+    {
+      "fieldname": "column_break_3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "source_type",
+      "fieldtype": "Select",
+      "label": "Source Type",
+      "options": "RFID\nBLE\nGPS\nLoRaWAN\nCCTV\nMobile App\nManual",
+      "reqd": 1
+    },
+    {
+      "fieldname": "source_id",
+      "fieldtype": "Data",
+      "label": "Source ID"
+    },
+    {
+      "fieldname": "confidence",
+      "fieldtype": "Percent",
+      "label": "Confidence",
+      "description": "Location accuracy confidence (0-100%)"
+    },
+    {
+      "fieldname": "section_break_gps",
+      "fieldtype": "Section Break",
+      "label": "GPS Coordinates"
+    },
+    {
+      "fieldname": "latitude",
+      "fieldtype": "Float",
+      "label": "Latitude",
+      "precision": "8"
+    },
+    {
+      "fieldname": "longitude",
+      "fieldtype": "Float",
+      "label": "Longitude",
+      "precision": "8"
+    },
+    {
+      "fieldname": "column_break_gps",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "associated_vehicle",
+      "fieldtype": "Data",
+      "label": "Associated Vehicle"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "links": [],
+  "modified": "2025-01-20 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sigma Personnel",
+  "name": "Human Location Event",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": []
+}
+

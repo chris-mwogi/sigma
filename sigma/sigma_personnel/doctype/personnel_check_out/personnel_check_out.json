@@ -1,0 +1,106 @@
+{
+  "actions": [],
+  "autoname": "format:KPLC-CHECKOUT-{YYYY}-{#####}",
+  "creation": "2025-01-20 00:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "Document",
+  "engine": "InnoDB",
+  "is_submittable": 1,
+  "field_order": [
+    "human",
+    "related_check_in",
+    "timestamp_out",
+    "column_break_3",
+    "exit_gate",
+    "method",
+    "duration_onsite",
+    "section_break_incident",
+    "incident_note"
+  ],
+  "fields": [
+    {
+      "fieldname": "human",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Human Profile",
+      "options": "Human Profile",
+      "reqd": 1
+    },
+    {
+      "fieldname": "related_check_in",
+      "fieldtype": "Link",
+      "label": "Related Check-In",
+      "options": "Personnel Check-In"
+    },
+    {
+      "fieldname": "timestamp_out",
+      "fieldtype": "Datetime",
+      "in_list_view": 1,
+      "label": "Check-Out Time",
+      "reqd": 1,
+      "default": "now"
+    },
+    {
+      "fieldname": "column_break_3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "exit_gate",
+      "fieldtype": "Data",
+      "label": "Exit Gate",
+      "reqd": 1
+    },
+    {
+      "fieldname": "method",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Check-Out Method",
+      "options": "RFID\nBiometric\nMobile App\nManual\nBLE\nNFC",
+      "reqd": 1
+    },
+    {
+      "fieldname": "duration_onsite",
+      "fieldtype": "Duration",
+      "label": "Duration On-Site",
+      "read_only": 1
+    },
+    {
+      "fieldname": "section_break_incident",
+      "fieldtype": "Section Break",
+      "label": "Incident Report"
+    },
+    {
+      "fieldname": "incident_note",
+      "fieldtype": "Text",
+      "label": "Incident Note"
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "links": [],
+  "modified": "2025-01-20 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sigma Personnel",
+  "name": "Personnel Check-Out",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1
+}
+

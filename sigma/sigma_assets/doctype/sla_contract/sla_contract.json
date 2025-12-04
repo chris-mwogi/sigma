@@ -1,0 +1,458 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2025-11-19 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "contract_information_section",
+  "contract_title",
+  "contract_number",
+  "vendor",
+  "vendor_name",
+  "column_break_contract1",
+  "contract_type",
+  "contract_status",
+  "priority",
+  "contract_dates_section",
+  "start_date",
+  "end_date",
+  "contract_duration_days",
+  "column_break_dates1",
+  "renewal_date",
+  "notice_period_days",
+  "auto_renewal",
+  "scope_and_coverage_section",
+  "scope_of_work",
+  "assets_covered",
+  "asset_categories_covered",
+  "column_break_scope1",
+  "geographic_coverage",
+  "service_hours",
+  "emergency_support_included",
+  "financial_terms_section",
+  "contract_value",
+  "currency",
+  "payment_terms",
+  "column_break_financial1",
+  "payment_frequency",
+  "penalty_clause",
+  "bonus_clause",
+  "sla_terms_section",
+  "response_time_hours",
+  "resolution_time_hours",
+  "availability_target",
+  "column_break_sla1",
+  "uptime_guarantee",
+  "maximum_downtime_hours",
+  "escalation_matrix",
+  "kpi_section",
+  "sla_kpis",
+  "performance_tracking_section",
+  "sla_compliance_percentage",
+  "total_incidents",
+  "resolved_incidents",
+  "column_break_perf1",
+  "breaches_count",
+  "penalties_applied",
+  "bonuses_earned",
+  "compliance_and_reporting_section",
+  "reporting_frequency",
+  "last_review_date",
+  "next_review_date",
+  "column_break_compliance1",
+  "compliance_status",
+  "audit_required",
+  "certification_required",
+  "notes_section",
+  "notes",
+  "terms_and_conditions",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "SIGMA-SLA-.YYYY.-"
+  },
+  {
+   "fieldname": "contract_information_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Information"
+  },
+  {
+   "fieldname": "contract_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Contract Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contract_number",
+   "fieldtype": "Data",
+   "label": "Contract Number",
+   "unique": 1
+  },
+  {
+   "fieldname": "vendor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Vendor",
+   "options": "Asset Vendor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vendor_name",
+   "fieldtype": "Data",
+   "fetch_from": "vendor.vendor_name",
+   "label": "Vendor Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_contract1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contract_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Contract Type",
+   "options": "\nMaintenance\nSupport\nService\nSupply\nConsulting\nManaged Services\nWarranty Extension",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contract_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Contract Status",
+   "options": "Draft\nActive\nExpired\nTerminated\nRenewed\nUnder Review",
+   "reqd": 1
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "\nLow\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "contract_dates_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Dates"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contract_duration_days",
+   "fieldtype": "Int",
+   "label": "Contract Duration (Days)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_dates1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "renewal_date",
+   "fieldtype": "Date",
+   "label": "Renewal Date"
+  },
+  {
+   "fieldname": "notice_period_days",
+   "fieldtype": "Int",
+   "label": "Notice Period (Days)"
+  },
+  {
+   "fieldname": "auto_renewal",
+   "fieldtype": "Check",
+   "label": "Auto Renewal"
+  },
+  {
+   "fieldname": "scope_and_coverage_section",
+   "fieldtype": "Section Break",
+   "label": "Scope and Coverage"
+  },
+  {
+   "fieldname": "scope_of_work",
+   "fieldtype": "Text Editor",
+   "label": "Scope of Work"
+  },
+  {
+   "fieldname": "assets_covered",
+   "fieldtype": "Small Text",
+   "label": "Assets Covered"
+  },
+  {
+   "fieldname": "asset_categories_covered",
+   "fieldtype": "Small Text",
+   "label": "Asset Categories Covered"
+  },
+  {
+   "fieldname": "column_break_scope1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "geographic_coverage",
+   "fieldtype": "Small Text",
+   "label": "Geographic Coverage"
+  },
+  {
+   "fieldname": "service_hours",
+   "fieldtype": "Data",
+   "label": "Service Hours"
+  },
+  {
+   "fieldname": "emergency_support_included",
+   "fieldtype": "Check",
+   "label": "Emergency Support Included"
+  },
+  {
+   "fieldname": "financial_terms_section",
+   "fieldtype": "Section Break",
+   "label": "Financial Terms"
+  },
+  {
+   "fieldname": "contract_value",
+   "fieldtype": "Currency",
+   "label": "Contract Value",
+   "reqd": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "payment_terms",
+   "fieldtype": "Select",
+   "label": "Payment Terms",
+   "options": "\nMonthly\nQuarterly\nAnnually\nMilestone-Based\nFixed Price\nTime and Materials"
+  },
+  {
+   "fieldname": "column_break_financial1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_frequency",
+   "fieldtype": "Select",
+   "label": "Payment Frequency",
+   "options": "\nMonthly\nQuarterly\nBi-Annually\nAnnually\nOne-Time"
+  },
+  {
+   "fieldname": "penalty_clause",
+   "fieldtype": "Text Editor",
+   "label": "Penalty Clause"
+  },
+  {
+   "fieldname": "bonus_clause",
+   "fieldtype": "Text Editor",
+   "label": "Bonus Clause"
+  },
+  {
+   "fieldname": "sla_terms_section",
+   "fieldtype": "Section Break",
+   "label": "SLA Terms"
+  },
+  {
+   "fieldname": "response_time_hours",
+   "fieldtype": "Float",
+   "label": "Response Time (Hours)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "resolution_time_hours",
+   "fieldtype": "Float",
+   "label": "Resolution Time (Hours)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "availability_target",
+   "fieldtype": "Percent",
+   "label": "Availability Target"
+  },
+  {
+   "fieldname": "column_break_sla1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "uptime_guarantee",
+   "fieldtype": "Percent",
+   "label": "Uptime Guarantee"
+  },
+  {
+   "fieldname": "maximum_downtime_hours",
+   "fieldtype": "Float",
+   "label": "Maximum Downtime (Hours/Month)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "escalation_matrix",
+   "fieldtype": "Text Editor",
+   "label": "Escalation Matrix"
+  },
+  {
+   "fieldname": "kpi_section",
+   "fieldtype": "Section Break",
+   "label": "KPIs"
+  },
+  {
+   "fieldname": "sla_kpis",
+   "fieldtype": "Table",
+   "label": "SLA KPIs",
+   "options": "SLA KPI"
+  },
+  {
+   "fieldname": "performance_tracking_section",
+   "fieldtype": "Section Break",
+   "label": "Performance Tracking"
+  },
+  {
+   "fieldname": "sla_compliance_percentage",
+   "fieldtype": "Percent",
+   "label": "SLA Compliance %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_incidents",
+   "fieldtype": "Int",
+   "label": "Total Incidents",
+   "read_only": 1
+  },
+  {
+   "fieldname": "resolved_incidents",
+   "fieldtype": "Int",
+   "label": "Resolved Incidents",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_perf1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "breaches_count",
+   "fieldtype": "Int",
+   "label": "SLA Breaches Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "penalties_applied",
+   "fieldtype": "Currency",
+   "label": "Penalties Applied",
+   "read_only": 1
+  },
+  {
+   "fieldname": "bonuses_earned",
+   "fieldtype": "Currency",
+   "label": "Bonuses Earned",
+   "read_only": 1
+  },
+  {
+   "fieldname": "compliance_and_reporting_section",
+   "fieldtype": "Section Break",
+   "label": "Compliance and Reporting"
+  },
+  {
+   "fieldname": "reporting_frequency",
+   "fieldtype": "Select",
+   "label": "Reporting Frequency",
+   "options": "\nWeekly\nMonthly\nQuarterly\nAnnually"
+  },
+  {
+   "fieldname": "last_review_date",
+   "fieldtype": "Date",
+   "label": "Last Review Date"
+  },
+  {
+   "fieldname": "next_review_date",
+   "fieldtype": "Date",
+   "label": "Next Review Date"
+  },
+  {
+   "fieldname": "column_break_compliance1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "compliance_status",
+   "fieldtype": "Select",
+   "label": "Compliance Status",
+   "options": "\nCompliant\nPartial\nNon-Compliant\nUnder Review"
+  },
+  {
+   "fieldname": "audit_required",
+   "fieldtype": "Check",
+   "label": "Audit Required"
+  },
+  {
+   "fieldname": "certification_required",
+   "fieldtype": "Check",
+   "label": "Certification Required"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "terms_and_conditions",
+   "fieldtype": "Text Editor",
+   "label": "Terms and Conditions"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "SLA Contract",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-11-19 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Assets",
+ "name": "SLA Contract",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+

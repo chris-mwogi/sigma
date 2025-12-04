@@ -1,0 +1,99 @@
+[
+
+    {
+        "doctype": "Property Setter",
+        "doctype_or_field": "DocField",
+        "doc_type": "Site Allocation",
+        "field_name": "location",
+        "property": "reqd",
+        "value": 1
+    },
+    {
+        "doctype": "Property Setter",
+        "doctype_or_field": "DocField",
+        "doc_type": "Site Allocation",
+        "field_name": "supplier",
+        "property": "reqd",
+        "value": 1
+    },
+    {
+        "doctype": "Property Setter",
+        "doctype_or_field": "DocField",
+        "doc_type": "Site Allocation",
+        "field_name": "assets",
+        "property": "hidden",
+        "value": 0
+    },
+    {
+        "doctype": "Property Setter",
+        "doctype_or_field": "DocField",
+        "doc_type": "Guard Shift",
+        "field_name": "site_allocation",
+        "property": "reqd",
+        "value": 1
+    },
+    {
+        "doctype": "Property Setter",
+        "doctype_or_field": "DocField",
+        "doc_type": "Guard Shift",
+        "field_name": "guard_name",
+        "property": "reqd",
+        "value": 1
+    },
+    {
+        "doctype": "Property Setter",
+        "doctype_or_field": "DocField",
+        "doc_type": "Guard Shift",
+        "field_name": "status",
+        "property": "options",
+        "value": "Active\nCompleted"
+    },
+    {
+        "doctype": "Property Setter",
+        "doctype_or_field": "DocField",
+        "doc_type": "Guard Incident",
+        "field_name": "location",
+        "property": "reqd",
+        "value": 1
+    },
+    {
+        "doctype": "Property Setter",
+        "doctype_or_field": "DocField",
+        "doc_type": "Guard Incident",
+        "field_name": "category",
+        "property": "reqd",
+        "value": 1
+    },
+    {
+        "doctype": "Property Setter",
+        "doctype_or_field": "DocField",
+        "doc_type": "Guard Incident",
+        "field_name": "asset",
+        "property": "reqd",
+        "value": 0
+    },
+    {
+        "doctype": "Property Setter",
+        "doctype_or_field": "DocField",
+        "doc_type": "Guard Incident",
+        "field_name": "incident_status",
+        "property": "options",
+        "value": "Open\nUnder Investigation\nResolved"
+    },
+    {
+        "doctype": "Property Setter",
+        "doctype_or_field": "DocField",
+        "doc_type": "Prosecution Case",
+        "field_name": "case_incident",
+        "property": "reqd",
+        "value": 1
+    },
+    {
+        "doctype": "Property Setter",
+        "doctype_or_field": "DocField",
+        "doc_type": "Prosecution Case",
+        "field_name": "case_status",
+        "property": "options",
+        "value": "Pending\nIn Progress\nClosed"
+    }
+]

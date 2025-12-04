@@ -1,0 +1,117 @@
+{
+ "app": "sigma",
+ "charts": [],
+ "content": "[{\"id\":\"header-main\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h3\\\"><b>Access Control</b></span>\",\"col\":12}},{\"id\":\"para-main\",\"type\":\"paragraph\",\"data\":{\"text\":\"<p>Manage access control systems, permissions, security policies, and monitor access events across all locations.</p>\",\"col\":12}},{\"id\":\"spacer-1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"header-shortcuts\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quick Actions</b></span>\",\"col\":12}},{\"id\":\"shortcut-event\",\"type\":\"shortcut\",\"data\":{\"col\":3,\"shortcut_name\":\"Access Event\"}},{\"id\":\"shortcut-point\",\"type\":\"shortcut\",\"data\":{\"col\":3,\"shortcut_name\":\"Access Point\"}},{\"id\":\"shortcut-policy\",\"type\":\"shortcut\",\"data\":{\"col\":3,\"shortcut_name\":\"Access Policy\"}},{\"id\":\"shortcut-log\",\"type\":\"shortcut\",\"data\":{\"col\":3,\"shortcut_name\":\"Access Log\"}},{\"id\":\"spacer-2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"header-cards\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Access Management</b></span>\",\"col\":12}},{\"id\":\"card-events\",\"type\":\"card\",\"data\":{\"card_name\":\"Access Events\",\"col\":4}},{\"id\":\"card-infrastructure\",\"type\":\"card\",\"data\":{\"card_name\":\"Infrastructure\",\"col\":4}},{\"id\":\"card-policies\",\"type\":\"card\",\"data\":{\"card_name\":\"Policies & Security\",\"col\":4}}]",
+ "creation": "2025-11-14 12:00:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "lock",
+ "idx": 0,
+ "indicator_color": "blue",
+ "is_hidden": 0,
+ "label": "Access Control",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Access Events",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Access Event",
+   "link_count": 0,
+   "link_to": "Access Event",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Access Log",
+   "link_count": 0,
+   "link_to": "Access Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Infrastructure",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Access Point",
+   "link_count": 0,
+   "link_to": "Access Point",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Policies & Security",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Access Policy",
+   "link_count": 0,
+   "link_to": "Access Policy",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-11-14 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Access Control",
+ "name": "Access Control",
+ "number_cards": [],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 30.0,
+ "shortcuts": [
+  {
+   "label": "Access Event",
+   "link_to": "Access Event",
+   "type": "DocType"
+  },
+  {
+   "label": "Access Point",
+   "link_to": "Access Point",
+   "type": "DocType"
+  },
+  {
+   "label": "Access Policy",
+   "link_to": "Access Policy",
+   "type": "DocType"
+  },
+  {
+   "label": "Access Log",
+   "link_to": "Access Log",
+   "type": "DocType"
+  }
+ ],
+ "title": "Access Control",
+ "type": "Workspace"
+}
+

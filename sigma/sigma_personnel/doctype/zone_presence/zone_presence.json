@@ -1,0 +1,128 @@
+{
+  "actions": [],
+  "autoname": "format:KPLC-PRES-{YYYY}-{#####}",
+  "creation": "2025-01-20 00:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "Document",
+  "engine": "InnoDB",
+  "field_order": [
+    "human",
+    "zone",
+    "time_entered",
+    "column_break_3",
+    "last_seen",
+    "time_exited",
+    "presence_duration",
+    "section_break_status",
+    "status",
+    "expected_departure",
+    "column_break_status",
+    "related_check_in",
+    "alert_triggered"
+  ],
+  "fields": [
+    {
+      "fieldname": "human",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Human Profile",
+      "options": "Human Profile",
+      "reqd": 1
+    },
+    {
+      "fieldname": "zone",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Zone",
+      "options": "Zone Configuration",
+      "reqd": 1
+    },
+    {
+      "fieldname": "time_entered",
+      "fieldtype": "Datetime",
+      "in_list_view": 1,
+      "label": "Time Entered",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "last_seen",
+      "fieldtype": "Datetime",
+      "label": "Last Seen"
+    },
+    {
+      "fieldname": "time_exited",
+      "fieldtype": "Datetime",
+      "label": "Time Exited"
+    },
+    {
+      "fieldname": "presence_duration",
+      "fieldtype": "Duration",
+      "label": "Presence Duration",
+      "read_only": 1
+    },
+    {
+      "fieldname": "section_break_status",
+      "fieldtype": "Section Break",
+      "label": "Status"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Status",
+      "options": "Active\nExited\nAlert",
+      "default": "Active",
+      "reqd": 1
+    },
+    {
+      "fieldname": "expected_departure",
+      "fieldtype": "Datetime",
+      "label": "Expected Departure"
+    },
+    {
+      "fieldname": "column_break_status",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "related_check_in",
+      "fieldtype": "Link",
+      "label": "Related Check-In",
+      "options": "Personnel Check-In"
+    },
+    {
+      "fieldname": "alert_triggered",
+      "fieldtype": "Check",
+      "label": "Alert Triggered"
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "links": [],
+  "modified": "2025-01-20 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sigma Personnel",
+  "name": "Zone Presence",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": []
+}
+

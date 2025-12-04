@@ -1,0 +1,193 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:MA-{#####}",
+ "creation": "2025-11-14 21:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "device_information_section",
+  "monitored_device",
+  "asset",
+  "column_break_1",
+  "source_system",
+  "timestamp",
+  "alert_information_section",
+  "alert_type",
+  "severity",
+  "message",
+  "column_break_2",
+  "workflow_state",
+  "resolved",
+  "resolved_at",
+  "resolved_by",
+  "resolution_section",
+  "resolution_notes",
+  "linked_documents_section",
+  "linked_issue",
+  "linked_maintenance_job",
+  "metadata_section",
+  "metadata"
+ ],
+ "fields": [
+  {
+   "fieldname": "device_information_section",
+   "fieldtype": "Section Break",
+   "label": "Device Information"
+  },
+  {
+   "fieldname": "monitored_device",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Monitored Device",
+   "options": "Monitored Device",
+   "reqd": 1
+  },
+  {
+   "fieldname": "asset",
+   "fieldtype": "Link",
+   "label": "Asset",
+   "options": "Asset"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "source_system",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Source System",
+   "reqd": 1
+  },
+  {
+   "fieldname": "timestamp",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Timestamp",
+   "reqd": 1
+  },
+  {
+   "fieldname": "alert_information_section",
+   "fieldtype": "Section Break",
+   "label": "Alert Information"
+  },
+  {
+   "fieldname": "alert_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Alert Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "severity",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Severity",
+   "options": "Info\nWarning\nCritical\nEmergency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "message",
+   "fieldtype": "Text",
+   "label": "Message",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Workflow State",
+   "options": "Open\nAcknowledged\nIn Progress\nResolved",
+   "default": "Open"
+  },
+  {
+   "fieldname": "resolved",
+   "fieldtype": "Check",
+   "label": "Resolved",
+   "default": 0
+  },
+  {
+   "fieldname": "resolved_at",
+   "fieldtype": "Datetime",
+   "label": "Resolved At"
+  },
+  {
+   "fieldname": "resolved_by",
+   "fieldtype": "Link",
+   "label": "Resolved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "resolution_section",
+   "fieldtype": "Section Break",
+   "label": "Resolution"
+  },
+  {
+   "fieldname": "resolution_notes",
+   "fieldtype": "Text",
+   "label": "Resolution Notes"
+  },
+  {
+   "fieldname": "linked_documents_section",
+   "fieldtype": "Section Break",
+   "label": "Linked Documents"
+  },
+  {
+   "fieldname": "linked_issue",
+   "fieldtype": "Link",
+   "label": "Linked Issue",
+   "options": "Issue"
+  },
+  {
+   "fieldname": "linked_maintenance_job",
+   "fieldtype": "Link",
+   "label": "Linked Maintenance Job",
+   "options": "Maintenance Job Card"
+  },
+  {
+   "fieldname": "metadata_section",
+   "fieldtype": "Section Break",
+   "label": "Metadata"
+  },
+  {
+   "fieldname": "metadata",
+   "fieldtype": "JSON",
+   "label": "Additional Metadata"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-14 21:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Assets",
+ "name": "Monitoring Alert",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+

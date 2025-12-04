@@ -1,0 +1,246 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:CTRL-{YYYY}-{#####}",
+ "creation": "2025-11-18 16:30:00.000000",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "control_details_section",
+  "control_name",
+  "control_type",
+  "control_category",
+  "column_break_1",
+  "control_owner",
+  "implementation_status",
+  "control_description_section",
+  "control_description",
+  "control_objective",
+  "implementation_section",
+  "implementation_date",
+  "last_review_date",
+  "column_break_2",
+  "next_review_date",
+  "review_frequency_days",
+  "effectiveness_section",
+  "effectiveness_rating",
+  "effectiveness_evidence",
+  "column_break_3",
+  "cost_of_control",
+  "automation_level",
+  "linked_information_section",
+  "linked_risks",
+  "linked_compliance_requirements",
+  "section_break_4",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "control_details_section",
+   "fieldtype": "Section Break",
+   "label": "Control Details"
+  },
+  {
+   "fieldname": "control_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Control Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "control_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Control Type",
+   "options": "Preventive\nDetective\nCorrective\nDirective",
+   "reqd": 1
+  },
+  {
+   "fieldname": "control_category",
+   "fieldtype": "Select",
+   "label": "Control Category",
+   "options": "Manual\nAutomated\nIT-Dependent\nManagement Review"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "control_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Control Owner",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "implementation_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Implementation Status",
+   "options": "Planned\nIn Progress\nImplemented\nUnder Review\nRetired",
+   "reqd": 1,
+   "default": "Planned"
+  },
+  {
+   "fieldname": "control_description_section",
+   "fieldtype": "Section Break",
+   "label": "Control Description"
+  },
+  {
+   "fieldname": "control_description",
+   "fieldtype": "Text Editor",
+   "label": "Control Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "control_objective",
+   "fieldtype": "Text Editor",
+   "label": "Control Objective"
+  },
+  {
+   "fieldname": "implementation_section",
+   "fieldtype": "Section Break",
+   "label": "Implementation & Review"
+  },
+  {
+   "fieldname": "implementation_date",
+   "fieldtype": "Date",
+   "label": "Implementation Date"
+  },
+  {
+   "fieldname": "last_review_date",
+   "fieldtype": "Date",
+   "label": "Last Review Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "next_review_date",
+   "fieldtype": "Date",
+   "label": "Next Review Date"
+  },
+  {
+   "fieldname": "review_frequency_days",
+   "fieldtype": "Int",
+   "label": "Review Frequency (Days)",
+   "default": "180"
+  },
+  {
+   "fieldname": "effectiveness_section",
+   "fieldtype": "Section Break",
+   "label": "Effectiveness Assessment"
+  },
+  {
+   "fieldname": "effectiveness_rating",
+   "fieldtype": "Select",
+   "label": "Effectiveness Rating",
+   "options": "Not Assessed\nNot Effective\nPartially Effective\nEffective\nHighly Effective"
+  },
+  {
+   "fieldname": "effectiveness_evidence",
+   "fieldtype": "Text Editor",
+   "label": "Effectiveness Evidence"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cost_of_control",
+   "fieldtype": "Currency",
+   "label": "Cost of Control"
+  },
+  {
+   "fieldname": "automation_level",
+   "fieldtype": "Percent",
+   "label": "Automation Level"
+  },
+  {
+   "fieldname": "linked_information_section",
+   "fieldtype": "Section Break",
+   "label": "Linked Information"
+  },
+  {
+   "fieldname": "linked_risks",
+   "fieldtype": "Small Text",
+   "label": "Linked Risks",
+   "read_only": 1
+  },
+  {
+   "fieldname": "linked_compliance_requirements",
+   "fieldtype": "Small Text",
+   "label": "Linked Compliance Requirements",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Additional Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-18 16:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Risk Assessment",
+ "name": "Risk Control",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Risk Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Risk Owner",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Employee"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "control_name",
+ "track_changes": 1
+}
+

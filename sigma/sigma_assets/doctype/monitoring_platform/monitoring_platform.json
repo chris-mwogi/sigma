@@ -1,0 +1,425 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:platform_name",
+ "creation": "2025-11-14 22:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "platform_information_section",
+  "platform_name",
+  "platform_type",
+  "description",
+  "column_break_1",
+  "enabled",
+  "status",
+  "last_sync",
+  "connection_details_section",
+  "api_endpoint_url",
+  "host",
+  "port",
+  "column_break_2",
+  "use_ssl",
+  "verify_ssl",
+  "timeout_seconds",
+  "authentication_section",
+  "auth_type",
+  "api_key",
+  "username",
+  "password",
+  "column_break_3",
+  "auth_token",
+  "client_id",
+  "client_secret",
+  "webhook_configuration_section",
+  "webhook_url",
+  "webhook_secret",
+  "webhook_enabled",
+  "column_break_4",
+  "signature_validation_enabled",
+  "signature_algorithm",
+  "rate_limiting_section",
+  "enable_rate_limiting",
+  "rate_limit_per_minute",
+  "rate_limit_per_hour",
+  "column_break_5",
+  "rate_limit_per_day",
+  "burst_limit",
+  "data_retention_section",
+  "telemetry_retention_days",
+  "alert_retention_days",
+  "column_break_6",
+  "auto_archive_old_data",
+  "archive_storage_path",
+  "platform_specific_settings_section",
+  "custom_headers",
+  "custom_parameters",
+  "metadata",
+  "statistics_section",
+  "total_devices",
+  "active_devices",
+  "column_break_7",
+  "total_alerts_today",
+  "last_error",
+  "last_error_time"
+ ],
+ "fields": [
+  {
+   "fieldname": "platform_information_section",
+   "fieldtype": "Section Break",
+   "label": "Platform Information"
+  },
+  {
+   "fieldname": "platform_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Platform Name",
+   "reqd": 1,
+   "unique": 1,
+   "description": "Unique name for this monitoring platform instance (e.g., 'OpManager Production', 'Zabbix HQ')"
+  },
+  {
+   "fieldname": "platform_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Platform Type",
+   "options": "OpManager\nZabbix\nPRTG\nIoT Gateway\nSCADA\nNagios\nPrometheus\nDatadog\nNew Relic\nCustom",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled",
+   "default": 1,
+   "description": "Enable/disable this monitoring platform"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nInactive\nError\nMaintenance",
+   "default": "Active"
+  },
+  {
+   "fieldname": "last_sync",
+   "fieldtype": "Datetime",
+   "label": "Last Sync",
+   "read_only": 1
+  },
+  {
+   "fieldname": "connection_details_section",
+   "fieldtype": "Section Break",
+   "label": "Connection Details"
+  },
+  {
+   "fieldname": "api_endpoint_url",
+   "fieldtype": "Data",
+   "label": "API Endpoint URL",
+   "description": "Full API endpoint URL (e.g., https://opmanager.example.com/api)"
+  },
+  {
+   "fieldname": "host",
+   "fieldtype": "Data",
+   "label": "Host",
+   "description": "Hostname or IP address"
+  },
+  {
+   "fieldname": "port",
+   "fieldtype": "Int",
+   "label": "Port",
+   "description": "Port number"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "use_ssl",
+   "fieldtype": "Check",
+   "label": "Use SSL/TLS",
+   "default": 1
+  },
+  {
+   "fieldname": "verify_ssl",
+   "fieldtype": "Check",
+   "label": "Verify SSL Certificate",
+   "default": 1
+  },
+  {
+   "fieldname": "timeout_seconds",
+   "fieldtype": "Int",
+   "label": "Timeout (seconds)",
+   "default": 30
+  },
+  {
+   "fieldname": "authentication_section",
+   "fieldtype": "Section Break",
+   "label": "Authentication"
+  },
+  {
+   "fieldname": "auth_type",
+   "fieldtype": "Select",
+   "label": "Authentication Type",
+   "options": "None\nAPI Key\nBasic Auth\nBearer Token\nOAuth 2.0\nCustom",
+   "default": "API Key"
+  },
+  {
+   "fieldname": "api_key",
+   "fieldtype": "Password",
+   "label": "API Key"
+  },
+  {
+   "fieldname": "username",
+   "fieldtype": "Data",
+   "label": "Username"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "label": "Password"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "auth_token",
+   "fieldtype": "Password",
+   "label": "Auth Token"
+  },
+  {
+   "fieldname": "client_id",
+   "fieldtype": "Data",
+   "label": "Client ID"
+  },
+  {
+   "fieldname": "client_secret",
+   "fieldtype": "Password",
+   "label": "Client Secret"
+  },
+  {
+   "fieldname": "webhook_configuration_section",
+   "fieldtype": "Section Break",
+   "label": "Webhook Configuration"
+  },
+  {
+   "fieldname": "webhook_url",
+   "fieldtype": "Data",
+   "label": "Webhook URL",
+   "read_only": 1,
+   "description": "This is the webhook URL to configure in your monitoring platform"
+  },
+  {
+   "fieldname": "webhook_secret",
+   "fieldtype": "Password",
+   "label": "Webhook Secret",
+   "description": "Secret key for HMAC signature validation"
+  },
+  {
+   "fieldname": "webhook_enabled",
+   "fieldtype": "Check",
+   "label": "Webhook Enabled",
+   "default": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "signature_validation_enabled",
+   "fieldtype": "Check",
+   "label": "Enable Signature Validation",
+   "default": 1,
+   "description": "Validate HMAC-SHA256 signatures on incoming webhooks"
+  },
+  {
+   "fieldname": "signature_algorithm",
+   "fieldtype": "Select",
+   "label": "Signature Algorithm",
+   "options": "HMAC-SHA256\nHMAC-SHA512\nNone",
+   "default": "HMAC-SHA256"
+  },
+  {
+   "fieldname": "rate_limiting_section",
+   "fieldtype": "Section Break",
+   "label": "Rate Limiting"
+  },
+  {
+   "fieldname": "enable_rate_limiting",
+   "fieldtype": "Check",
+   "label": "Enable Rate Limiting",
+   "default": 1
+  },
+  {
+   "fieldname": "rate_limit_per_minute",
+   "fieldtype": "Int",
+   "label": "Rate Limit Per Minute",
+   "default": 100,
+   "description": "Maximum requests per minute from this platform"
+  },
+  {
+   "fieldname": "rate_limit_per_hour",
+   "fieldtype": "Int",
+   "label": "Rate Limit Per Hour",
+   "default": 5000
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rate_limit_per_day",
+   "fieldtype": "Int",
+   "label": "Rate Limit Per Day",
+   "default": 100000
+  },
+  {
+   "fieldname": "burst_limit",
+   "fieldtype": "Int",
+   "label": "Burst Limit",
+   "default": 200,
+   "description": "Maximum burst requests allowed"
+  },
+  {
+   "fieldname": "data_retention_section",
+   "fieldtype": "Section Break",
+   "label": "Data Retention"
+  },
+  {
+   "fieldname": "telemetry_retention_days",
+   "fieldtype": "Int",
+   "label": "Telemetry Retention (Days)",
+   "default": 30,
+   "description": "Keep telemetry data for this many days"
+  },
+  {
+   "fieldname": "alert_retention_days",
+   "fieldtype": "Int",
+   "label": "Alert Retention (Days)",
+   "default": 90,
+   "description": "Keep alert data for this many days"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "auto_archive_old_data",
+   "fieldtype": "Check",
+   "label": "Auto Archive Old Data",
+   "default": 0
+  },
+  {
+   "fieldname": "archive_storage_path",
+   "fieldtype": "Data",
+   "label": "Archive Storage Path",
+   "description": "Path for archived data storage"
+  },
+  {
+   "fieldname": "platform_specific_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Platform-Specific Settings"
+  },
+  {
+   "fieldname": "custom_headers",
+   "fieldtype": "JSON",
+   "label": "Custom Headers",
+   "description": "JSON object with custom HTTP headers"
+  },
+  {
+   "fieldname": "custom_parameters",
+   "fieldtype": "JSON",
+   "label": "Custom Parameters",
+   "description": "JSON object with platform-specific parameters"
+  },
+  {
+   "fieldname": "metadata",
+   "fieldtype": "JSON",
+   "label": "Metadata",
+   "description": "Additional metadata for this platform"
+  },
+  {
+   "fieldname": "statistics_section",
+   "fieldtype": "Section Break",
+   "label": "Statistics",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "total_devices",
+   "fieldtype": "Int",
+   "label": "Total Devices",
+   "read_only": 1,
+   "default": 0
+  },
+  {
+   "fieldname": "active_devices",
+   "fieldtype": "Int",
+   "label": "Active Devices",
+   "read_only": 1,
+   "default": 0
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_alerts_today",
+   "fieldtype": "Int",
+   "label": "Total Alerts Today",
+   "read_only": 1,
+   "default": 0
+  },
+  {
+   "fieldname": "last_error",
+   "fieldtype": "Small Text",
+   "label": "Last Error",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_error_time",
+   "fieldtype": "Datetime",
+   "label": "Last Error Time",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-14 22:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Assets",
+ "name": "Monitoring Platform",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "title_field": "platform_name"
+}
+

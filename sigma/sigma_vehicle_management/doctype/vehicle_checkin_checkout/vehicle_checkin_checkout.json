@@ -36,6 +36,7 @@
   "linked_staff_visit",
   "column_break_integration",
   "vehicle_pass_number",
+  "parking_zone",
   "parking_space_assigned",
   "vms_section",
   "vms_entry_event",
@@ -217,6 +218,12 @@
    "fieldname": "vehicle_pass_number",
    "fieldtype": "Data",
    "label": "Vehicle Pass Number"
+  },
+  {
+   "fieldname": "parking_zone",
+   "fieldtype": "Link",
+   "label": "Parking Zone",
+   "options": "Parking Zone"
   },
   {
    "fieldname": "parking_space_assigned",

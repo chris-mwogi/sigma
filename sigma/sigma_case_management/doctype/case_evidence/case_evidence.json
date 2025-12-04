@@ -4,7 +4,7 @@
   "module": "Sigma Case Management",
   "custom": 0,
   "is_submittable": 1,
-  "autoname": "EVID-{YYYY}-{####}",
+  "autoname": "format:EVD-{YYYY}-{#####}",
   "title_field": "evidence_description",
   "fields": [
     {

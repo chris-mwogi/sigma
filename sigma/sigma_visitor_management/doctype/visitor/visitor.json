@@ -1,5 +1,5 @@
 {
-  "autoname": "VIS-{YYYY}-{####}",
+  "autoname": "format:VIS-.{YYYY}.-.{####}",
   "creation": "2025-10-24 00:00:00.000000",
   "doctype": "DocType",
   "document_type": "Document",

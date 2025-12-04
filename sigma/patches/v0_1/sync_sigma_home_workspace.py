@@ -72,6 +72,18 @@ def execute():
     # Create new workspace from fixture
     print(f"\nCreating workspace from fixture...")
     try:
+        # Ensure Module Def exists so link validation passes
+        if not frappe.db.exists("Module Def", "Sigma"):
+            try:
+                md = frappe.new_doc("Module Def")
+                md.module_name = "Sigma"
+                md.app_name = "sigma"
+                md.insert(ignore_permissions=True)
+                frappe.db.commit()
+                print("✅ Module Def 'Sigma' created")
+            except Exception as me:
+                print(f"⚠️ Could not create Module Def: {me}")
+
         workspace = frappe.get_doc(workspace_data)
         workspace.insert()
         frappe.db.commit()

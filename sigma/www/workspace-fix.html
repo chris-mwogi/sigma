@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigma Workspace Fix Tool</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-right: 10px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .workspace-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .workspace-item {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.2s;
+        }
+
+        .workspace-item:hover {
+            transform: translateX(5px);
+        }
+
+        .workspace-item.needs-fix {
+            border-left-color: #f5576c;
+            background: #fff5f5;
+        }
+
+        .workspace-item.fixed {
+            border-left-color: #51cf66;
+            background: #f0fdf4;
+        }
+
+        .workspace-name {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .workspace-stats {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .status-ok {
+            background: #d3f9d8;
+            color: #2b8a3e;
+        }
+
+        .status-warning {
+            background: #fff3bf;
+            color: #e67700;
+        }
+
+        .status-error {
+            background: #ffe0e0;
+            color: #c92a2a;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .alert {
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .alert-success {
+            background: #d3f9d8;
+            color: #2b8a3e;
+            border-left: 4px solid #51cf66;
+        }
+
+        .alert-error {
+            background: #ffe0e0;
+            color: #c92a2a;
+            border-left: 4px solid #f5576c;
+        }
+
+        .summary {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .summary-item {
+            flex: 1;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .summary-number {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .summary-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔧 Sigma Workspace & Dashboard Fix Tool</h1>
+            <p>This tool helps diagnose and fix workspace display issues in the Sigma app. Click "Check Status" to see which workspaces need fixing, then click "Fix All Workspaces" to apply the fixes.</p>
+            <p style="margin-top: 10px;"><strong>Note:</strong> This tool also checks if number cards and dashboard components are properly configured.</p>
+        </div>
+
+        <div class="card">
+            <h2>Actions</h2>
+            <button class="btn" onclick="checkStatus()">🔍 Check Status</button>
+            <button class="btn btn-secondary" onclick="fixWorkspaces()" id="fixBtn" disabled>🔨 Fix All Workspaces</button>
+        </div>
+
+        <div id="alertContainer"></div>
+
+        <div id="summaryContainer"></div>
+
+        <div class="card">
+            <h2>Workspace Status</h2>
+            <div id="workspaceList">
+                <div class="loading">
+                    <p>Click "Check Status" to load workspace information</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function checkStatus() {
+            const container = document.getElementById('workspaceList');
+            const alertContainer = document.getElementById('alertContainer');
+            const summaryContainer = document.getElementById('summaryContainer');
+
+            container.innerHTML = '<div class="loading"><div class="spinner"></div><p>Loading workspace status...</p></div>';
+            alertContainer.innerHTML = '';
+            summaryContainer.innerHTML = '';
+
+            try {
+                const response = await fetch('/api/method/sigma.api.api.get_workspace_status');
+                const data = await response.json();
+
+                if (data.message && data.message.status === 'success') {
+                    const workspaces = data.message.workspaces;
+                    const needsFix = data.message.needs_fix;
+
+                    // Show summary
+                    summaryContainer.innerHTML = `
+                        <div class="summary">
+                            <div class="summary-item">
+                                <div class="summary-number">${workspaces.length}</div>
+                                <div class="summary-label">Total Workspaces</div>
+                            </div>
+                            <div class="summary-item">
+                                <div class="summary-number">${needsFix}</div>
+                                <div class="summary-label">Need Fixing</div>
+                            </div>
+                            <div class="summary-item">
+                                <div class="summary-number">${workspaces.length - needsFix}</div>
+                                <div class="summary-label">OK</div>
+                            </div>
+                        </div>
+                    `;
+
+                    // Enable fix button if needed
+                    document.getElementById('fixBtn').disabled = needsFix === 0;
+
+                    // Display workspaces
+                    container.innerHTML = '<div class="workspace-list">' +
+                        workspaces.map(ws => {
+                            if (!ws.exists) {
+                                return `
+                                    <div class="workspace-item">
+                                        <div class="workspace-name">${ws.name}</div>
+                                        <span class="status-badge status-error">Not Found</span>
+                                    </div>
+                                `;
+                            }
+
+                            const statusClass = ws.needs_fix ? 'needs-fix' : 'fixed';
+                            const statusBadge = ws.needs_fix ?
+                                '<span class="status-badge status-warning">Needs Fix</span>' :
+                                '<span class="status-badge status-ok">OK</span>';
+
+                            return `
+                                <div class="workspace-item ${statusClass}">
+                                    <div class="workspace-name">${ws.name}</div>
+                                    <div class="workspace-stats">📊 Shortcuts: ${ws.shortcuts_count}</div>
+                                    <div class="workspace-stats">🔗 Links: ${ws.links_count}</div>
+                                    <div class="workspace-stats">📈 Number Cards: ${ws.number_cards_count}</div>
+                                    <div class="workspace-stats">📝 Content Length: ${ws.content_length}</div>
+                                    ${statusBadge}
+                                </div>
+                            `;
+                        }).join('') +
+                        '</div>';
+                } else {
+                    throw new Error(data.message || 'Failed to load workspace status');
+                }
+            } catch (error) {
+                container.innerHTML = `<div class="alert alert-error">Error: ${error.message}</div>`;
+            }
+        }
+
+        async function fixWorkspaces() {
+            const container = document.getElementById('workspaceList');
+            const alertContainer = document.getElementById('alertContainer');
+            const fixBtn = document.getElementById('fixBtn');
+
+            fixBtn.disabled = true;
+            container.innerHTML = '<div class="loading"><div class="spinner"></div><p>Fixing workspaces...</p></div>';
+            alertContainer.innerHTML = '';
+
+            try {
+                const response = await fetch('/api/method/sigma.api.api.fix_all_workspaces');
+                const data = await response.json();
+
+                if (data.message && data.message.status === 'completed') {
+                    const results = data.message.results;
+                    const successful = data.message.successful;
+                    const total = data.message.total;
+
+                    alertContainer.innerHTML = `
+                        <div class="alert alert-success">
+                            ✅ Successfully fixed ${successful} out of ${total} workspaces!
+                        </div>
+                    `;
+
+                    // Reload status
+                    await checkStatus();
+                } else {
+                    throw new Error(data.message || 'Failed to fix workspaces');
+                }
+            } catch (error) {
+                alertContainer.innerHTML = `<div class="alert alert-error">Error: ${error.message}</div>`;
+                fixBtn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>
+

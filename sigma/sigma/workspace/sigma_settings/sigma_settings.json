@@ -1,0 +1,375 @@
+{
+ "app": "sigma",
+ "charts": [],
+ "content": "[{\"id\":\"header-main\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h3\\\"><b>Settings</b></span>\",\"col\":12}},{\"id\":\"para-main\",\"type\":\"paragraph\",\"data\":{\"text\":\"<p>Centralized configuration hub for all Sigma modules, integrations, monitoring systems, and system settings.</p>\",\"col\":12}},{\"id\":\"spacer-1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"header-shortcuts\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quick Access</b></span>\",\"col\":12}},{\"id\":\"shortcut-monitoring-alert\",\"type\":\"shortcut\",\"data\":{\"col\":3,\"shortcut_name\":\"Monitoring Alert\"}},{\"id\":\"shortcut-monitored-device\",\"type\":\"shortcut\",\"data\":{\"col\":3,\"shortcut_name\":\"Monitored Device\"}},{\"id\":\"shortcut-monitored-system-settings\",\"type\":\"shortcut\",\"data\":{\"col\":3,\"shortcut_name\":\"Monitored System Settings\"}},{\"id\":\"shortcut-integration\",\"type\":\"shortcut\",\"data\":{\"col\":3,\"shortcut_name\":\"Sigma Integration Settings\"}},{\"id\":\"spacer-2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"header-cards\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Configuration Categories</b></span>\",\"col\":12}},{\"id\":\"card-monitoring\",\"type\":\"card\",\"data\":{\"card_name\":\"Monitoring Systems\",\"col\":3}},{\"id\":\"card-integration\",\"type\":\"card\",\"data\":{\"card_name\":\"Integration Settings\",\"col\":3}},{\"id\":\"card-module\",\"type\":\"card\",\"data\":{\"card_name\":\"Module Settings\",\"col\":3}},{\"id\":\"card-customization\",\"type\":\"card\",\"data\":{\"card_name\":\"Customization\",\"col\":3}},{\"id\":\"card-system\",\"type\":\"card\",\"data\":{\"card_name\":\"System Configuration\",\"col\":3}}]",
+ "creation": "2025-11-14 14:00:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "settings",
+ "idx": 0,
+ "indicator_color": "gray",
+ "is_hidden": 0,
+ "label": "Sigma Settings",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Monitoring Systems",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Monitoring Platform",
+   "link_count": 0,
+   "link_to": "Monitoring Platform",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "description": "Register and configure monitoring platforms (OpManager, Zabbix, PRTG, etc.)"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Monitored Device",
+   "link_count": 0,
+   "link_to": "Monitored Device",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Telemetry Event",
+   "link_count": 0,
+   "link_to": "Telemetry Event",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Monitoring Alert",
+   "link_count": 0,
+   "link_to": "Monitoring Alert",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Monitored System Settings",
+   "link_count": 0,
+   "link_to": "Monitored System Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Integration Settings",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sigma Integration Settings",
+   "link_count": 0,
+   "link_to": "Sigma Integration Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Integration Log",
+   "link_count": 0,
+   "link_to": "Integration Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Module Settings",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "CRM Settings",
+   "link_count": 0,
+   "link_to": "CRM Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Support Settings",
+   "link_count": 0,
+   "link_to": "Support Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Projects Settings",
+   "link_count": 0,
+   "link_to": "Projects Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "SMS Settings",
+   "link_count": 0,
+   "link_to": "SMS Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Stock & Inventory Settings",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Stock Settings",
+   "link_count": 0,
+   "link_to": "Stock Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Buying Settings",
+   "link_count": 0,
+   "link_to": "Buying Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Selling Settings",
+   "link_count": 0,
+   "link_to": "Selling Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Accounts Settings",
+   "link_count": 0,
+   "link_to": "Accounts Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Customization",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Custom Field",
+   "link_count": 0,
+   "link_to": "Custom Field",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Property Setter",
+   "link_count": 0,
+   "link_to": "Property Setter",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Client Script",
+   "link_count": 0,
+   "link_to": "Client Script",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Workspace Settings",
+   "link_count": 0,
+   "link_to": "Workspace Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "System Configuration",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "System Settings",
+   "link_count": 0,
+   "link_to": "System Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Naming Series",
+   "link_count": 0,
+   "link_to": "Naming Series",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Document Naming Settings",
+   "link_count": 0,
+   "link_to": "Document Naming Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Role",
+   "link_count": 0,
+   "link_to": "Role",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "User",
+   "link_count": 0,
+   "link_to": "User",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Print Settings",
+   "link_count": 0,
+   "link_to": "Print Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-11-14 21:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma",
+ "name": "Sigma Settings",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 100.0,
+ "shortcuts": [
+  {
+   "color": "Teal",
+   "label": "Monitoring Platform",
+   "link_to": "Monitoring Platform",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "label": "Monitored System Settings",
+   "link_to": "Monitored System Settings",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "label": "Sigma Integration Settings",
+   "link_to": "Sigma Integration Settings",
+   "type": "DocType"
+  },
+  {
+   "color": "Purple",
+   "label": "Integration Log",
+   "link_to": "Integration Log",
+   "type": "DocType"
+  },
+  {
+   "color": "Cyan",
+   "label": "System Settings",
+   "link_to": "System Settings",
+   "type": "DocType"
+  },
+  {
+   "color": "Yellow",
+   "label": "CRM Settings",
+   "link_to": "CRM Settings",
+   "type": "DocType"
+  },
+  {
+   "color": "Pink",
+   "label": "Support Settings",
+   "link_to": "Support Settings",
+   "type": "DocType"
+  }
+ ],
+ "title": "Sigma Settings"
+}
+

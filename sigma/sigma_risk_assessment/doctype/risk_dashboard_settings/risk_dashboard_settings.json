@@ -1,0 +1,167 @@
+{
+ "actions": [],
+ "creation": "2025-11-18 16:30:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "risk_score_thresholds_section",
+  "risk_score_low_threshold",
+  "risk_score_medium_threshold",
+  "column_break_1",
+  "risk_score_high_threshold",
+  "risk_score_critical_threshold",
+  "color_settings_section",
+  "color_low",
+  "color_medium",
+  "column_break_2",
+  "color_high",
+  "color_critical",
+  "review_settings_section",
+  "default_review_frequency_days",
+  "column_break_3",
+  "enable_email_alerts",
+  "alert_recipients_section",
+  "alert_recipients"
+ ],
+ "fields": [
+  {
+   "fieldname": "risk_score_thresholds_section",
+   "fieldtype": "Section Break",
+   "label": "Risk Score Thresholds"
+  },
+  {
+   "default": "6",
+   "description": "Risk scores 1-6 are considered Low",
+   "fieldname": "risk_score_low_threshold",
+   "fieldtype": "Int",
+   "label": "Low Risk Threshold"
+  },
+  {
+   "default": "12",
+   "description": "Risk scores 7-12 are considered Medium",
+   "fieldname": "risk_score_medium_threshold",
+   "fieldtype": "Int",
+   "label": "Medium Risk Threshold"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "20",
+   "description": "Risk scores 13-20 are considered High",
+   "fieldname": "risk_score_high_threshold",
+   "fieldtype": "Int",
+   "label": "High Risk Threshold"
+  },
+  {
+   "default": "25",
+   "description": "Risk scores 21-25 are considered Critical",
+   "fieldname": "risk_score_critical_threshold",
+   "fieldtype": "Int",
+   "label": "Critical Risk Threshold"
+  },
+  {
+   "fieldname": "color_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Color Settings"
+  },
+  {
+   "default": "#28a745",
+   "fieldname": "color_low",
+   "fieldtype": "Color",
+   "label": "Low Risk Color"
+  },
+  {
+   "default": "#ffc107",
+   "fieldname": "color_medium",
+   "fieldtype": "Color",
+   "label": "Medium Risk Color"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "#fd7e14",
+   "fieldname": "color_high",
+   "fieldtype": "Color",
+   "label": "High Risk Color"
+  },
+  {
+   "default": "#dc3545",
+   "fieldname": "color_critical",
+   "fieldtype": "Color",
+   "label": "Critical Risk Color"
+  },
+  {
+   "fieldname": "review_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Review Settings"
+  },
+  {
+   "default": "90",
+   "description": "Default number of days between risk reviews",
+   "fieldname": "default_review_frequency_days",
+   "fieldtype": "Int",
+   "label": "Default Review Frequency (Days)"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_email_alerts",
+   "fieldtype": "Check",
+   "label": "Enable Email Alerts"
+  },
+  {
+   "depends_on": "eval:doc.enable_email_alerts==1",
+   "fieldname": "alert_recipients_section",
+   "fieldtype": "Section Break",
+   "label": "Alert Recipients"
+  },
+  {
+   "fieldname": "alert_recipients",
+   "fieldtype": "Table",
+   "label": "Alert Recipients",
+   "options": "Risk Alert Recipient"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-11-18 16:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Risk Assessment",
+ "name": "Risk Dashboard Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Risk Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+

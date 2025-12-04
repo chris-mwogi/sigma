@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-11-17 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ip_address",
+  "ip_type",
+  "interface_name",
+  "is_primary",
+  "column_break_1",
+  "vlan_id",
+  "subnet_mask",
+  "gateway",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "ip_address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "IP Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ip_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "IP Type",
+   "options": "Management\nData\nBackup\niLO/IPMI\nStorage\nPublic\nPrivate\nOther",
+   "default": "Data"
+  },
+  {
+   "fieldname": "interface_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Interface Name",
+   "description": "e.g., eth0, ens192, bond0"
+  },
+  {
+   "fieldname": "is_primary",
+   "fieldtype": "Check",
+   "label": "Primary IP",
+   "default": 0
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vlan_id",
+   "fieldtype": "Data",
+   "label": "VLAN ID"
+  },
+  {
+   "fieldname": "subnet_mask",
+   "fieldtype": "Data",
+   "label": "Subnet Mask"
+  },
+  {
+   "fieldname": "gateway",
+   "fieldtype": "Data",
+   "label": "Gateway"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-11-17 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Assets",
+ "name": "Device IP Address",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+

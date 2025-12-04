@@ -1,0 +1,155 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:visitor_category",
+ "creation": "2025-11-18 20:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "visitor_category",
+  "description",
+  "column_break_3",
+  "risk_weight",
+  "section_break_5",
+  "access_level_template",
+  "max_visit_duration_hours",
+  "column_break_8",
+  "escort_required",
+  "nda_required",
+  "safety_induction_required",
+  "section_break_12",
+  "required_documents",
+  "section_break_14",
+  "ppe_requirements"
+ ],
+ "fields": [
+  {
+   "fieldname": "visitor_category",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Visitor Category",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "risk_weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Risk Weight (1-5)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break",
+   "label": "Access Control"
+  },
+  {
+   "fieldname": "access_level_template",
+   "fieldtype": "Select",
+   "label": "Access Level Template",
+   "options": "Public Areas Only\nOffice Areas\nRestricted Areas\nSensitive Areas\nAll Areas"
+  },
+  {
+   "default": "8",
+   "fieldname": "max_visit_duration_hours",
+   "fieldtype": "Int",
+   "label": "Max Visit Duration (Hours)"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "escort_required",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Escort Required"
+  },
+  {
+   "default": "0",
+   "fieldname": "nda_required",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "NDA Required"
+  },
+  {
+   "default": "0",
+   "fieldname": "safety_induction_required",
+   "fieldtype": "Check",
+   "label": "Safety Induction Required"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break",
+   "label": "Required Documents"
+  },
+  {
+   "fieldname": "required_documents",
+   "fieldtype": "Table",
+   "label": "Required Documents",
+   "options": "Visitor Required Document"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break",
+   "label": "PPE Requirements"
+  },
+  {
+   "fieldname": "ppe_requirements",
+   "fieldtype": "Small Text",
+   "label": "PPE Requirements"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-18 20:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Visitor Management",
+ "name": "Visitor Type",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Security Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+

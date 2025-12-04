@@ -1,0 +1,55 @@
+{
+ "actions": [],
+ "creation": "2025-11-18 21:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "compliance_standard",
+  "requirement_reference",
+  "compliance_status",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "compliance_standard",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Compliance Standard",
+   "options": "ISO 31000 - Risk Management\nISO 37001 - Anti-Bribery\nISO 27001 - Information Security\nACFE Guidelines\nDOJ Framework\nCorporate Ethics Policy\nLabor Laws\nData Protection Act\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "requirement_reference",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Requirement Reference"
+  },
+  {
+   "fieldname": "compliance_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Compliance Status",
+   "options": "Compliant\nNon-Compliant\nPartially Compliant\nUnder Review",
+   "reqd": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-11-18 21:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Case Management",
+ "name": "Case Compliance Link",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
+

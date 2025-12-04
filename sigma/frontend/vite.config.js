@@ -12,6 +12,7 @@ export default defineConfig({
   build: {
     outDir: '../public/dist',
     emptyOutDir: true,
+    base: '/assets/sigma/public/dist/',
     rollupOptions: {
       output: {
         entryFileNames: 'js/[name].js',

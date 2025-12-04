@@ -9,6 +9,7 @@ from frappe import _
 from frappe.utils import now
 from frappe import whitelist
 from sigma.api.integrations import WebhookHandler, TelemetryNormalizer, NotificationService
+from sigma.fix_workspace_content import fix_workspace_content, fix_vehicle_management_workspace
 
 @whitelist(allow_guest=True)
 def receive_access_event_webhook():
@@ -265,3 +266,121 @@ def create_helpdesk_ticket_from_call_log(call_log_name: str):
         frappe.logger().error(f"Create HD Ticket failed: {e}")
         return {"error": str(e)}
 
+
+@whitelist()
+def fix_all_workspaces():
+    """
+    Fix all Sigma workspaces by rebuilding their content fields
+    GET /api/method/sigma.api.api.fix_all_workspaces
+    """
+    try:
+        results = []
+
+        # Standard workspaces with shortcuts
+        workspaces_to_fix = [
+            'Sigma',
+            'Risk Assessment',
+            'Assets & Inventory',
+            'Acquisition (Buying)',
+            'Disposal (Selling)'
+        ]
+
+        for workspace_name in workspaces_to_fix:
+            if frappe.db.exists('Workspace', workspace_name):
+                try:
+                    success = fix_workspace_content(workspace_name)
+                    results.append({
+                        "workspace": workspace_name,
+                        "status": "success" if success else "failed",
+                        "message": "Content field updated" if success else "Update failed"
+                    })
+                except Exception as e:
+                    results.append({
+                        "workspace": workspace_name,
+                        "status": "error",
+                        "message": str(e)
+                    })
+            else:
+                results.append({
+                    "workspace": workspace_name,
+                    "status": "skipped",
+                    "message": "Workspace does not exist"
+                })
+
+        # Fix Vehicle Management separately (has links instead of shortcuts)
+        if frappe.db.exists('Workspace', 'Vehicle Management'):
+            try:
+                success = fix_vehicle_management_workspace()
+                results.append({
+                    "workspace": "Vehicle Management",
+                    "status": "success" if success else "failed",
+                    "message": "Content field updated" if success else "Update failed"
+                })
+            except Exception as e:
+                results.append({
+                    "workspace": "Vehicle Management",
+                    "status": "error",
+                    "message": str(e)
+                })
+
+        frappe.db.commit()
+
+        return {
+            "status": "completed",
+            "results": results,
+            "total": len(results),
+            "successful": len([r for r in results if r["status"] == "success"])
+        }
+    except Exception as e:
+        frappe.logger().error(f"Fix workspaces failed: {e}")
+        return {"status": "error", "message": str(e)}
+
+
+@whitelist()
+def get_workspace_status():
+    """
+    Get status of all Sigma workspaces
+    GET /api/method/sigma.api.api.get_workspace_status
+    """
+    try:
+        workspaces = [
+            'Sigma',
+            'Risk Assessment',
+            'Assets & Inventory',
+            'Acquisition (Buying)',
+            'Disposal (Selling)',
+            'Vehicle Management'
+        ]
+
+        status_list = []
+        for workspace_name in workspaces:
+            if frappe.db.exists('Workspace', workspace_name):
+                ws = frappe.get_doc('Workspace', workspace_name)
+                content_length = len(ws.content) if ws.content else 0
+
+                status_list.append({
+                    "name": workspace_name,
+                    "exists": True,
+                    "shortcuts_count": len(ws.shortcuts) if ws.shortcuts else 0,
+                    "links_count": len(ws.links) if ws.links else 0,
+                    "number_cards_count": len(ws.number_cards) if ws.number_cards else 0,
+                    "content_length": content_length,
+                    "has_content": content_length > 0,
+                    "needs_fix": content_length < 100 or (len(ws.shortcuts) > 0 and content_length < 500) or (len(ws.links) > 0 and content_length < 500)
+                })
+            else:
+                status_list.append({
+                    "name": workspace_name,
+                    "exists": False,
+                    "needs_fix": False
+                })
+
+        return {
+            "status": "success",
+            "workspaces": status_list,
+            "total": len(status_list),
+            "needs_fix": len([w for w in status_list if w.get("needs_fix", False)])
+        }
+    except Exception as e:
+        frappe.logger().error(f"Get workspace status failed: {e}")
+        return {"status": "error", "message": str(e)}

@@ -41,40 +41,31 @@ frappe.treeview_settings["Asset"] = $.extend({}, original_asset_settings, {
 	// Override get_tree_nodes to use location-based hierarchy
 	get_tree_nodes: "sigma.sigma_asset_integrations.api.asset_management_api.get_tree_nodes_with_location",
 
-	// Custom node rendering
+	// Custom node rendering - OPTIMIZED for performance
 	onrender: function(node) {
-		// Add custom styling for location nodes
+		// Use CSS classes instead of inline styles to avoid forced reflows
 		if (node.data && node.data.is_location) {
+			// Add class for CSS-based styling (no inline styles = no reflow)
 			$(node.$tree_link).addClass('location-node');
-			$(node.$tree_link).css({
-				'background': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-				'color': 'white',
-				'font-weight': '700',
-				'padding': '10px 15px',
-				'border-radius': '8px',
-				'margin-bottom': '10px'
-			});
 
-			// Add location icon
+			// Add location icon using data attribute (deferred rendering)
 			const icon = get_location_icon(node.data.location_type);
-			$(node.$tree_link).find('.tree-label').prepend(`<span style="margin-right: 8px;">${icon}</span>`);
+			const $label = $(node.$tree_link).find('.tree-label');
 
-			// Add asset count badge
+			// Batch DOM operations to minimize reflows
+			let html = `<span class="location-icon" style="margin-right: 8px;">${icon}</span>`;
+
 			if (node.data.asset_count) {
-				$(node.$tree_link).find('.tree-label').append(
-					`<span class="badge badge-info" style="margin-left: 10px; background: rgba(255,255,255,0.3);">
-						<i class="fa fa-cubes"></i> ${node.data.asset_count} Assets
-					</span>`
-				);
+				html += `<span class="asset-count-badge">
+					<i class="fa fa-cubes"></i> ${node.data.asset_count} Assets
+				</span>`;
 			}
+
+			// Single DOM operation instead of multiple
+			$label.prepend(html);
 		} else {
-			// Standard asset node styling
-			$(node.$tree_link).css({
-				'background': 'white',
-				'border-left': '4px solid #667eea',
-				'padding': '8px 12px',
-				'margin-bottom': '5px'
-			});
+			// Use CSS class for standard asset styling
+			$(node.$tree_link).addClass('standard-asset-node');
 		}
 	}
 });
@@ -123,24 +114,57 @@ function get_location_icon(location_type) {
 	return icon_map[location_type] || icon_map['default'];
 }
 
-// Add custom CSS for location nodes
+// Add custom CSS for location nodes - OPTIMIZED
+// Use document.head.appendChild instead of jQuery for better performance
 frappe.ready(function() {
-	$('head').append(`
-		<style>
-			.location-node {
-				box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3) !important;
-				transition: all 0.3s ease !important;
-			}
-			
-			.location-node:hover {
-				transform: translateY(-2px) !important;
-				box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4) !important;
-			}
-			
-			.tree-node-toolbar {
-				background: transparent !important;
-			}
-		</style>
-	`);
+	// Check if styles already exist to avoid duplicate injection
+	if (document.getElementById('sigma-asset-tree-styles')) {
+		return;
+	}
+
+	const style = document.createElement('style');
+	style.id = 'sigma-asset-tree-styles';
+	style.textContent = `
+		.location-node {
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+			color: white !important;
+			font-weight: 700 !important;
+			padding: 10px 15px !important;
+			border-radius: 8px !important;
+			margin-bottom: 10px !important;
+			box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3) !important;
+			transition: all 0.3s ease !important;
+		}
+
+		.location-node:hover {
+			transform: translateY(-2px) !important;
+			box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4) !important;
+		}
+
+		.standard-asset-node {
+			background: white !important;
+			border-left: 4px solid #667eea !important;
+			padding: 8px 12px !important;
+			margin-bottom: 5px !important;
+		}
+
+		.location-icon {
+			margin-right: 8px;
+		}
+
+		.asset-count-badge {
+			margin-left: 10px;
+			background: rgba(255, 255, 255, 0.3);
+			padding: 2px 6px;
+			border-radius: 3px;
+			font-size: 0.85em;
+		}
+
+		.tree-node-toolbar {
+			background: transparent !important;
+		}
+	`;
+
+	document.head.appendChild(style);
 });
 

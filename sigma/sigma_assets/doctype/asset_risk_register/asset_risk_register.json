@@ -1,0 +1,446 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:SIGMA-RISK-{asset_category_sigma}-{YYYY}-{#####}",
+ "creation": "2025-11-19 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "asset_information_section",
+  "asset",
+  "asset_name",
+  "asset_category_sigma",
+  "asset_location",
+  "criticality_rating",
+  "column_break_asset",
+  "risk_assessment_date",
+  "assessed_by",
+  "review_date",
+  "risk_status",
+  "risk_identification_section",
+  "risk_type",
+  "risk_category",
+  "risk_description",
+  "potential_causes",
+  "column_break_risk",
+  "potential_consequences",
+  "affected_systems",
+  "regulatory_requirements",
+  "risk_analysis_section",
+  "likelihood_score",
+  "consequence_score",
+  "inherent_risk_score",
+  "inherent_risk_level",
+  "column_break_analysis",
+  "control_effectiveness",
+  "residual_risk_score",
+  "residual_risk_level",
+  "risk_appetite_threshold",
+  "risk_treatment_section",
+  "treatment_strategy",
+  "treatment_description",
+  "treatment_owner",
+  "treatment_deadline",
+  "column_break_treatment",
+  "treatment_cost",
+  "treatment_status",
+  "treatment_completion_date",
+  "treatment_effectiveness",
+  "monitoring_section",
+  "monitoring_frequency",
+  "monitoring_method",
+  "key_risk_indicators",
+  "column_break_monitoring",
+  "last_monitoring_date",
+  "next_monitoring_date",
+  "escalation_required",
+  "escalation_to",
+  "compliance_section",
+  "iso_55000_alignment",
+  "iso_31000_alignment",
+  "nist_controls",
+  "column_break_compliance",
+  "regulatory_compliance",
+  "audit_trail",
+  "last_audit_date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "asset_information_section",
+   "fieldtype": "Section Break",
+   "label": "Asset Information"
+  },
+  {
+   "fieldname": "asset",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Asset",
+   "options": "Asset",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "asset.asset_name",
+   "fieldname": "asset_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Asset Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "asset.asset_category_sigma",
+   "fieldname": "asset_category_sigma",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Asset Category",
+   "options": "Asset Category Sigma",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "asset.asset_location",
+   "fieldname": "asset_location",
+   "fieldtype": "Link",
+   "label": "Asset Location",
+   "options": "Asset Location",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "asset.criticality_rating",
+   "fieldname": "criticality_rating",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Criticality Rating",
+   "options": "\nLow\nMedium\nHigh\nCritical",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_asset",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "risk_assessment_date",
+   "fieldtype": "Date",
+   "label": "Risk Assessment Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "assessed_by",
+   "fieldtype": "Link",
+   "label": "Assessed By",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "review_date",
+   "fieldtype": "Date",
+   "label": "Review Date"
+  },
+  {
+   "default": "Open",
+   "fieldname": "risk_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Risk Status",
+   "options": "Open\nUnder Treatment\nMitigated\nAccepted\nTransferred\nClosed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "risk_identification_section",
+   "fieldtype": "Section Break",
+   "label": "Risk Identification"
+  },
+  {
+   "fieldname": "risk_type",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Risk Type",
+   "options": "\nOperational\nFinancial\nStrategic\nCompliance\nSafety\nEnvironmental\nCybersecurity\nReputational",
+   "reqd": 1
+  },
+  {
+   "fieldname": "risk_category",
+   "fieldtype": "Select",
+   "label": "Risk Category",
+   "options": "\nEquipment Failure\nHuman Error\nNatural Disaster\nCyber Attack\nSupply Chain\nRegulatory Change\nObsolescence\nPerformance Degradation"
+  },
+  {
+   "fieldname": "risk_description",
+   "fieldtype": "Text Editor",
+   "label": "Risk Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "potential_causes",
+   "fieldtype": "Text Editor",
+   "label": "Potential Causes"
+  },
+  {
+   "fieldname": "column_break_risk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "potential_consequences",
+   "fieldtype": "Text Editor",
+   "label": "Potential Consequences"
+  },
+  {
+   "fieldname": "affected_systems",
+   "fieldtype": "Small Text",
+   "label": "Affected Systems/Processes"
+  },
+  {
+   "fieldname": "regulatory_requirements",
+   "fieldtype": "Small Text",
+   "label": "Regulatory Requirements"
+  },
+  {
+   "fieldname": "risk_analysis_section",
+   "fieldtype": "Section Break",
+   "label": "Risk Analysis (ISO 31000)"
+  },
+  {
+   "description": "Likelihood of risk occurring (1-5: Rare, Unlikely, Possible, Likely, Almost Certain)",
+   "fieldname": "likelihood_score",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Likelihood Score (1-5)",
+   "reqd": 1
+  },
+  {
+   "description": "Severity of consequences (1-5: Insignificant, Minor, Moderate, Major, Catastrophic)",
+   "fieldname": "consequence_score",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Consequence Score (1-5)",
+   "reqd": 1
+  },
+  {
+   "description": "Inherent Risk = Likelihood × Consequence (1-25)",
+   "fieldname": "inherent_risk_score",
+   "fieldtype": "Int",
+   "label": "Inherent Risk Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "inherent_risk_level",
+   "fieldtype": "Select",
+   "label": "Inherent Risk Level",
+   "options": "\nLow (1-5)\nMedium (6-12)\nHigh (13-20)\nVery High (21-25)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_analysis",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Effectiveness of existing controls (0-100%)",
+   "fieldname": "control_effectiveness",
+   "fieldtype": "Percent",
+   "label": "Control Effectiveness"
+  },
+  {
+   "description": "Residual Risk = Inherent Risk × (1 - Control Effectiveness)",
+   "fieldname": "residual_risk_score",
+   "fieldtype": "Float",
+   "label": "Residual Risk Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "residual_risk_level",
+   "fieldtype": "Select",
+   "label": "Residual Risk Level",
+   "options": "\nLow\nMedium\nHigh\nVery High",
+   "read_only": 1
+  },
+  {
+   "description": "Maximum acceptable risk level",
+   "fieldname": "risk_appetite_threshold",
+   "fieldtype": "Float",
+   "label": "Risk Appetite Threshold"
+  },
+  {
+   "fieldname": "risk_treatment_section",
+   "fieldtype": "Section Break",
+   "label": "Risk Treatment"
+  },
+  {
+   "fieldname": "treatment_strategy",
+   "fieldtype": "Select",
+   "label": "Treatment Strategy",
+   "options": "\nAvoid\nMitigate\nTransfer\nAccept"
+  },
+  {
+   "fieldname": "treatment_description",
+   "fieldtype": "Text Editor",
+   "label": "Treatment Description"
+  },
+  {
+   "fieldname": "treatment_owner",
+   "fieldtype": "Link",
+   "label": "Treatment Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "treatment_deadline",
+   "fieldtype": "Date",
+   "label": "Treatment Deadline"
+  },
+  {
+   "fieldname": "column_break_treatment",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "treatment_cost",
+   "fieldtype": "Currency",
+   "label": "Treatment Cost"
+  },
+  {
+   "default": "Not Started",
+   "fieldname": "treatment_status",
+   "fieldtype": "Select",
+   "label": "Treatment Status",
+   "options": "Not Started\nIn Progress\nCompleted\nOn Hold\nCancelled"
+  },
+  {
+   "fieldname": "treatment_completion_date",
+   "fieldtype": "Date",
+   "label": "Treatment Completion Date"
+  },
+  {
+   "description": "Effectiveness of treatment (0-100%)",
+   "fieldname": "treatment_effectiveness",
+   "fieldtype": "Percent",
+   "label": "Treatment Effectiveness"
+  },
+  {
+   "fieldname": "monitoring_section",
+   "fieldtype": "Section Break",
+   "label": "Monitoring & Review"
+  },
+  {
+   "fieldname": "monitoring_frequency",
+   "fieldtype": "Select",
+   "label": "Monitoring Frequency",
+   "options": "\nDaily\nWeekly\nMonthly\nQuarterly\nAnnually"
+  },
+  {
+   "fieldname": "monitoring_method",
+   "fieldtype": "Small Text",
+   "label": "Monitoring Method"
+  },
+  {
+   "fieldname": "key_risk_indicators",
+   "fieldtype": "Text Editor",
+   "label": "Key Risk Indicators (KRIs)"
+  },
+  {
+   "fieldname": "column_break_monitoring",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_monitoring_date",
+   "fieldtype": "Date",
+   "label": "Last Monitoring Date"
+  },
+  {
+   "fieldname": "next_monitoring_date",
+   "fieldtype": "Date",
+   "label": "Next Monitoring Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "escalation_required",
+   "fieldtype": "Check",
+   "label": "Escalation Required"
+  },
+  {
+   "depends_on": "eval:doc.escalation_required==1",
+   "fieldname": "escalation_to",
+   "fieldtype": "Link",
+   "label": "Escalate To",
+   "options": "User"
+  },
+  {
+   "fieldname": "compliance_section",
+   "fieldtype": "Section Break",
+   "label": "Compliance & Standards"
+  },
+  {
+   "fieldname": "iso_55000_alignment",
+   "fieldtype": "Small Text",
+   "label": "ISO 55000 Alignment"
+  },
+  {
+   "fieldname": "iso_31000_alignment",
+   "fieldtype": "Small Text",
+   "label": "ISO 31000 Alignment"
+  },
+  {
+   "fieldname": "nist_controls",
+   "fieldtype": "Small Text",
+   "label": "NIST Controls"
+  },
+  {
+   "fieldname": "column_break_compliance",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "regulatory_compliance",
+   "fieldtype": "Small Text",
+   "label": "Regulatory Compliance"
+  },
+  {
+   "fieldname": "audit_trail",
+   "fieldtype": "Text Editor",
+   "label": "Audit Trail",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_audit_date",
+   "fieldtype": "Date",
+   "label": "Last Audit Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Asset Risk Register",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-11-19 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Assets",
+ "name": "Asset Risk Register",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+

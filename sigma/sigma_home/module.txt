@@ -1,7 +1,0 @@
-module_name: Sigma Home
-category: Modules
-label: Sigma Home
-description: Main dashboard and home module for Sigma security management system
-icon: octicon octicon-home
-color: blue
-

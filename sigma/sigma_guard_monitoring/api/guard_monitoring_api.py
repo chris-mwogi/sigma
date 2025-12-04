@@ -16,9 +16,9 @@ def create_guard_shift(site_allocation, guard_name, check_in_time=None):
 
 @frappe.whitelist()
 def report_incident(location, category, description, asset=None):
-    """Create an incident/case record."""
+    """Create a guard incident record."""
     incident = frappe.get_doc({
-        "doctype": "Case Incident",
+        "doctype": "Guard Incident",
         "location": location,
         "category": category,
         "description": description,

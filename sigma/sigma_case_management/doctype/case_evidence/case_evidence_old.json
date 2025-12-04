@@ -1,0 +1,198 @@
+{
+  "doctype": "DocType",
+  "name": "Case Evidence",
+  "module": "Sigma Case Management",
+  "custom": 0,
+  "is_submittable": 1,
+  "autoname": "EVID-{YYYY}-{####}",
+  "title_field": "evidence_description",
+  "fields": [
+    {
+      "fieldname": "case",
+      "fieldtype": "Link",
+      "label": "Case",
+      "options": "Case",
+      "reqd": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "evidence_type",
+      "fieldtype": "Select",
+      "label": "Evidence Type",
+      "reqd": 1,
+      "options": "Photo\nVideo\nDocument\nAudio\nIoT Log\nWitness Statement\nOther",
+      "width": "50%"
+    },
+    {
+      "fieldname": "evidence_description",
+      "fieldtype": "Data",
+      "label": "Evidence Description",
+      "reqd": 1,
+      "width": "100%"
+    },
+    {
+      "fieldname": "section_file_info",
+      "fieldtype": "Section Break",
+      "label": "File Information"
+    },
+    {
+      "fieldname": "file_attachment",
+      "fieldtype": "Attach",
+      "label": "File Attachment",
+      "reqd": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "file_size_mb",
+      "fieldtype": "Float",
+      "label": "File Size (MB)",
+      "read_only": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "file_hash",
+      "fieldtype": "Data",
+      "label": "File Hash (SHA256)",
+      "read_only": 1,
+      "width": "100%"
+    },
+    {
+      "fieldname": "virus_scan_status",
+      "fieldtype": "Select",
+      "label": "Virus Scan Status",
+      "options": "Pending\nScanned - Clean\nScanned - Infected\nSkipped",
+      "default": "Pending",
+      "width": "50%"
+    },
+    {
+      "fieldname": "virus_scan_date",
+      "fieldtype": "Datetime",
+      "label": "Virus Scan Date",
+      "read_only": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "section_metadata",
+      "fieldtype": "Section Break",
+      "label": "Metadata"
+    },
+    {
+      "fieldname": "capture_date",
+      "fieldtype": "Datetime",
+      "label": "Capture Date/Time",
+      "width": "50%"
+    },
+    {
+      "fieldname": "capture_location_gps",
+      "fieldtype": "Data",
+      "label": "Capture Location (GPS)",
+      "width": "50%"
+    },
+    {
+      "fieldname": "captured_by",
+      "fieldtype": "Link",
+      "label": "Captured By",
+      "options": "User",
+      "width": "50%"
+    },
+    {
+      "fieldname": "device_info",
+      "fieldtype": "Data",
+      "label": "Device Info",
+      "width": "50%"
+    },
+    {
+      "fieldname": "section_chain_of_custody",
+      "fieldtype": "Section Break",
+      "label": "Chain of Custody"
+    },
+    {
+      "fieldname": "collected_by",
+      "fieldtype": "Link",
+      "label": "Collected By",
+      "options": "User",
+      "reqd": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "collection_date",
+      "fieldtype": "Datetime",
+      "label": "Collection Date",
+      "reqd": 1,
+      "width": "50%"
+    },
+    {
+      "fieldname": "custody_log",
+      "fieldtype": "Table",
+      "label": "Custody Log",
+      "options": "Evidence Custody Log"
+    },
+    {
+      "fieldname": "section_categorization",
+      "fieldtype": "Section Break",
+      "label": "Categorization"
+    },
+    {
+      "fieldname": "evidence_category",
+      "fieldtype": "Select",
+      "label": "Evidence Category",
+      "options": "Physical\nDigital\nDocumentary\nTestimonial\nOther",
+      "width": "50%"
+    },
+    {
+      "fieldname": "tags",
+      "fieldtype": "Data",
+      "label": "Tags",
+      "width": "100%"
+    },
+    {
+      "fieldname": "section_integrity",
+      "fieldtype": "Section Break",
+      "label": "Integrity Verification"
+    },
+    {
+      "fieldname": "integrity_verified",
+      "fieldtype": "Check",
+      "label": "Integrity Verified",
+      "default": 0
+    },
+    {
+      "fieldname": "verification_date",
+      "fieldtype": "Datetime",
+      "label": "Verification Date",
+      "read_only": 1
+    },
+    {
+      "fieldname": "verified_by",
+      "fieldtype": "Link",
+      "label": "Verified By",
+      "options": "User",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "perm_read": 1,
+      "perm_write": 1,
+      "perm_create": 1,
+      "perm_delete": 1,
+      "perm_submit": 1
+    },
+    {
+      "role": "Lead Investigator",
+      "perm_read": 1,
+      "perm_write": 1,
+      "perm_create": 1,
+      "perm_submit": 1
+    },
+    {
+      "role": "Investigator",
+      "perm_read": 1,
+      "perm_write": 1,
+      "perm_create": 1,
+      "perm_submit": 1
+    }
+  ]
+}
+

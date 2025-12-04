@@ -1,0 +1,147 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:ACT-{YYYY}-{#####}",
+ "creation": "2025-11-18 20:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "linked_case",
+  "linked_investigation",
+  "activity_type",
+  "activity_date",
+  "column_break_1",
+  "performed_by",
+  "activity_status",
+  "section_break_2",
+  "activity_description",
+  "section_break_3",
+  "outcome",
+  "next_action"
+ ],
+ "fields": [
+  {
+   "fieldname": "linked_case",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Linked Case",
+   "options": "Case",
+   "reqd": 1
+  },
+  {
+   "fieldname": "linked_investigation",
+   "fieldtype": "Link",
+   "label": "Linked Investigation",
+   "options": "Case Investigation"
+  },
+  {
+   "fieldname": "activity_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Activity Type",
+   "options": "Interview\nSite Visit\nDocument Review\nData Analysis\nMeeting\nPhone Call\nEmail Communication\nEvidence Collection\nForensic Analysis\nReport Writing\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "activity_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Activity Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "performed_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Performed By",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "activity_status",
+   "fieldtype": "Select",
+   "label": "Activity Status",
+   "options": "Planned\nIn Progress\nCompleted\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Activity Details"
+  },
+  {
+   "fieldname": "activity_description",
+   "fieldtype": "Text Editor",
+   "label": "Activity Description"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "Outcome"
+  },
+  {
+   "fieldname": "outcome",
+   "fieldtype": "Text Editor",
+   "label": "Outcome"
+  },
+  {
+   "fieldname": "next_action",
+   "fieldtype": "Text Editor",
+   "label": "Next Action"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-18 20:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Case Management",
+ "name": "Case Activity",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Investigator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Case Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+

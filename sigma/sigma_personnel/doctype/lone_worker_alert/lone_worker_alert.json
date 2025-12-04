@@ -1,0 +1,135 @@
+{
+  "actions": [],
+  "autoname": "format:KPLC-LWA-{YYYY}-{#####}",
+  "creation": "2025-01-20 00:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "Document",
+  "engine": "InnoDB",
+  "field_order": [
+    "human",
+    "alert_type",
+    "raised_at",
+    "column_break_3",
+    "zone",
+    "severity",
+    "resolution_status",
+    "section_break_response",
+    "responder",
+    "response_time",
+    "column_break_response",
+    "resolution_notes",
+    "escalation_level"
+  ],
+  "fields": [
+    {
+      "fieldname": "human",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Human Profile",
+      "options": "Human Profile",
+      "reqd": 1
+    },
+    {
+      "fieldname": "alert_type",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Alert Type",
+      "options": "Lone Worker Timeout\nPanic Button\nNo Movement\nZone Breach\nMax Duration Exceeded\nMissed Check-In\nDevice Offline",
+      "reqd": 1
+    },
+    {
+      "fieldname": "raised_at",
+      "fieldtype": "Datetime",
+      "in_list_view": 1,
+      "label": "Raised At",
+      "reqd": 1,
+      "default": "now"
+    },
+    {
+      "fieldname": "column_break_3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "zone",
+      "fieldtype": "Link",
+      "label": "Zone",
+      "options": "Zone Configuration"
+    },
+    {
+      "fieldname": "severity",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Severity",
+      "options": "Low\nMedium\nHigh\nCritical",
+      "reqd": 1,
+      "default": "Medium"
+    },
+    {
+      "fieldname": "resolution_status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Resolution Status",
+      "options": "Open\nAcknowledged\nInvestigating\nResolved\nFalse Alarm",
+      "default": "Open",
+      "reqd": 1
+    },
+    {
+      "fieldname": "section_break_response",
+      "fieldtype": "Section Break",
+      "label": "Response"
+    },
+    {
+      "fieldname": "responder",
+      "fieldtype": "Link",
+      "label": "Responder",
+      "options": "Employee"
+    },
+    {
+      "fieldname": "response_time",
+      "fieldtype": "Duration",
+      "label": "Response Time",
+      "read_only": 1
+    },
+    {
+      "fieldname": "column_break_response",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "resolution_notes",
+      "fieldtype": "Text",
+      "label": "Resolution Notes"
+    },
+    {
+      "fieldname": "escalation_level",
+      "fieldtype": "Int",
+      "label": "Escalation Level",
+      "default": "0"
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "links": [],
+  "modified": "2025-01-20 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sigma Personnel",
+  "name": "Lone Worker Alert",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": []
+}
+

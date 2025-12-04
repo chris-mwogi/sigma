@@ -1,0 +1,403 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:SIGMA-MNT-{asset_category_sigma}-{YYYY}-{#####}",
+ "creation": "2025-11-19 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "asset_information_section",
+  "asset",
+  "asset_name",
+  "asset_category_sigma",
+  "asset_location",
+  "column_break_5",
+  "monitored_device",
+  "criticality_rating",
+  "maintenance_strategy",
+  "schedule_section",
+  "schedule_type",
+  "maintenance_type",
+  "frequency",
+  "frequency_unit",
+  "column_break_15",
+  "start_date",
+  "end_date",
+  "next_due_date",
+  "last_completed_date",
+  "task_details_section",
+  "task_description",
+  "estimated_duration_hours",
+  "column_break_22",
+  "required_skills",
+  "required_tools",
+  "safety_requirements",
+  "condition_based_section",
+  "enable_condition_based",
+  "condition_metric",
+  "condition_threshold",
+  "column_break_28",
+  "condition_operator",
+  "condition_unit",
+  "predictive_section",
+  "enable_predictive",
+  "mtbf_hours",
+  "mttr_hours",
+  "column_break_34",
+  "failure_probability_threshold",
+  "auto_generate_work_order",
+  "status_section",
+  "status",
+  "is_active",
+  "column_break_39",
+  "total_completions",
+  "missed_schedules",
+  "compliance_percentage"
+ ],
+ "fields": [
+  {
+   "fieldname": "asset_information_section",
+   "fieldtype": "Section Break",
+   "label": "Asset Information"
+  },
+  {
+   "fieldname": "asset",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Asset",
+   "options": "Asset",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "asset.asset_name",
+   "fieldname": "asset_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Asset Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "asset.asset_category_sigma",
+   "fieldname": "asset_category_sigma",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Asset Category",
+   "options": "Asset Category Sigma",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "asset.location",
+   "fieldname": "asset_location",
+   "fieldtype": "Link",
+   "label": "Asset Location",
+   "options": "Asset Location",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "asset.monitored_device",
+   "fieldname": "monitored_device",
+   "fieldtype": "Link",
+   "label": "Monitored Device",
+   "options": "Monitored Device",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "asset.criticality_rating",
+   "fieldname": "criticality_rating",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Criticality",
+   "options": "Low\nMedium\nHigh\nCritical",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "asset.maintenance_strategy",
+   "fieldname": "maintenance_strategy",
+   "fieldtype": "Select",
+   "label": "Maintenance Strategy",
+   "options": "Time-Based Maintenance (TBM)\nCondition-Based Maintenance (CBM)\nPredictive Maintenance\nRun-to-Failure\nRisk-Based Maintenance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "schedule_section",
+   "fieldtype": "Section Break",
+   "label": "Schedule Configuration"
+  },
+  {
+   "fieldname": "schedule_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Schedule Type",
+   "options": "Recurring\nOne-Time\nCondition-Based\nPredictive",
+   "reqd": 1
+  },
+  {
+   "fieldname": "maintenance_type",
+   "fieldtype": "Select",
+   "label": "Maintenance Type",
+   "options": "Preventive\nCorrective\nPredictive\nInspection\nCalibration\nCleaning\nLubrication\nReplacement",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.schedule_type=='Recurring'",
+   "fieldname": "frequency",
+   "fieldtype": "Int",
+   "label": "Frequency",
+   "mandatory_depends_on": "eval:doc.schedule_type=='Recurring'"
+  },
+  {
+   "depends_on": "eval:doc.schedule_type=='Recurring'",
+   "fieldname": "frequency_unit",
+   "fieldtype": "Select",
+   "label": "Frequency Unit",
+   "mandatory_depends_on": "eval:doc.schedule_type=='Recurring'",
+   "options": "Days\nWeeks\nMonths\nYears\nOperating Hours\nCycles"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "next_due_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Next Due Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_completed_date",
+   "fieldtype": "Date",
+   "label": "Last Completed Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "task_details_section",
+   "fieldtype": "Section Break",
+   "label": "Task Details"
+  },
+  {
+   "fieldname": "task_description",
+   "fieldtype": "Text Editor",
+   "label": "Task Description"
+  },
+  {
+   "fieldname": "estimated_duration_hours",
+   "fieldtype": "Float",
+   "label": "Estimated Duration (Hours)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "required_skills",
+   "fieldtype": "Small Text",
+   "label": "Required Skills"
+  },
+  {
+   "fieldname": "required_tools",
+   "fieldtype": "Small Text",
+   "label": "Required Tools/Equipment"
+  },
+  {
+   "fieldname": "safety_requirements",
+   "fieldtype": "Small Text",
+   "label": "Safety Requirements"
+  },
+  {
+   "collapsible": 1,
+   "depends_on": "eval:doc.schedule_type=='Condition-Based'",
+   "fieldname": "condition_based_section",
+   "fieldtype": "Section Break",
+   "label": "Condition-Based Triggers"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_condition_based",
+   "fieldtype": "Check",
+   "label": "Enable Condition-Based Triggering"
+  },
+  {
+   "depends_on": "enable_condition_based",
+   "fieldname": "condition_metric",
+   "fieldtype": "Data",
+   "label": "Condition Metric Name",
+   "mandatory_depends_on": "enable_condition_based"
+  },
+  {
+   "depends_on": "enable_condition_based",
+   "fieldname": "condition_threshold",
+   "fieldtype": "Float",
+   "label": "Threshold Value",
+   "mandatory_depends_on": "enable_condition_based",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "enable_condition_based",
+   "fieldname": "condition_operator",
+   "fieldtype": "Select",
+   "label": "Operator",
+   "mandatory_depends_on": "enable_condition_based",
+   "options": "Greater Than\nLess Than\nEquals\nGreater Than or Equal\nLess Than or Equal"
+  },
+  {
+   "depends_on": "enable_condition_based",
+   "fieldname": "condition_unit",
+   "fieldtype": "Data",
+   "label": "Unit"
+  },
+  {
+   "collapsible": 1,
+   "depends_on": "eval:doc.schedule_type=='Predictive'",
+   "fieldname": "predictive_section",
+   "fieldtype": "Section Break",
+   "label": "Predictive Maintenance"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_predictive",
+   "fieldtype": "Check",
+   "label": "Enable Predictive Triggering"
+  },
+  {
+   "depends_on": "enable_predictive",
+   "fieldname": "mtbf_hours",
+   "fieldtype": "Float",
+   "label": "MTBF (Hours)",
+   "precision": "2"
+  },
+  {
+   "depends_on": "enable_predictive",
+   "fieldname": "mttr_hours",
+   "fieldtype": "Float",
+   "label": "MTTR (Hours)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "enable_predictive",
+   "description": "Auto-generate work order when failure probability exceeds this threshold (%)",
+   "fieldname": "failure_probability_threshold",
+   "fieldtype": "Float",
+   "label": "Failure Probability Threshold (%)",
+   "precision": "2"
+  },
+  {
+   "default": "0",
+   "depends_on": "enable_predictive",
+   "fieldname": "auto_generate_work_order",
+   "fieldtype": "Check",
+   "label": "Auto-Generate Work Order"
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status & Tracking"
+  },
+  {
+   "default": "Scheduled",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Scheduled\nDue\nOverdue\nIn Progress\nCompleted\nCancelled\nSuspended"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "column_break_39",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_completions",
+   "fieldtype": "Int",
+   "label": "Total Completions",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "missed_schedules",
+   "fieldtype": "Int",
+   "label": "Missed Schedules",
+   "read_only": 1
+  },
+  {
+   "fieldname": "compliance_percentage",
+   "fieldtype": "Percent",
+   "label": "Compliance %",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-19 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Assets",
+ "name": "Asset Maintenance Schedule",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Asset Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+

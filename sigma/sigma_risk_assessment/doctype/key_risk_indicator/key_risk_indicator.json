@@ -1,0 +1,324 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:KRI-{YYYY}-{#####}",
+ "creation": "2025-11-18 17:25:00.000000",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "kri_details_section",
+  "kri_name",
+  "kri_code",
+  "kri_category",
+  "column_break_1",
+  "kri_owner",
+  "linked_risk",
+  "status",
+  "kri_description_section",
+  "kri_description",
+  "measurement_criteria",
+  "measurement_section",
+  "unit_of_measurement",
+  "measurement_frequency",
+  "data_source",
+  "column_break_2",
+  "calculation_method",
+  "target_value",
+  "current_value",
+  "thresholds_section",
+  "threshold_green",
+  "threshold_yellow",
+  "column_break_3",
+  "threshold_red",
+  "threshold_direction",
+  "current_status_section",
+  "current_status",
+  "last_reading_date",
+  "column_break_4",
+  "last_reading_value",
+  "trend",
+  "readings_section",
+  "kri_readings",
+  "analysis_section",
+  "trend_analysis",
+  "action_required",
+  "section_break_5",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "kri_details_section",
+   "fieldtype": "Section Break",
+   "label": "KRI Details"
+  },
+  {
+   "fieldname": "kri_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "KRI Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "kri_code",
+   "fieldtype": "Data",
+   "label": "KRI Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "kri_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "KRI Category",
+   "options": "Financial\nOperational\nCompliance\nStrategic\nReputational\nTechnology",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "kri_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "KRI Owner",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "linked_risk",
+   "fieldtype": "Link",
+   "label": "Linked Risk",
+   "options": "Risk Register"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nInactive\nUnder Review",
+   "default": "Active",
+   "reqd": 1
+  },
+  {
+   "fieldname": "kri_description_section",
+   "fieldtype": "Section Break",
+   "label": "KRI Description"
+  },
+  {
+   "fieldname": "kri_description",
+   "fieldtype": "Text Editor",
+   "label": "KRI Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "measurement_criteria",
+   "fieldtype": "Text Editor",
+   "label": "Measurement Criteria"
+  },
+  {
+   "fieldname": "measurement_section",
+   "fieldtype": "Section Break",
+   "label": "Measurement Configuration"
+  },
+  {
+   "fieldname": "unit_of_measurement",
+   "fieldtype": "Data",
+   "label": "Unit of Measurement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "measurement_frequency",
+   "fieldtype": "Select",
+   "label": "Measurement Frequency",
+   "options": "Daily\nWeekly\nBi-Weekly\nMonthly\nQuarterly\nAnnually",
+   "reqd": 1
+  },
+  {
+   "fieldname": "data_source",
+   "fieldtype": "Data",
+   "label": "Data Source"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "calculation_method",
+   "fieldtype": "Text",
+   "label": "Calculation Method"
+  },
+  {
+   "fieldname": "target_value",
+   "fieldtype": "Float",
+   "label": "Target Value"
+  },
+  {
+   "fieldname": "current_value",
+   "fieldtype": "Float",
+   "label": "Current Value",
+   "read_only": 1
+  },
+  {
+   "fieldname": "thresholds_section",
+   "fieldtype": "Section Break",
+   "label": "Thresholds"
+  },
+  {
+   "fieldname": "threshold_green",
+   "fieldtype": "Float",
+   "label": "Green Threshold (Normal)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "threshold_yellow",
+   "fieldtype": "Float",
+   "label": "Yellow Threshold (Warning)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "threshold_red",
+   "fieldtype": "Float",
+   "label": "Red Threshold (Critical)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "threshold_direction",
+   "fieldtype": "Select",
+   "label": "Threshold Direction",
+   "options": "Higher is Better\nLower is Better",
+   "reqd": 1,
+   "default": "Lower is Better"
+  },
+  {
+   "fieldname": "current_status_section",
+   "fieldtype": "Section Break",
+   "label": "Current Status"
+  },
+  {
+   "fieldname": "current_status",
+   "fieldtype": "Select",
+   "label": "Current Status",
+   "options": "Normal\nWarning\nCritical",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_reading_date",
+   "fieldtype": "Date",
+   "label": "Last Reading Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_reading_value",
+   "fieldtype": "Float",
+   "label": "Last Reading Value",
+   "read_only": 1
+  },
+  {
+   "fieldname": "trend",
+   "fieldtype": "Select",
+   "label": "Trend",
+   "options": "Improving\nStable\nDeteriorating",
+   "read_only": 1
+  },
+  {
+   "fieldname": "readings_section",
+   "fieldtype": "Section Break",
+   "label": "KRI Readings"
+  },
+  {
+   "fieldname": "kri_readings",
+   "fieldtype": "Table",
+   "label": "KRI Readings",
+   "options": "KRI Reading"
+  },
+  {
+   "fieldname": "analysis_section",
+   "fieldtype": "Section Break",
+   "label": "Analysis & Actions"
+  },
+  {
+   "fieldname": "trend_analysis",
+   "fieldtype": "Text Editor",
+   "label": "Trend Analysis"
+  },
+  {
+   "fieldname": "action_required",
+   "fieldtype": "Text Editor",
+   "label": "Action Required"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break",
+   "label": "Additional Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-18 17:25:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Risk Assessment",
+ "name": "Key Risk Indicator",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Risk Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Risk Owner",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Employee"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "kri_name",
+ "track_changes": 1
+}
+

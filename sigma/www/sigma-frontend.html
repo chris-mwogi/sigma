@@ -5,7 +5,7 @@
 {% block head_include %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%23003d7a'>Σ</text></svg>">
-    <link rel="stylesheet" href="/assets/sigma/dist/sigma-app.css">
+    <link rel="stylesheet" href="/assets/sigma/dist/css/index-8c729d21.css">
     <style>
         /* Ensure full width usage */
         html, body {
@@ -17,7 +17,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
         }
 
-        #sigma-app {
+        #app {
             width: 100%;
             height: 100%;
             margin: 0;
@@ -115,7 +115,7 @@
 {% endblock %}
 
 {% block page_content %}
-<div id="sigma-app">
+<div id="app">
     <div class="sigma-loading">
         <div class="sigma-spinner"></div>
         <span>Loading Sigma...</span>
@@ -124,15 +124,16 @@
 {% endblock %}
 
 {% block script %}
-<script type="module" src="/assets/sigma/dist/sigma-app.js?v={{ frappe.utils.now() }}"></script>
+<script type="module" src="/assets/sigma/dist/js/index.js?v={{ frappe.utils.now() }}"></script>
 <script>
     console.log('Sigma: Page loaded successfully');
 
     // Check if the app initialized successfully
     setTimeout(() => {
-        if (!window.SigmaApp || !window.SigmaMounted) {
+        const appDiv = document.getElementById('app');
+        if (!appDiv || appDiv.innerHTML.includes('sigma-loading')) {
             console.error('Sigma: Failed to load application');
-            document.getElementById('sigma-app').innerHTML = `
+            appDiv.innerHTML = `
                 <div class="sigma-loading">
                     <div style="color: #f56c6c; margin-bottom: 20px;">
                         <h3>Application Loading Error</h3>

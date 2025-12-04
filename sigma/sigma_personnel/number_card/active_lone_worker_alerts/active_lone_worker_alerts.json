@@ -1,0 +1,25 @@
+{
+ "aggregate_function_based_on": "",
+ "creation": "2025-01-21 10:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Lone Worker Alert",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[[\"Lone Worker Alert\",\"resolution_status\",\"in\",[\"Open\",\"Acknowledged\"],false]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Active Lone Worker Alerts",
+ "modified": "2025-01-21 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Personnel",
+ "name": "Active Lone Worker Alerts",
+ "owner": "Administrator",
+ "report_function": "Count",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Daily",
+ "type": "Document Type",
+ "color": "Red"
+}
+

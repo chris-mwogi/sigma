@@ -1,168 +1,200 @@
 {
-  "doctype": "DocType",
-  "name": "Case External Communication",
-  "module": "Sigma Case Management",
-  "custom": 0,
-  "is_submittable": 0,
-  "autoname": "EXTCOM-{YYYY}-{####}",
-  "fields": [
-    {
-      "fieldname": "case",
-      "fieldtype": "Link",
-      "label": "Case",
-      "options": "Case",
-      "reqd": 1,
-      "width": "50%"
-    },
-    {
-      "fieldname": "stakeholder_type",
-      "fieldtype": "Select",
-      "label": "Stakeholder Type",
-      "reqd": 1,
-      "options": "Police\nCourt\nLegal Counsel\nInsurance Company\nClient\nEmployee\nOther",
-      "width": "50%"
-    },
-    {
-      "fieldname": "stakeholder_name",
-      "fieldtype": "Data",
-      "label": "Stakeholder Name",
-      "reqd": 1,
-      "width": "50%"
-    },
-    {
-      "fieldname": "stakeholder_contact",
-      "fieldtype": "Data",
-      "label": "Contact Information",
-      "width": "50%"
-    },
-    {
-      "fieldname": "communication_type",
-      "fieldtype": "Select",
-      "label": "Communication Type",
-      "reqd": 1,
-      "options": "Email\nPhone Call\nIn-Person Meeting\nLetter\nFax\nSMS\nOther",
-      "width": "50%"
-    },
-    {
-      "fieldname": "communication_date",
-      "fieldtype": "Datetime",
-      "label": "Communication Date",
-      "reqd": 1,
-      "width": "50%"
-    },
-    {
-      "fieldname": "subject",
-      "fieldtype": "Data",
-      "label": "Subject",
-      "reqd": 1,
-      "width": "100%"
-    },
-    {
-      "fieldname": "message",
-      "fieldtype": "Text Editor",
-      "label": "Message",
-      "reqd": 1
-    },
-    {
-      "fieldname": "section_followup",
-      "fieldtype": "Section Break",
-      "label": "Follow-up"
-    },
-    {
-      "fieldname": "follow_up_required",
-      "fieldtype": "Check",
-      "label": "Follow-up Required",
-      "default": 0
-    },
-    {
-      "fieldname": "follow_up_date",
-      "fieldtype": "Date",
-      "label": "Follow-up Date"
-    },
-    {
-      "fieldname": "follow_up_action",
-      "fieldtype": "Text",
-      "label": "Follow-up Action"
-    },
-    {
-      "fieldname": "section_attachments",
-      "fieldtype": "Section Break",
-      "label": "Attachments"
-    },
-    {
-      "fieldname": "attachments",
-      "fieldtype": "Attach",
-      "label": "Attachments"
-    },
-    {
-      "fieldname": "section_metadata",
-      "fieldtype": "Section Break",
-      "label": "Metadata"
-    },
-    {
-      "fieldname": "communicated_by",
-      "fieldtype": "Link",
-      "label": "Communicated By",
-      "options": "User",
-      "read_only": 1,
-      "width": "50%"
-    },
-    {
-      "fieldname": "communication_status",
-      "fieldtype": "Select",
-      "label": "Communication Status",
-      "options": "Sent\nReceived\nPending Response\nResolved",
-      "default": "Sent",
-      "width": "50%"
-    },
-    {
-      "fieldname": "response_received",
-      "fieldtype": "Check",
-      "label": "Response Received",
-      "default": 0
-    },
-    {
-      "fieldname": "response_date",
-      "fieldtype": "Datetime",
-      "label": "Response Date"
-    },
-    {
-      "fieldname": "response_content",
-      "fieldtype": "Text Editor",
-      "label": "Response Content"
-    }
-  ],
-  "permissions": [
-    {
-      "role": "System Manager",
-      "perm_read": 1,
-      "perm_write": 1,
-      "perm_create": 1,
-      "perm_delete": 1
-    },
-    {
-      "role": "Security Manager",
-      "perm_read": 1,
-      "perm_write": 1,
-      "perm_create": 1
-    },
-    {
-      "role": "Lead Investigator",
-      "perm_read": 1,
-      "perm_write": 1,
-      "perm_create": 1
-    },
-    {
-      "role": "Legal Officer",
-      "perm_read": 1,
-      "perm_write": 1,
-      "perm_create": 1
-    },
-    {
-      "role": "Investigator",
-      "perm_read": 1,
-      "perm_create": 1
-    }
-  ]
+ "actions": [],
+ "autoname": "EXTCOM-{YYYY}-{####}",
+ "creation": "2025-11-14 16:48:33.531182",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "case",
+  "stakeholder_type",
+  "stakeholder_name",
+  "stakeholder_contact",
+  "communication_type",
+  "communication_date",
+  "subject",
+  "message",
+  "section_followup",
+  "follow_up_required",
+  "follow_up_date",
+  "follow_up_action",
+  "section_attachments",
+  "attachments",
+  "section_metadata",
+  "communicated_by",
+  "communication_status",
+  "response_received",
+  "response_date",
+  "response_content"
+ ],
+ "fields": [
+  {
+   "fieldname": "case",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Case",
+   "options": "Case",
+   "reqd": 1,
+   "width": "50%"
+  },
+  {
+   "fieldname": "stakeholder_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Stakeholder Type",
+   "options": "Police\nCourt\nLegal Counsel\nInsurance Company\nClient\nEmployee\nOther",
+   "reqd": 1,
+   "width": "50%"
+  },
+  {
+   "fieldname": "stakeholder_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Stakeholder Name",
+   "reqd": 1,
+   "width": "50%"
+  },
+  {
+   "fieldname": "stakeholder_contact",
+   "fieldtype": "Data",
+   "label": "Contact Information",
+   "width": "50%"
+  },
+  {
+   "fieldname": "communication_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Communication Type",
+   "options": "Email\nPhone Call\nIn-Person Meeting\nLetter\nFax\nSMS\nOther",
+   "reqd": 1,
+   "width": "50%"
+  },
+  {
+   "fieldname": "communication_date",
+   "fieldtype": "Datetime",
+   "label": "Communication Date",
+   "reqd": 1,
+   "width": "50%"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "label": "Subject",
+   "reqd": 1,
+   "width": "100%"
+  },
+  {
+   "fieldname": "message",
+   "fieldtype": "Text Editor",
+   "label": "Message",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_followup",
+   "fieldtype": "Section Break",
+   "label": "Follow-up"
+  },
+  {
+   "default": "0",
+   "fieldname": "follow_up_required",
+   "fieldtype": "Check",
+   "label": "Follow-up Required"
+  },
+  {
+   "fieldname": "follow_up_date",
+   "fieldtype": "Date",
+   "label": "Follow-up Date"
+  },
+  {
+   "fieldname": "follow_up_action",
+   "fieldtype": "Text",
+   "label": "Follow-up Action"
+  },
+  {
+   "fieldname": "section_attachments",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Attach",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "section_metadata",
+   "fieldtype": "Section Break",
+   "label": "Metadata"
+  },
+  {
+   "fieldname": "communicated_by",
+   "fieldtype": "Link",
+   "label": "Communicated By",
+   "options": "User",
+   "read_only": 1,
+   "width": "50%"
+  },
+  {
+   "default": "Sent",
+   "fieldname": "communication_status",
+   "fieldtype": "Select",
+   "label": "Communication Status",
+   "options": "Sent\nReceived\nPending Response\nResolved",
+   "width": "50%"
+  },
+  {
+   "default": "0",
+   "fieldname": "response_received",
+   "fieldtype": "Check",
+   "label": "Response Received"
+  },
+  {
+   "fieldname": "response_date",
+   "fieldtype": "Datetime",
+   "label": "Response Date"
+  },
+  {
+   "fieldname": "response_content",
+   "fieldtype": "Text Editor",
+   "label": "Response Content"
+  }
+ ],
+ "links": [],
+ "modified": "2025-12-03 21:47:21.143107",
+ "modified_by": "Administrator",
+ "module": "Sigma Case Management",
+ "name": "Case External Communication",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Security Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Lead Investigator",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Legal Officer"
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Investigator"
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
 }
-

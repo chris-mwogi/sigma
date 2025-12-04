@@ -19,15 +19,23 @@ app_version = app_version
 # desktop.py defines how modules appear on ERPNext Desk
 # Include all modules
 modules = [
-    "Sigma Home",
+    "Sigma",
     "Sigma Access Control",
-    "Sigma Case Management",
-    "Sigma Guard Monitoring",
     "Sigma Asset Integrations",
+    "Sigma Assets Inventory",
+    "Sigma Case Management",
+    "Sigma Erpnext Integrations",
+    "Sigma Guard Monitoring",
+    "Sigma Personnel",
     "Sigma Risk Assessment",
+    "Sigma Vehicle Management",
     "Sigma Visitor Management",
-    "sigma Vehicle Management",
-    "Sigma ERPNext Integrations"
+    "Sigma CRM",
+    "Sigma Helpdesk",
+    "Sigma Projects",
+    "Sigma Quality",
+    "Sigma Support",
+    "Sigma Telephony"
 ]
 
 # Desk icon registration
@@ -52,7 +60,6 @@ fixtures = [
     "Client Script",
     {"dt": "Module Def", "filters": [["app_name", "=", "sigma"]]},
     {"dt": "Location Type"},
-    {"dt": "Substation Type"},
     {"dt": "Location Subtype"}
 ]
 
@@ -76,10 +83,9 @@ fixtures = [
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/sigma/css/sigma.css"
+app_include_css = "/assets/sigma/css/sigma.css"
 # app_include_js = "/assets/sigma/js/sigma.js"
 app_include_js = []
-app_include_css = []
 
 # include js, css files in header of web template
 # web_include_css = "/assets/sigma/css/sigma.css"
@@ -93,12 +99,12 @@ app_include_css = []
 # webform_include_css = {"doctype": "public/css/doctype.css"}
 
 website_route_rules = [
-    {"from_route": "/sigma-home", "to_route": "sigma-home"},
-    {"from_route": "/sigma-dashboard", "to_route": "sigma-home"}  # Redirect old URL
+    {"from_route": "/sigma", "to_route": "sigma"},
+    {"from_route": "/sigma-dashboard", "to_route": "sigma"},  # Redirect old URL
 ]
 
 portal_menu_items = [
-    {"title": "Sigma Home", "route": "/sigma-home", "reference_doctype": "Sigma Dashboard"}
+    {"title": "Sigma", "route": "/sigma-home", "reference_doctype": "Sigma Dashboard"}
 ]
 
 # include js in page
@@ -129,12 +135,14 @@ doctype_tree_js = {
 # ----------
 
 # application home page (will override Website Settings)
-# home_page = "login"
+# Redirect root URL to /app
+home_page = "app"
 
 # website user home page (by Role)
-# role_home_page = {
-# 	"Role": "home_page"
-# }
+role_home_page = {
+	"System Manager": "app",
+	"Administrator": "app"
+}
 
 # Generators
 # ----------
@@ -262,9 +270,34 @@ doc_events = {
 	"Incident Report": {
 		"after_insert": "sigma.sigma_erpnext_integrations.api.support_integration_hooks.create_maintenance_visit_from_incident",
 	},
-	"Visitor": {
-		"after_insert": "sigma.sigma_erpnext_integrations.api.crm_integration.CRMIntegration.sync_visitor_to_contact",
-		"on_update": "sigma.sigma_erpnext_integrations.api.crm_integration.CRMIntegration.sync_visitor_to_contact",
+	# Temporarily disabled - causing import issues during test data creation
+	# "Visitor": {
+	# 	"after_insert": "sigma.sigma_erpnext_integrations.api.crm_integration.CRMIntegration.sync_visitor_to_contact",
+	# 	"on_update": "sigma.sigma_erpnext_integrations.api.crm_integration.CRMIntegration.sync_visitor_to_contact",
+	# },
+	"Project": {
+		"after_insert": "sigma.sigma_erpnext_integrations.api.projects_integration_hooks.sync_project_to_sigma",
+		"on_update": "sigma.sigma_erpnext_integrations.api.projects_integration_hooks.sync_project_to_sigma",
+	},
+	"Issue": {
+		"after_insert": "sigma.sigma_erpnext_integrations.api.support_integration_hooks.sync_support_to_sigma",
+		"on_update": "sigma.sigma_erpnext_integrations.api.support_integration_hooks.sync_support_to_sigma",
+	},
+	"Maintenance Visit": {
+		"after_insert": "sigma.sigma_erpnext_integrations.api.support_integration_hooks.sync_support_to_sigma",
+		"on_update": "sigma.sigma_erpnext_integrations.api.support_integration_hooks.sync_support_to_sigma",
+	},
+	"Maintenance Schedule": {
+		"after_insert": "sigma.sigma_erpnext_integrations.api.support_integration_hooks.sync_support_to_sigma",
+		"on_update": "sigma.sigma_erpnext_integrations.api.support_integration_hooks.sync_support_to_sigma",
+	},
+	"Warranty Claim": {
+		"after_insert": "sigma.sigma_erpnext_integrations.api.support_integration_hooks.sync_support_to_sigma",
+		"on_update": "sigma.sigma_erpnext_integrations.api.support_integration_hooks.sync_support_to_sigma",
+	},
+	"Call Log": {
+		"after_insert": "sigma.sigma_erpnext_integrations.api.telephony_integration_hooks.sync_call_log_to_sigma",
+		"on_update": "sigma.sigma_erpnext_integrations.api.telephony_integration_hooks.sync_call_log_to_sigma",
 	},
 }
 
@@ -280,11 +313,25 @@ scheduler_events = {
 		"sigma.api.integrations.poll_vendor_apis",
 		"sigma.sigma_erpnext_integrations.sync_handlers.scheduled_sync.sync_pending_assets",
 		"sigma.sigma_erpnext_integrations.sync_handlers.scheduled_sync.sync_maintenance_schedules",
+		"sigma.sigma_case_management.automation.check_sla_breaches",
+		# Asset Management Automation
+		"sigma.sigma_asset_integrations.automation.scheduled_jobs.auto_escalate_critical_alerts",
+		"sigma.sigma_asset_integrations.automation.scheduled_jobs.auto_update_asset_health",
+		# Advanced Automation - Phase 2
+		"sigma.sigma_asset_integrations.automation.work_order_assignment.auto_assign_work_orders",
 	],
 	"daily": [
 		"sigma.api.integrations.generate_reports",
 		"sigma.sigma_erpnext_integrations.sync_handlers.scheduled_sync.sync_all_integrations",
 		"sigma.sigma_erpnext_integrations.sync_handlers.scheduled_sync.cleanup_old_logs",
+		# Asset Management Automation
+		"sigma.sigma_asset_integrations.automation.scheduled_jobs.auto_generate_maintenance_schedules",
+		"sigma.sigma_asset_integrations.automation.contract_automation.check_contract_expiry",
+		"sigma.sigma_asset_integrations.automation.contract_automation.update_contract_performance",
+		"sigma.sigma_asset_integrations.automation.contract_automation.check_vendor_compliance",
+		# Advanced Automation - Phase 2
+		"sigma.sigma_asset_integrations.automation.predictive_maintenance.generate_predictive_alerts",
+		"sigma.sigma_asset_integrations.automation.spare_parts_automation.check_spare_parts_inventory",
 	],
 }
 

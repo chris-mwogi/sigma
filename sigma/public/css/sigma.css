@@ -1,0 +1,64 @@
+/* Sigma Custom Styles */
+
+/* ============================================
+   Frappe Sidebar Scrolling Fix
+   ============================================
+   Enable vertical scrolling for the workspace sidebar
+   to ensure all workspaces remain accessible when the
+   list exceeds the viewport height.
+   ============================================ */
+
+/* Enable scrolling for the sidebar top container (collapsed state) */
+.body-sidebar .body-sidebar-top {
+	overflow-y: auto !important;
+	overflow-x: hidden;
+}
+
+/* Enable scrolling for the sidebar top container (expanded state) */
+.body-sidebar-container.expanded .body-sidebar .body-sidebar-top {
+	overflow-y: auto !important;
+	overflow-x: hidden;
+}
+
+/* Ensure smooth scrolling behavior */
+.body-sidebar .body-sidebar-top,
+.body-sidebar-container.expanded .body-sidebar .body-sidebar-top {
+	scroll-behavior: smooth;
+}
+
+/* Custom scrollbar styling for better UX */
+.body-sidebar .body-sidebar-top::-webkit-scrollbar {
+	width: 6px;
+}
+
+.body-sidebar .body-sidebar-top::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.body-sidebar .body-sidebar-top::-webkit-scrollbar-thumb {
+	background: rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+}
+
+.body-sidebar .body-sidebar-top::-webkit-scrollbar-thumb:hover {
+	background: rgba(0, 0, 0, 0.3);
+}
+
+/* Dark theme scrollbar */
+[data-theme="dark"] .body-sidebar .body-sidebar-top::-webkit-scrollbar-thumb {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .body-sidebar .body-sidebar-top::-webkit-scrollbar-thumb:hover {
+	background: rgba(255, 255, 255, 0.3);
+}
+
+/* Firefox scrollbar styling */
+.body-sidebar .body-sidebar-top {
+	scrollbar-width: thin;
+	scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+[data-theme="dark"] .body-sidebar .body-sidebar-top {
+	scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}

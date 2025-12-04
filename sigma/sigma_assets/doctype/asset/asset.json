@@ -1,0 +1,586 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 0,
+ "autoname": "naming_series:",
+ "creation": "2025-11-17 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_information_section",
+  "naming_series",
+  "item_code",
+  "item_name",
+  "asset_name",
+  "asset_category",
+  "asset_category_sigma",
+  "column_break_1",
+  "location",
+  "company",
+  "custodian",
+  "department",
+  "column_break_2",
+  "status",
+  "is_composite_asset",
+  "asset_owner",
+  "iso_55000_section",
+  "lifecycle_status",
+  "criticality_rating",
+  "condition_index",
+  "column_break_iso_1",
+  "risk_score",
+  "risk_classification",
+  "failure_probability",
+  "monitoring_section",
+  "monitored_device",
+  "is_iot_enabled",
+  "is_network_asset",
+  "column_break_monitoring",
+  "requires_gps_tracking",
+  "last_telemetry_update",
+  "health_status",
+  "environmental_section",
+  "operating_temperature",
+  "operating_humidity",
+  "operating_pressure",
+  "column_break_env",
+  "environmental_conditions_met",
+  "last_environmental_check",
+  "environmental_notes",
+  "compliance_section",
+  "iso_55000_compliant",
+  "iso_14224_failure_code",
+  "nist_compliant",
+  "column_break_compliance",
+  "iec_61850_compliant",
+  "regulatory_compliance_status",
+  "compliance_notes",
+  "components_section",
+  "components",
+  "location_installation_section",
+  "asset_location",
+  "installation_point",
+  "system_relationships_section",
+  "parent_system",
+  "requires_maintenance",
+  "maintenance_frequency",
+  "maintenance_strategy",
+  "column_break_maint",
+  "last_maintenance_date",
+  "next_maintenance_date",
+  "last_audit_date",
+  "mtbf_hours",
+  "mttr_hours",
+  "purchase_details_section",
+  "purchase_date",
+  "available_for_use_date",
+  "is_existing_asset",
+  "column_break_purchase",
+  "purchase_amount",
+  "gross_purchase_amount",
+  "warranty_expiry_date",
+  "depreciation_section",
+  "expected_useful_life_years",
+  "depreciation_method",
+  "residual_value_percentage",
+  "column_break_depreciation",
+  "current_value",
+  "accumulated_depreciation",
+  "last_revaluation_date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "SIGMA-ASS-.YYYY.-\nSIGMA-ASS-.####",
+   "reqd": 1,
+   "default": "SIGMA-ASS-.YYYY.-"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item Code",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "read_only": 1,
+   "fetch_from": "item_code.item_name"
+  },
+  {
+   "fieldname": "asset_name",
+   "fieldtype": "Data",
+   "label": "Asset Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "asset_category",
+   "fieldtype": "Link",
+   "label": "Asset Category",
+   "options": "Asset Category"
+  },
+  {
+   "fieldname": "asset_category_sigma",
+   "fieldtype": "Link",
+   "label": "Asset Category (Sigma)",
+   "options": "Asset Category Sigma",
+   "description": "ISO 55000 compliant asset category"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Location"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1,
+   "default": "Kenya Power"
+  },
+  {
+   "fieldname": "custodian",
+   "fieldtype": "Link",
+   "label": "Custodian",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nSubmitted\nIn Use\nUnder Maintenance\nOut of Service\nSold\nScrapped\nCancelled",
+   "default": "Draft",
+   "reqd": 1
+  },
+  {
+   "fieldname": "is_composite_asset",
+   "fieldtype": "Check",
+   "label": "Is Composite Asset",
+   "default": "0"
+  },
+  {
+   "fieldname": "asset_owner",
+   "fieldtype": "Select",
+   "label": "Asset Owner",
+   "options": "Company\nSupplier\nCustomer",
+   "default": "Company"
+  },
+  {
+   "fieldname": "iso_55000_section",
+   "fieldtype": "Section Break",
+   "label": "ISO 55000 Asset Management"
+  },
+  {
+   "fieldname": "lifecycle_status",
+   "fieldtype": "Select",
+   "label": "Lifecycle Status",
+   "options": "\nPlanned\nProcurement\nInstallation\nCommissioning\nOperational\nMaintenance\nUpgrade\nDecommissioning\nDisposal",
+   "default": "Planned"
+  },
+  {
+   "fieldname": "criticality_rating",
+   "fieldtype": "Select",
+   "label": "Criticality Rating",
+   "options": "\nLow\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "condition_index",
+   "fieldtype": "Select",
+   "label": "Condition Index",
+   "options": "\nExcellent (90-100%)\nGood (70-89%)\nFair (50-69%)\nPoor (30-49%)\nVery Poor (0-29%)"
+  },
+  {
+   "fieldname": "column_break_iso_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "risk_score",
+   "fieldtype": "Int",
+   "label": "Risk Score (1-100)",
+   "description": "Calculated risk score based on failure probability and impact"
+  },
+  {
+   "fieldname": "risk_classification",
+   "fieldtype": "Select",
+   "label": "Risk Classification",
+   "options": "\nLow Risk\nMedium Risk\nHigh Risk\nVery High Risk"
+  },
+  {
+   "fieldname": "failure_probability",
+   "fieldtype": "Percent",
+   "label": "Failure Probability %"
+  },
+  {
+   "fieldname": "monitoring_section",
+   "fieldtype": "Section Break",
+   "label": "Monitoring & IoT Integration"
+  },
+  {
+   "fieldname": "monitored_device",
+   "fieldtype": "Link",
+   "label": "Monitored Device",
+   "options": "Monitored Device",
+   "description": "Link to IoT/SNMP monitored device"
+  },
+  {
+   "fieldname": "is_iot_enabled",
+   "fieldtype": "Check",
+   "label": "IoT Enabled",
+   "default": "0"
+  },
+  {
+   "fieldname": "is_network_asset",
+   "fieldtype": "Check",
+   "label": "Network Asset",
+   "default": "0"
+  },
+  {
+   "fieldname": "column_break_monitoring",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "requires_gps_tracking",
+   "fieldtype": "Check",
+   "label": "Requires GPS Tracking",
+   "default": "0"
+  },
+  {
+   "fieldname": "last_telemetry_update",
+   "fieldtype": "Datetime",
+   "label": "Last Telemetry Update",
+   "read_only": 1
+  },
+  {
+   "fieldname": "health_status",
+   "fieldtype": "Select",
+   "label": "Health Status",
+   "options": "\nHealthy\nWarning\nCritical\nFailed\nUnknown",
+   "default": "Unknown"
+  },
+  {
+   "fieldname": "environmental_section",
+   "fieldtype": "Section Break",
+   "label": "Environmental Conditions"
+  },
+  {
+   "fieldname": "operating_temperature",
+   "fieldtype": "Float",
+   "label": "Operating Temperature (°C)"
+  },
+  {
+   "fieldname": "operating_humidity",
+   "fieldtype": "Percent",
+   "label": "Operating Humidity %"
+  },
+  {
+   "fieldname": "operating_pressure",
+   "fieldtype": "Float",
+   "label": "Operating Pressure (kPa)"
+  },
+  {
+   "fieldname": "column_break_env",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "environmental_conditions_met",
+   "fieldtype": "Check",
+   "label": "Environmental Conditions Met",
+   "default": "1"
+  },
+  {
+   "fieldname": "last_environmental_check",
+   "fieldtype": "Datetime",
+   "label": "Last Environmental Check"
+  },
+  {
+   "fieldname": "environmental_notes",
+   "fieldtype": "Small Text",
+   "label": "Environmental Notes"
+  },
+  {
+   "fieldname": "compliance_section",
+   "fieldtype": "Section Break",
+   "label": "Compliance & Standards"
+  },
+  {
+   "fieldname": "iso_55000_compliant",
+   "fieldtype": "Check",
+   "label": "ISO 55000/55001 Compliant",
+   "default": "1"
+  },
+  {
+   "fieldname": "iso_14224_failure_code",
+   "fieldtype": "Data",
+   "label": "ISO 14224 Failure Code"
+  },
+  {
+   "fieldname": "nist_compliant",
+   "fieldtype": "Check",
+   "label": "NIST SP 800-53 Compliant",
+   "default": "0"
+  },
+  {
+   "fieldname": "column_break_compliance",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "iec_61850_compliant",
+   "fieldtype": "Check",
+   "label": "IEC 61850 Compliant",
+   "default": "0"
+  },
+  {
+   "fieldname": "regulatory_compliance_status",
+   "fieldtype": "Select",
+   "label": "Regulatory Compliance Status",
+   "options": "\nCompliant\nNon-Compliant\nPartially Compliant\nUnder Review"
+  },
+  {
+   "fieldname": "compliance_notes",
+   "fieldtype": "Text",
+   "label": "Compliance Notes"
+  },
+  {
+   "fieldname": "components_section",
+   "fieldtype": "Section Break",
+   "label": "Components",
+   "depends_on": "eval:doc.is_composite_asset"
+  },
+  {
+   "fieldname": "components",
+   "fieldtype": "Table",
+   "label": "Components",
+   "options": "Asset Component",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "location_installation_section",
+   "fieldtype": "Section Break",
+   "label": "Location & Installation"
+  },
+  {
+   "fieldname": "asset_location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Location",
+   "description": "Physical location of the asset"
+  },
+  {
+   "fieldname": "installation_point",
+   "fieldtype": "Data",
+   "label": "Installation Point",
+   "description": "Specific installation point or room"
+  },
+  {
+   "fieldname": "system_relationships_section",
+   "fieldtype": "Section Break",
+   "label": "System Relationships"
+  },
+  {
+   "fieldname": "parent_system",
+   "fieldtype": "Link",
+   "label": "Parent System",
+   "options": "Asset",
+   "description": "Parent asset if this is part of a larger system"
+  },
+  {
+   "fieldname": "requires_maintenance",
+   "fieldtype": "Check",
+   "label": "Requires Maintenance",
+   "default": "0"
+  },
+  {
+   "fieldname": "maintenance_frequency",
+   "fieldtype": "Select",
+   "label": "Maintenance Frequency",
+   "options": "\nDaily\nWeekly\nMonthly\nQuarterly\nSemi-Annually\nAnnually\nBiennially",
+   "depends_on": "eval:doc.requires_maintenance"
+  },
+  {
+   "fieldname": "maintenance_strategy",
+   "fieldtype": "Select",
+   "label": "Maintenance Strategy",
+   "options": "\nTime-Based Maintenance (TBM)\nCondition-Based Maintenance (CBM)\nPredictive Maintenance\nRun-to-Failure\nRisk-Based Maintenance",
+   "depends_on": "eval:doc.requires_maintenance"
+  },
+  {
+   "fieldname": "column_break_maint",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_maintenance_date",
+   "fieldtype": "Date",
+   "label": "Last Maintenance Date"
+  },
+  {
+   "fieldname": "next_maintenance_date",
+   "fieldtype": "Date",
+   "label": "Next Maintenance Date"
+  },
+  {
+   "fieldname": "last_audit_date",
+   "fieldtype": "Date",
+   "label": "Last Audit Date"
+  },
+  {
+   "fieldname": "mtbf_hours",
+   "fieldtype": "Float",
+   "label": "MTBF (Mean Time Between Failures) - Hours"
+  },
+  {
+   "fieldname": "mttr_hours",
+   "fieldtype": "Float",
+   "label": "MTTR (Mean Time To Repair) - Hours"
+  },
+  {
+   "fieldname": "purchase_details_section",
+   "fieldtype": "Section Break",
+   "label": "Purchase Details"
+  },
+  {
+   "fieldname": "purchase_date",
+   "fieldtype": "Date",
+   "label": "Purchase Date"
+  },
+  {
+   "fieldname": "available_for_use_date",
+   "fieldtype": "Date",
+   "label": "Available for Use Date"
+  },
+  {
+   "fieldname": "is_existing_asset",
+   "fieldtype": "Check",
+   "label": "Is Existing Asset",
+   "default": "0"
+  },
+  {
+   "fieldname": "column_break_purchase",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "purchase_amount",
+   "fieldtype": "Currency",
+   "label": "Purchase Amount",
+   "precision": "2"
+  },
+  {
+   "fieldname": "gross_purchase_amount",
+   "fieldtype": "Currency",
+   "label": "Gross Purchase Amount",
+   "precision": "2"
+  },
+  {
+   "fieldname": "warranty_expiry_date",
+   "fieldtype": "Date",
+   "label": "Warranty Expiry Date"
+  },
+  {
+   "fieldname": "depreciation_section",
+   "fieldtype": "Section Break",
+   "label": "Depreciation & Valuation"
+  },
+  {
+   "fieldname": "expected_useful_life_years",
+   "fieldtype": "Int",
+   "label": "Expected Useful Life (Years)"
+  },
+  {
+   "fieldname": "depreciation_method",
+   "fieldtype": "Select",
+   "label": "Depreciation Method",
+   "options": "\nStraight Line\nReducing Balance\nDouble Declining Balance\nSum of Years Digits\nManual"
+  },
+  {
+   "fieldname": "residual_value_percentage",
+   "fieldtype": "Percent",
+   "label": "Residual Value %"
+  },
+  {
+   "fieldname": "column_break_depreciation",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "current_value",
+   "fieldtype": "Currency",
+   "label": "Current Value",
+   "read_only": 1,
+   "precision": "2"
+  },
+  {
+   "fieldname": "accumulated_depreciation",
+   "fieldtype": "Currency",
+   "label": "Accumulated Depreciation",
+   "read_only": 1,
+   "precision": "2"
+  },
+  {
+   "fieldname": "last_revaluation_date",
+   "fieldtype": "Date",
+   "label": "Last Revaluation Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Asset",
+   "read_only": 1,
+   "no_copy": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-11-17 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Assets",
+ "name": "Asset",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+

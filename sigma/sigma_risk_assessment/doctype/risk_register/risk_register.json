@@ -1,0 +1,223 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:RISK-{YYYY}-{#####}",
+ "creation": "2025-11-18 16:30:00.000000",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "risk_identification_section",
+  "risk_title",
+  "risk_category",
+  "risk_description",
+  "column_break_1",
+  "risk_source",
+  "impact_area",
+  "status",
+  "ownership_section",
+  "risk_owner",
+  "business_unit",
+  "column_break_2",
+  "department",
+  "location",
+  "review_schedule_section",
+  "date_identified",
+  "last_review_date",
+  "column_break_3",
+  "next_review_date",
+  "review_frequency_days",
+  "section_break_4",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "risk_identification_section",
+   "fieldtype": "Section Break",
+   "label": "Risk Identification"
+  },
+  {
+   "fieldname": "risk_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Risk Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "risk_category",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Risk Category",
+   "options": "Risk Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "risk_description",
+   "fieldtype": "Text Editor",
+   "label": "Risk Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "risk_source",
+   "fieldtype": "Select",
+   "label": "Risk Source",
+   "options": "Internal\nExternal\nBoth"
+  },
+  {
+   "fieldname": "impact_area",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Impact Area",
+   "options": "Financial\nOperational\nReputational\nCompliance\nStrategic\nSafety\nEnvironmental\nTechnology"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nUnder Review\nMitigated\nAccepted\nClosed",
+   "reqd": 1,
+   "default": "Active"
+  },
+  {
+   "fieldname": "ownership_section",
+   "fieldtype": "Section Break",
+   "label": "Ownership & Responsibility"
+  },
+  {
+   "fieldname": "risk_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Risk Owner",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "business_unit",
+   "fieldtype": "Data",
+   "label": "Business Unit"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Location"
+  },
+  {
+   "fieldname": "review_schedule_section",
+   "fieldtype": "Section Break",
+   "label": "Review Schedule"
+  },
+  {
+   "fieldname": "date_identified",
+   "fieldtype": "Date",
+   "label": "Date Identified",
+   "reqd": 1,
+   "default": "Today"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "last_review_date",
+   "fieldtype": "Date",
+   "label": "Last Review Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "next_review_date",
+   "fieldtype": "Date",
+   "label": "Next Review Date"
+  },
+  {
+   "fieldname": "review_frequency_days",
+   "fieldtype": "Int",
+   "label": "Review Frequency (Days)",
+   "default": "90"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Additional Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-11-18 16:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Risk Assessment",
+ "name": "Risk Register",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Risk Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Risk Owner",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Employee"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "risk_title",
+ "track_changes": 1
+}
+

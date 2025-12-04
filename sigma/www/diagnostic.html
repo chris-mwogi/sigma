@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigma Diagnostic Tool</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #f5f7fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .card h2 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 20px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .status-box {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-family: monospace;
+            font-size: 13px;
+        }
+
+        .status-success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+
+        .status-error {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+
+        .status-warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+        }
+
+        .status-info {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            color: #0c5460;
+        }
+
+        .test-result {
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #667eea;
+            background: #f8f9fa;
+        }
+
+        .test-result.pass {
+            border-left-color: #28a745;
+        }
+
+        .test-result.fail {
+            border-left-color: #dc3545;
+        }
+
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 12px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .metric {
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .metric-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔍 Sigma Diagnostic Tool</h1>
+            <p>Comprehensive testing and diagnostics for the Sigma app</p>
+        </div>
+
+        <div class="card">
+            <h2>Quick Actions</h2>
+            <button class="btn" onclick="runAllTests()">🚀 Run All Tests</button>
+            <button class="btn" onclick="testDashboardAPI()">📊 Test Dashboard API</button>
+            <button class="btn" onclick="testWorkspaces()">📁 Test Workspaces</button>
+            <button class="btn" onclick="testNumberCards()">🔢 Test Number Cards</button>
+            <button class="btn" onclick="checkBrowserConsole()">🐛 Check Console Errors</button>
+        </div>
+
+        <div id="results"></div>
+    </div>
+
+    <script>
+        let testResults = [];
+
+        function addResult(title, status, message, data = null) {
+            const result = { title, status, message, data, timestamp: new Date() };
+            testResults.push(result);
+            displayResults();
+        }
+
+        function displayResults() {
+            const container = document.getElementById('results');
+            container.innerHTML = testResults.map(r => `
+                <div class="card">
+                    <h2>${r.title}</h2>
+                    <div class="test-result ${r.status}">
+                        <strong>${r.status.toUpperCase()}</strong>: ${r.message}
+                        <br><small>${r.timestamp.toLocaleTimeString()}</small>
+                    </div>
+                    ${r.data ? `<pre>${JSON.stringify(r.data, null, 2)}</pre>` : ''}
+                </div>
+            `).reverse().join('');
+        }
+
+        async function testDashboardAPI() {
+            addResult('Dashboard API Test', 'info', 'Testing dashboard API endpoint...');
+
+            try {
+                const response = await fetch('/api/method/sigma.api.dashboard.get_dashboard_data');
+                const data = await response.json();
+
+                if (response.ok && data.message) {
+                    const dashData = data.message.data;
+                    addResult('Dashboard API Test', 'pass',
+                        `✅ Dashboard API is working! Found ${Object.keys(dashData).length} metrics`,
+                        dashData);
+                } else {
+                    addResult('Dashboard API Test', 'fail',
+                        '❌ Dashboard API returned unexpected response', data);
+                }
+            } catch (error) {
+                addResult('Dashboard API Test', 'fail',
+                    `❌ Dashboard API failed: ${error.message}`, { error: error.toString() });
+            }
+        }
+
+        async function testWorkspaces() {
+            addResult('Workspace Test', 'info', 'Testing workspace status...');
+
+            try {
+                const response = await fetch('/api/method/sigma.api.api.get_workspace_status');
+                const data = await response.json();
+
+                if (response.ok && data.message) {
+                    const workspaces = data.message.workspaces;
+                    const needsFix = workspaces.filter(w => w.needs_fix).length;
+
+                    addResult('Workspace Test', needsFix > 0 ? 'warning' : 'pass',
+                        `Found ${workspaces.length} workspaces, ${needsFix} need fixing`,
+                        data.message);
+                } else {
+                    addResult('Workspace Test', 'fail',
+                        '❌ Workspace API returned unexpected response', data);
+                }
+            } catch (error) {
+                addResult('Workspace Test', 'fail',
+                    `❌ Workspace test failed: ${error.message}`, { error: error.toString() });
+            }
+        }
+
+        async function testNumberCards() {
+            addResult('Number Card Test', 'info', 'Testing number cards...');
+
+            const cardsToTest = [
+                'Total Cases',
+                'Open Cases',
+                'Active Guard Shifts',
+                'Total Assets'
+            ];
+
+            try {
+                const results = {};
+                for (const card of cardsToTest) {
+                    const response = await fetch(`/api/resource/Number Card/${encodeURIComponent(card)}`);
+                    results[card] = response.ok ? '✅ Exists' : '❌ Missing';
+                }
+
+                const missing = Object.values(results).filter(v => v.includes('❌')).length;
+                addResult('Number Card Test', missing > 0 ? 'fail' : 'pass',
+                    `Checked ${cardsToTest.length} cards, ${missing} missing`,
+                    results);
+            } catch (error) {
+                addResult('Number Card Test', 'fail',
+                    `❌ Number card test failed: ${error.message}`, { error: error.toString() });
+            }
+        }
+
+        function checkBrowserConsole() {
+            addResult('Browser Console Check', 'info', 'Checking for console errors...');
+
+            // Capture console errors
+            const errors = [];
+            const warnings = [];
+
+            const originalError = console.error;
+            const originalWarn = console.warn;
+
+            console.error = function(...args) {
+                errors.push(args.join(' '));
+                originalError.apply(console, args);
+            };
+
+            console.warn = function(...args) {
+                warnings.push(args.join(' '));
+                originalWarn.apply(console, args);
+            };
+
+            setTimeout(() => {
+                const status = errors.length > 0 ? 'fail' : warnings.length > 0 ? 'warning' : 'pass';
+                const message = `Found ${errors.length} errors and ${warnings.length} warnings`;
+
+                addResult('Browser Console Check', status, message, {
+                    errors: errors.slice(0, 10),
+                    warnings: warnings.slice(0, 10)
+                });
+
+                console.error = originalError;
+                console.warn = originalWarn;
+            }, 2000);
+        }
+
+        async function runAllTests() {
+            testResults = [];
+            addResult('Test Suite', 'info', '🚀 Starting comprehensive test suite...');
+
+            await testDashboardAPI();
+            await new Promise(resolve => setTimeout(resolve, 500));
+
+            await testWorkspaces();
+            await new Promise(resolve => setTimeout(resolve, 500));
+
+            await testNumberCards();
+            await new Promise(resolve => setTimeout(resolve, 500));
+
+            checkBrowserConsole();
+
+            addResult('Test Suite', 'pass', '✅ All tests completed!');
+        }
+
+        // Auto-run tests on page load
+        window.addEventListener('load', () => {
+            setTimeout(runAllTests, 1000);
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,130 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:policy_name",
+ "creation": "2025-12-01 15:21:18.371265",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "policy_name",
+  "description",
+  "tracking_section",
+  "tracking_scope",
+  "retention_period",
+  "column_break_1",
+  "consent_required",
+  "applicable_zones",
+  "compliance_section",
+  "compliance_standard",
+  "effective_date",
+  "column_break_2",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "policy_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Policy Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tracking_section",
+   "fieldtype": "Section Break",
+   "label": "Tracking Configuration"
+  },
+  {
+   "default": "All Personnel",
+   "fieldname": "tracking_scope",
+   "fieldtype": "Select",
+   "label": "Tracking Scope",
+   "options": "All Personnel\nEmployees Only\nVisitors Only\nContractors Only\nCustom"
+  },
+  {
+   "default": "90",
+   "fieldname": "retention_period",
+   "fieldtype": "Int",
+   "label": "Retention Period (Days)"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "consent_required",
+   "fieldtype": "Check",
+   "label": "Consent Required"
+  },
+  {
+   "fieldname": "applicable_zones",
+   "fieldtype": "Small Text",
+   "label": "Applicable Zones"
+  },
+  {
+   "fieldname": "compliance_section",
+   "fieldtype": "Section Break",
+   "label": "Compliance"
+  },
+  {
+   "fieldname": "compliance_standard",
+   "fieldtype": "Select",
+   "label": "Compliance Standard",
+   "options": "GDPR\nCCPA\nHIPAA\nISO 27001\nCustom"
+  },
+  {
+   "fieldname": "effective_date",
+   "fieldtype": "Date",
+   "label": "Effective Date"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nActive\nInactive\nArchived"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-12-01 15:21:18.371265",
+ "modified_by": "Administrator",
+ "module": "Sigma Personnel",
+ "name": "Human Tracking Policy",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

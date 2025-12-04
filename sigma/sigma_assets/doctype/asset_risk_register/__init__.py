@@ -1,0 +1,2 @@
+# Asset Risk Register DocType
+

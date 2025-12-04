@@ -1,0 +1,389 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:category_name",
+ "creation": "2025-11-19 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "category_name",
+  "category_code",
+  "parent_category",
+  "description",
+  "column_break_1",
+  "is_active",
+  "asset_type",
+  "criticality_level",
+  "section_break_2",
+  "is_iot_enabled",
+  "is_network_asset",
+  "requires_gps_tracking",
+  "requires_environmental_monitoring",
+  "column_break_3",
+  "is_mobile_asset",
+  "is_critical_infrastructure",
+  "requires_cybersecurity_compliance",
+  "maintenance_section",
+  "maintenance_strategy",
+  "default_maintenance_frequency",
+  "default_maintenance_duration",
+  "column_break_4",
+  "enable_predictive_maintenance",
+  "enable_condition_based_maintenance",
+  "mtbf_hours",
+  "mttr_hours",
+  "lifecycle_section",
+  "expected_useful_life_years",
+  "depreciation_method",
+  "residual_value_percentage",
+  "column_break_5",
+  "warranty_period_months",
+  "calibration_required",
+  "calibration_frequency_months",
+  "risk_section",
+  "default_risk_classification",
+  "failure_impact_score",
+  "environmental_impact_score",
+  "column_break_6",
+  "safety_critical",
+  "regulatory_compliance_required",
+  "compliance_standards",
+  "standards_section",
+  "iso_55000_compliant",
+  "iso_14224_failure_codes",
+  "nist_cybersecurity_required",
+  "column_break_7",
+  "iec_61850_compliant",
+  "itil_configuration_item",
+  "custom_compliance_requirements"
+ ],
+ "fields": [
+  {
+   "fieldname": "category_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Category Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "category_code",
+   "fieldtype": "Data",
+   "label": "Category Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "parent_category",
+   "fieldtype": "Link",
+   "label": "Parent Category",
+   "options": "Asset Category Sigma"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "asset_type",
+   "fieldtype": "Select",
+   "label": "Asset Type",
+   "options": "\nPhysical Asset\nIT Asset\nNetwork Asset\nIoT Device\nInfrastructure\nVehicle\nEquipment\nFacility"
+  },
+  {
+   "fieldname": "criticality_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Criticality Level",
+   "options": "\nLow\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Asset Characteristics"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_iot_enabled",
+   "fieldtype": "Check",
+   "label": "IoT Enabled"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_network_asset",
+   "fieldtype": "Check",
+   "label": "Network Asset"
+  },
+  {
+   "default": "0",
+   "fieldname": "requires_gps_tracking",
+   "fieldtype": "Check",
+   "label": "Requires GPS Tracking"
+  },
+  {
+   "default": "0",
+   "fieldname": "requires_environmental_monitoring",
+   "fieldtype": "Check",
+   "label": "Requires Environmental Monitoring"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_mobile_asset",
+   "fieldtype": "Check",
+   "label": "Mobile Asset"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_critical_infrastructure",
+   "fieldtype": "Check",
+   "label": "Critical Infrastructure"
+  },
+  {
+   "default": "0",
+   "fieldname": "requires_cybersecurity_compliance",
+   "fieldtype": "Check",
+   "label": "Requires Cybersecurity Compliance"
+  },
+  {
+   "fieldname": "maintenance_section",
+   "fieldtype": "Section Break",
+   "label": "Maintenance Strategy (ISO 55000)"
+  },
+  {
+   "fieldname": "maintenance_strategy",
+   "fieldtype": "Select",
+   "label": "Maintenance Strategy",
+   "options": "\nTime-Based Maintenance (TBM)\nCondition-Based Maintenance (CBM)\nPredictive Maintenance\nRun-to-Failure\nRisk-Based Maintenance"
+  },
+  {
+   "fieldname": "default_maintenance_frequency",
+   "fieldtype": "Select",
+   "label": "Default Maintenance Frequency",
+   "options": "\nDaily\nWeekly\nMonthly\nQuarterly\nSemi-Annually\nAnnually\nBiennially"
+  },
+  {
+   "fieldname": "default_maintenance_duration",
+   "fieldtype": "Float",
+   "label": "Default Maintenance Duration (Hours)"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_predictive_maintenance",
+   "fieldtype": "Check",
+   "label": "Enable Predictive Maintenance"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_condition_based_maintenance",
+   "fieldtype": "Check",
+   "label": "Enable Condition-Based Maintenance"
+  },
+  {
+   "fieldname": "mtbf_hours",
+   "fieldtype": "Float",
+   "label": "MTBF (Mean Time Between Failures) - Hours"
+  },
+  {
+   "fieldname": "mttr_hours",
+   "fieldtype": "Float",
+   "label": "MTTR (Mean Time To Repair) - Hours"
+  },
+  {
+   "fieldname": "lifecycle_section",
+   "fieldtype": "Section Break",
+   "label": "Lifecycle & Depreciation"
+  },
+  {
+   "fieldname": "expected_useful_life_years",
+   "fieldtype": "Int",
+   "label": "Expected Useful Life (Years)"
+  },
+  {
+   "fieldname": "depreciation_method",
+   "fieldtype": "Select",
+   "label": "Depreciation Method",
+   "options": "\nStraight Line\nReducing Balance\nDouble Declining Balance\nSum of Years Digits\nManual"
+  },
+  {
+   "fieldname": "residual_value_percentage",
+   "fieldtype": "Percent",
+   "label": "Residual Value %"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "warranty_period_months",
+   "fieldtype": "Int",
+   "label": "Default Warranty Period (Months)"
+  },
+  {
+   "default": "0",
+   "fieldname": "calibration_required",
+   "fieldtype": "Check",
+   "label": "Calibration Required"
+  },
+  {
+   "depends_on": "calibration_required",
+   "fieldname": "calibration_frequency_months",
+   "fieldtype": "Int",
+   "label": "Calibration Frequency (Months)"
+  },
+  {
+   "fieldname": "risk_section",
+   "fieldtype": "Section Break",
+   "label": "Risk & Compliance (ISO 31000)"
+  },
+  {
+   "fieldname": "default_risk_classification",
+   "fieldtype": "Select",
+   "label": "Default Risk Classification",
+   "options": "\nLow Risk\nMedium Risk\nHigh Risk\nVery High Risk"
+  },
+  {
+   "description": "1-10 scale",
+   "fieldname": "failure_impact_score",
+   "fieldtype": "Int",
+   "label": "Failure Impact Score"
+  },
+  {
+   "description": "1-10 scale",
+   "fieldname": "environmental_impact_score",
+   "fieldtype": "Int",
+   "label": "Environmental Impact Score"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "safety_critical",
+   "fieldtype": "Check",
+   "label": "Safety Critical"
+  },
+  {
+   "default": "0",
+   "fieldname": "regulatory_compliance_required",
+   "fieldtype": "Check",
+   "label": "Regulatory Compliance Required"
+  },
+  {
+   "depends_on": "regulatory_compliance_required",
+   "fieldname": "compliance_standards",
+   "fieldtype": "Small Text",
+   "label": "Compliance Standards"
+  },
+  {
+   "fieldname": "standards_section",
+   "fieldtype": "Section Break",
+   "label": "International Standards"
+  },
+  {
+   "default": "1",
+   "fieldname": "iso_55000_compliant",
+   "fieldtype": "Check",
+   "label": "ISO 55000/55001 Compliant"
+  },
+  {
+   "default": "0",
+   "fieldname": "iso_14224_failure_codes",
+   "fieldtype": "Check",
+   "label": "Use ISO 14224 Failure Codes"
+  },
+  {
+   "default": "0",
+   "fieldname": "nist_cybersecurity_required",
+   "fieldtype": "Check",
+   "label": "NIST SP 800-53 Cybersecurity Required"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "iec_61850_compliant",
+   "fieldtype": "Check",
+   "label": "IEC 61850 Compliant (Utility Assets)"
+  },
+  {
+   "default": "0",
+   "fieldname": "itil_configuration_item",
+   "fieldtype": "Check",
+   "label": "ITIL Configuration Item"
+  },
+  {
+   "fieldname": "custom_compliance_requirements",
+   "fieldtype": "Small Text",
+   "label": "Custom Compliance Requirements"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-19 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Assets",
+ "name": "Asset Category Sigma",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Asset Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Asset User",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+

@@ -1,0 +1,68 @@
+[
+  {
+    "workspace": "Projects",
+    "block_index": 6,
+    "unresolved_name": "Project Billing Summary",
+    "field": "unresolved_shortcut_name",
+    "candidates": [
+      {
+        "type": "Report",
+        "name": "Project Summary",
+        "score": 0.789
+      },
+      {
+        "type": "Report",
+        "name": "Timesheet Billing Summary",
+        "score": 0.75
+      },
+      {
+        "type": "Report",
+        "name": "Production Plan Summary",
+        "score": 0.696
+      },
+      {
+        "type": "DocType",
+        "name": "Projects Settings",
+        "score": 0.6
+      },
+      {
+        "type": "DocType",
+        "name": "Project User",
+        "score": 0.571
+      }
+    ]
+  },
+  {
+    "workspace": "Projects",
+    "block_index": 8,
+    "unresolved_name": "Learn Project Management",
+    "field": "unresolved_shortcut_name",
+    "candidates": [
+      {
+        "type": "DocType",
+        "name": "Project Template",
+        "score": 0.55
+      },
+      {
+        "type": "DocType",
+        "name": "Project Template Task",
+        "score": 0.533
+      },
+      {
+        "type": "Report",
+        "name": "Profit and Loss Statement",
+        "score": 0.531
+      },
+      {
+        "type": "DocType",
+        "name": "Market Segment",
+        "score": 0.526
+      },
+      {
+        "type": "DocType",
+        "name": "Project Update",
+        "score": 0.526
+      }
+    ]
+  }
+]

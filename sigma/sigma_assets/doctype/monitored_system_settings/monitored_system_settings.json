@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "creation": "2025-11-14 21:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "rate_limiting_section",
+  "rate_limit_per_device",
+  "alert_deduplication_window",
+  "security_section",
+  "webhook_secrets",
+  "data_retention_section",
+  "telemetry_retention_days",
+  "enable_data_archiving"
+ ],
+ "fields": [
+  {
+   "fieldname": "rate_limiting_section",
+   "fieldtype": "Section Break",
+   "label": "Rate Limiting"
+  },
+  {
+   "default": "1000",
+   "fieldname": "rate_limit_per_device",
+   "fieldtype": "Int",
+   "label": "Rate Limit Per Device (requests/minute)"
+  },
+  {
+   "default": "5",
+   "fieldname": "alert_deduplication_window",
+   "fieldtype": "Int",
+   "label": "Alert Deduplication Window (minutes)"
+  },
+  {
+   "fieldname": "security_section",
+   "fieldtype": "Section Break",
+   "label": "Security"
+  },
+  {
+   "fieldname": "webhook_secrets",
+   "fieldtype": "JSON",
+   "label": "Webhook Secrets (JSON: {\"system\": \"secret\"})"
+  },
+  {
+   "fieldname": "data_retention_section",
+   "fieldtype": "Section Break",
+   "label": "Data Retention"
+  },
+  {
+   "default": "30",
+   "fieldname": "telemetry_retention_days",
+   "fieldtype": "Int",
+   "label": "Telemetry Retention Days"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_data_archiving",
+   "fieldtype": "Check",
+   "label": "Enable Data Archiving"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-11-14 21:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Assets",
+ "name": "Monitored System Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+

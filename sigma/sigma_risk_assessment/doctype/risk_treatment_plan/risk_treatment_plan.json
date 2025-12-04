@@ -1,0 +1,340 @@
+{
+ "actions": [],
+ "autoname": "format:RTP-{YYYY}-{#####}",
+ "creation": "2025-11-18 16:40:00.000000",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "plan_details_section",
+  "plan_title",
+  "linked_risk",
+  "risk_title",
+  "column_break_1",
+  "risk_assessment",
+  "plan_owner",
+  "plan_status",
+  "treatment_strategy_section",
+  "treatment_strategy",
+  "treatment_justification",
+  "column_break_2",
+  "priority",
+  "target_risk_level",
+  "timeline_section",
+  "start_date",
+  "target_completion_date",
+  "column_break_3",
+  "actual_completion_date",
+  "progress_percentage",
+  "budget_section",
+  "estimated_budget",
+  "actual_cost",
+  "column_break_4",
+  "budget_variance",
+  "budget_variance_percentage",
+  "actions_section",
+  "treatment_actions",
+  "monitoring_section",
+  "monitoring_frequency",
+  "last_review_date",
+  "column_break_5",
+  "next_review_date",
+  "review_notes",
+  "effectiveness_section",
+  "effectiveness_rating",
+  "effectiveness_evidence",
+  "section_break_6",
+  "additional_notes",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "plan_details_section",
+   "fieldtype": "Section Break",
+   "label": "Plan Details"
+  },
+  {
+   "fieldname": "plan_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Plan Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "linked_risk",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Linked Risk",
+   "options": "Risk Register",
+   "reqd": 1
+  },
+  {
+   "fieldname": "risk_title",
+   "fieldtype": "Data",
+   "label": "Risk Title",
+   "read_only": 1,
+   "fetch_from": "linked_risk.risk_title"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "risk_assessment",
+   "fieldtype": "Link",
+   "label": "Risk Assessment",
+   "options": "Risk Assessment"
+  },
+  {
+   "fieldname": "plan_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Plan Owner",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "plan_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Plan Status",
+   "options": "Draft\nApproved\nIn Progress\nCompleted\nOn Hold\nCancelled",
+   "default": "Draft",
+   "reqd": 1
+  },
+  {
+   "fieldname": "treatment_strategy_section",
+   "fieldtype": "Section Break",
+   "label": "Treatment Strategy"
+  },
+  {
+   "fieldname": "treatment_strategy",
+   "fieldtype": "Select",
+   "label": "Treatment Strategy",
+   "options": "Avoid\nReduce\nTransfer\nAccept",
+   "reqd": 1
+  },
+  {
+   "fieldname": "treatment_justification",
+   "fieldtype": "Text Editor",
+   "label": "Treatment Justification",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nCritical",
+   "reqd": 1
+  },
+  {
+   "fieldname": "target_risk_level",
+   "fieldtype": "Select",
+   "label": "Target Risk Level",
+   "options": "Low\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "timeline_section",
+   "fieldtype": "Section Break",
+   "label": "Timeline"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "target_completion_date",
+   "fieldtype": "Date",
+   "label": "Target Completion Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "actual_completion_date",
+   "fieldtype": "Date",
+   "label": "Actual Completion Date"
+  },
+  {
+   "fieldname": "progress_percentage",
+   "fieldtype": "Percent",
+   "label": "Progress %",
+   "default": "0"
+  },
+  {
+   "fieldname": "budget_section",
+   "fieldtype": "Section Break",
+   "label": "Budget"
+  },
+  {
+   "fieldname": "estimated_budget",
+   "fieldtype": "Currency",
+   "label": "Estimated Budget"
+  },
+  {
+   "fieldname": "actual_cost",
+   "fieldtype": "Currency",
+   "label": "Actual Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "budget_variance",
+   "fieldtype": "Currency",
+   "label": "Budget Variance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "budget_variance_percentage",
+   "fieldtype": "Percent",
+   "label": "Budget Variance %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "actions_section",
+   "fieldtype": "Section Break",
+   "label": "Treatment Actions"
+  },
+  {
+   "fieldname": "treatment_actions",
+   "fieldtype": "Table",
+   "label": "Treatment Actions",
+   "options": "Risk Treatment Action"
+  },
+  {
+   "fieldname": "monitoring_section",
+   "fieldtype": "Section Break",
+   "label": "Monitoring & Review"
+  },
+  {
+   "fieldname": "monitoring_frequency",
+   "fieldtype": "Select",
+   "label": "Monitoring Frequency",
+   "options": "Weekly\nBi-Weekly\nMonthly\nQuarterly\nAnnually"
+  },
+  {
+   "fieldname": "last_review_date",
+   "fieldtype": "Date",
+   "label": "Last Review Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "next_review_date",
+   "fieldtype": "Date",
+   "label": "Next Review Date"
+  },
+  {
+   "fieldname": "review_notes",
+   "fieldtype": "Text Editor",
+   "label": "Review Notes"
+  },
+  {
+   "fieldname": "effectiveness_section",
+   "fieldtype": "Section Break",
+   "label": "Effectiveness Assessment"
+  },
+  {
+   "fieldname": "effectiveness_rating",
+   "fieldtype": "Select",
+   "label": "Effectiveness Rating",
+   "options": "Not Assessed\nNot Effective\nPartially Effective\nEffective\nHighly Effective"
+  },
+  {
+   "fieldname": "effectiveness_evidence",
+   "fieldtype": "Text Editor",
+   "label": "Effectiveness Evidence"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "additional_notes",
+   "fieldtype": "Text Editor",
+   "label": "Additional Notes"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Risk Treatment Plan",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-11-18 16:40:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Risk Assessment",
+ "name": "Risk Treatment Plan",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Risk Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Risk Owner",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Employee"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "plan_title",
+ "track_changes": 1
+}
+

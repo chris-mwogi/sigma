@@ -1,0 +1,104 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-11-17 20:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "timestamp",
+  "latitude",
+  "longitude",
+  "altitude",
+  "accuracy",
+  "column_break_1",
+  "speed",
+  "heading",
+  "location_source",
+  "address",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "timestamp",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Timestamp",
+   "reqd": 1
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Latitude",
+   "precision": "8",
+   "reqd": 1
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Longitude",
+   "precision": "8",
+   "reqd": 1
+  },
+  {
+   "fieldname": "altitude",
+   "fieldtype": "Float",
+   "label": "Altitude (meters)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "accuracy",
+   "fieldtype": "Float",
+   "label": "Accuracy (meters)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "speed",
+   "fieldtype": "Float",
+   "label": "Speed (km/h)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "heading",
+   "fieldtype": "Float",
+   "label": "Heading (degrees)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "location_source",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Source",
+   "options": "\nGPS\nCell Tower\nWi-Fi\nManual\nIP Geolocation\nOther"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-11-17 20:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Assets",
+ "name": "Device Location History",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "timestamp",
+ "sort_order": "DESC",
+ "states": []
+}
+

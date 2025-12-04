@@ -1,0 +1,394 @@
+{
+ "actions": [],
+ "autoname": "format:INC-{YYYY}-{#####}",
+ "creation": "2025-11-18 17:30:00.000000",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "incident_details_section",
+  "incident_title",
+  "incident_type",
+  "incident_category",
+  "column_break_1",
+  "incident_date",
+  "reported_by",
+  "incident_status",
+  "incident_description_section",
+  "incident_description",
+  "root_cause",
+  "impact_section",
+  "impact_level",
+  "financial_impact",
+  "column_break_2",
+  "operational_impact",
+  "reputational_impact",
+  "affected_areas_section",
+  "affected_department",
+  "affected_business_process",
+  "column_break_3",
+  "affected_assets",
+  "affected_stakeholders",
+  "linked_information_section",
+  "linked_risk",
+  "linked_control",
+  "column_break_4",
+  "linked_compliance",
+  "linked_kri",
+  "investigation_section",
+  "investigation_owner",
+  "investigation_status",
+  "column_break_5",
+  "investigation_start_date",
+  "investigation_completion_date",
+  "investigation_findings_section",
+  "investigation_findings",
+  "lessons_learned",
+  "response_section",
+  "immediate_actions_taken",
+  "corrective_actions",
+  "column_break_6",
+  "preventive_actions",
+  "target_completion_date",
+  "closure_section",
+  "closure_date",
+  "closure_notes",
+  "section_break_7",
+  "notes",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "incident_details_section",
+   "fieldtype": "Section Break",
+   "label": "Incident Details"
+  },
+  {
+   "fieldname": "incident_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Incident Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "incident_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Incident Type",
+   "options": "Risk Event\nControl Failure\nCompliance Breach\nSecurity Incident\nOperational Failure\nFinancial Loss\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "incident_category",
+   "fieldtype": "Link",
+   "label": "Incident Category",
+   "options": "Risk Category"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "incident_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Incident Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reported_by",
+   "fieldtype": "Link",
+   "label": "Reported By",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "incident_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Incident Status",
+   "options": "Reported\nUnder Investigation\nContained\nResolved\nClosed",
+   "default": "Reported",
+   "reqd": 1
+  },
+  {
+   "fieldname": "incident_description_section",
+   "fieldtype": "Section Break",
+   "label": "Incident Description"
+  },
+  {
+   "fieldname": "incident_description",
+   "fieldtype": "Text Editor",
+   "label": "Incident Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "root_cause",
+   "fieldtype": "Text Editor",
+   "label": "Root Cause"
+  },
+  {
+   "fieldname": "impact_section",
+   "fieldtype": "Section Break",
+   "label": "Impact Assessment"
+  },
+  {
+   "fieldname": "impact_level",
+   "fieldtype": "Select",
+   "label": "Impact Level",
+   "options": "Low\nMedium\nHigh\nCritical",
+   "reqd": 1
+  },
+  {
+   "fieldname": "financial_impact",
+   "fieldtype": "Currency",
+   "label": "Financial Impact"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "operational_impact",
+   "fieldtype": "Text",
+   "label": "Operational Impact"
+  },
+  {
+   "fieldname": "reputational_impact",
+   "fieldtype": "Text",
+   "label": "Reputational Impact"
+  },
+  {
+   "fieldname": "affected_areas_section",
+   "fieldtype": "Section Break",
+   "label": "Affected Areas"
+  },
+  {
+   "fieldname": "affected_department",
+   "fieldtype": "Link",
+   "label": "Affected Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "affected_business_process",
+   "fieldtype": "Link",
+   "label": "Affected Business Process",
+   "options": "Business Process Register"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "affected_assets",
+   "fieldtype": "Text",
+   "label": "Affected Assets"
+  },
+  {
+   "fieldname": "affected_stakeholders",
+   "fieldtype": "Text",
+   "label": "Affected Stakeholders"
+  },
+  {
+   "fieldname": "linked_information_section",
+   "fieldtype": "Section Break",
+   "label": "Linked Information"
+  },
+  {
+   "fieldname": "linked_risk",
+   "fieldtype": "Link",
+   "label": "Linked Risk",
+   "options": "Risk Register"
+  },
+  {
+   "fieldname": "linked_control",
+   "fieldtype": "Link",
+   "label": "Linked Control",
+   "options": "Risk Control"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "linked_compliance",
+   "fieldtype": "Link",
+   "label": "Linked Compliance",
+   "options": "Compliance Requirement"
+  },
+  {
+   "fieldname": "linked_kri",
+   "fieldtype": "Link",
+   "label": "Linked KRI",
+   "options": "Key Risk Indicator"
+  },
+  {
+   "fieldname": "investigation_section",
+   "fieldtype": "Section Break",
+   "label": "Investigation"
+  },
+  {
+   "fieldname": "investigation_owner",
+   "fieldtype": "Link",
+   "label": "Investigation Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "investigation_status",
+   "fieldtype": "Select",
+   "label": "Investigation Status",
+   "options": "Not Started\nIn Progress\nCompleted"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "investigation_start_date",
+   "fieldtype": "Date",
+   "label": "Investigation Start Date"
+  },
+  {
+   "fieldname": "investigation_completion_date",
+   "fieldtype": "Date",
+   "label": "Investigation Completion Date"
+  },
+  {
+   "fieldname": "investigation_findings_section",
+   "fieldtype": "Section Break",
+   "label": "Investigation Findings"
+  },
+  {
+   "fieldname": "investigation_findings",
+   "fieldtype": "Text Editor",
+   "label": "Investigation Findings"
+  },
+  {
+   "fieldname": "lessons_learned",
+   "fieldtype": "Text Editor",
+   "label": "Lessons Learned"
+  },
+  {
+   "fieldname": "response_section",
+   "fieldtype": "Section Break",
+   "label": "Response & Actions"
+  },
+  {
+   "fieldname": "immediate_actions_taken",
+   "fieldtype": "Text Editor",
+   "label": "Immediate Actions Taken"
+  },
+  {
+   "fieldname": "corrective_actions",
+   "fieldtype": "Text Editor",
+   "label": "Corrective Actions"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "preventive_actions",
+   "fieldtype": "Text Editor",
+   "label": "Preventive Actions"
+  },
+  {
+   "fieldname": "target_completion_date",
+   "fieldtype": "Date",
+   "label": "Target Completion Date"
+  },
+  {
+   "fieldname": "closure_section",
+   "fieldtype": "Section Break",
+   "label": "Closure"
+  },
+  {
+   "fieldname": "closure_date",
+   "fieldtype": "Date",
+   "label": "Closure Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "closure_notes",
+   "fieldtype": "Text Editor",
+   "label": "Closure Notes"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "Additional Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Risk Incident",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-11-18 17:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Risk Assessment",
+ "name": "Risk Incident",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Risk Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Risk Owner",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Employee"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "incident_title",
+ "track_changes": 1
+}
+

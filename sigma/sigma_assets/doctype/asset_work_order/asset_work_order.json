@@ -1,0 +1,413 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:SIGMA-WO-{YYYY}-{#####}",
+ "creation": "2025-11-19 10:30:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "asset_information_section",
+  "asset",
+  "asset_name",
+  "asset_category_sigma",
+  "asset_location",
+  "column_break_5",
+  "monitored_device",
+  "criticality_rating",
+  "maintenance_schedule",
+  "monitoring_alert",
+  "sla_contract",
+  "work_order_details_section",
+  "work_order_type",
+  "priority",
+  "work_description",
+  "column_break_14",
+  "estimated_duration_hours",
+  "estimated_cost",
+  "actual_duration_hours",
+  "actual_cost",
+  "scheduling_section",
+  "scheduled_start_date",
+  "scheduled_end_date",
+  "column_break_21",
+  "actual_start_date",
+  "actual_end_date",
+  "assignment_section",
+  "assigned_to",
+  "assigned_team",
+  "column_break_26",
+  "required_skills",
+  "required_tools",
+  "safety_requirements",
+  "parts_section",
+  "spare_parts_required",
+  "spare_parts_cost",
+  "column_break_31",
+  "materials_used",
+  "materials_cost",
+  "completion_section",
+  "work_performed",
+  "findings",
+  "column_break_36",
+  "recommendations",
+  "follow_up_required",
+  "follow_up_date",
+  "status_section",
+  "workflow_state",
+  "is_emergency",
+  "column_break_42",
+  "completion_percentage",
+  "sla_compliance"
+ ],
+ "fields": [
+  {
+   "fieldname": "asset_information_section",
+   "fieldtype": "Section Break",
+   "label": "Asset Information"
+  },
+  {
+   "fieldname": "asset",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Asset",
+   "options": "Asset",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "asset.asset_name",
+   "fieldname": "asset_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Asset Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "asset.asset_category_sigma",
+   "fieldname": "asset_category_sigma",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Asset Category",
+   "options": "Asset Category Sigma",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "asset.location",
+   "fieldname": "asset_location",
+   "fieldtype": "Link",
+   "label": "Asset Location",
+   "options": "Asset Location",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "asset.monitored_device",
+   "fieldname": "monitored_device",
+   "fieldtype": "Link",
+   "label": "Monitored Device",
+   "options": "Monitored Device",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "asset.criticality_rating",
+   "fieldname": "criticality_rating",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Criticality",
+   "options": "Low\nMedium\nHigh\nCritical",
+   "read_only": 1
+  },
+  {
+   "fieldname": "maintenance_schedule",
+   "fieldtype": "Link",
+   "label": "Maintenance Schedule",
+   "options": "Asset Maintenance Schedule"
+  },
+  {
+   "fieldname": "monitoring_alert",
+   "fieldtype": "Link",
+   "label": "Monitoring Alert",
+   "options": "Monitoring Alert"
+  },
+  {
+   "fieldname": "sla_contract",
+   "fieldtype": "Link",
+   "label": "SLA Contract",
+   "options": "SLA Contract"
+  },
+  {
+   "fieldname": "work_order_details_section",
+   "fieldtype": "Section Break",
+   "label": "Work Order Details"
+  },
+  {
+   "fieldname": "work_order_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Work Order Type",
+   "options": "Preventive Maintenance\nCorrective Maintenance\nPredictive Maintenance\nInspection\nCalibration\nRepair\nReplacement\nUpgrade\nEmergency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nCritical\nEmergency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "work_description",
+   "fieldtype": "Text Editor",
+   "label": "Work Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "estimated_duration_hours",
+   "fieldtype": "Float",
+   "label": "Estimated Duration (Hours)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "estimated_cost",
+   "fieldtype": "Currency",
+   "label": "Estimated Cost"
+  },
+  {
+   "fieldname": "actual_duration_hours",
+   "fieldtype": "Float",
+   "label": "Actual Duration (Hours)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "actual_cost",
+   "fieldtype": "Currency",
+   "label": "Actual Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "scheduling_section",
+   "fieldtype": "Section Break",
+   "label": "Scheduling"
+  },
+  {
+   "fieldname": "scheduled_start_date",
+   "fieldtype": "Datetime",
+   "label": "Scheduled Start Date"
+  },
+  {
+   "fieldname": "scheduled_end_date",
+   "fieldtype": "Datetime",
+   "label": "Scheduled End Date"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "actual_start_date",
+   "fieldtype": "Datetime",
+   "label": "Actual Start Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "actual_end_date",
+   "fieldtype": "Datetime",
+   "label": "Actual End Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "assignment_section",
+   "fieldtype": "Section Break",
+   "label": "Assignment"
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned To",
+   "options": "User"
+  },
+  {
+   "fieldname": "assigned_team",
+   "fieldtype": "Data",
+   "label": "Assigned Team"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "required_skills",
+   "fieldtype": "Small Text",
+   "label": "Required Skills"
+  },
+  {
+   "fieldname": "required_tools",
+   "fieldtype": "Small Text",
+   "label": "Required Tools/Equipment"
+  },
+  {
+   "fieldname": "safety_requirements",
+   "fieldtype": "Small Text",
+   "label": "Safety Requirements"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "parts_section",
+   "fieldtype": "Section Break",
+   "label": "Parts & Materials"
+  },
+  {
+   "fieldname": "spare_parts_required",
+   "fieldtype": "Small Text",
+   "label": "Spare Parts Required"
+  },
+  {
+   "fieldname": "spare_parts_cost",
+   "fieldtype": "Currency",
+   "label": "Spare Parts Cost"
+  },
+  {
+   "fieldname": "column_break_31",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "materials_used",
+   "fieldtype": "Small Text",
+   "label": "Materials Used"
+  },
+  {
+   "fieldname": "materials_cost",
+   "fieldtype": "Currency",
+   "label": "Materials Cost"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "completion_section",
+   "fieldtype": "Section Break",
+   "label": "Completion Details"
+  },
+  {
+   "fieldname": "work_performed",
+   "fieldtype": "Text Editor",
+   "label": "Work Performed"
+  },
+  {
+   "fieldname": "findings",
+   "fieldtype": "Text Editor",
+   "label": "Findings"
+  },
+  {
+   "fieldname": "column_break_36",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "recommendations",
+   "fieldtype": "Text Editor",
+   "label": "Recommendations"
+  },
+  {
+   "default": "0",
+   "fieldname": "follow_up_required",
+   "fieldtype": "Check",
+   "label": "Follow-up Required"
+  },
+  {
+   "depends_on": "follow_up_required",
+   "fieldname": "follow_up_date",
+   "fieldtype": "Date",
+   "label": "Follow-up Date"
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "workflow_state",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Draft\nScheduled\nAssigned\nIn Progress\nOn Hold\nCompleted\nCancelled\nClosed"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_emergency",
+   "fieldtype": "Check",
+   "label": "Emergency Work Order"
+  },
+  {
+   "fieldname": "column_break_42",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "completion_percentage",
+   "fieldtype": "Percent",
+   "label": "Completion %"
+  },
+  {
+   "default": "0",
+   "fieldname": "sla_compliance",
+   "fieldtype": "Check",
+   "label": "SLA Compliant",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-11-19 10:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Assets",
+ "name": "Asset Work Order",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Asset Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+

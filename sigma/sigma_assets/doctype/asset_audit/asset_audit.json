@@ -1,0 +1,400 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:SIGMA-AUDIT-{asset_category_sigma}-{YYYY}-{#####}",
+ "creation": "2025-11-19 10:30:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "audit_information_section",
+  "audit_type",
+  "audit_date",
+  "auditor",
+  "audit_status",
+  "column_break_audit",
+  "audit_standard",
+  "audit_scope",
+  "next_audit_date",
+  "asset_information_section",
+  "asset",
+  "asset_name",
+  "asset_category_sigma",
+  "asset_location",
+  "column_break_asset",
+  "criticality_rating",
+  "lifecycle_status",
+  "last_audit_date",
+  "audit_checklist_section",
+  "audit_findings",
+  "audit_summary_section",
+  "total_checks",
+  "passed_checks",
+  "failed_checks",
+  "compliance_percentage",
+  "column_break_summary",
+  "critical_findings",
+  "major_findings",
+  "minor_findings",
+  "observations",
+  "recommendations_section",
+  "recommendations",
+  "corrective_actions_required",
+  "corrective_action_deadline",
+  "column_break_recommendations",
+  "corrective_action_owner",
+  "corrective_action_status",
+  "corrective_action_completion_date",
+  "compliance_section",
+  "iso_55000_compliance",
+  "iso_14224_compliance",
+  "nist_compliance",
+  "column_break_compliance",
+  "regulatory_compliance",
+  "certification_status",
+  "certification_expiry",
+  "attachments_section",
+  "audit_report_attachment",
+  "evidence_attachments",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "audit_information_section",
+   "fieldtype": "Section Break",
+   "label": "Audit Information"
+  },
+  {
+   "fieldname": "audit_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Audit Type",
+   "options": "\nInternal Audit\nExternal Audit\nCompliance Audit\nSafety Audit\nPerformance Audit\nCondition Assessment\nVerification\nCertification Audit",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "audit_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Audit Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "auditor",
+   "fieldtype": "Link",
+   "label": "Auditor",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "default": "Scheduled",
+   "fieldname": "audit_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Audit Status",
+   "options": "Scheduled\nIn Progress\nCompleted\nReport Pending\nClosed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_audit",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "audit_standard",
+   "fieldtype": "Select",
+   "label": "Audit Standard",
+   "options": "\nISO 55000\nISO 55001\nISO 14224\nISO 31000\nNIST SP 800-53\nIEC 61850\nIEC 61968\nCustom"
+  },
+  {
+   "fieldname": "audit_scope",
+   "fieldtype": "Text Editor",
+   "label": "Audit Scope"
+  },
+  {
+   "fieldname": "next_audit_date",
+   "fieldtype": "Date",
+   "label": "Next Audit Date"
+  },
+  {
+   "fieldname": "asset_information_section",
+   "fieldtype": "Section Break",
+   "label": "Asset Information"
+  },
+  {
+   "fieldname": "asset",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Asset",
+   "options": "Asset",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "asset.asset_name",
+   "fieldname": "asset_name",
+   "fieldtype": "Data",
+   "label": "Asset Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "asset.asset_category_sigma",
+   "fieldname": "asset_category_sigma",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Asset Category",
+   "options": "Asset Category Sigma",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "asset.asset_location",
+   "fieldname": "asset_location",
+   "fieldtype": "Link",
+   "label": "Asset Location",
+   "options": "Asset Location",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_asset",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "asset.criticality_rating",
+   "fieldname": "criticality_rating",
+   "fieldtype": "Select",
+   "label": "Criticality Rating",
+   "options": "\nLow\nMedium\nHigh\nCritical",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "asset.lifecycle_status",
+   "fieldname": "lifecycle_status",
+   "fieldtype": "Select",
+   "label": "Lifecycle Status",
+   "options": "\nPlanned\nProcurement\nInstallation\nCommissioning\nOperational\nMaintenance\nUpgrade\nDecommissioning\nDisposal",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "asset.last_audit_date",
+   "fieldname": "last_audit_date",
+   "fieldtype": "Date",
+   "label": "Last Audit Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "audit_checklist_section",
+   "fieldtype": "Section Break",
+   "label": "Audit Checklist & Findings"
+  },
+  {
+   "fieldname": "audit_findings",
+   "fieldtype": "Table",
+   "label": "Audit Findings",
+   "options": "Asset Audit Finding"
+  },
+  {
+   "fieldname": "audit_summary_section",
+   "fieldtype": "Section Break",
+   "label": "Audit Summary"
+  },
+  {
+   "fieldname": "total_checks",
+   "fieldtype": "Int",
+   "label": "Total Checks",
+   "read_only": 1
+  },
+  {
+   "fieldname": "passed_checks",
+   "fieldtype": "Int",
+   "label": "Passed Checks",
+   "read_only": 1
+  },
+  {
+   "fieldname": "failed_checks",
+   "fieldtype": "Int",
+   "label": "Failed Checks",
+   "read_only": 1
+  },
+  {
+   "fieldname": "compliance_percentage",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Compliance %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_summary",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "critical_findings",
+   "fieldtype": "Int",
+   "label": "Critical Findings",
+   "read_only": 1
+  },
+  {
+   "fieldname": "major_findings",
+   "fieldtype": "Int",
+   "label": "Major Findings",
+   "read_only": 1
+  },
+  {
+   "fieldname": "minor_findings",
+   "fieldtype": "Int",
+   "label": "Minor Findings",
+   "read_only": 1
+  },
+  {
+   "fieldname": "observations",
+   "fieldtype": "Int",
+   "label": "Observations",
+   "read_only": 1
+  },
+  {
+   "fieldname": "recommendations_section",
+   "fieldtype": "Section Break",
+   "label": "Recommendations & Corrective Actions"
+  },
+  {
+   "fieldname": "recommendations",
+   "fieldtype": "Text Editor",
+   "label": "Recommendations"
+  },
+  {
+   "default": "0",
+   "fieldname": "corrective_actions_required",
+   "fieldtype": "Check",
+   "label": "Corrective Actions Required"
+  },
+  {
+   "depends_on": "eval:doc.corrective_actions_required==1",
+   "fieldname": "corrective_action_deadline",
+   "fieldtype": "Date",
+   "label": "Corrective Action Deadline"
+  },
+  {
+   "fieldname": "column_break_recommendations",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.corrective_actions_required==1",
+   "fieldname": "corrective_action_owner",
+   "fieldtype": "Link",
+   "label": "Corrective Action Owner",
+   "options": "User"
+  },
+  {
+   "default": "Not Started",
+   "depends_on": "eval:doc.corrective_actions_required==1",
+   "fieldname": "corrective_action_status",
+   "fieldtype": "Select",
+   "label": "Corrective Action Status",
+   "options": "Not Started\nIn Progress\nCompleted\nVerified"
+  },
+  {
+   "depends_on": "eval:doc.corrective_actions_required==1",
+   "fieldname": "corrective_action_completion_date",
+   "fieldtype": "Date",
+   "label": "Corrective Action Completion Date"
+  },
+  {
+   "fieldname": "compliance_section",
+   "fieldtype": "Section Break",
+   "label": "Compliance Status"
+  },
+  {
+   "default": "0",
+   "fieldname": "iso_55000_compliance",
+   "fieldtype": "Check",
+   "label": "ISO 55000 Compliant"
+  },
+  {
+   "default": "0",
+   "fieldname": "iso_14224_compliance",
+   "fieldtype": "Check",
+   "label": "ISO 14224 Compliant"
+  },
+  {
+   "default": "0",
+   "fieldname": "nist_compliance",
+   "fieldtype": "Check",
+   "label": "NIST Compliant"
+  },
+  {
+   "fieldname": "column_break_compliance",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "regulatory_compliance",
+   "fieldtype": "Check",
+   "label": "Regulatory Compliant"
+  },
+  {
+   "fieldname": "certification_status",
+   "fieldtype": "Select",
+   "label": "Certification Status",
+   "options": "\nCertified\nProvisional\nNon-Compliant\nPending"
+  },
+  {
+   "fieldname": "certification_expiry",
+   "fieldtype": "Date",
+   "label": "Certification Expiry"
+  },
+  {
+   "fieldname": "attachments_section",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "audit_report_attachment",
+   "fieldtype": "Attach",
+   "label": "Audit Report"
+  },
+  {
+   "fieldname": "evidence_attachments",
+   "fieldtype": "Text Editor",
+   "label": "Evidence Attachments (Links)"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Asset Audit",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-11-19 10:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Assets",
+ "name": "Asset Audit",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+

@@ -1,0 +1,277 @@
+{
+  "actions": [],
+  "autoname": "format:KPLC-HUM-{YYYY}-{#####}",
+  "creation": "2025-01-20 00:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "Document",
+  "engine": "InnoDB",
+  "is_submittable": 1,
+  "field_order": [
+    "person_type",
+    "linked_employee",
+    "full_name",
+    "column_break_3",
+    "department",
+    "job_role",
+    "employee_id",
+    "section_break_clearance",
+    "clearance_level",
+    "hazard_training_level",
+    "column_break_clearance",
+    "ppe_required",
+    "ppe_certified_date",
+    "section_break_tracking",
+    "primary_tracking_device",
+    "secondary_tracking_device",
+    "column_break_tracking",
+    "tracking_enabled",
+    "consent_signed",
+    "consent_date",
+    "section_break_emergency",
+    "emergency_contact_name",
+    "emergency_contact_phone",
+    "emergency_contact_relationship",
+    "column_break_emergency",
+    "blood_group",
+    "medical_conditions",
+    "section_break_risk",
+    "risk_score",
+    "status",
+    "column_break_risk",
+    "last_training_date",
+    "next_training_due",
+    "section_break_notes",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "person_type",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Person Type",
+      "options": "Employee\nContractor\nVisitor\nVendor\nTemporary Staff",
+      "reqd": 1
+    },
+    {
+      "fieldname": "linked_employee",
+      "fieldtype": "Link",
+      "label": "Linked Employee",
+      "options": "Employee",
+      "description": "Link to ERPNext Employee record"
+    },
+    {
+      "fieldname": "full_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Full Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "department",
+      "fieldtype": "Link",
+      "label": "Department",
+      "options": "Department"
+    },
+    {
+      "fieldname": "job_role",
+      "fieldtype": "Data",
+      "label": "Job Role"
+    },
+    {
+      "fieldname": "employee_id",
+      "fieldtype": "Data",
+      "label": "Employee ID",
+      "description": "Company employee/contractor ID"
+    },
+    {
+      "fieldname": "section_break_clearance",
+      "fieldtype": "Section Break",
+      "label": "Clearance & Training (ISO 27001, IEC 62443)"
+    },
+    {
+      "fieldname": "clearance_level",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Clearance Level",
+      "options": "Low\nMedium\nHigh\nCritical",
+      "reqd": 1,
+      "default": "Low",
+      "description": "Access clearance level (IEC 62443)"
+    },
+    {
+      "fieldname": "hazard_training_level",
+      "fieldtype": "Select",
+      "label": "Hazard Training Level",
+      "options": "Basic\nIntermediate\nAdvanced\nExpert",
+      "default": "Basic",
+      "description": "ISO 45001 safety training level"
+    },
+    {
+      "fieldname": "column_break_clearance",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "ppe_required",
+      "fieldtype": "Small Text",
+      "label": "PPE Required",
+      "description": "Required PPE items (comma-separated)"
+    },
+    {
+      "fieldname": "ppe_certified_date",
+      "fieldtype": "Date",
+      "label": "PPE Certified Date"
+    },
+    {
+      "fieldname": "section_break_tracking",
+      "fieldtype": "Section Break",
+      "label": "Tracking Devices & Consent"
+    },
+    {
+      "fieldname": "primary_tracking_device",
+      "fieldtype": "Link",
+      "label": "Primary Tracking Device",
+      "options": "Tracking Device"
+    },
+    {
+      "fieldname": "secondary_tracking_device",
+      "fieldtype": "Link",
+      "label": "Secondary Tracking Device",
+      "options": "Tracking Device"
+    },
+    {
+      "fieldname": "column_break_tracking",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "tracking_enabled",
+      "fieldtype": "Check",
+      "label": "Tracking Enabled",
+      "default": "1"
+    },
+    {
+      "fieldname": "consent_signed",
+      "fieldtype": "Check",
+      "label": "Consent Signed",
+      "description": "GDPR/data privacy consent"
+    },
+    {
+      "fieldname": "consent_date",
+      "fieldtype": "Date",
+      "label": "Consent Date"
+    },
+    {
+      "fieldname": "section_break_emergency",
+      "fieldtype": "Section Break",
+      "label": "Emergency Contact"
+    },
+    {
+      "fieldname": "emergency_contact_name",
+      "fieldtype": "Data",
+      "label": "Emergency Contact Name"
+    },
+    {
+      "fieldname": "emergency_contact_phone",
+      "fieldtype": "Phone",
+      "label": "Emergency Contact Phone"
+    },
+    {
+      "fieldname": "emergency_contact_relationship",
+      "fieldtype": "Data",
+      "label": "Relationship"
+    },
+    {
+      "fieldname": "column_break_emergency",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "blood_group",
+      "fieldtype": "Select",
+      "label": "Blood Group",
+      "options": "A+\nA-\nB+\nB-\nAB+\nAB-\nO+\nO-"
+    },
+    {
+      "fieldname": "medical_conditions",
+      "fieldtype": "Small Text",
+      "label": "Medical Conditions",
+      "description": "Known medical conditions for emergency response"
+    },
+    {
+      "fieldname": "section_break_risk",
+      "fieldtype": "Section Break",
+      "label": "Risk & Status"
+    },
+    {
+      "fieldname": "risk_score",
+      "fieldtype": "Float",
+      "label": "Risk Score",
+      "read_only": 1,
+      "precision": "2",
+      "description": "Calculated risk score (ISO 31000)"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Status",
+      "options": "Active\nInactive\nSuspended\nTerminated",
+      "default": "Active",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_risk",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "last_training_date",
+      "fieldtype": "Date",
+      "label": "Last Training Date"
+    },
+    {
+      "fieldname": "next_training_due",
+      "fieldtype": "Date",
+      "label": "Next Training Due"
+    },
+    {
+      "fieldname": "section_break_notes",
+      "fieldtype": "Section Break",
+      "label": "Notes"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text",
+      "label": "Notes"
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "links": [],
+  "modified": "2025-01-20 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sigma Personnel",
+  "name": "Human Profile",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1
+}
+

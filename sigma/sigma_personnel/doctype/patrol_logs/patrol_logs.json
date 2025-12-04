@@ -1,0 +1,118 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:PL-{####}",
+ "creation": "2025-12-01 15:18:52.365812",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patrol_id",
+  "personnel",
+  "column_break_1",
+  "checkpoint",
+  "timestamp",
+  "location_section",
+  "location_coordinates",
+  "zone",
+  "status_section",
+  "status",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "patrol_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patrol ID"
+  },
+  {
+   "fieldname": "personnel",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Personnel",
+   "options": "Human Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "checkpoint",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Checkpoint"
+  },
+  {
+   "default": "now",
+   "fieldname": "timestamp",
+   "fieldtype": "Datetime",
+   "label": "Timestamp",
+   "reqd": 1
+  },
+  {
+   "fieldname": "location_section",
+   "fieldtype": "Section Break",
+   "label": "Location Details"
+  },
+  {
+   "fieldname": "location_coordinates",
+   "fieldtype": "Data",
+   "label": "Location Coordinates"
+  },
+  {
+   "fieldname": "zone",
+   "fieldtype": "Link",
+   "label": "Zone",
+   "options": "Zone Configuration"
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status & Notes"
+  },
+  {
+   "default": "Completed",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Completed\nIn Progress\nSkipped\nIncident Reported"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-12-01 15:18:52.365812",
+ "modified_by": "Administrator",
+ "module": "Sigma Personnel",
+ "name": "Patrol Logs",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

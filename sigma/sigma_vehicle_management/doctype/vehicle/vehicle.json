@@ -17,11 +17,27 @@
   "year",
   "color",
   "status",
+  "risk_assessment_section",
+  "risk_score",
+  "risk_band",
+  "is_blacklisted",
+  "blacklist_reason",
+  "column_break_risk",
+  "cargo_type",
+  "dangerous_goods_flag",
+  "dangerous_goods_class",
   "ownership_section",
   "owner_type",
   "owner_name",
   "owner_contact",
   "owner_email",
+  "driver_information_section",
+  "driver_name",
+  "driver_license_number",
+  "driver_license_expiry",
+  "column_break_driver",
+  "driver_contact",
+  "driver_license_upload",
   "company_vehicle_section",
   "assignment_type",
   "assigned_to_driver",
@@ -112,6 +128,62 @@
    "default": "Active"
   },
   {
+   "fieldname": "risk_assessment_section",
+   "fieldtype": "Section Break",
+   "label": "Risk Assessment (ISO 31000)"
+  },
+  {
+   "fieldname": "risk_score",
+   "fieldtype": "Int",
+   "label": "Risk Score",
+   "read_only": 1,
+   "description": "Auto-calculated risk score (0-100)"
+  },
+  {
+   "fieldname": "risk_band",
+   "fieldtype": "Select",
+   "label": "Risk Band",
+   "options": "\nLow\nMedium\nHigh",
+   "read_only": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "is_blacklisted",
+   "fieldtype": "Check",
+   "label": "Blacklisted",
+   "default": 0
+  },
+  {
+   "fieldname": "blacklist_reason",
+   "fieldtype": "Text",
+   "label": "Blacklist Reason",
+   "depends_on": "eval:doc.is_blacklisted==1"
+  },
+  {
+   "fieldname": "column_break_risk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cargo_type",
+   "fieldtype": "Select",
+   "label": "Cargo Type",
+   "options": "\nGeneral Cargo\nEquipment\nDangerous Goods\nHazardous Materials\nExplosives\nFlammable\nChemicals\nRadioactive"
+  },
+  {
+   "fieldname": "dangerous_goods_flag",
+   "fieldtype": "Check",
+   "label": "Carrying Dangerous Goods",
+   "default": 0
+  },
+  {
+   "fieldname": "dangerous_goods_class",
+   "fieldtype": "Select",
+   "label": "Dangerous Goods Class",
+   "options": "\nClass 1 - Explosives\nClass 2 - Gases\nClass 3 - Flammable Liquids\nClass 4 - Flammable Solids\nClass 5 - Oxidizing Substances\nClass 6 - Toxic Substances\nClass 7 - Radioactive Material\nClass 8 - Corrosive Substances\nClass 9 - Miscellaneous",
+   "depends_on": "eval:doc.dangerous_goods_flag==1"
+  },
+  {
    "fieldname": "ownership_section",
    "fieldtype": "Section Break",
    "label": "Ownership Information"
@@ -142,6 +214,40 @@
    "fieldname": "owner_email",
    "fieldtype": "Data",
    "label": "Owner Email"
+  },
+  {
+   "fieldname": "driver_information_section",
+   "fieldtype": "Section Break",
+   "label": "Driver Information (ISO 45001)"
+  },
+  {
+   "fieldname": "driver_name",
+   "fieldtype": "Data",
+   "label": "Driver Name"
+  },
+  {
+   "fieldname": "driver_license_number",
+   "fieldtype": "Data",
+   "label": "Driver License Number"
+  },
+  {
+   "fieldname": "driver_license_expiry",
+   "fieldtype": "Date",
+   "label": "Driver License Expiry Date"
+  },
+  {
+   "fieldname": "column_break_driver",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "driver_contact",
+   "fieldtype": "Data",
+   "label": "Driver Contact Number"
+  },
+  {
+   "fieldname": "driver_license_upload",
+   "fieldtype": "Attach",
+   "label": "Driver License Upload"
   },
   {
    "depends_on": "eval:doc.owner_type == 'Company Vehicle'",

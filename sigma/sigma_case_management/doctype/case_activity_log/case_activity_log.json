@@ -1,137 +1,168 @@
 {
-  "doctype": "DocType",
-  "name": "Case Activity Log",
-  "module": "Sigma Case Management",
-  "custom": 0,
-  "is_submittable": 0,
-  "autoname": "ACTLOG-{YYYY}-{####}",
-  "fields": [
-    {
-      "fieldname": "case",
-      "fieldtype": "Link",
-      "label": "Case",
-      "options": "Case",
-      "reqd": 1,
-      "width": "50%"
-    },
-    {
-      "fieldname": "activity_type",
-      "fieldtype": "Select",
-      "label": "Activity Type",
-      "reqd": 1,
-      "options": "Case Created\nStatus Changed\nAssignment\nEvidence Added\nComment Added\nMilestone Recorded\nEscalation\nReassignment\nClosure\nReopening\nOther",
-      "width": "50%"
-    },
-    {
-      "fieldname": "activity_date",
-      "fieldtype": "Datetime",
-      "label": "Activity Date",
-      "reqd": 1,
-      "width": "50%"
-    },
-    {
-      "fieldname": "performed_by",
-      "fieldtype": "Link",
-      "label": "Performed By",
-      "options": "User",
-      "reqd": 1,
-      "width": "50%"
-    },
-    {
-      "fieldname": "activity_description",
-      "fieldtype": "Text Editor",
-      "label": "Activity Description",
-      "reqd": 1
-    },
-    {
-      "fieldname": "section_details",
-      "fieldtype": "Section Break",
-      "label": "Activity Details"
-    },
-    {
-      "fieldname": "old_value",
-      "fieldtype": "Data",
-      "label": "Old Value",
-      "width": "50%"
-    },
-    {
-      "fieldname": "new_value",
-      "fieldtype": "Data",
-      "label": "New Value",
-      "width": "50%"
-    },
-    {
-      "fieldname": "milestone_name",
-      "fieldtype": "Data",
-      "label": "Milestone Name",
-      "width": "50%"
-    },
-    {
-      "fieldname": "milestone_date",
-      "fieldtype": "Datetime",
-      "label": "Milestone Date",
-      "width": "50%"
-    },
-    {
-      "fieldname": "section_sla",
-      "fieldtype": "Section Break",
-      "label": "SLA Tracking"
-    },
-    {
-      "fieldname": "sla_deadline",
-      "fieldtype": "Datetime",
-      "label": "SLA Deadline",
-      "width": "50%"
-    },
-    {
-      "fieldname": "sla_status",
-      "fieldtype": "Select",
-      "label": "SLA Status",
-      "options": "On Track\nAt Risk\nOverdue",
-      "width": "50%"
-    },
-    {
-      "fieldname": "days_remaining",
-      "fieldtype": "Int",
-      "label": "Days Remaining",
-      "read_only": 1,
-      "width": "50%"
-    },
-    {
-      "fieldname": "section_attachments",
-      "fieldtype": "Section Break",
-      "label": "Attachments"
-    },
-    {
-      "fieldname": "attachment",
-      "fieldtype": "Attach",
-      "label": "Attachment"
-    }
-  ],
-  "permissions": [
-    {
-      "role": "System Manager",
-      "perm_read": 1,
-      "perm_write": 1,
-      "perm_create": 1,
-      "perm_delete": 1
-    },
-    {
-      "role": "Security Manager",
-      "perm_read": 1,
-      "perm_write": 1,
-      "perm_create": 1
-    },
-    {
-      "role": "Lead Investigator",
-      "perm_read": 1,
-      "perm_write": 1,
-      "perm_create": 1
-    },
-    {
-      "role": "Investigator",
-      "perm_read": 1
-    }
-  ]
+ "actions": [],
+ "autoname": "ACTLOG-{YYYY}-{####}",
+ "creation": "2025-11-14 16:48:33.026633",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "case",
+  "activity_type",
+  "activity_date",
+  "performed_by",
+  "activity_description",
+  "section_details",
+  "old_value",
+  "new_value",
+  "milestone_name",
+  "milestone_date",
+  "section_sla",
+  "sla_deadline",
+  "sla_status",
+  "days_remaining",
+  "section_attachments",
+  "attachment"
+ ],
+ "fields": [
+  {
+   "fieldname": "case",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Case",
+   "options": "Case",
+   "reqd": 1,
+   "width": "50%"
+  },
+  {
+   "fieldname": "activity_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Activity Type",
+   "options": "Case Created\nStatus Changed\nAssignment\nEvidence Added\nComment Added\nMilestone Recorded\nEscalation\nReassignment\nClosure\nReopening\nOther",
+   "reqd": 1,
+   "width": "50%"
+  },
+  {
+   "fieldname": "activity_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Activity Date",
+   "reqd": 1,
+   "width": "50%"
+  },
+  {
+   "fieldname": "performed_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Performed By",
+   "options": "User",
+   "reqd": 1,
+   "width": "50%"
+  },
+  {
+   "fieldname": "activity_description",
+   "fieldtype": "Text Editor",
+   "label": "Activity Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_details",
+   "fieldtype": "Section Break",
+   "label": "Activity Details"
+  },
+  {
+   "fieldname": "old_value",
+   "fieldtype": "Data",
+   "label": "Old Value",
+   "width": "50%"
+  },
+  {
+   "fieldname": "new_value",
+   "fieldtype": "Data",
+   "label": "New Value",
+   "width": "50%"
+  },
+  {
+   "fieldname": "milestone_name",
+   "fieldtype": "Data",
+   "label": "Milestone Name",
+   "width": "50%"
+  },
+  {
+   "fieldname": "milestone_date",
+   "fieldtype": "Datetime",
+   "label": "Milestone Date",
+   "width": "50%"
+  },
+  {
+   "fieldname": "section_sla",
+   "fieldtype": "Section Break",
+   "label": "SLA Tracking"
+  },
+  {
+   "fieldname": "sla_deadline",
+   "fieldtype": "Datetime",
+   "label": "SLA Deadline",
+   "width": "50%"
+  },
+  {
+   "fieldname": "sla_status",
+   "fieldtype": "Select",
+   "label": "SLA Status",
+   "options": "On Track\nAt Risk\nOverdue",
+   "width": "50%"
+  },
+  {
+   "fieldname": "days_remaining",
+   "fieldtype": "Int",
+   "label": "Days Remaining",
+   "read_only": 1,
+   "width": "50%"
+  },
+  {
+   "fieldname": "section_attachments",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  }
+ ],
+ "links": [],
+ "modified": "2025-12-03 21:47:20.413522",
+ "modified_by": "Administrator",
+ "module": "Sigma Case Management",
+ "name": "Case Activity Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Security Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Lead Investigator",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Investigator"
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
 }
-

@@ -6,8 +6,8 @@
 
 :root {
   /* KPLC Brand Colors (extracted + normalized) */
-  --primary-color: #00337F;         /* legacy alias: deep blue */
-  --primary-dark: #002555;          /* darker blue for gradients */
+  --primary-color: #1A5FA0;         /* legacy alias: deep blue */
+  --primary-dark: #1A5FA0;          /* darker blue for gradients */
   --primary-light: #1A5FA0;         /* tint for hovers */
   --secondary-color: #00A3E0;       /* electric blue */
   --secondary-light: #7FD3F2;       /* light electric blue */

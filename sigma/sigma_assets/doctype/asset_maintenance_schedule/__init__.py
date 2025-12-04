@@ -1,0 +1,2 @@
+# Asset Maintenance Schedule DocType
+

@@ -1,8 +1,0 @@
-[
-  {"doctype": "Location Subtype", "name": "220/66 kV", "title": "220/66 kV", "location_type": "Substation", "disabled": 0},
-  {"doctype": "Location Subtype", "name": "132/66 kV", "title": "132/66 kV", "location_type": "Substation", "disabled": 0},
-  {"doctype": "Location Subtype", "name": "132/33 kV", "title": "132/33 kV", "location_type": "Substation", "disabled": 0},
-  {"doctype": "Location Subtype", "name": "66/11 kV", "title": "66/11 kV", "location_type": "Substation", "disabled": 0},
-  {"doctype": "Location Subtype", "name": "33/11 kV", "title": "33/11 kV", "location_type": "Substation", "disabled": 0}
-]
-

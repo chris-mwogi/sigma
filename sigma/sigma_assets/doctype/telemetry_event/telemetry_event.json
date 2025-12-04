@@ -1,0 +1,138 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:TE-{#####}",
+ "creation": "2025-11-14 21:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "device_information_section",
+  "monitored_device",
+  "asset",
+  "column_break_1",
+  "source_system",
+  "timestamp",
+  "metric_information_section",
+  "metric_name",
+  "metric_value",
+  "metric_unit",
+  "column_break_2",
+  "status",
+  "metadata_section",
+  "metadata"
+ ],
+ "fields": [
+  {
+   "fieldname": "device_information_section",
+   "fieldtype": "Section Break",
+   "label": "Device Information"
+  },
+  {
+   "fieldname": "monitored_device",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Monitored Device",
+   "options": "Monitored Device",
+   "reqd": 1
+  },
+  {
+   "fieldname": "asset",
+   "fieldtype": "Link",
+   "label": "Asset",
+   "options": "Asset"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "source_system",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Source System",
+   "reqd": 1
+  },
+  {
+   "fieldname": "timestamp",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Timestamp",
+   "reqd": 1
+  },
+  {
+   "fieldname": "metric_information_section",
+   "fieldtype": "Section Break",
+   "label": "Metric Information"
+  },
+  {
+   "fieldname": "metric_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Metric Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "metric_value",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Metric Value",
+   "reqd": 1
+  },
+  {
+   "fieldname": "metric_unit",
+   "fieldtype": "Data",
+   "label": "Metric Unit"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Normal\nWarning\nCritical",
+   "default": "Normal"
+  },
+  {
+   "fieldname": "metadata_section",
+   "fieldtype": "Section Break",
+   "label": "Metadata"
+  },
+  {
+   "fieldname": "metadata",
+   "fieldtype": "JSON",
+   "label": "Additional Metadata"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-14 21:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Assets",
+ "name": "Telemetry Event",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+

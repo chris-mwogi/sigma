@@ -1,5 +1,5 @@
 {
-  "autoname": "VR-{YYYY}-{####}",
+  "autoname": "format:VR-.{YYYY}.-.{####}",
   "creation": "2025-10-24 00:00:00.000000",
   "doctype": "DocType",
   "document_type": "Document",
@@ -22,6 +22,21 @@
     "column_break_8",
     "special_requirements",
     "requires_escort",
+    "section_break_risk",
+    "risk_score",
+    "risk_band",
+    "column_break_risk",
+    "on_watchlist",
+    "is_first_time_visitor",
+    "access_level",
+    "section_break_compliance",
+    "nda_required",
+    "nda_signed",
+    "nda_document",
+    "column_break_compliance",
+    "safety_induction_required",
+    "safety_induction_completed",
+    "ppe_required",
     "section_break_9",
     "status",
     "registration_date",
@@ -121,6 +136,98 @@
       "fieldtype": "Check",
       "label": "Requires Escort",
       "default": 0
+    },
+    {
+      "fieldname": "section_break_risk",
+      "fieldtype": "Section Break",
+      "label": "Risk Assessment (ISO 31000)"
+    },
+    {
+      "fieldname": "risk_score",
+      "fieldtype": "Int",
+      "label": "Risk Score",
+      "read_only": 1,
+      "description": "Auto-calculated risk score based on visitor profile"
+    },
+    {
+      "fieldname": "risk_band",
+      "fieldtype": "Select",
+      "label": "Risk Band",
+      "options": "Low\nMedium\nHigh",
+      "read_only": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "column_break_risk",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "on_watchlist",
+      "fieldtype": "Check",
+      "label": "On Watchlist",
+      "read_only": 1,
+      "default": 0
+    },
+    {
+      "fieldname": "is_first_time_visitor",
+      "fieldtype": "Check",
+      "label": "First Time Visitor",
+      "read_only": 1,
+      "default": 0
+    },
+    {
+      "fieldname": "access_level",
+      "fieldtype": "Select",
+      "label": "Access Level Required",
+      "options": "Public Areas Only\nOffice Areas\nRestricted Areas\nSensitive Areas\nAll Areas",
+      "default": "Public Areas Only"
+    },
+    {
+      "fieldname": "section_break_compliance",
+      "fieldtype": "Section Break",
+      "label": "Compliance Requirements (ISO 27001, ISO 45001, OSHA)"
+    },
+    {
+      "fieldname": "nda_required",
+      "fieldtype": "Check",
+      "label": "NDA Required",
+      "default": 0
+    },
+    {
+      "fieldname": "nda_signed",
+      "fieldtype": "Check",
+      "label": "NDA Signed",
+      "default": 0,
+      "depends_on": "eval:doc.nda_required==1"
+    },
+    {
+      "fieldname": "nda_document",
+      "fieldtype": "Attach",
+      "label": "NDA Document",
+      "depends_on": "eval:doc.nda_required==1"
+    },
+    {
+      "fieldname": "column_break_compliance",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "safety_induction_required",
+      "fieldtype": "Check",
+      "label": "Safety Induction Required",
+      "default": 0
+    },
+    {
+      "fieldname": "safety_induction_completed",
+      "fieldtype": "Check",
+      "label": "Safety Induction Completed",
+      "default": 0,
+      "depends_on": "eval:doc.safety_induction_required==1"
+    },
+    {
+      "fieldname": "ppe_required",
+      "fieldtype": "Small Text",
+      "label": "PPE Required",
+      "description": "List of required Personal Protective Equipment"
     },
     {
       "fieldname": "section_break_9",

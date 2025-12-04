@@ -1,0 +1,408 @@
+{
+ "app": "sigma",
+ "charts": [],
+ "content": "[{\"id\": \"header-main\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h3\\\"><b>Case Management</b></span>\", \"col\": 12}}, {\"id\": \"spacer-1\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"shortcut-block\", \"type\": \"shortcut\", \"data\": {\"col\": 12}}, {\"id\": \"spacer-2\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"card-block-1\", \"type\": \"card\", \"data\": {\"card_name\": \"Case Management\", \"col\": 4}}, {\"id\": \"card-block-2\", \"type\": \"card\", \"data\": {\"card_name\": \"Related Modules\", \"col\": 4}}, {\"id\": \"card-block-3\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 4}}]",
+ "creation": "2025-12-01 13:45:09.446970",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "briefcase",
+ "idx": 0,
+ "indicator_color": "red",
+ "is_hidden": 0,
+ "label": "Case Management",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Case Management",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Case",
+   "link_count": 0,
+   "link_to": "Case",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Case Investigation",
+   "link_count": 0,
+   "link_to": "Case Investigation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Case Evidence",
+   "link_count": 0,
+   "link_to": "Case Evidence",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Case Activity",
+   "link_count": 0,
+   "link_to": "Case Activity",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Case Action Plan",
+   "link_count": 0,
+   "link_to": "Case Action Plan",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Case Settings",
+   "link_count": 0,
+   "link_to": "Case Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Case Category",
+   "link_count": 0,
+   "link_to": "Case Category",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Case Source",
+   "link_count": 0,
+   "link_to": "Case Source",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Case Severity Matrix",
+   "link_count": 0,
+   "link_to": "Case Severity Matrix",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Case Assignment",
+   "link_count": 0,
+   "link_to": "Case Assignment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Case Activity Log",
+   "link_count": 0,
+   "link_to": "Case Activity Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Case Discussion",
+   "link_count": 0,
+   "link_to": "Case Discussion",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Case External Communication",
+   "link_count": 0,
+   "link_to": "Case External Communication",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Case Types",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Incident Report",
+   "link_count": 0,
+   "link_to": "Incident Report",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Theft",
+   "link_count": 0,
+   "link_to": "Asset Theft",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Illegal Connection",
+   "link_count": 0,
+   "link_to": "Illegal Connection",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Legal Case",
+   "link_count": 0,
+   "link_to": "Legal Case",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Prosecution Case",
+   "link_count": 0,
+   "link_to": "Prosecution Case",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Related Modules",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Zone Presence",
+   "link_count": 0,
+   "link_to": "Zone Presence",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Human Profile",
+   "link_count": 0,
+   "link_to": "Human Profile",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Personnel Management",
+   "link_count": 0,
+   "link_to": "personnel-management",
+   "link_type": "Page",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Management",
+   "link_count": 0,
+   "link_to": "risk-management",
+   "link_type": "Page",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Case Summary Dashboard",
+   "link_count": 0,
+   "link_to": "Case Summary Dashboard",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Case Aging Report",
+   "link_count": 0,
+   "link_to": "Case Aging Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Case Outcome Analysis",
+   "link_count": 0,
+   "link_to": "Case Outcome Analysis",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Root Cause Analysis",
+   "link_count": 0,
+   "link_to": "Root Cause Analysis",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "High Severity Case Matrix",
+   "link_count": 0,
+   "link_to": "High Severity Case Matrix",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Investigation SLA Adherence",
+   "link_count": 0,
+   "link_to": "Investigation SLA Adherence",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Case Investigation Report",
+   "link_count": 0,
+   "link_to": "Case Investigation Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Case Resolution Report",
+   "link_count": 0,
+   "link_to": "Case Resolution Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Case Trend Analysis",
+   "link_count": 0,
+   "link_to": "Case Trend Analysis",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Case Workload Report",
+   "link_count": 0,
+   "link_to": "Case Workload Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-12-01 17:44:21.410936",
+ "modified_by": "Administrator",
+ "module": "Sigma Case Management",
+ "name": "Case Management",
+ "number_cards": [],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 0.0,
+ "shortcuts": [
+  {
+   "color": "red",
+   "doc_view": "",
+   "format": "{} Open",
+   "label": "Case",
+   "link_to": "Case",
+   "stats_filter": "{\"status\": \"Open\"}",
+   "type": "DocType"
+  }
+ ],
+ "title": "Case Management",
+ "type": "Workspace"
+}

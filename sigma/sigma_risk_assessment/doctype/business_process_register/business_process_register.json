@@ -1,0 +1,311 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:BP-{YYYY}-{#####}",
+ "creation": "2025-11-18 17:10:00.000000",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "process_details_section",
+  "process_name",
+  "process_code",
+  "process_category",
+  "column_break_1",
+  "process_owner",
+  "department",
+  "status",
+  "process_description_section",
+  "process_description",
+  "process_objective",
+  "hierarchy_section",
+  "parent_process",
+  "is_group",
+  "column_break_2",
+  "process_level",
+  "criticality",
+  "criticality_section",
+  "business_impact",
+  "revenue_impact",
+  "column_break_3",
+  "customer_impact",
+  "regulatory_impact",
+  "performance_section",
+  "key_inputs",
+  "key_outputs",
+  "column_break_4",
+  "key_stakeholders",
+  "dependencies",
+  "risk_section",
+  "risk_exposure_level",
+  "linked_risks",
+  "column_break_5",
+  "linked_controls",
+  "linked_compliance",
+  "section_break_6",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "process_details_section",
+   "fieldtype": "Section Break",
+   "label": "Process Details"
+  },
+  {
+   "fieldname": "process_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Process Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "process_code",
+   "fieldtype": "Data",
+   "label": "Process Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "process_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Process Category",
+   "options": "Core Business\nSupport\nManagement\nOperational\nStrategic",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "process_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Process Owner",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nUnder Review\nInactive\nRetired",
+   "default": "Active",
+   "reqd": 1
+  },
+  {
+   "fieldname": "process_description_section",
+   "fieldtype": "Section Break",
+   "label": "Process Description"
+  },
+  {
+   "fieldname": "process_description",
+   "fieldtype": "Text Editor",
+   "label": "Process Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "process_objective",
+   "fieldtype": "Text Editor",
+   "label": "Process Objective"
+  },
+  {
+   "fieldname": "hierarchy_section",
+   "fieldtype": "Section Break",
+   "label": "Process Hierarchy"
+  },
+  {
+   "fieldname": "parent_process",
+   "fieldtype": "Link",
+   "label": "Parent Process",
+   "options": "Business Process Register"
+  },
+  {
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "process_level",
+   "fieldtype": "Select",
+   "label": "Process Level",
+   "options": "Level 1 - Strategic\nLevel 2 - Operational\nLevel 3 - Tactical\nLevel 4 - Task"
+  },
+  {
+   "fieldname": "criticality",
+   "fieldtype": "Select",
+   "label": "Criticality",
+   "options": "Low\nMedium\nHigh\nCritical",
+   "default": "Medium"
+  },
+  {
+   "fieldname": "criticality_section",
+   "fieldtype": "Section Break",
+   "label": "Impact Assessment"
+  },
+  {
+   "fieldname": "business_impact",
+   "fieldtype": "Select",
+   "label": "Business Impact",
+   "options": "Low\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "revenue_impact",
+   "fieldtype": "Currency",
+   "label": "Revenue Impact (Annual)"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_impact",
+   "fieldtype": "Select",
+   "label": "Customer Impact",
+   "options": "Low\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "regulatory_impact",
+   "fieldtype": "Select",
+   "label": "Regulatory Impact",
+   "options": "None\nLow\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "performance_section",
+   "fieldtype": "Section Break",
+   "label": "Process Performance"
+  },
+  {
+   "fieldname": "key_inputs",
+   "fieldtype": "Text",
+   "label": "Key Inputs"
+  },
+  {
+   "fieldname": "key_outputs",
+   "fieldtype": "Text",
+   "label": "Key Outputs"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "key_stakeholders",
+   "fieldtype": "Text",
+   "label": "Key Stakeholders"
+  },
+  {
+   "fieldname": "dependencies",
+   "fieldtype": "Text",
+   "label": "Dependencies"
+  },
+  {
+   "fieldname": "risk_section",
+   "fieldtype": "Section Break",
+   "label": "Risk Information"
+  },
+  {
+   "fieldname": "risk_exposure_level",
+   "fieldtype": "Select",
+   "label": "Risk Exposure Level",
+   "options": "Low\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "linked_risks",
+   "fieldtype": "Small Text",
+   "label": "Linked Risks",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "linked_controls",
+   "fieldtype": "Small Text",
+   "label": "Linked Controls",
+   "read_only": 1
+  },
+  {
+   "fieldname": "linked_compliance",
+   "fieldtype": "Small Text",
+   "label": "Linked Compliance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "Additional Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-18 17:10:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Risk Assessment",
+ "name": "Business Process Register",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Risk Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Risk Owner",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Employee"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "process_name",
+ "track_changes": 1
+}
+

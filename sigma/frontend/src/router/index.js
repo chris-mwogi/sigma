@@ -12,6 +12,7 @@ import AccessControl from '../views/access-control/AccessControl.vue'
 import GuardMonitoring from '../views/guard-monitoring/GuardMonitoring.vue'
 import AssetList from '../views/assets/AssetList.vue'
 import AssetDetail from '../views/assets/AssetDetail.vue'
+import AssetTransactions from '../views/assets/AssetTransactions.vue'
 import RiskAssessment from '../views/risk-assessment/RiskAssessment.vue'
 import HelpdeskDashboard from '../views/helpdesk/HelpdeskDashboard.vue'
 import SupportDashboard from '../views/support/SupportDashboard.vue'
@@ -87,6 +88,12 @@ const routes = [
     path: '/assets/:id',
     name: 'AssetDetail',
     component: AssetDetail,
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/asset-transactions',
+    name: 'AssetTransactions',
+    component: AssetTransactions,
     meta: { requiresAuth: true }
   },
   {

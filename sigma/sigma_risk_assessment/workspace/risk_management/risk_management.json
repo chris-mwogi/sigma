@@ -1,0 +1,296 @@
+{
+ "app": "sigma",
+ "charts": [],
+ "content": "[{\"id\": \"header-main\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h3\\\"><b>Risk Management</b></span>\", \"col\": 12}}, {\"id\": \"spacer-1\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"shortcut-block\", \"type\": \"shortcut\", \"data\": {\"col\": 12}}, {\"id\": \"spacer-2\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"card-block-1\", \"type\": \"card\", \"data\": {\"card_name\": \"Risk Management\", \"col\": 4}}, {\"id\": \"card-block-2\", \"type\": \"card\", \"data\": {\"card_name\": \"Integration\", \"col\": 4}}, {\"id\": \"card-block-3\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports & Analytics\", \"col\": 4}}]",
+ "creation": "2025-12-01 13:45:10.228359",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "alert-triangle",
+ "idx": 0,
+ "indicator_color": "yellow",
+ "is_hidden": 0,
+ "label": "Risk Management",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Management",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Assessment",
+   "link_count": 0,
+   "link_to": "Risk Assessment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Register",
+   "link_count": 0,
+   "link_to": "Risk Register",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Treatment Plan",
+   "link_count": 0,
+   "link_to": "Risk Treatment Plan",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Category",
+   "link_count": 0,
+   "link_to": "Risk Category",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Control",
+   "link_count": 0,
+   "link_to": "Risk Control",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Incident",
+   "link_count": 0,
+   "link_to": "Risk Incident",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Key Risk Indicator",
+   "link_count": 0,
+   "link_to": "Key Risk Indicator",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Compliance Requirement",
+   "link_count": 0,
+   "link_to": "Compliance Requirement",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Business Process Register",
+   "link_count": 0,
+   "link_to": "Business Process Register",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Configuration",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Impact Matrix",
+   "link_count": 0,
+   "link_to": "Risk Impact Matrix",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Likelihood Matrix",
+   "link_count": 0,
+   "link_to": "Risk Likelihood Matrix",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Dashboard Settings",
+   "link_count": 0,
+   "link_to": "Risk Dashboard Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Integration",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Zone Presence",
+   "link_count": 0,
+   "link_to": "Zone Presence",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Human Profile",
+   "link_count": 0,
+   "link_to": "Human Profile",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sigma Personnel",
+   "link_count": 0,
+   "link_to": "sigma-personnel",
+   "link_type": "Page",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Case Management",
+   "link_count": 0,
+   "link_to": "case-management",
+   "link_type": "Page",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports & Analytics",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Risk Heat Map",
+   "link_count": 0,
+   "link_to": "Risk Heat Map",
+   "link_type": "Report",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Risk Treatment Status Report",
+   "link_count": 0,
+   "link_to": "Risk Treatment Status Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Risk Register Report",
+   "link_count": 0,
+   "link_to": "Risk Register Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Risk Incident Analysis",
+   "link_count": 0,
+   "link_to": "Risk Incident Analysis",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "KRI Dashboard Report",
+   "link_count": 0,
+   "link_to": "KRI Dashboard Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-12-01 17:44:21.590195",
+ "modified_by": "Administrator",
+ "module": "Sigma Risk Assessment",
+ "name": "Risk Management",
+ "number_cards": [],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 0.0,
+ "shortcuts": [
+  {
+   "color": "yellow",
+   "doc_view": "",
+   "format": "{} Active",
+   "label": "Risk Assessment",
+   "link_to": "Risk Assessment",
+   "stats_filter": "{\"status\": \"Active\"}",
+   "type": "DocType"
+  }
+ ],
+ "title": "Risk Management",
+ "type": "Workspace"
+}

@@ -1,129 +1,343 @@
 {
+  "actions": [],
+  "allow_rename": 1,
+  "autoname": "format:RASS-{YYYY}-{#####}",
+  "creation": "2025-11-18 16:30:00.000000",
   "doctype": "DocType",
-  "name": "Risk Assessment",
-  "module": "Sigma Risk Assessment",
-  "custom": true,
+  "document_type": "Document",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "assessment_details_section",
+    "linked_risk",
+    "risk_title",
+    "assessment_date",
+    "column_break_1",
+    "assessment_type",
+    "assessed_by",
+    "status",
+    "inherent_risk_section",
+    "inherent_impact",
+    "inherent_impact_score",
+    "inherent_likelihood",
+    "column_break_2",
+    "inherent_likelihood_score",
+    "inherent_risk_score",
+    "inherent_risk_rating",
+    "control_evaluation_section",
+    "existing_controls",
+    "control_effectiveness",
+    "control_gaps_identified",
+    "residual_risk_section",
+    "residual_impact",
+    "residual_impact_score",
+    "residual_likelihood",
+    "column_break_3",
+    "residual_likelihood_score",
+    "residual_risk_score",
+    "residual_risk_rating",
+    "recommendations_section",
+    "risk_treatment_required",
+    "recommended_actions",
+    "column_break_4",
+    "priority",
+    "target_completion_date",
+    "additional_information_section",
+    "assessment_notes",
+    "linked_assets",
+    "mitigation_actions"
+  ],
   "fields": [
     {
-      "fieldname": "assessment_title",
-      "label": "Assessment Title",
+      "fieldname": "assessment_details_section",
+      "fieldtype": "Section Break",
+      "label": "Assessment Details"
+    },
+    {
+      "fieldname": "linked_risk",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Linked Risk",
+      "options": "Risk Register",
+      "reqd": 1
+    },
+    {
+      "fetch_from": "linked_risk.risk_title",
+      "fieldname": "risk_title",
       "fieldtype": "Data",
-      "reqd": 1
-    },
-    {
-      "fieldname": "assessment_type",
-      "label": "Assessment Type",
-      "fieldtype": "Select",
-      "options": "Location-Based\\nCorporate",
-      "reqd": 1
-    },
-    {
-      "fieldname": "description",
-      "label": "Description",
-      "fieldtype": "Small Text"
-    },
-    {
-      "fieldname": "risk_category",
-      "label": "Risk Category",
-      "fieldtype": "Select",
-      "options": "Operational\\nSafety\\nEnvironmental\\nFinancial\\nCompliance\\nStrategic\\nICT\\nHR"
-    },
-    {
-      "fieldname": "likelihood",
-      "label": "Likelihood",
-      "fieldtype": "Select",
-      "options": "Rare\\nUnlikely\\nPossible\\nLikely\\nAlmost Certain"
-    },
-    {
-      "fieldname": "impact",
-      "label": "Impact",
-      "fieldtype": "Select",
-      "options": "Insignificant\\nMinor\\nModerate\\nMajor\\nCatastrophic"
-    },
-    {
-      "fieldname": "risk_score",
-      "label": "Risk Score",
-      "fieldtype": "Int",
-      "read_only": 1
-    },
-    {
-      "fieldname": "risk_level",
-      "label": "Risk Level",
-      "fieldtype": "Select",
-      "options": "Low\\nMedium\\nHigh\\nCritical",
+      "in_list_view": 1,
+      "label": "Risk Title",
       "read_only": 1
     },
     {
       "fieldname": "assessment_date",
-      "label": "Assessment Date",
       "fieldtype": "Date",
+      "in_list_view": 1,
+      "label": "Assessment Date",
+      "reqd": 1,
       "default": "Today"
     },
     {
-      "fieldname": "review_date",
-      "label": "Review Date",
-      "fieldtype": "Date"
+      "fieldname": "column_break_1",
+      "fieldtype": "Column Break"
     },
     {
-      "fieldname": "risk_owner",
-      "label": "Risk Owner",
+      "fieldname": "assessment_type",
+      "fieldtype": "Select",
+      "label": "Assessment Type",
+      "options": "Initial Assessment\nPeriodic Review\nIncident-Triggered\nAudit-Triggered\nChange-Triggered",
+      "reqd": 1,
+      "default": "Initial Assessment"
+    },
+    {
+      "fieldname": "assessed_by",
       "fieldtype": "Link",
-      "options": "Employee"
+      "label": "Assessed By",
+      "options": "User",
+      "reqd": 1,
+      "default": "__user"
     },
     {
       "fieldname": "status",
-      "label": "Status",
       "fieldtype": "Select",
-      "options": "Open\\nMitigated\\nClosed\\nIn Progress",
-      "default": "Open"
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Status",
+      "options": "Draft\nIn Progress\nCompleted\nApproved",
+      "reqd": 1,
+      "default": "Draft"
     },
     {
-      "fieldname": "responsible_department",
-      "label": "Responsible Department",
-      "fieldtype": "Link",
-      "options": "Department"
+      "fieldname": "inherent_risk_section",
+      "fieldtype": "Section Break",
+      "label": "Inherent Risk Assessment"
     },
     {
-      "fieldname": "linked_location",
-      "label": "Linked Location",
+      "fieldname": "inherent_impact",
       "fieldtype": "Link",
-      "options": "Location"
+      "in_list_view": 1,
+      "label": "Inherent Impact",
+      "options": "Risk Impact Matrix",
+      "reqd": 1
+    },
+    {
+      "fetch_from": "inherent_impact.impact_score",
+      "fieldname": "inherent_impact_score",
+      "fieldtype": "Int",
+      "label": "Impact Score",
+      "read_only": 1
+    },
+    {
+      "fieldname": "inherent_likelihood",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Inherent Likelihood",
+      "options": "Risk Likelihood Matrix",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fetch_from": "inherent_likelihood.likelihood_score",
+      "fieldname": "inherent_likelihood_score",
+      "fieldtype": "Int",
+      "label": "Likelihood Score",
+      "read_only": 1
+    },
+    {
+      "fieldname": "inherent_risk_score",
+      "fieldtype": "Int",
+      "in_list_view": 1,
+      "label": "Inherent Risk Score",
+      "read_only": 1
+    },
+    {
+      "fieldname": "inherent_risk_rating",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Inherent Risk Rating",
+      "options": "Low\nMedium\nHigh\nCritical",
+      "read_only": 1
+    },
+    {
+      "fieldname": "control_evaluation_section",
+      "fieldtype": "Section Break",
+      "label": "Control Evaluation"
+    },
+    {
+      "fieldname": "existing_controls",
+      "fieldtype": "Text Editor",
+      "label": "Existing Controls"
+    },
+    {
+      "fieldname": "control_effectiveness",
+      "fieldtype": "Select",
+      "label": "Control Effectiveness",
+      "options": "Not Effective\nPartially Effective\nEffective\nHighly Effective"
+    },
+    {
+      "fieldname": "control_gaps_identified",
+      "fieldtype": "Text Editor",
+      "label": "Control Gaps Identified"
+    },
+    {
+      "fieldname": "residual_risk_section",
+      "fieldtype": "Section Break",
+      "label": "Residual Risk Assessment"
+    },
+    {
+      "fieldname": "residual_impact",
+      "fieldtype": "Link",
+      "label": "Residual Impact",
+      "options": "Risk Impact Matrix",
+      "reqd": 1
+    },
+    {
+      "fetch_from": "residual_impact.impact_score",
+      "fieldname": "residual_impact_score",
+      "fieldtype": "Int",
+      "label": "Impact Score",
+      "read_only": 1
+    },
+    {
+      "fieldname": "residual_likelihood",
+      "fieldtype": "Link",
+      "label": "Residual Likelihood",
+      "options": "Risk Likelihood Matrix",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fetch_from": "residual_likelihood.likelihood_score",
+      "fieldname": "residual_likelihood_score",
+      "fieldtype": "Int",
+      "label": "Likelihood Score",
+      "read_only": 1
+    },
+    {
+      "fieldname": "residual_risk_score",
+      "fieldtype": "Int",
+      "label": "Residual Risk Score",
+      "read_only": 1
+    },
+    {
+      "fieldname": "residual_risk_rating",
+      "fieldtype": "Select",
+      "label": "Residual Risk Rating",
+      "options": "Low\nMedium\nHigh\nCritical",
+      "read_only": 1
+    },
+    {
+      "fieldname": "recommendations_section",
+      "fieldtype": "Section Break",
+      "label": "Recommendations"
+    },
+    {
+      "default": "0",
+      "fieldname": "risk_treatment_required",
+      "fieldtype": "Check",
+      "label": "Risk Treatment Required"
+    },
+    {
+      "fieldname": "recommended_actions",
+      "fieldtype": "Text Editor",
+      "label": "Recommended Actions"
+    },
+    {
+      "fieldname": "column_break_4",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "priority",
+      "fieldtype": "Select",
+      "label": "Priority",
+      "options": "Low\nMedium\nHigh\nCritical"
+    },
+    {
+      "fieldname": "target_completion_date",
+      "fieldtype": "Date",
+      "label": "Target Completion Date"
+    },
+    {
+      "fieldname": "additional_information_section",
+      "fieldtype": "Section Break",
+      "label": "Additional Information"
+    },
+    {
+      "fieldname": "assessment_notes",
+      "fieldtype": "Text Editor",
+      "label": "Assessment Notes"
     },
     {
       "fieldname": "linked_assets",
-      "label": "Linked Assets",
       "fieldtype": "Table",
+      "label": "Linked Assets",
       "options": "Linked Asset Item"
     },
     {
       "fieldname": "mitigation_actions",
-      "label": "Mitigation Actions",
       "fieldtype": "Table",
+      "label": "Mitigation Actions",
       "options": "Risk Mitigation Action"
-    },
-    {
-      "fieldname": "residual_risk_level",
-      "label": "Residual Risk Level",
-      "fieldtype": "Select",
-      "options": "Low\\nMedium\\nHigh\\nCritical"
-    },
-    {
-      "fieldname": "remarks",
-      "label": "Remarks",
-      "fieldtype": "Small Text"
     }
   ],
+  "index_web_pages_for_search": 1,
+  "is_submittable": 1,
+  "links": [],
+  "modified": "2025-11-18 16:30:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sigma Risk Assessment",
+  "name": "Risk Assessment",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
   "permissions": [
     {
-      "role": "System Manager",
-      "read": 1,
-      "write": 1,
       "create": 1,
-      "delete": 1
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "submit": 1,
+      "write": 1
     },
     {
-      "role": "Employee",
-      "read": 1
+      "create": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Risk Manager",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "email": 1,
+      "print": 1,
+      "read": 1,
+      "role": "Risk Owner",
+      "write": 1
+    },
+    {
+      "read": 1,
+      "role": "Employee"
     }
-  ]
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "title_field": "risk_title",
+  "track_changes": 1
 }

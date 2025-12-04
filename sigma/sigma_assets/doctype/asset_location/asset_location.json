@@ -1,0 +1,426 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:location_name",
+ "creation": "2025-11-19 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "location_name",
+  "location_code",
+  "location_type",
+  "parent_location",
+  "column_break_1",
+  "is_active",
+  "company",
+  "cost_center",
+  "address_section",
+  "address_line_1",
+  "address_line_2",
+  "city",
+  "state_province",
+  "column_break_2",
+  "country",
+  "postal_code",
+  "phone",
+  "email",
+  "gps_section",
+  "latitude",
+  "longitude",
+  "altitude",
+  "gps_accuracy",
+  "column_break_3",
+  "geofence_enabled",
+  "geofence_radius_meters",
+  "geofence_shape",
+  "geofence_coordinates",
+  "capacity_section",
+  "total_capacity",
+  "capacity_unit",
+  "current_occupancy",
+  "column_break_4",
+  "available_capacity",
+  "occupancy_percentage",
+  "max_asset_count",
+  "environmental_section",
+  "temperature_min",
+  "temperature_max",
+  "humidity_min",
+  "humidity_max",
+  "column_break_5",
+  "requires_climate_control",
+  "requires_security_clearance",
+  "security_level",
+  "access_restrictions",
+  "facility_section",
+  "facility_manager",
+  "facility_contact",
+  "operating_hours",
+  "column_break_6",
+  "emergency_contact",
+  "emergency_phone",
+  "evacuation_plan",
+  "notes_section",
+  "description",
+  "special_instructions"
+ ],
+ "fields": [
+  {
+   "fieldname": "location_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Location Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "location_code",
+   "fieldtype": "Data",
+   "label": "Location Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "location_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Location Type",
+   "options": "\nSite\nBuilding\nFloor\nRoom\nZone\nRack\nCabinet\nField Location\nVehicle\nMobile Unit",
+   "reqd": 1
+  },
+  {
+   "fieldname": "parent_location",
+   "fieldtype": "Link",
+   "label": "Parent Location",
+   "options": "Asset Location"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "address_section",
+   "fieldtype": "Section Break",
+   "label": "Address"
+  },
+  {
+   "fieldname": "address_line_1",
+   "fieldtype": "Data",
+   "label": "Address Line 1"
+  },
+  {
+   "fieldname": "address_line_2",
+   "fieldtype": "Data",
+   "label": "Address Line 2"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "state_province",
+   "fieldtype": "Data",
+   "label": "State/Province"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "postal_code",
+   "fieldtype": "Data",
+   "label": "Postal Code"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "gps_section",
+   "fieldtype": "Section Break",
+   "label": "GPS & Geofencing"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Float",
+   "label": "Latitude",
+   "precision": "8"
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Float",
+   "label": "Longitude",
+   "precision": "8"
+  },
+  {
+   "fieldname": "altitude",
+   "fieldtype": "Float",
+   "label": "Altitude (meters)"
+  },
+  {
+   "fieldname": "gps_accuracy",
+   "fieldtype": "Float",
+   "label": "GPS Accuracy (meters)"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "geofence_enabled",
+   "fieldtype": "Check",
+   "label": "Geofence Enabled"
+  },
+  {
+   "depends_on": "geofence_enabled",
+   "fieldname": "geofence_radius_meters",
+   "fieldtype": "Float",
+   "label": "Geofence Radius (meters)"
+  },
+  {
+   "depends_on": "geofence_enabled",
+   "fieldname": "geofence_shape",
+   "fieldtype": "Select",
+   "label": "Geofence Shape",
+   "options": "\nCircle\nPolygon\nRectangle"
+  },
+  {
+   "depends_on": "eval:doc.geofence_enabled && doc.geofence_shape == 'Polygon'",
+   "description": "JSON array of coordinates for polygon geofence",
+   "fieldname": "geofence_coordinates",
+   "fieldtype": "Long Text",
+   "label": "Geofence Coordinates (JSON)"
+  },
+  {
+   "fieldname": "capacity_section",
+   "fieldtype": "Section Break",
+   "label": "Capacity Management"
+  },
+  {
+   "fieldname": "total_capacity",
+   "fieldtype": "Float",
+   "label": "Total Capacity"
+  },
+  {
+   "fieldname": "capacity_unit",
+   "fieldtype": "Select",
+   "label": "Capacity Unit",
+   "options": "\nSquare Meters\nSquare Feet\nCubic Meters\nAsset Count\nRack Units\nPallet Positions"
+  },
+  {
+   "fieldname": "current_occupancy",
+   "fieldtype": "Float",
+   "label": "Current Occupancy",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "available_capacity",
+   "fieldtype": "Float",
+   "label": "Available Capacity",
+   "read_only": 1
+  },
+  {
+   "fieldname": "occupancy_percentage",
+   "fieldtype": "Percent",
+   "label": "Occupancy %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "max_asset_count",
+   "fieldtype": "Int",
+   "label": "Maximum Asset Count"
+  },
+  {
+   "fieldname": "environmental_section",
+   "fieldtype": "Section Break",
+   "label": "Environmental Conditions"
+  },
+  {
+   "fieldname": "temperature_min",
+   "fieldtype": "Float",
+   "label": "Min Temperature (°C)"
+  },
+  {
+   "fieldname": "temperature_max",
+   "fieldtype": "Float",
+   "label": "Max Temperature (°C)"
+  },
+  {
+   "fieldname": "humidity_min",
+   "fieldtype": "Percent",
+   "label": "Min Humidity %"
+  },
+  {
+   "fieldname": "humidity_max",
+   "fieldtype": "Percent",
+   "label": "Max Humidity %"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "requires_climate_control",
+   "fieldtype": "Check",
+   "label": "Requires Climate Control"
+  },
+  {
+   "default": "0",
+   "fieldname": "requires_security_clearance",
+   "fieldtype": "Check",
+   "label": "Requires Security Clearance"
+  },
+  {
+   "depends_on": "requires_security_clearance",
+   "fieldname": "security_level",
+   "fieldtype": "Select",
+   "label": "Security Level",
+   "options": "\nPublic\nRestricted\nConfidential\nSecret\nTop Secret"
+  },
+  {
+   "fieldname": "access_restrictions",
+   "fieldtype": "Small Text",
+   "label": "Access Restrictions"
+  },
+  {
+   "fieldname": "facility_section",
+   "fieldtype": "Section Break",
+   "label": "Facility Management"
+  },
+  {
+   "fieldname": "facility_manager",
+   "fieldtype": "Link",
+   "label": "Facility Manager",
+   "options": "User"
+  },
+  {
+   "fieldname": "facility_contact",
+   "fieldtype": "Data",
+   "label": "Facility Contact"
+  },
+  {
+   "fieldname": "operating_hours",
+   "fieldtype": "Data",
+   "label": "Operating Hours"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "emergency_contact",
+   "fieldtype": "Data",
+   "label": "Emergency Contact"
+  },
+  {
+   "fieldname": "emergency_phone",
+   "fieldtype": "Data",
+   "label": "Emergency Phone"
+  },
+  {
+   "fieldname": "evacuation_plan",
+   "fieldtype": "Attach",
+   "label": "Evacuation Plan"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "special_instructions",
+   "fieldtype": "Text",
+   "label": "Special Instructions"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-19 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Assets",
+ "name": "Asset Location",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Asset Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Asset User",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+
