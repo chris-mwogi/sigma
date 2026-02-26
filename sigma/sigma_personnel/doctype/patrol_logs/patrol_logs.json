@@ -32,7 +32,9 @@
    "in_list_view": 1,
    "label": "Personnel",
    "options": "Human Profile",
-   "reqd": 1
+   "reqd": 1,
+   "link_filters": "[[\"Human Profile\", \"person_type\", \"in\", [\"Employee\", \"Contractor\"]]]",
+   "description": "Company employees and contractor staff only"
   },
   {
    "fieldname": "column_break_1",

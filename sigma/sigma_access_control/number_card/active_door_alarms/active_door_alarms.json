@@ -1,0 +1,24 @@
+{
+ "aggregate_function_based_on": "",
+ "color": "#dc2626",
+ "creation": "2025-12-05 12:00:00",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Door Alarm",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[[\"Door Alarm\",\"status\",\"=\",\"Active\"]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Active Alarms",
+ "modified": "2025-12-05 12:00:00",
+ "modified_by": "Administrator",
+ "module": "Sigma Access Control",
+ "name": "Active Door Alarms",
+ "owner": "Administrator",
+ "show_full_number": 1,
+ "show_percentage_stats": 0,
+ "type": "Document Type"
+}
+

@@ -61,7 +61,8 @@
       "fieldtype": "Link",
       "label": "Assigned To",
       "options": "Human Profile",
-      "description": "Personnel assigned to this device"
+      "description": "Company employees and contractor staff only",
+      "link_filters": "[[\"Human Profile\", \"person_type\", \"in\", [\"Employee\", \"Contractor\"]]]"
     },
     {
       "fieldname": "activation_date",

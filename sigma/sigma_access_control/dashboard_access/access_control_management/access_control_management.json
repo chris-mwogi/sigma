@@ -1,0 +1,35 @@
+{
+ "cards": [
+  {"card": "Access Events This Month"},
+  {"card": "Total Active Credentials"},
+  {"card": "Credentials Expiring Soon"},
+  {"card": "Open Access Incidents"},
+  {"card": "Active Emergency Rules"},
+  {"card": "High Risk Events Today"},
+  {"card": "Device Health Issues"},
+  {"card": "Total Access Points"}
+ ],
+ "charts": [
+  {"chart": "Access Events Trend", "width": "Full"},
+  {"chart": "Access by Zone", "width": "Half"},
+  {"chart": "Access by Location", "width": "Half"},
+  {"chart": "Credential Type Distribution", "width": "Half"},
+  {"chart": "Access by Result", "width": "Half"},
+  {"chart": "Access Incidents by Type", "width": "Half"},
+  {"chart": "Access Incidents Trend", "width": "Half"},
+  {"chart": "Denied Access Trend", "width": "Full"}
+ ],
+ "creation": "2025-12-05 12:00:00",
+ "dashboard_name": "Access Control Management",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2025-12-05 12:00:00",
+ "modified_by": "Administrator",
+ "module": "Sigma Access Control",
+ "name": "Access Control Management",
+ "owner": "Administrator"
+}
+

@@ -1,0 +1,47 @@
+{
+ "cards": [
+  {
+   "card": "Blacklisted Visitors"
+  },
+  {
+   "card": "Visitors Currently Onsite"
+  },
+  {
+   "card": "Pending Approvals"
+  },
+  {
+   "card": "Security Alerts Today"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Blacklisted Visitors Trend",
+   "width": "Half"
+  },
+  {
+   "chart": "Overstaying Visitors",
+   "width": "Half"
+  },
+  {
+   "chart": "Visitors by Location",
+   "width": "Half"
+  },
+  {
+   "chart": "Visitor Check-ins Trend",
+   "width": "Half"
+  }
+ ],
+ "creation": "2025-12-11 12:00:00.000000",
+ "dashboard_name": "Visitor Security Dashboard",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2025-12-11 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Visitor Management",
+ "name": "Visitor Security Dashboard",
+ "owner": "Administrator"
+}
+

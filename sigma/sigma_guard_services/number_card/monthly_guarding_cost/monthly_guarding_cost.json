@@ -1,0 +1,25 @@
+{
+ "aggregate_function_based_on": "",
+ "color": "#10b981",
+ "creation": "2025-12-05 12:00:00",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Guard Shift",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[[\"Guard Shift\",\"shift_date\",\"Timespan\",\"this month\"]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Monthly Guarding Cost",
+ "modified": "2025-12-05 12:00:00",
+ "modified_by": "Administrator",
+ "module": "Sigma Guard Services",
+ "name": "Monthly Guarding Cost",
+ "owner": "Administrator",
+ "show_full_number": 1,
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Monthly",
+ "type": "Document Type"
+}
+

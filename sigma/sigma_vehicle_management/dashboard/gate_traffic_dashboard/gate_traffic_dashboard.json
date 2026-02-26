@@ -1,0 +1,29 @@
+{
+  "name": "Gate Traffic Dashboard",
+  "label": "Unified Gate & Traffic Dashboard",
+  "module": "Sigma Vehicle Management",
+  "icon": "🔵",
+  "description": "Live vehicle entry/exit monitoring for Security Command Center, Gate Officers, and Control Room",
+  "is_default": 0,
+  "charts": [
+    {"chart": "Vehicle Entries by Gate", "width": "Half"},
+    {"chart": "Hourly Traffic Volume", "width": "Half"},
+    {"chart": "Vehicle Segmentation", "width": "Half"},
+    {"chart": "Traffic Trend Today", "width": "Half"}
+  ],
+  "shortcuts": [
+    {"label": "Vehicle Check-ins", "link_to": "Vehicle Checkin Checkout", "type": "DocType"},
+    {"label": "Vehicle Passes", "link_to": "Vehicle Pass", "type": "DocType"},
+    {"label": "Access Logs", "link_to": "Vehicle Access Log", "type": "DocType"}
+  ],
+  "cards": [
+    {"card": "Company Vehicles Onsite"},
+    {"card": "Staff Vehicles Onsite"},
+    {"card": "Visitor Vehicles Onsite"},
+    {"card": "Entries Today"},
+    {"card": "Exits Today"},
+    {"card": "Unauthorized Attempts"},
+    {"card": "Awaiting Approval"}
+  ]
+}
+

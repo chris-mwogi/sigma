@@ -75,7 +75,7 @@ class TestAssetManagement(unittest.TestCase):
 
 	def test_ip_address_validation(self):
 		"""Test IP address validation"""
-		from sigma.sigma_asset_integrations.doctype.asset_ip_address.asset_ip_address import AssetIPAddress
+		from sigma.sigma_assets.doctype.asset_ip_address.asset_ip_address import AssetIPAddress
 		
 		# Valid IPv4
 		ip = AssetIPAddress({
@@ -94,7 +94,7 @@ class TestAssetManagement(unittest.TestCase):
 
 	def test_mac_address_validation(self):
 		"""Test MAC address validation and normalization"""
-		from sigma.sigma_asset_integrations.doctype.asset_mac_address.asset_mac_address import AssetMACAddress
+		from sigma.sigma_assets.doctype.asset_mac_address.asset_mac_address import AssetMACAddress
 		
 		# Valid MAC with colons
 		mac = AssetMACAddress({
@@ -125,7 +125,7 @@ class TestAssetManagement(unittest.TestCase):
 
 	def test_gps_coordinates_validation(self):
 		"""Test GPS coordinates validation"""
-		from sigma.sigma_asset_integrations.asset_hooks import validate_gps_coordinates
+		from sigma.sigma_assets.asset_hooks import validate_gps_coordinates
 		
 		# Valid coordinates
 		asset = frappe.get_doc({
@@ -164,7 +164,7 @@ class TestAssetManagement(unittest.TestCase):
 
 	def test_parent_system_validation(self):
 		"""Test parent system validation and circular reference detection"""
-		from sigma.sigma_asset_integrations.asset_hooks import validate_parent_system
+		from sigma.sigma_assets.asset_hooks import validate_parent_system
 		
 		# Asset cannot be its own parent
 		asset = frappe.get_doc({
@@ -179,7 +179,7 @@ class TestAssetManagement(unittest.TestCase):
 
 	def test_asset_component_date_validation(self):
 		"""Test asset component date validation"""
-		from sigma.sigma_asset_integrations.doctype.asset_component.asset_component import AssetComponent
+		from sigma.sigma_assets.doctype.asset_component.asset_component import AssetComponent
 		
 		# date_removed before date_installed should raise error
 		component = AssetComponent({
@@ -194,7 +194,7 @@ class TestAssetManagement(unittest.TestCase):
 
 	def test_asset_project_link_date_validation(self):
 		"""Test asset project link date validation"""
-		from sigma.sigma_asset_integrations.doctype.asset_project_link.asset_project_link import AssetProjectLink
+		from sigma.sigma_assets.doctype.asset_project_link.asset_project_link import AssetProjectLink
 
 		# date_removed before date_assigned should raise error
 		project_link = AssetProjectLink({

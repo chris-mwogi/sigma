@@ -1,0 +1,27 @@
+{
+ "cards": [
+  {"card": "Total Risks"},
+  {"card": "High Risks"},
+  {"card": "KRI Alerts"},
+  {"card": "Open Incidents"}
+ ],
+ "charts": [
+  {"chart": "Risks by Category", "width": "Half"},
+  {"chart": "Risks by Status", "width": "Half"},
+  {"chart": "KRI by Status", "width": "Half"},
+  {"chart": "Incidents by Status", "width": "Half"}
+ ],
+ "creation": "2025-12-14 18:00:00.000000",
+ "dashboard_name": "ICT Risk Dashboard",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2025-12-14 18:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Risk Assessment",
+ "name": "ICT Risk Dashboard",
+ "owner": "Administrator"
+}
+

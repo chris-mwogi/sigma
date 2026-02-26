@@ -1,0 +1,27 @@
+{
+ "cards": [
+  {"card": "Total Risks"},
+  {"card": "Active Risks"},
+  {"card": "Active Treatments"},
+  {"card": "Overdue Treatments"}
+ ],
+ "charts": [
+  {"chart": "Risks by Status", "width": "Half"},
+  {"chart": "Risks by Category", "width": "Half"},
+  {"chart": "Treatments by Status", "width": "Half"},
+  {"chart": "Treatments by Strategy", "width": "Half"}
+ ],
+ "creation": "2025-12-14 18:00:00.000000",
+ "dashboard_name": "Departmental Risk Dashboard",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2025-12-14 18:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Risk Assessment",
+ "name": "Departmental Risk Dashboard",
+ "owner": "Administrator"
+}
+

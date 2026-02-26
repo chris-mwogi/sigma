@@ -1,0 +1,157 @@
+{
+  "autoname": "EET-{YYYY}-{####}",
+  "creation": "2025-10-24 00:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "Document",
+  "engine": "InnoDB",
+  "field_order": [
+    "location",
+    "evacuation_date",
+    "column_break_2",
+    "evacuation_type",
+    "status",
+    "section_break_3",
+    "evacuation_start_time",
+    "evacuation_end_time",
+    "column_break_5",
+    "total_visitors",
+    "total_evacuated",
+    "section_break_6",
+    "assigned_visitors",
+    "section_break_7",
+    "evacuation_notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "location",
+      "fieldtype": "Link",
+      "label": "Location",
+      "options": "Location",
+      "reqd": 1
+    },
+    {
+      "fieldname": "evacuation_date",
+      "fieldtype": "Date",
+      "label": "Evacuation Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "evacuation_type",
+      "fieldtype": "Select",
+      "label": "Evacuation Type",
+      "options": "Fire\nMedical Emergency\nSecurity Threat\nNatural Disaster\nDrill\nOther",
+      "reqd": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Initiated\nIn Progress\nCompleted\nCancelled",
+      "default": "Initiated"
+    },
+    {
+      "fieldname": "section_break_3",
+      "fieldtype": "Section Break",
+      "label": "Evacuation Timeline"
+    },
+    {
+      "fieldname": "evacuation_start_time",
+      "fieldtype": "Datetime",
+      "label": "Evacuation Start Time",
+      "reqd": 1
+    },
+    {
+      "fieldname": "evacuation_end_time",
+      "fieldtype": "Datetime",
+      "label": "Evacuation End Time"
+    },
+    {
+      "fieldname": "column_break_5",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "total_visitors",
+      "fieldtype": "Int",
+      "label": "Total Visitors",
+      "read_only": 1
+    },
+    {
+      "fieldname": "total_evacuated",
+      "fieldtype": "Int",
+      "label": "Total Evacuated",
+      "read_only": 1
+    },
+    {
+      "fieldname": "section_break_6",
+      "fieldtype": "Section Break",
+      "label": "Assigned Visitors"
+    },
+    {
+      "fieldname": "assigned_visitors",
+      "fieldtype": "Table",
+      "label": "Assigned Visitors",
+      "options": "Evacuation Assignment Item"
+    },
+    {
+      "fieldname": "section_break_7",
+      "fieldtype": "Section Break",
+      "label": "Notes"
+    },
+    {
+      "fieldname": "evacuation_notes",
+      "fieldtype": "Text Editor",
+      "label": "Evacuation Notes"
+    }
+  ],
+  "is_submittable": 1,
+  "links": [],
+  "modified": "2025-10-24 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sigma Guard Services",
+  "name": "Emergency Evacuation Tracking",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Compliance Officer",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Service Provider"
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1
+}
+

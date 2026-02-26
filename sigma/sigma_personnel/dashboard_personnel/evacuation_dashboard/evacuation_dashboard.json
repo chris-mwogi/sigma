@@ -1,0 +1,24 @@
+{
+  "cards": [
+    {"card": "Who Is In Which Muster Point"},
+    {"card": "Missing Staff"},
+    {"card": "Last Known Locations"}
+  ],
+  "charts": [
+    {"chart": "Muster Point Occupancy", "width": "Full"},
+    {"chart": "Personnel by Location Type", "width": "Half"},
+    {"chart": "Evacuation Status", "width": "Half"}
+  ],
+  "creation": "2025-12-09 00:00:00",
+  "dashboard_name": "Evacuation Dashboard",
+  "docstatus": 0,
+  "doctype": "Dashboard",
+  "idx": 0,
+  "is_default": 0,
+  "is_standard": 1,
+  "modified": "2025-12-09 00:00:00",
+  "modified_by": "Administrator",
+  "module": "Sigma Personnel",
+  "name": "Evacuation Dashboard",
+  "owner": "Administrator"
+}

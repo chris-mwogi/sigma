@@ -1,0 +1,189 @@
+[
+ {
+  "app_name": "sigma",
+  "custom": 0,
+  "docstatus": 0,
+  "doctype": "Module Def",
+  "modified": "2025-11-14 16:25:09.537038",
+  "module_name": "Sigma",
+  "name": "Sigma",
+  "package": null,
+  "restrict_to_domain": null
+ },
+ {
+  "app_name": "sigma",
+  "custom": 0,
+  "docstatus": 0,
+  "doctype": "Module Def",
+  "modified": "2025-11-14 16:25:09.728043",
+  "module_name": "Sigma Access Control",
+  "name": "Sigma Access Control",
+  "package": null,
+  "restrict_to_domain": null
+ },
+ {
+  "app_name": "sigma",
+  "custom": 0,
+  "docstatus": 0,
+  "doctype": "Module Def",
+  "modified": "2025-11-14 16:25:10.262601",
+  "module_name": "Sigma Case Management",
+  "name": "Sigma Case Management",
+  "package": null,
+  "restrict_to_domain": null
+ },
+ {
+  "app_name": "sigma",
+  "custom": 0,
+  "docstatus": 0,
+  "doctype": "Module Def",
+  "modified": "2025-11-14 16:25:10.404744",
+  "module_name": "Sigma Erpnext Integrations",
+  "name": "Sigma Erpnext Integrations",
+  "package": null,
+  "restrict_to_domain": null
+ },
+ {
+  "app_name": "sigma",
+  "custom": 0,
+  "docstatus": 0,
+  "doctype": "Module Def",
+  "modified": "2025-11-14 16:25:10.697550",
+  "module_name": "Sigma Risk Assessment",
+  "name": "Sigma Risk Assessment",
+  "package": null,
+  "restrict_to_domain": null
+ },
+ {
+  "app_name": "sigma",
+  "custom": 0,
+  "docstatus": 0,
+  "doctype": "Module Def",
+  "modified": "2025-11-14 16:25:10.842099",
+  "module_name": "Sigma Vehicle Management",
+  "name": "Sigma Vehicle Management",
+  "package": null,
+  "restrict_to_domain": null
+ },
+ {
+  "app_name": "sigma",
+  "custom": 0,
+  "docstatus": 0,
+  "doctype": "Module Def",
+  "modified": "2025-11-14 16:25:10.973554",
+  "module_name": "Sigma Visitor Management",
+  "name": "Sigma Visitor Management",
+  "package": null,
+  "restrict_to_domain": null
+ },
+ {
+  "app_name": "sigma",
+  "custom": 0,
+  "docstatus": 0,
+  "doctype": "Module Def",
+  "modified": "2025-11-14 16:25:11.123056",
+  "module_name": "Sigma CRM",
+  "name": "Sigma CRM",
+  "package": null,
+  "restrict_to_domain": null
+ },
+ {
+  "app_name": "sigma",
+  "custom": 0,
+  "docstatus": 0,
+  "doctype": "Module Def",
+  "modified": "2025-11-14 16:25:11.268469",
+  "module_name": "Sigma Helpdesk",
+  "name": "Sigma Helpdesk",
+  "package": null,
+  "restrict_to_domain": null
+ },
+ {
+  "app_name": "sigma",
+  "custom": 0,
+  "docstatus": 0,
+  "doctype": "Module Def",
+  "modified": "2025-11-14 16:25:11.430631",
+  "module_name": "Sigma Projects",
+  "name": "Sigma Projects",
+  "package": null,
+  "restrict_to_domain": null
+ },
+ {
+  "app_name": "sigma",
+  "custom": 0,
+  "docstatus": 0,
+  "doctype": "Module Def",
+  "modified": "2025-11-14 16:25:11.627361",
+  "module_name": "Sigma Quality",
+  "name": "Sigma Quality",
+  "package": null,
+  "restrict_to_domain": null
+ },
+ {
+  "app_name": "sigma",
+  "custom": 0,
+  "docstatus": 0,
+  "doctype": "Module Def",
+  "modified": "2025-11-14 16:25:11.767860",
+  "module_name": "Sigma Support",
+  "name": "Sigma Support",
+  "package": null,
+  "restrict_to_domain": null
+ },
+ {
+  "app_name": "sigma",
+  "custom": 0,
+  "docstatus": 0,
+  "doctype": "Module Def",
+  "modified": "2025-11-14 16:25:11.932434",
+  "module_name": "Sigma Telephony",
+  "name": "Sigma Telephony",
+  "package": null,
+  "restrict_to_domain": null
+ },
+ {
+  "app_name": "sigma",
+  "custom": 0,
+  "docstatus": 0,
+  "doctype": "Module Def",
+  "modified": "2025-11-20 14:13:16.191501",
+  "module_name": "Sigma Personnel",
+  "name": "Sigma Personnel",
+  "package": null,
+  "restrict_to_domain": null
+ },
+ {
+  "app_name": "sigma",
+  "custom": 0,
+  "docstatus": 0,
+  "doctype": "Module Def",
+  "modified": "2025-12-01 19:46:03.795385",
+  "module_name": "Sigma Assets",
+  "name": "Sigma Assets",
+  "package": null,
+  "restrict_to_domain": null
+ },
+ {
+  "app_name": "sigma",
+  "custom": 0,
+  "docstatus": 0,
+  "doctype": "Module Def",
+  "modified": "2025-12-01 20:21:18.888318",
+  "module_name": "Sigma Human Tracking",
+  "name": "Sigma Human Tracking",
+  "package": null,
+  "restrict_to_domain": null
+ },
+ {
+  "app_name": "sigma",
+  "custom": 0,
+  "docstatus": 0,
+  "doctype": "Module Def",
+  "modified": "2025-12-11 00:00:00.000000",
+  "module_name": "Sigma Guard Services",
+  "name": "Sigma Guard Services",
+  "package": null,
+  "restrict_to_domain": null
+ }
+]

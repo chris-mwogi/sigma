@@ -1,0 +1,27 @@
+{
+  "name": "Visitor Vehicle Dashboard",
+  "label": "Visitor Vehicle Management Dashboard",
+  "module": "Sigma Vehicle Management",
+  "icon": "🟡",
+  "description": "Vendors, contractors, external visitors - approvals, pre-registration, ANPR tracking",
+  "is_default": 0,
+  "charts": [
+    {"chart": "Visitor Vehicles by Purpose", "width": "Half"},
+    {"chart": "Frequency by Vendor Company", "width": "Half"},
+    {"chart": "By Hosting Department", "width": "Half"},
+    {"chart": "Visitor Vehicle Trend", "width": "Half"}
+  ],
+  "shortcuts": [
+    {"label": "Visitor Vehicles", "link_to": "Vehicle Pass", "type": "DocType"},
+    {"label": "Pre-Registration", "link_to": "Vehicle Registration", "type": "DocType"},
+    {"label": "ANPR Logs", "link_to": "Vehicle Access Log", "type": "DocType"}
+  ],
+  "cards": [
+    {"card": "Expected Today"},
+    {"card": "Approved Visitors"},
+    {"card": "Pending Host Approval"},
+    {"card": "Parked Onsite"},
+    {"card": "Overstay Vehicles"}
+  ]
+}
+

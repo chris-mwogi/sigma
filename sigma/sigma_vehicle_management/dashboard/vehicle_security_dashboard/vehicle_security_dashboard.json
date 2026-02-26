@@ -1,0 +1,28 @@
+{
+  "name": "Vehicle Security Dashboard",
+  "label": "Vehicle Security & Incident Dashboard",
+  "module": "Sigma Vehicle Management",
+  "icon": "🚨",
+  "description": "Corporate Security & Risk Unit - restricted zones, night entries, stolen plates, route violations",
+  "is_default": 0,
+  "charts": [
+    {"chart": "Restricted Zone Entries by Type", "width": "Half"},
+    {"chart": "Night Entry Breakdown", "width": "Half"},
+    {"chart": "Security Incident Timeline", "width": "Half"},
+    {"chart": "Alert Severity Distribution", "width": "Half"}
+  ],
+  "shortcuts": [
+    {"label": "Security Alerts", "link_to": "Vehicle Access Log", "type": "DocType"},
+    {"label": "Incidents", "link_to": "Vehicle Access Log", "type": "DocType"},
+    {"label": "Blacklisted Vehicles", "link_to": "Vehicle", "type": "DocType"}
+  ],
+  "cards": [
+    {"card": "Restricted Zone Entries"},
+    {"card": "Night Entries"},
+    {"card": "Human Vehicle Incidents"},
+    {"card": "Stolen Mismatched Plates"},
+    {"card": "Route Violations"},
+    {"card": "Total Alerts"}
+  ]
+}
+

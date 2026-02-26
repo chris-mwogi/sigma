@@ -1,0 +1,16 @@
+// Case Management Dashboards
+export { default as CaseExecutiveDashboard } from './CaseExecutiveDashboard.vue'
+export { default as CaseInvestigationDashboard } from './CaseInvestigationDashboard.vue'
+export { default as FraudEthicsDashboard } from './FraudEthicsDashboard.vue'
+export { default as HRMisconductDashboard } from './HRMisconductDashboard.vue'
+export { default as SafetyIncidentDashboard } from './SafetyIncidentDashboard.vue'
+export { default as CustomerComplaintDashboard } from './CustomerComplaintDashboard.vue'
+export { default as LegalCaseDashboard } from './LegalCaseDashboard.vue'
+export { default as SLAPerformanceDashboard } from './SLAPerformanceDashboard.vue'
+export { default as CaseGeographicDashboard } from './CaseGeographicDashboard.vue'
+export { default as AuditCaseDashboard } from './AuditCaseDashboard.vue'
+export { default as WhistleblowerDashboard } from './WhistleblowerDashboard.vue'
+export { default as CaseClosureDashboard } from './CaseClosureDashboard.vue'
+export { default as AssetTheftDashboard } from './AssetTheftDashboard.vue'
+export { default as IllegalConnectionDashboard } from './IllegalConnectionDashboard.vue'
+

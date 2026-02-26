@@ -85,12 +85,22 @@ def after_install():
         except Exception as e:
             print(f"✗ Error creating item group: {str(e)}\n")
     
+    # Sync Executive Security & SOC dashboards
+    print("Syncing dashboards...")
+    try:
+        from sigma.sigma_guard_services.dashboard_sync import sync_executive_and_soc_dashboards
+        sync_executive_and_soc_dashboards()
+        print("✓ Executive Security & SOC dashboards synced\n")
+    except Exception as e:
+        print(f"✗ Error syncing dashboards: {str(e)}\n")
+        frappe.log_error("Dashboard Sync Error", str(e))
+
     frappe.db.commit()
-    
+
     print("="*60)
     print("✓ Sigma ERPNext Integrations installed successfully!")
     print("="*60 + "\n")
-    
+
     print("Next Steps:")
     print("1. Configure integration settings in: Setup > Sigma Integration Settings")
     print("2. Review custom fields added to ERPNext DocTypes")
@@ -100,12 +110,13 @@ def after_install():
 def after_migrate():
     """
     Run after database migration
-    
+
     - Update custom fields if needed
     - Migrate data if schema changed
+    - Sync dashboards from JSON definitions
     """
     print("Running post-migration tasks for Sigma ERPNext Integrations...")
-    
+
     # Reinstall custom fields to catch any updates
     try:
         from sigma.sigma_erpnext_integrations.custom_fields import install_custom_fields
@@ -114,7 +125,16 @@ def after_migrate():
     except Exception as e:
         print(f"✗ Error updating custom fields: {str(e)}")
         frappe.log_error("Custom Fields Update Error", str(e))
-    
+
+    # Sync Executive Security & SOC dashboards
+    try:
+        from sigma.sigma_guard_services.dashboard_sync import sync_executive_and_soc_dashboards
+        sync_executive_and_soc_dashboards()
+        print("✓ Executive Security & SOC dashboards synced")
+    except Exception as e:
+        print(f"✗ Error syncing dashboards: {str(e)}")
+        frappe.log_error("Dashboard Sync Error", str(e))
+
     frappe.db.commit()
 
 

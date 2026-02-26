@@ -1,0 +1,84 @@
+{
+  "creation": "2025-10-24 00:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "Document",
+  "engine": "InnoDB",
+  "field_order": [
+    "visitor",
+    "visitor_name",
+    "guard",
+    "guard_name",
+    "visitor_guard_assignment",
+    "column_break_5",
+    "evacuated",
+    "evacuation_time",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "visitor",
+      "fieldtype": "Link",
+      "label": "Visitor",
+      "options": "Human Profile",
+      "reqd": 1,
+      "link_filters": "[[\"Human Profile\", \"person_type\", \"=\", \"Visitor\"]]"
+    },
+    {
+      "fieldname": "visitor_name",
+      "fieldtype": "Data",
+      "label": "Visitor Name",
+      "read_only": 1
+    },
+    {
+      "fieldname": "guard",
+      "fieldtype": "Link",
+      "label": "Guard",
+      "options": "Security Resource",
+      "reqd": 1
+    },
+    {
+      "fieldname": "guard_name",
+      "fieldtype": "Data",
+      "label": "Guard Name",
+      "read_only": 1
+    },
+    {
+      "fieldname": "visitor_guard_assignment",
+      "fieldtype": "Link",
+      "label": "Visitor Guard Assignment",
+      "options": "Visitor Guard Assignment"
+    },
+    {
+      "fieldname": "column_break_5",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "evacuated",
+      "fieldtype": "Check",
+      "label": "Evacuated",
+      "default": 0
+    },
+    {
+      "fieldname": "evacuation_time",
+      "fieldtype": "Datetime",
+      "label": "Evacuation Time"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ],
+  "istable": 1,
+  "links": [],
+  "modified": "2025-10-24 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sigma Guard Services",
+  "name": "Evacuation Assignment Item",
+  "owner": "Administrator",
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1
+}
+

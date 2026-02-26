@@ -1,0 +1,28 @@
+{
+  "name": "Fleet Operations Dashboard",
+  "label": "Company Fleet Operations Dashboard",
+  "module": "Sigma Vehicle Management",
+  "icon": "🛣️",
+  "description": "Official company vehicles tracking - GPS, fuel, maintenance, driver analytics",
+  "is_default": 0,
+  "charts": [
+    {"chart": "Fleet Status Distribution", "width": "Half"},
+    {"chart": "Engine Hours by Vehicle", "width": "Half"},
+    {"chart": "Fuel Usage Trend", "width": "Half"},
+    {"chart": "Route Deviations", "width": "Half"},
+    {"chart": "Driver Behavior Analytics", "width": "Full"}
+  ],
+  "shortcuts": [
+    {"label": "Company Vehicles", "link_to": "Vehicle", "type": "DocType"},
+    {"label": "Work Orders", "link_to": "Vehicle Inspection Checklist", "type": "DocType"},
+    {"label": "Fuel Records", "link_to": "Vehicle", "type": "DocType"}
+  ],
+  "cards": [
+    {"card": "Active on Road"},
+    {"card": "Parked at Yards"},
+    {"card": "In Maintenance"},
+    {"card": "Unavailable Breakdown"},
+    {"card": "Active Drivers Today"}
+  ]
+}
+

@@ -1,0 +1,24 @@
+{
+ "aggregate_function_based_on": "",
+ "color": "#f59e0b",
+ "creation": "2025-12-11 16:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Case Record",
+ "filters_json": "[[\"Case Record\",\"status\",\"=\",\"Closed\"]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Avg Resolution Days",
+ "modified": "2025-12-11 16:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Case Management",
+ "name": "Avg Resolution Days",
+ "owner": "Administrator",
+ "roles": [],
+ "show_percentage_stats": 0,
+ "stats_time_interval": "Monthly",
+ "type": "Document Type"
+}
+

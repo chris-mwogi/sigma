@@ -138,6 +138,7 @@
    "default": "Active",
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_standard_filter": 1,
    "label": "Status",
    "options": "Active\nCompleted\nReassigned\nCancelled",
    "width": "50%"

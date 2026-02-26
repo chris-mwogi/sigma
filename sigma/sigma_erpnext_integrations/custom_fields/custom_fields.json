@@ -256,7 +256,8 @@
     "fieldname": "sigma_visitor",
     "label": "Sigma Visitor",
     "fieldtype": "Link",
-    "options": "Visitor",
+    "options": "Human Profile",
+    "link_filters": "[[\"Human Profile\", \"person_type\", \"=\", \"Visitor\"]]",
     "insert_after": "first_name",
     "read_only": 1
   },

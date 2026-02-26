@@ -33,12 +33,12 @@ class VMSEvent(Document):
 	
 	def validate_visitor_status(self):
 		"""Validate visitor status"""
-		if self.visitor and not frappe.db.exists("Visitor", self.visitor):
+		if self.visitor and not frappe.db.exists("Human Profile", self.visitor):
 			frappe.throw(f"Visitor {self.visitor} not found")
-		
+
 		# Check if visitor is blacklisted
 		if self.visitor:
-			visitor = frappe.get_doc("Visitor", self.visitor)
+			visitor = frappe.get_doc("Human Profile", self.visitor)
 			if visitor.is_blacklisted:
 				self.visitor_status = "Blacklisted"
 	

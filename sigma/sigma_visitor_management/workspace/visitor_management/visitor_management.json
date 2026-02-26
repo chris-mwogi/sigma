@@ -1,8 +1,8 @@
 {
  "app": "sigma",
  "charts": [],
- "content": "[{\"id\": \"header-main\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h3\\\"><b>Visitor Management</b></span>\", \"col\": 12}}, {\"id\": \"spacer-1\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"shortcut-block\", \"type\": \"shortcut\", \"data\": {\"col\": 12}}, {\"id\": \"spacer-2\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"card-block-1\", \"type\": \"card\", \"data\": {\"card_name\": \"Visitor Management\", \"col\": 4}}, {\"id\": \"card-block-2\", \"type\": \"card\", \"data\": {\"card_name\": \"Integration\", \"col\": 4}}, {\"id\": \"card-block-3\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports & Analytics\", \"col\": 4}}]",
- "creation": "2025-12-01 13:42:25.015976",
+ "content": "[{\"id\": \"header-main\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h3\\\"><b>Visitor Management</b></span>\", \"col\": 12}}, {\"id\": \"para-main\", \"type\": \"paragraph\", \"data\": {\"text\": \"<p>Manage visitors, registrations, check-ins, and security monitoring.</p>\", \"col\": 12}}, {\"id\": \"spacer-1\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"header-shortcuts\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Quick Access</b></span>\", \"col\": 12}}, {\"id\": \"shortcut-visitor\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Visitor\"}}, {\"id\": \"shortcut-registration\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Visitor Registration\"}}, {\"id\": \"shortcut-checkin\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Visitor Checkin Checkout\"}}, {\"id\": \"shortcut-watchlist\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Visitor Watchlist\"}}, {\"id\": \"spacer-2\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"header-dashboards\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Dashboards</b></span>\", \"col\": 12}}, {\"id\": \"dashboard-visitor\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"Visitor Dashboard\"}}, {\"id\": \"dashboard-operations\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"Visitor Operations Dashboard\"}}, {\"id\": \"dashboard-security\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"Visitor Security Dashboard\"}}, {\"id\": \"dashboard-analytics\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"Visitor Analytics Dashboard\"}}, {\"id\": \"dashboard-prereg\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"Visitor Pre-Registration Dashboard\"}}, {\"id\": \"spacer-3\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"header-cards\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Visitor Management</b></span>\", \"col\": 12}}, {\"id\": \"card-visitors\", \"type\": \"card\", \"data\": {\"card_name\": \"Visitor Management\", \"col\": 6}}, {\"id\": \"card-settings\", \"type\": \"card\", \"data\": {\"card_name\": \"Settings\", \"col\": 6}}]",
+ "creation": "2025-12-17 11:46:11.175913",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
@@ -14,18 +14,6 @@
  "label": "Visitor Management",
  "link_type": "DocType",
  "links": [
-  {
-   "description": "Unified human tracking and monitoring workspace",
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Human Tracking",
-   "link_count": 0,
-   "link_to": "human-tracking",
-   "link_type": "Page",
-   "onboard": 0,
-   "only_for": "",
-   "type": "Link"
-  },
   {
    "hidden": 0,
    "is_query_report": 0,
@@ -42,8 +30,7 @@
    "link_count": 0,
    "link_to": "Visitor",
    "link_type": "DocType",
-   "onboard": 0,
-   "only_for": "",
+   "onboard": 1,
    "type": "Link"
   },
   {
@@ -53,30 +40,27 @@
    "link_count": 0,
    "link_to": "Visitor Registration",
    "link_type": "DocType",
-   "onboard": 0,
-   "only_for": "",
+   "onboard": 1,
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Visitor Type",
+   "label": "Visitor Checkin Checkout",
    "link_count": 0,
-   "link_to": "Visitor Type",
+   "link_to": "Visitor Checkin Checkout",
    "link_type": "DocType",
-   "onboard": 0,
-   "only_for": "",
+   "onboard": 1,
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Visitor Watchlist",
+   "label": "Visitor Access Log",
    "link_count": 0,
-   "link_to": "Visitor Watchlist",
+   "link_to": "Visitor Access Log",
    "link_type": "DocType",
    "onboard": 0,
-   "only_for": "",
    "type": "Link"
   },
   {
@@ -92,19 +76,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Visitor Checkin Checkout",
+   "label": "Visitor Watchlist",
    "link_count": 0,
-   "link_to": "Visitor Checkin Checkout",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Visitor Access Log",
-   "link_count": 0,
-   "link_to": "Visitor Access Log",
+   "link_to": "Visitor Watchlist",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -132,7 +106,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Integration",
+   "label": "Settings",
    "link_count": 0,
    "link_type": "DocType",
    "onboard": 0,
@@ -141,127 +115,97 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Human Profile",
+   "label": "Visitor Type",
    "link_count": 0,
-   "link_to": "Human Profile",
+   "link_to": "Visitor Type",
    "link_type": "DocType",
    "onboard": 0,
-   "only_for": "",
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Human Location Event",
+   "label": "Visitor Required Document",
    "link_count": 0,
-   "link_to": "Human Location Event",
+   "link_to": "Visitor Required Document",
    "link_type": "DocType",
-   "onboard": 0,
-   "only_for": "",
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Personnel Management",
-   "link_count": 0,
-   "link_to": "personnel-management",
-   "link_type": "Page",
-   "onboard": 0,
-   "only_for": "",
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Reports & Analytics",
-   "link_count": 0,
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Visitor Log Report",
-   "link_count": 0,
-   "link_to": "Visitor Log Report",
-   "link_type": "Report",
-   "onboard": 0,
-   "only_for": "",
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Visitor Statistics",
-   "link_count": 0,
-   "link_to": "Visitor Statistics",
-   "link_type": "Report",
-   "onboard": 0,
-   "only_for": "",
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Visitor Activity Report",
-   "link_count": 0,
-   "link_to": "Visitor Activity Report",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Live Visitors Onsite",
-   "link_count": 0,
-   "link_to": "Live Visitors Onsite",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "High-Risk Visitors Today",
-   "link_count": 0,
-   "link_to": "High-Risk Visitors Today",
-   "link_type": "Report",
    "onboard": 0,
    "type": "Link"
   }
  ],
- "modified": "2025-12-01 17:44:19.857572",
+ "modified": "2025-12-17 12:19:51.535890",
  "modified_by": "Administrator",
  "module": "Sigma Visitor Management",
  "name": "Visitor Management",
  "number_cards": [],
  "owner": "Administrator",
- "parent_page": "Human Tracking",
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 2.0,
+ "sequence_id": 0.0,
  "shortcuts": [
   {
    "color": "green",
    "doc_view": "",
-   "format": "{} Active",
    "label": "Visitor",
    "link_to": "Visitor",
-   "stats_filter": "{\"status\": \"Active\"}",
    "type": "DocType"
   },
   {
    "color": "blue",
    "doc_view": "",
-   "format": "{} Today",
    "label": "Visitor Registration",
    "link_to": "Visitor Registration",
-   "stats_filter": "{\"registration_date\": [\"Timespan\", \"today\"]}",
    "type": "DocType"
+  },
+  {
+   "color": "orange",
+   "doc_view": "",
+   "label": "Visitor Checkin Checkout",
+   "link_to": "Visitor Checkin Checkout",
+   "type": "DocType"
+  },
+  {
+   "color": "red",
+   "doc_view": "",
+   "label": "Visitor Watchlist",
+   "link_to": "Visitor Watchlist",
+   "type": "DocType"
+  },
+  {
+   "color": "cyan",
+   "doc_view": "",
+   "label": "Visitor Dashboard",
+   "link_to": "Visitor Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "blue",
+   "doc_view": "",
+   "label": "Visitor Operations Dashboard",
+   "link_to": "Visitor Operations Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "red",
+   "doc_view": "",
+   "label": "Visitor Security Dashboard",
+   "link_to": "Visitor Security Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "purple",
+   "doc_view": "",
+   "label": "Visitor Analytics Dashboard",
+   "link_to": "Visitor Analytics Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "orange",
+   "doc_view": "",
+   "label": "Visitor Pre-Registration Dashboard",
+   "link_to": "Visitor Pre-Registration Dashboard",
+   "type": "Dashboard"
   }
  ],
  "title": "Visitor Management",

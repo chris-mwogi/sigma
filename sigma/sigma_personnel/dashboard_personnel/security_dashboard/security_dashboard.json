@@ -1,0 +1,26 @@
+{
+  "cards": [
+    {"card": "Unauthorized Access Attempts"},
+    {"card": "Tailgating Events"},
+    {"card": "Restricted Area Entry"},
+    {"card": "CCTV Anomaly Logs"}
+  ],
+  "charts": [
+    {"chart": "Security Incidents Trend", "width": "Full"},
+    {"chart": "Unauthorized Access by Zone", "width": "Half"},
+    {"chart": "Tailgating by Access Point", "width": "Half"},
+    {"chart": "Security Events by Hour", "width": "Full"}
+  ],
+  "creation": "2025-12-09 00:00:00",
+  "dashboard_name": "Security Dashboard",
+  "docstatus": 0,
+  "doctype": "Dashboard",
+  "idx": 0,
+  "is_default": 0,
+  "is_standard": 1,
+  "modified": "2025-12-09 00:00:00",
+  "modified_by": "Administrator",
+  "module": "Sigma Personnel",
+  "name": "Security Dashboard",
+  "owner": "Administrator"
+}

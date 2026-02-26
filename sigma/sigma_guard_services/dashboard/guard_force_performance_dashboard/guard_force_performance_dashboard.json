@@ -1,0 +1,50 @@
+{
+ "cards": [
+  {
+   "card": "Total Guards Deployed"
+  },
+  {
+   "card": "Guards on Duty"
+  },
+  {
+   "card": "Unmanned Posts"
+  },
+  {
+   "card": "Late Checkins Today"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Guard Shifts by Status",
+   "width": "Half"
+  },
+  {
+   "chart": "Guard Assignments by Status",
+   "width": "Half"
+  },
+  {
+   "chart": "Patrols Completed Over Time",
+   "width": "Full"
+  },
+  {
+   "chart": "Resource Deployments by Location",
+   "width": "Half"
+  },
+  {
+   "chart": "Guard Activity Trend",
+   "width": "Half"
+  }
+ ],
+ "creation": "2025-12-11 15:13:52.869883",
+ "dashboard_name": "Guard Force Performance Dashboard",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2025-12-11 16:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Guard Services",
+ "name": "Guard Force Performance Dashboard",
+ "owner": "Administrator"
+}

@@ -1,0 +1,24 @@
+{
+ "aggregate_function_based_on": "",
+ "color": "#dc2626",
+ "creation": "2025-12-11 00:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Case",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[[\"Case\",\"status\",\"not in\",[\"Closed\",\"Rejected\"]],[\"Case\",\"docstatus\",\"!=\",2]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "High Severity Cases",
+ "modified": "2025-12-11 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Case Management",
+ "name": "High Severity Cases",
+ "owner": "Administrator",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Monthly",
+ "type": "Document Type"
+}
+

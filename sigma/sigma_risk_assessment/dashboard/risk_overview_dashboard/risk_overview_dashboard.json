@@ -1,0 +1,54 @@
+{
+ "cards": [
+  {
+   "card": "Total Risks"
+  },
+  {
+   "card": "High Risks"
+  },
+  {
+   "card": "Active Risks"
+  },
+  {
+   "card": "Mitigated Risks"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Risks by Status",
+   "width": "Half"
+  },
+  {
+   "chart": "Risks by Category",
+   "width": "Half"
+  },
+  {
+   "chart": "Risks by Impact Area",
+   "width": "Half"
+  },
+  {
+   "chart": "Risk Register Trend",
+   "width": "Half"
+  },
+  {
+   "chart": "Assessments by Risk Rating",
+   "width": "Half"
+  },
+  {
+   "chart": "Assessments by Type",
+   "width": "Half"
+  }
+ ],
+ "creation": "2025-12-14 17:39:06.862852",
+ "dashboard_name": "Risk Overview Dashboard",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2025-12-14 17:39:06.862852",
+ "modified_by": "Administrator",
+ "module": "Sigma Risk Assessment",
+ "name": "Risk Overview Dashboard",
+ "owner": "Administrator"
+}

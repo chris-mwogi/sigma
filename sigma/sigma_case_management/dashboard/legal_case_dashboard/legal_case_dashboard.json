@@ -1,0 +1,46 @@
+{
+ "cards": [
+  {
+   "card": "Active Legal Cases"
+  },
+  {
+   "card": "High Severity Cases"
+  },
+  {
+   "card": "Under Investigation Cases"
+  },
+  {
+   "card": "Cases This Month"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Case Trend Monthly",
+   "width": "Full"
+  },
+  {
+   "chart": "Cases by Type",
+   "width": "Half"
+  },
+  {
+   "chart": "Cases by Status",
+   "width": "Half"
+  },
+  {
+   "chart": "Cases by Region",
+   "width": "Full"
+  }
+ ],
+ "creation": "2025-12-11 11:50:41.710308",
+ "dashboard_name": "Legal Case Dashboard",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2025-12-11 11:50:41.710308",
+ "modified_by": "Administrator",
+ "module": "Sigma Case Management",
+ "name": "Legal Case Dashboard",
+ "owner": "Administrator"
+}

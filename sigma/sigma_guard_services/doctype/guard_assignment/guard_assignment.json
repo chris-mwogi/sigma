@@ -1,0 +1,225 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "autoname": "GA-.location.-.YYYY.-.####",
+  "creation": "2025-02-13 10:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "Document",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "manning_allocation",
+    "allocation_details",
+    "column_break_1",
+    "security_firm",
+    "security_firm_name",
+    "section_break_location",
+    "location",
+    "location_name",
+    "column_break_location",
+    "zone",
+    "assignment_date",
+    "section_break_guards",
+    "assigned_guards",
+    "section_break_stats",
+    "total_assigned",
+    "day_shift_count",
+    "column_break_stats",
+    "night_shift_count",
+    "section_break_notes",
+    "assignment_notes",
+    "amended_from"
+  ],
+  "fields": [
+    {
+      "fieldname": "manning_allocation",
+      "fieldtype": "Link",
+      "label": "Manning Allocation",
+      "options": "Manning Allocation",
+      "reqd": 1,
+      "in_list_view": 1,
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "allocation_details",
+      "fieldtype": "Small Text",
+      "label": "Allocation Details",
+      "read_only": 1,
+      "description": "Summary of required manning from allocation"
+    },
+    {
+      "fieldname": "column_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "security_firm",
+      "fieldtype": "Link",
+      "label": "Security Firm",
+      "options": "Supplier",
+      "reqd": 1,
+      "in_list_view": 1,
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "security_firm_name",
+      "fieldtype": "Data",
+      "label": "Security Firm Name",
+      "fetch_from": "security_firm.supplier_name",
+      "read_only": 1
+    },
+    {
+      "fieldname": "section_break_location",
+      "fieldtype": "Section Break",
+      "label": "Location"
+    },
+    {
+      "fieldname": "location",
+      "fieldtype": "Link",
+      "label": "Location",
+      "options": "Location",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "location_name",
+      "fieldtype": "Data",
+      "label": "Location Name",
+      "fetch_from": "location.location_name",
+      "read_only": 1
+    },
+    {
+      "fieldname": "column_break_location",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "zone",
+      "fieldtype": "Link",
+      "label": "Zone",
+      "options": "Zone Configuration"
+    },
+    {
+      "fieldname": "assignment_date",
+      "fieldtype": "Date",
+      "label": "Assignment Date",
+      "reqd": 1,
+      "default": "Today"
+    },
+    {
+      "fieldname": "section_break_guards",
+      "fieldtype": "Section Break",
+      "label": "Assigned Guards"
+    },
+    {
+      "fieldname": "assigned_guards",
+      "fieldtype": "Table",
+      "label": "Assigned Guards",
+      "options": "Guard Assignment Item",
+      "reqd": 1
+    },
+    {
+      "fieldname": "section_break_stats",
+      "fieldtype": "Section Break",
+      "label": "Assignment Statistics"
+    },
+    {
+      "fieldname": "total_assigned",
+      "fieldtype": "Int",
+      "label": "Total Assigned",
+      "read_only": 1
+    },
+    {
+      "fieldname": "day_shift_count",
+      "fieldtype": "Int",
+      "label": "Day Shift",
+      "read_only": 1
+    },
+    {
+      "fieldname": "column_break_stats",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "night_shift_count",
+      "fieldtype": "Int",
+      "label": "Night Shift",
+      "read_only": 1
+    },
+    {
+      "fieldname": "section_break_notes",
+      "fieldtype": "Section Break",
+      "label": "Notes"
+    },
+    {
+      "fieldname": "assignment_notes",
+      "fieldtype": "Text Editor",
+      "label": "Assignment Notes"
+    },
+    {
+      "fieldname": "amended_from",
+      "fieldtype": "Link",
+      "label": "Amended From",
+      "no_copy": 1,
+      "options": "Guard Assignment",
+      "print_hide": 1,
+      "read_only": 1
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "is_submittable": 1,
+  "links": [],
+  "modified": "2025-02-13 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sigma Guard Services",
+  "name": "Guard Assignment",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "amend": 1,
+      "cancel": 1,
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "amend": 1,
+      "cancel": 1,
+      "create": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Security Manager",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "amend": 1,
+      "cancel": 1,
+      "create": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Service Provider",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1
+}
+

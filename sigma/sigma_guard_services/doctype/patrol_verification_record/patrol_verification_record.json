@@ -1,0 +1,195 @@
+{
+  "autoname": "PVR-{YYYY}-{####}",
+  "creation": "2025-10-24 00:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "Document",
+  "engine": "InnoDB",
+  "field_order": [
+    "patrol_schedule",
+    "location",
+    "zone",
+    "patrol_date",
+    "checkpoint",
+    "column_break_4",
+    "patrol_officer",
+    "verification_time",
+    "section_break_5",
+    "gps_latitude",
+    "gps_longitude",
+    "section_break_6",
+    "resources_verified",
+    "section_break_7",
+    "photos",
+    "section_break_8",
+    "discrepancies_found",
+    "discrepancy_report",
+    "section_break_9",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "patrol_schedule",
+      "fieldtype": "Link",
+      "label": "Patrol Schedule",
+      "options": "Patrol Schedule",
+      "reqd": 1
+    },
+    {
+      "fieldname": "location",
+      "fieldtype": "Link",
+      "label": "Location",
+      "options": "Location",
+      "reqd": 1,
+      "description": "Location where verification occurred"
+    },
+    {
+      "fieldname": "zone",
+      "fieldtype": "Link",
+      "label": "Zone",
+      "options": "Zone Configuration",
+      "description": "Specific zone within the location"
+    },
+    {
+      "fieldname": "patrol_date",
+      "fieldtype": "Date",
+      "label": "Patrol Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "checkpoint",
+      "fieldtype": "Link",
+      "label": "Checkpoint",
+      "options": "Patrol Checkpoint",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_4",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "patrol_officer",
+      "fieldtype": "Link",
+      "label": "Patrol Officer",
+      "options": "Security Resource",
+      "read_only": 1
+    },
+    {
+      "fieldname": "verification_time",
+      "fieldtype": "Datetime",
+      "label": "Verification Time",
+      "reqd": 1
+    },
+    {
+      "fieldname": "section_break_5",
+      "fieldtype": "Section Break",
+      "label": "GPS Coordinates"
+    },
+    {
+      "fieldname": "gps_latitude",
+      "fieldtype": "Float",
+      "label": "GPS Latitude",
+      "precision": 8
+    },
+    {
+      "fieldname": "gps_longitude",
+      "fieldtype": "Float",
+      "label": "GPS Longitude",
+      "precision": 8
+    },
+    {
+      "fieldname": "section_break_6",
+      "fieldtype": "Section Break",
+      "label": "Resources Verified"
+    },
+    {
+      "fieldname": "resources_verified",
+      "fieldtype": "Table",
+      "label": "Resources Verified",
+      "options": "Patrol Verification Item"
+    },
+    {
+      "fieldname": "section_break_7",
+      "fieldtype": "Section Break",
+      "label": "Photos"
+    },
+    {
+      "fieldname": "photos",
+      "fieldtype": "Attach Image",
+      "label": "Verification Photos"
+    },
+    {
+      "fieldname": "section_break_8",
+      "fieldtype": "Section Break",
+      "label": "Discrepancies"
+    },
+    {
+      "fieldname": "discrepancies_found",
+      "fieldtype": "Check",
+      "label": "Discrepancies Found"
+    },
+    {
+      "fieldname": "discrepancy_report",
+      "fieldtype": "Link",
+      "label": "Discrepancy Report",
+      "options": "Discrepancy Report",
+      "read_only": 1
+    },
+    {
+      "fieldname": "section_break_9",
+      "fieldtype": "Section Break",
+      "label": "Notes"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text Editor",
+      "label": "Notes"
+    }
+  ],
+  "is_submittable": 1,
+  "links": [],
+  "modified": "2025-10-24 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sigma Guard Services",
+  "name": "Patrol Verification Record",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Compliance Officer",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Service Provider"
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1
+}
+

@@ -1,0 +1,28 @@
+{
+  "name": "Parking Management Dashboard",
+  "label": "Parking Management Dashboard",
+  "module": "Sigma Vehicle Management",
+  "icon": "🅿️",
+  "description": "All vehicle types - zone occupancy, violations, heatmaps, reserved slot utilization",
+  "is_default": 0,
+  "charts": [
+    {"chart": "Overall Occupancy", "width": "Half"},
+    {"chart": "Occupancy by Vehicle Type", "width": "Half"},
+    {"chart": "Parking Lot Heatmap", "width": "Half"},
+    {"chart": "Occupancy per Zone", "width": "Half"},
+    {"chart": "Reserved Slot Utilization", "width": "Full"}
+  ],
+  "shortcuts": [
+    {"label": "Parking Zones", "link_to": "Parking Zone", "type": "DocType"},
+    {"label": "Parking Spaces", "link_to": "Parking Space", "type": "DocType"},
+    {"label": "Vehicle Check-ins", "link_to": "Vehicle Checkin Checkout", "type": "DocType"}
+  ],
+  "cards": [
+    {"card": "Total Parking Capacity"},
+    {"card": "Company Occupancy"},
+    {"card": "Staff Occupancy"},
+    {"card": "Visitor Occupancy"},
+    {"card": "Parking Violations"}
+  ]
+}
+

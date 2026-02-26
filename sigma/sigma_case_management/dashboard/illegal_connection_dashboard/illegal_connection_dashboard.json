@@ -1,0 +1,50 @@
+{
+ "cards": [
+  {
+   "card": "Total Illegal Connections"
+  },
+  {
+   "card": "Total Cases"
+  },
+  {
+   "card": "High Severity Cases"
+  },
+  {
+   "card": "Under Investigation Cases"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Illegal Connection Trend",
+   "width": "Full"
+  },
+  {
+   "chart": "Illegal Connection by Type",
+   "width": "Half"
+  },
+  {
+   "chart": "Cases by Region",
+   "width": "Half"
+  },
+  {
+   "chart": "Cases by Status",
+   "width": "Half"
+  },
+  {
+   "chart": "Cases by Severity",
+   "width": "Half"
+  }
+ ],
+ "creation": "2025-12-11 11:50:41.678449",
+ "dashboard_name": "Illegal Connection Dashboard",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2025-12-11 11:50:41.678449",
+ "modified_by": "Administrator",
+ "module": "Sigma Case Management",
+ "name": "Illegal Connection Dashboard",
+ "owner": "Administrator"
+}

@@ -4,6 +4,7 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [vue()],
+  base: '/assets/sigma/dist/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -12,7 +13,6 @@ export default defineConfig({
   build: {
     outDir: '../public/dist',
     emptyOutDir: true,
-    base: '/assets/sigma/public/dist/',
     rollupOptions: {
       output: {
         entryFileNames: 'js/[name].js',

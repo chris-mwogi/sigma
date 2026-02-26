@@ -1,8 +1,8 @@
 {
  "app": "sigma",
  "charts": [],
- "content": "[{\"id\": \"header-welcome\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h3\\\"><b>Welcome to Sigma</b></span>\", \"col\": 12}}, {\"id\": \"para-welcome\", \"type\": \"paragraph\", \"data\": {\"text\": \"<p>Comprehensive security, asset management, and operations platform.</p>\", \"col\": 12}}, {\"id\": \"spacer-welcome\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"header-shortcuts\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Quick Actions</b></span>\", \"col\": 12}}, {\"id\": \"shortcut-case\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Case\"}}, {\"id\": \"shortcut-project\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Project\"}}, {\"id\": \"shortcut-issue\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Issue\"}}, {\"id\": \"shortcut-visitor\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Visitor\"}}, {\"id\": \"shortcut-asset\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Asset\"}}, {\"id\": \"shortcut-access\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Access Event\"}}, {\"id\": \"spacer-nav\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"header-workspaces\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Workspace Navigation</b></span>\", \"col\": 12}}, {\"id\": \"card-core\", \"type\": \"card\", \"data\": {\"card_name\": \"Core Workspaces\", \"col\": 3}}, {\"id\": \"card-assets\", \"type\": \"card\", \"data\": {\"card_name\": \"Asset Management\", \"col\": 3}}, {\"id\": \"card-human\", \"type\": \"card\", \"data\": {\"card_name\": \"Human Tracking\", \"col\": 3}}, {\"id\": \"card-operations\", \"type\": \"card\", \"data\": {\"card_name\": \"Operations\", \"col\": 3}}, {\"id\": \"spacer-integration\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"card-integration\", \"type\": \"card\", \"data\": {\"card_name\": \"Integration & Monitoring\", \"col\": 3}}]",
- "creation": "2025-11-14 10:00:00.000000",
+ "content": "[{\"id\": \"header-welcome\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h3\\\"><b>Welcome to Sigma</b></span>\", \"col\": 12}}, {\"id\": \"para-welcome\", \"type\": \"paragraph\", \"data\": {\"text\": \"<p>Comprehensive security, asset management, and operations platform integrated with ERPNext.</p>\", \"col\": 12}}, {\"id\": \"spacer-welcome\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"header-shortcuts\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Quick Actions</b></span>\", \"col\": 12}}, {\"id\": \"shortcut-case\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Case\"}}, {\"id\": \"shortcut-project\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Project\"}}, {\"id\": \"shortcut-issue\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Issue\"}}, {\"id\": \"shortcut-lead\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Lead\"}}, {\"id\": \"shortcut-asset\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Asset\"}}, {\"id\": \"shortcut-visitor\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Visitor Registration\"}}, {\"id\": \"shortcut-sales\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Sales Order\"}}, {\"id\": \"shortcut-purchase\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Purchase Order\"}}, {\"id\": \"spacer-nav\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"header-workspaces\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Module Navigation</b></span>\", \"col\": 12}}, {\"id\": \"card-core\", \"type\": \"card\", \"data\": {\"card_name\": \"Core Workspaces\", \"col\": 4}}, {\"id\": \"card-assets\", \"type\": \"card\", \"data\": {\"card_name\": \"Asset Management\", \"col\": 4}}, {\"id\": \"card-human\", \"type\": \"card\", \"data\": {\"card_name\": \"Human Tracking\", \"col\": 4}}, {\"id\": \"card-operations\", \"type\": \"card\", \"data\": {\"card_name\": \"Operations\", \"col\": 4}}, {\"id\": \"card-erpnext\", \"type\": \"card\", \"data\": {\"card_name\": \"ERPNext Modules\", \"col\": 4}}, {\"id\": \"card-system\", \"type\": \"card\", \"data\": {\"card_name\": \"System & Settings\", \"col\": 4}}]",
+ "creation": "2025-11-14 10:00:00",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
@@ -19,66 +19,58 @@
    "is_query_report": 0,
    "label": "Core Workspaces",
    "link_count": 0,
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
   },
   {
+   "description": "Case Management",
    "hidden": 0,
    "is_query_report": 0,
-   "label": "CRM",
+   "label": "Case",
    "link_count": 0,
-   "link_to": "CRM",
-   "link_type": "Workspace",
+   "link_to": "Case",
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Helpdesk",
+   "label": "Risk Assessment",
    "link_count": 0,
-   "link_to": "Helpdesk",
-   "link_type": "Workspace",
+   "link_to": "Risk Assessment",
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Telephony",
+   "label": "Guard Shift",
    "link_count": 0,
-   "link_to": "Telephony",
-   "link_type": "Workspace",
+   "link_to": "Guard Shift",
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Support",
+   "label": "Access Event",
    "link_count": 0,
-   "link_to": "Support",
-   "link_type": "Workspace",
+   "link_to": "Access Event",
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Quality",
+   "label": "Incident Report",
    "link_count": 0,
-   "link_to": "Quality",
-   "link_type": "Workspace",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Projects",
-   "link_count": 0,
-   "link_to": "Projects",
-   "link_type": "Workspace",
+   "link_to": "Incident Report",
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   },
@@ -87,46 +79,57 @@
    "is_query_report": 0,
    "label": "Asset Management",
    "link_count": 0,
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Asset Management",
+   "label": "Asset",
    "link_count": 0,
-   "link_to": "Asset Management",
-   "link_type": "Workspace",
+   "link_to": "Asset",
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Stock",
+   "label": "Asset Location",
    "link_count": 0,
-   "link_to": "Stock",
-   "link_type": "Workspace",
+   "link_to": "Asset Location",
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Asset Acquisition",
+   "label": "Asset Category",
    "link_count": 0,
-   "link_to": "Asset Acquisition",
-   "link_type": "Workspace",
+   "link_to": "Asset Category",
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Asset Disposal",
+   "label": "Asset Maintenance",
    "link_count": 0,
-   "link_to": "Asset Disposal",
-   "link_type": "Workspace",
+   "link_to": "Asset Maintenance",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Item",
+   "link_count": 0,
+   "link_to": "Item",
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   },
@@ -135,46 +138,57 @@
    "is_query_report": 0,
    "label": "Human Tracking",
    "link_count": 0,
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Human Tracking",
+   "label": "Human Profile",
    "link_count": 0,
-   "link_to": "Human Tracking",
-   "link_type": "Workspace",
+   "link_to": "Human Profile",
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Personnel Management",
+   "label": "Visitor Registration",
    "link_count": 0,
-   "link_to": "Personnel Management",
-   "link_type": "Workspace",
+   "link_to": "Visitor Registration",
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Visitor Management",
+   "label": "Vehicle",
    "link_count": 0,
-   "link_to": "Visitor Management",
-   "link_type": "Workspace",
+   "link_to": "Vehicle",
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Vehicle Management",
+   "label": "Tracking Device",
    "link_count": 0,
-   "link_to": "Vehicle Management",
-   "link_type": "Workspace",
+   "link_to": "Tracking Device",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee",
+   "link_count": 0,
+   "link_to": "Employee",
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   },
@@ -183,63 +197,16 @@
    "is_query_report": 0,
    "label": "Operations",
    "link_count": 0,
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Case Management",
+   "label": "Lead",
    "link_count": 0,
-   "link_to": "Case Management",
-   "link_type": "Workspace",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Risk Management",
-   "link_count": 0,
-   "link_to": "Risk Management",
-   "link_type": "Workspace",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Access Control",
-   "link_count": 0,
-   "link_to": "Access Control",
-   "link_type": "Workspace",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Guarding Services",
-   "link_count": 0,
-   "link_to": "Guarding Services",
-   "link_type": "Workspace",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Integration & Monitoring",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Integration Log",
-   "link_count": 0,
-   "link_to": "Integration Log",
+   "link_to": "Lead",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -247,25 +214,173 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Integration Settings",
+   "label": "Issue",
+   "link_count": 0,
+   "link_to": "Issue",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Project",
+   "link_count": 0,
+   "link_to": "Project",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Task",
+   "link_count": 0,
+   "link_to": "Task",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Quality Inspection",
+   "link_count": 0,
+   "link_to": "Quality Inspection",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "ERPNext Modules",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Order",
+   "link_count": 0,
+   "link_to": "Sales Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchase Order",
+   "link_count": 0,
+   "link_to": "Purchase Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Invoice",
+   "link_count": 0,
+   "link_to": "Sales Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchase Invoice",
+   "link_count": 0,
+   "link_to": "Purchase Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Journal Entry",
+   "link_count": 0,
+   "link_to": "Journal Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Stock Entry",
+   "link_count": 0,
+   "link_to": "Stock Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "System & Settings",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "User",
+   "link_count": 0,
+   "link_to": "User",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Role",
+   "link_count": 0,
+   "link_to": "Role",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Company",
+   "link_count": 0,
+   "link_to": "Company",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "System Settings",
+   "link_count": 0,
+   "link_to": "System Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sigma Integration Settings",
    "link_count": 0,
    "link_to": "Sigma Integration Settings",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Sigma Settings",
-   "link_count": 0,
-   "link_to": "Sigma Settings",
-   "link_type": "Workspace",
-   "onboard": 0,
-   "type": "Link"
   }
  ],
- "modified": "2025-11-14 12:00:00.000000",
+ "modified": "2026-02-13 14:23:08.112870",
  "modified_by": "Administrator",
  "module": "Sigma",
  "name": "Home",
@@ -312,7 +427,17 @@
  "sequence_id": -100.0,
  "shortcuts": [
   {
+   "color": "Green",
+   "doc_view": "",
+   "format": "{} Open",
+   "label": "Case",
+   "link_to": "Case",
+   "stats_filter": "{\"status\":\"Open\"}",
+   "type": "DocType"
+  },
+  {
    "color": "Blue",
+   "doc_view": "",
    "format": "{} Open",
    "label": "Lead",
    "link_to": "Lead",
@@ -321,6 +446,7 @@
   },
   {
    "color": "Orange",
+   "doc_view": "",
    "format": "{} Open",
    "label": "Issue",
    "link_to": "Issue",
@@ -329,6 +455,7 @@
   },
   {
    "color": "Blue",
+   "doc_view": "",
    "format": "{} Open",
    "label": "Task",
    "link_to": "Task",
@@ -336,50 +463,48 @@
    "type": "DocType"
   },
   {
-   "color": "Green",
-   "format": "{} Open",
-   "label": "Case",
-   "link_to": "Case",
-   "stats_filter": "{\"status\":\"Open\"}",
-   "type": "DocType"
-  },
-  {
    "color": "Cyan",
+   "doc_view": "",
    "label": "Asset",
    "link_to": "Asset",
    "type": "DocType"
   },
   {
    "color": "Purple",
-   "label": "Visitor",
-   "link_to": "Visitor",
+   "doc_view": "",
+   "label": "Visitor Registration",
+   "link_to": "Visitor Registration",
    "type": "DocType"
   },
   {
-   "color": "Red",
-   "label": "Access Event",
-   "link_to": "Access Event",
+   "color": "Green",
+   "doc_view": "",
+   "label": "Sales Order",
+   "link_to": "Sales Order",
    "type": "DocType"
   },
   {
    "color": "Yellow",
-   "label": "Guard Shift",
-   "link_to": "Guard Shift",
+   "doc_view": "",
+   "label": "Purchase Order",
+   "link_to": "Purchase Order",
    "type": "DocType"
   },
   {
    "color": "Grey",
-   "label": "Vehicle",
-   "link_to": "Vehicle",
+   "doc_view": "",
+   "label": "Project",
+   "link_to": "Project",
    "type": "DocType"
   },
   {
-   "color": "Pink",
+   "color": "Red",
+   "doc_view": "",
    "label": "Risk Assessment",
    "link_to": "Risk Assessment",
    "type": "DocType"
   }
  ],
- "title": "Home"
+ "title": "Home",
+ "type": "Workspace"
 }
-

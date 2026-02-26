@@ -1,0 +1,107 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "autoname": "RA-{resource}-{####}",
+  "creation": "2025-10-24 10:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "Document",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "resource",
+    "availability_from",
+    "availability_to",
+    "availability_status",
+    "reason_section",
+    "reason",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "resource",
+      "fieldtype": "Link",
+      "label": "Resource",
+      "options": "Security Resource",
+      "reqd": 1
+    },
+    {
+      "fieldname": "availability_from",
+      "fieldtype": "Datetime",
+      "label": "Available From",
+      "reqd": 1
+    },
+    {
+      "fieldname": "availability_to",
+      "fieldtype": "Datetime",
+      "label": "Available To",
+      "reqd": 1
+    },
+    {
+      "fieldname": "availability_status",
+      "fieldtype": "Select",
+      "label": "Availability Status",
+      "options": "Available\nUnavailable\nMaintenance\nSick Leave\nAnnual Leave\nOther",
+      "default": "Available",
+      "reqd": 1
+    },
+    {
+      "fieldname": "reason_section",
+      "fieldtype": "Section Break",
+      "label": "Reason"
+    },
+    {
+      "fieldname": "reason",
+      "fieldtype": "Select",
+      "label": "Reason",
+      "options": "Scheduled Maintenance\nUnscheduled Maintenance\nSick Leave\nAnnual Leave\nPersonal Leave\nTraining\nOther",
+      "depends_on": "availability_status != 'Available'"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text",
+      "label": "Notes"
+    }
+  ],
+  "idx": 1,
+  "is_submittable": 1,
+  "links": [],
+  "modified": "2025-10-24 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sigma Guard Services",
+  "name": "Resource Availability",
+  "naming_rule": "NAMING_SERIES",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Compliance Officer",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    }
+  ],
+  "quick_entry": 1,
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1
+}
+

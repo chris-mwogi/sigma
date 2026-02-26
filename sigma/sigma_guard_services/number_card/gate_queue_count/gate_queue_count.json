@@ -1,0 +1,24 @@
+{
+ "aggregate_function_based_on": "",
+ "color": "#8b5cf6",
+ "creation": "2025-12-05 12:00:00",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Guard Activity",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[[\"Guard Activity\",\"activity_type\",\"=\",\"Gate Duty\"],[\"Guard Activity\",\"status\",\"=\",\"In Progress\"]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Gate Queue Count",
+ "modified": "2025-12-05 12:00:00",
+ "modified_by": "Administrator",
+ "module": "Sigma Guard Services",
+ "name": "Gate Queue Count",
+ "owner": "Administrator",
+ "show_full_number": 1,
+ "show_percentage_stats": 0,
+ "type": "Document Type"
+}
+

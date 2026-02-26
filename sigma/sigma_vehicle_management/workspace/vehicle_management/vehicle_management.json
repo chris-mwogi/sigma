@@ -1,7 +1,7 @@
 {
  "app": "sigma",
  "charts": [],
- "content": "[{\"id\": \"header-main\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h3\\\"><b>Vehicle Management</b></span>\", \"col\": 12}}, {\"id\": \"spacer-1\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"shortcut-block\", \"type\": \"shortcut\", \"data\": {\"col\": 12}}, {\"id\": \"spacer-2\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"card-block-1\", \"type\": \"card\", \"data\": {\"card_name\": \"Vehicle Management\", \"col\": 4}}, {\"id\": \"card-block-2\", \"type\": \"card\", \"data\": {\"card_name\": \"Integration\", \"col\": 4}}, {\"id\": \"card-block-3\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports & Analytics\", \"col\": 4}}]",
+ "content": "[{\"id\":\"header-main\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h3\\\"><b>Vehicle Management</b></span>\",\"col\":12}},{\"id\":\"para-main\",\"type\":\"paragraph\",\"data\":{\"text\":\"<p>Comprehensive vehicle tracking, parking management, and access control.</p>\",\"col\":12}},{\"id\":\"spacer-1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"header-shortcuts\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quick Actions</b></span>\",\"col\":12}},{\"id\":\"shortcut-vehicle\",\"type\":\"shortcut\",\"data\":{\"col\":3,\"shortcut_name\":\"Vehicle\"}},{\"id\":\"shortcut-checkin\",\"type\":\"shortcut\",\"data\":{\"col\":3,\"shortcut_name\":\"Vehicle Checkin Checkout\"}},{\"id\":\"shortcut-pass\",\"type\":\"shortcut\",\"data\":{\"col\":3,\"shortcut_name\":\"Vehicle Pass\"}},{\"id\":\"shortcut-parking\",\"type\":\"shortcut\",\"data\":{\"col\":3,\"shortcut_name\":\"Parking Zone\"}},{\"id\":\"spacer-2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"header-dashboards\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Dashboards</b></span>\",\"col\":12}},{\"id\":\"d1\",\"type\":\"shortcut\",\"data\":{\"col\":4,\"shortcut_name\":\"Vehicle Dashboard\"}},{\"id\":\"d2\",\"type\":\"shortcut\",\"data\":{\"col\":4,\"shortcut_name\":\"Vehicle Security Dashboard\"}},{\"id\":\"d3\",\"type\":\"shortcut\",\"data\":{\"col\":4,\"shortcut_name\":\"Vehicle Maintenance Dashboard\"}},{\"id\":\"d4\",\"type\":\"shortcut\",\"data\":{\"col\":4,\"shortcut_name\":\"Visitor Vehicle Dashboard\"}},{\"id\":\"d5\",\"type\":\"shortcut\",\"data\":{\"col\":4,\"shortcut_name\":\"Vehicle Access Control Dashboard\"}},{\"id\":\"d6\",\"type\":\"shortcut\",\"data\":{\"col\":4,\"shortcut_name\":\"Staff Vehicle Dashboard\"}},{\"id\":\"d7\",\"type\":\"shortcut\",\"data\":{\"col\":4,\"shortcut_name\":\"Fleet Operations Dashboard\"}},{\"id\":\"d8\",\"type\":\"shortcut\",\"data\":{\"col\":4,\"shortcut_name\":\"Gate Traffic Dashboard\"}},{\"id\":\"d9\",\"type\":\"shortcut\",\"data\":{\"col\":4,\"shortcut_name\":\"Parking Management Dashboard\"}},{\"id\":\"spacer-3\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"header-cards\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Vehicle Management</b></span>\",\"col\":12}},{\"id\":\"card-vehicles\",\"type\":\"card\",\"data\":{\"card_name\":\"Vehicle Registry\",\"col\":4}},{\"id\":\"card-parking\",\"type\":\"card\",\"data\":{\"card_name\":\"Parking Management\",\"col\":4}},{\"id\":\"card-inspection\",\"type\":\"card\",\"data\":{\"card_name\":\"Vehicle Inspection\",\"col\":4}},{\"id\":\"card-settings\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"card-reports\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports & Analytics\",\"col\":4}},{\"id\":\"card-dashboards\",\"type\":\"card\",\"data\":{\"card_name\":\"Dashboards\",\"col\":4}}]",
  "creation": "2025-12-01 13:45:08.506620",
  "custom_blocks": [],
  "docstatus": 0,
@@ -15,23 +15,9 @@
  "link_type": "DocType",
  "links": [
   {
-   "description": "Unified human tracking and monitoring workspace",
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Human Tracking",
-   "link_count": 0,
-   "link_to": "human-tracking",
-   "link_type": "Page",
-   "onboard": 0,
-   "only_for": "",
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Vehicle Management",
-   "link_count": 0,
-   "link_type": "DocType",
+   "label": "Vehicle Registry",
    "onboard": 0,
    "type": "Card Break"
   },
@@ -42,40 +28,7 @@
    "link_count": 0,
    "link_to": "Vehicle",
    "link_type": "DocType",
-   "onboard": 0,
-   "only_for": "",
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Vehicle Checkin Checkout",
-   "link_count": 0,
-   "link_to": "Vehicle Checkin Checkout",
-   "link_type": "DocType",
-   "onboard": 0,
-   "only_for": "",
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Parking Zone",
-   "link_count": 0,
-   "link_to": "Parking Zone",
-   "link_type": "DocType",
-   "onboard": 0,
-   "only_for": "",
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Parking Space",
-   "link_count": 0,
-   "link_to": "Parking Space",
-   "link_type": "DocType",
-   "onboard": 0,
+   "onboard": 1,
    "type": "Link"
   },
   {
@@ -101,12 +54,56 @@
   {
    "hidden": 0,
    "is_query_report": 0,
+   "label": "Vehicle Checkin Checkout",
+   "link_count": 0,
+   "link_to": "Vehicle Checkin Checkout",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Vehicle Access Log",
    "link_count": 0,
    "link_to": "Vehicle Access Log",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Parking Management",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Parking Zone",
+   "link_count": 0,
+   "link_to": "Parking Zone",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Parking Space",
+   "link_count": 0,
+   "link_to": "Parking Space",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Vehicle Inspection",
+   "onboard": 0,
+   "type": "Card Break"
   },
   {
    "hidden": 0,
@@ -131,51 +128,24 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Integration",
-   "link_count": 0,
-   "link_type": "DocType",
+   "label": "Settings",
    "onboard": 0,
    "type": "Card Break"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Human Profile",
+   "label": "Allowed Vehicle Type",
    "link_count": 0,
-   "link_to": "Human Profile",
+   "link_to": "Allowed Vehicle Type",
    "link_type": "DocType",
    "onboard": 0,
-   "only_for": "",
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Human Location Event",
-   "link_count": 0,
-   "link_to": "Human Location Event",
-   "link_type": "DocType",
-   "onboard": 0,
-   "only_for": "",
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Personnel Management",
-   "link_count": 0,
-   "link_to": "personnel-management",
-   "link_type": "Page",
-   "onboard": 0,
-   "only_for": "",
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Reports & Analytics",
-   "link_count": 0,
-   "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
   },
@@ -187,7 +157,6 @@
    "link_to": "Vehicle Log Report",
    "link_type": "Report",
    "onboard": 0,
-   "only_for": "",
    "type": "Link"
   },
   {
@@ -239,15 +208,103 @@
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Dashboards",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Vehicle Dashboard",
+   "link_to": "Vehicle Dashboard",
+   "link_type": "Dashboard",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Vehicle Security Dashboard",
+   "link_to": "Vehicle Security Dashboard",
+   "link_type": "Dashboard",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Vehicle Maintenance Dashboard",
+   "link_to": "Vehicle Maintenance Dashboard",
+   "link_type": "Dashboard",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Visitor Vehicle Dashboard",
+   "link_to": "Visitor Vehicle Dashboard",
+   "link_type": "Dashboard",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Vehicle Access Control Dashboard",
+   "link_to": "Vehicle Access Control Dashboard",
+   "link_type": "Dashboard",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Staff Vehicle Dashboard",
+   "link_to": "Staff Vehicle Dashboard",
+   "link_type": "Dashboard",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fleet Operations Dashboard",
+   "link_to": "Fleet Operations Dashboard",
+   "link_type": "Dashboard",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Gate Traffic Dashboard",
+   "link_to": "Gate Traffic Dashboard",
+   "link_type": "Dashboard",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Parking Management Dashboard",
+   "link_to": "Parking Management Dashboard",
+   "link_type": "Dashboard",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2025-12-01 17:44:21.272196",
+ "modified": "2025-12-16 12:00:00.000000",
  "modified_by": "Administrator",
  "module": "Sigma Vehicle Management",
  "name": "Vehicle Management",
  "number_cards": [],
  "owner": "Administrator",
- "parent_page": "Human Tracking",
+ "parent_page": "",
  "public": 1,
  "quick_lists": [],
  "roles": [],
@@ -261,6 +318,90 @@
    "link_to": "Vehicle",
    "stats_filter": "{\"status\": \"Active\"}",
    "type": "DocType"
+  },
+  {
+   "color": "blue",
+   "doc_view": "",
+   "label": "Vehicle Checkin Checkout",
+   "link_to": "Vehicle Checkin Checkout",
+   "type": "DocType"
+  },
+  {
+   "color": "green",
+   "doc_view": "",
+   "label": "Vehicle Pass",
+   "link_to": "Vehicle Pass",
+   "type": "DocType"
+  },
+  {
+   "color": "purple",
+   "doc_view": "",
+   "label": "Parking Zone",
+   "link_to": "Parking Zone",
+   "type": "DocType"
+  },
+  {
+   "color": "cyan",
+   "doc_view": "",
+   "label": "Vehicle Dashboard",
+   "link_to": "Vehicle Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "red",
+   "doc_view": "",
+   "label": "Vehicle Security Dashboard",
+   "link_to": "Vehicle Security Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "orange",
+   "doc_view": "",
+   "label": "Vehicle Maintenance Dashboard",
+   "link_to": "Vehicle Maintenance Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "green",
+   "doc_view": "",
+   "label": "Visitor Vehicle Dashboard",
+   "link_to": "Visitor Vehicle Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "purple",
+   "doc_view": "",
+   "label": "Vehicle Access Control Dashboard",
+   "link_to": "Vehicle Access Control Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "cyan",
+   "doc_view": "",
+   "label": "Staff Vehicle Dashboard",
+   "link_to": "Staff Vehicle Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "teal",
+   "doc_view": "",
+   "label": "Fleet Operations Dashboard",
+   "link_to": "Fleet Operations Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "yellow",
+   "doc_view": "",
+   "label": "Gate Traffic Dashboard",
+   "link_to": "Gate Traffic Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "pink",
+   "doc_view": "",
+   "label": "Parking Management Dashboard",
+   "link_to": "Parking Management Dashboard",
+   "type": "Dashboard"
   }
  ],
  "title": "Vehicle Management",

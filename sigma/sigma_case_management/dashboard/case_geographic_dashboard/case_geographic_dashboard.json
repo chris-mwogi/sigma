@@ -1,0 +1,46 @@
+{
+ "cards": [
+  {
+   "card": "Total Cases"
+  },
+  {
+   "card": "Open Cases"
+  },
+  {
+   "card": "High Severity Cases"
+  },
+  {
+   "card": "Cases This Month"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Cases by Region",
+   "width": "Full"
+  },
+  {
+   "chart": "Cases by Type",
+   "width": "Half"
+  },
+  {
+   "chart": "Cases by Severity",
+   "width": "Half"
+  },
+  {
+   "chart": "Case Trend Monthly",
+   "width": "Full"
+  }
+ ],
+ "creation": "2025-12-11 11:50:41.387779",
+ "dashboard_name": "Case Geographic Dashboard",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2025-12-11 11:50:41.387779",
+ "modified_by": "Administrator",
+ "module": "Sigma Case Management",
+ "name": "Case Geographic Dashboard",
+ "owner": "Administrator"
+}

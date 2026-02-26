@@ -1,0 +1,23 @@
+{
+ "aggregate_function_based_on": "",
+ "creation": "2025-12-07 21:24:36",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Guard Activity",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[[\"Guard Activity\",\"activity_type\",\"=\",\"Patrol\"]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Post Inspection Status",
+ "modified": "2025-12-10 20:57:36.889957",
+ "modified_by": "Administrator",
+ "module": "Sigma Guard Services",
+ "name": "Post Inspection Status",
+ "owner": "Administrator",
+ "show_full_number": 0,
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Daily",
+ "type": "Document Type"
+}

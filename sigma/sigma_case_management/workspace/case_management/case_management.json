@@ -1,7 +1,7 @@
 {
  "app": "sigma",
  "charts": [],
- "content": "[{\"id\": \"header-main\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h3\\\"><b>Case Management</b></span>\", \"col\": 12}}, {\"id\": \"spacer-1\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"shortcut-block\", \"type\": \"shortcut\", \"data\": {\"col\": 12}}, {\"id\": \"spacer-2\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"card-block-1\", \"type\": \"card\", \"data\": {\"card_name\": \"Case Management\", \"col\": 4}}, {\"id\": \"card-block-2\", \"type\": \"card\", \"data\": {\"card_name\": \"Related Modules\", \"col\": 4}}, {\"id\": \"card-block-3\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 4}}]",
+ "content": "[{\"id\": \"header-main\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h3\\\"><b>Case Management</b></span>\", \"col\": 12}}, {\"id\": \"para-main\", \"type\": \"paragraph\", \"data\": {\"text\": \"<p>Comprehensive case management - investigations, evidence tracking, activities, and reporting.</p>\", \"col\": 12}}, {\"id\": \"spacer-1\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"header-shortcuts\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Quick Actions</b></span>\", \"col\": 12}}, {\"id\": \"shortcut-case\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Case\"}}, {\"id\": \"shortcut-investigation\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Case Investigation\"}}, {\"id\": \"shortcut-incident\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Incident Report\"}}, {\"id\": \"shortcut-evidence\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Case Evidence\"}}, {\"id\": \"shortcut-activity\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Case Activity\"}}, {\"id\": \"shortcut-action-plan\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Case Action Plan\"}}, {\"id\": \"shortcut-assignment\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Case Assignment\"}}, {\"id\": \"shortcut-legal\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Legal Case\"}}, {\"id\": \"spacer-2\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"spacer-3\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"header-dashboards\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Dashboards</b></span>\", \"col\": 12}}, {\"id\": \"dashboard-case-executive-dashboard\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"Case Executive Dashboard\"}}, {\"id\": \"dashboard-case-investigation-dashboard\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"Case Investigation Dashboard\"}}, {\"id\": \"dashboard-sla-performance-dashboard\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"SLA Performance Dashboard\"}}, {\"id\": \"dashboard-asset-theft-dashboard\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"Asset Theft Dashboard\"}}, {\"id\": \"dashboard-audit-case-dashboard\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"Audit Case Dashboard\"}}, {\"id\": \"dashboard-case-closure-dashboard\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"Case Closure Dashboard\"}}, {\"id\": \"dashboard-case-geographic-dashboard\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"Case Geographic Dashboard\"}}, {\"id\": \"dashboard-customer-complaint-dashboard\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"Customer Complaint Dashboard\"}}, {\"id\": \"dashboard-fraud-and-ethics-dashboard\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"Fraud and Ethics Dashboard\"}}, {\"id\": \"dashboard-hr-misconduct-dashboard\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"HR Misconduct Dashboard\"}}, {\"id\": \"dashboard-illegal-connection-dashboard\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"Illegal Connection Dashboard\"}}, {\"id\": \"dashboard-legal-case-dashboard\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"Legal Case Dashboard\"}}, {\"id\": \"dashboard-safety-incident-dashboard\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"Safety Incident Dashboard\"}}, {\"id\": \"dashboard-whistleblower-dashboard\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"Whistleblower Dashboard\"}}, {\"id\": \"spacer-nc\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"header-stats\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Key Metrics</b></span>\", \"col\": 12}}, {\"id\": \"nc-total\", \"type\": \"number_card\", \"data\": {\"col\": 4, \"number_card_name\": \"Total Cases\"}}, {\"id\": \"nc-open\", \"type\": \"number_card\", \"data\": {\"col\": 4, \"number_card_name\": \"Open Cases\"}}, {\"id\": \"nc-high\", \"type\": \"number_card\", \"data\": {\"col\": 4, \"number_card_name\": \"High Severity Cases\"}}, {\"id\": \"nc-investigation\", \"type\": \"number_card\", \"data\": {\"col\": 4, \"number_card_name\": \"Under Investigation Cases\"}}, {\"id\": \"nc-sla\", \"type\": \"number_card\", \"data\": {\"col\": 4, \"number_card_name\": \"SLA Breached Cases\"}}, {\"id\": \"nc-month\", \"type\": \"number_card\", \"data\": {\"col\": 4, \"number_card_name\": \"Cases This Month\"}}, {\"id\": \"header-cards\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Case Management</b></span>\", \"col\": 12}}, {\"id\": \"card-cases\", \"type\": \"card\", \"data\": {\"card_name\": \"Cases\", \"col\": 4}}, {\"id\": \"card-types\", \"type\": \"card\", \"data\": {\"card_name\": \"Case Types\", \"col\": 4}}, {\"id\": \"card-config\", \"type\": \"card\", \"data\": {\"card_name\": \"Configuration\", \"col\": 4}}, {\"id\": \"card-reports\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 4}}]",
  "creation": "2025-12-01 13:45:09.446970",
  "custom_blocks": [],
  "docstatus": 0,
@@ -17,7 +17,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Case Management",
+   "label": "Cases",
    "link_count": 0,
    "link_type": "DocType",
    "onboard": 0,
@@ -30,7 +30,7 @@
    "link_count": 0,
    "link_to": "Case",
    "link_type": "DocType",
-   "onboard": 0,
+   "onboard": 1,
    "only_for": "",
    "type": "Link"
   },
@@ -41,7 +41,7 @@
    "link_count": 0,
    "link_to": "Case Investigation",
    "link_type": "DocType",
-   "onboard": 0,
+   "onboard": 1,
    "only_for": "",
    "type": "Link"
   },
@@ -81,48 +81,6 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Case Settings",
-   "link_count": 0,
-   "link_to": "Case Settings",
-   "link_type": "DocType",
-   "onboard": 0,
-   "only_for": "",
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Case Category",
-   "link_count": 0,
-   "link_to": "Case Category",
-   "link_type": "DocType",
-   "onboard": 0,
-   "only_for": "",
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Case Source",
-   "link_count": 0,
-   "link_to": "Case Source",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Case Severity Matrix",
-   "link_count": 0,
-   "link_to": "Case Severity Matrix",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
    "label": "Case Assignment",
    "link_count": 0,
    "link_to": "Case Assignment",
@@ -146,16 +104,6 @@
    "label": "Case Discussion",
    "link_count": 0,
    "link_to": "Case Discussion",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Case External Communication",
-   "link_count": 0,
-   "link_to": "Case External Communication",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -222,7 +170,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Related Modules",
+   "label": "Configuration",
    "link_count": 0,
    "link_type": "DocType",
    "onboard": 0,
@@ -231,45 +179,41 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Zone Presence",
+   "label": "Case Settings",
    "link_count": 0,
-   "link_to": "Zone Presence",
+   "link_to": "Case Settings",
    "link_type": "DocType",
    "onboard": 0,
-   "only_for": "",
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Human Profile",
+   "label": "Case Category",
    "link_count": 0,
-   "link_to": "Human Profile",
+   "link_to": "Case Category",
    "link_type": "DocType",
    "onboard": 0,
-   "only_for": "",
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Personnel Management",
+   "label": "Case Source",
    "link_count": 0,
-   "link_to": "personnel-management",
-   "link_type": "Page",
+   "link_to": "Case Source",
+   "link_type": "DocType",
    "onboard": 0,
-   "only_for": "",
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Risk Management",
+   "label": "Case Severity Matrix",
    "link_count": 0,
-   "link_to": "risk-management",
-   "link_type": "Page",
+   "link_to": "Case Severity Matrix",
+   "link_type": "DocType",
    "onboard": 0,
-   "only_for": "",
    "type": "Link"
   },
   {
@@ -382,25 +326,213 @@
    "type": "Link"
   }
  ],
- "modified": "2025-12-01 17:44:21.410936",
+ "modified": "2026-02-13 14:23:08.694473",
  "modified_by": "Administrator",
  "module": "Sigma Case Management",
  "name": "Case Management",
- "number_cards": [],
+ "number_cards": [
+  {
+   "number_card_name": "Total Cases"
+  },
+  {
+   "number_card_name": "Open Cases"
+  },
+  {
+   "number_card_name": "High Severity Cases"
+  },
+  {
+   "number_card_name": "Under Investigation Cases"
+  },
+  {
+   "number_card_name": "SLA Breached Cases"
+  },
+  {
+   "number_card_name": "Cases This Month"
+  }
+ ],
  "owner": "Administrator",
  "public": 1,
- "quick_lists": [],
+ "quick_lists": [
+  {
+   "document_type": "Case",
+   "label": "My Open Cases"
+  },
+  {
+   "document_type": "Case Investigation",
+   "label": "Active Investigations"
+  }
+ ],
  "roles": [],
- "sequence_id": 0.0,
+ "sequence_id": 10.0,
  "shortcuts": [
   {
    "color": "red",
-   "doc_view": "",
+   "doc_view": "List",
    "format": "{} Open",
    "label": "Case",
    "link_to": "Case",
    "stats_filter": "{\"status\": \"Open\"}",
    "type": "DocType"
+  },
+  {
+   "color": "blue",
+   "doc_view": "List",
+   "format": "",
+   "label": "Case Investigation",
+   "link_to": "Case Investigation",
+   "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "color": "orange",
+   "doc_view": "List",
+   "format": "",
+   "label": "Incident Report",
+   "link_to": "Incident Report",
+   "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "color": "green",
+   "doc_view": "List",
+   "format": "{} Items",
+   "label": "Case Evidence",
+   "link_to": "Case Evidence",
+   "type": "DocType"
+  },
+  {
+   "color": "purple",
+   "doc_view": "List",
+   "format": "",
+   "label": "Case Activity",
+   "link_to": "Case Activity",
+   "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "color": "teal",
+   "doc_view": "List",
+   "format": "",
+   "label": "Case Action Plan",
+   "link_to": "Case Action Plan",
+   "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "color": "cyan",
+   "doc_view": "List",
+   "format": "{} Pending",
+   "label": "Case Assignment",
+   "link_to": "Case Assignment",
+   "stats_filter": "{\"status\": \"Pending\"}",
+   "type": "DocType"
+  },
+  {
+   "color": "yellow",
+   "doc_view": "List",
+   "format": "",
+   "label": "Legal Case",
+   "link_to": "Legal Case",
+   "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "color": "blue",
+   "doc_view": "",
+   "label": "Case Executive Dashboard",
+   "link_to": "Case Executive Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "green",
+   "doc_view": "",
+   "label": "Case Investigation Dashboard",
+   "link_to": "Case Investigation Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "orange",
+   "doc_view": "",
+   "label": "SLA Performance Dashboard",
+   "link_to": "SLA Performance Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "red",
+   "doc_view": "",
+   "label": "Asset Theft Dashboard",
+   "link_to": "Asset Theft Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "purple",
+   "doc_view": "",
+   "label": "Audit Case Dashboard",
+   "link_to": "Audit Case Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "yellow",
+   "doc_view": "",
+   "label": "Case Closure Dashboard",
+   "link_to": "Case Closure Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "teal",
+   "doc_view": "",
+   "label": "Case Geographic Dashboard",
+   "link_to": "Case Geographic Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "cyan",
+   "doc_view": "",
+   "label": "Customer Complaint Dashboard",
+   "link_to": "Customer Complaint Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "pink",
+   "doc_view": "",
+   "label": "Fraud and Ethics Dashboard",
+   "link_to": "Fraud and Ethics Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "grey",
+   "doc_view": "",
+   "label": "HR Misconduct Dashboard",
+   "link_to": "HR Misconduct Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "blue",
+   "doc_view": "",
+   "label": "Illegal Connection Dashboard",
+   "link_to": "Illegal Connection Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "green",
+   "doc_view": "",
+   "label": "Legal Case Dashboard",
+   "link_to": "Legal Case Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "orange",
+   "doc_view": "",
+   "label": "Safety Incident Dashboard",
+   "link_to": "Safety Incident Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "red",
+   "doc_view": "",
+   "label": "Whistleblower Dashboard",
+   "link_to": "Whistleblower Dashboard",
+   "type": "Dashboard"
   }
  ],
  "title": "Case Management",

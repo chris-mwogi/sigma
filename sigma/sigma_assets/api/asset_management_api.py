@@ -367,7 +367,7 @@ def get_asset_events(asset_id, event_type=None, days=7):
 	2. Call get_device_monitoring_info(monitored_device_id) instead
 	3. Use Monitoring Alert and Telemetry Event DocTypes for new events
 
-	See: sigma.sigma_asset_integrations.api.monitoring_ingestion.get_device_monitoring_info
+	See: sigma.sigma_assets.api.monitoring_ingestion.get_device_monitoring_info
 
 	Args:
 		asset_id: Asset ID
@@ -392,7 +392,7 @@ def get_asset_events(asset_id, event_type=None, days=7):
 
 	if monitored_device:
 		# Redirect to new endpoint
-		from sigma.sigma_asset_integrations.api.monitoring_ingestion import get_device_monitoring_info
+		from sigma.sigma_assets.api.monitoring_ingestion import get_device_monitoring_info
 		result = get_device_monitoring_info(monitored_device_id=monitored_device, days=days)
 
 		# Transform to old format for backward compatibility
@@ -474,7 +474,7 @@ def update_asset_location(asset_id, latitude, longitude, altitude=None, speed=No
 	2. Call update_device_location(monitored_device_id, ...) instead
 	3. Location will automatically sync to Asset if linked
 
-	See: sigma.sigma_asset_integrations.api.monitoring_ingestion.update_device_location
+	See: sigma.sigma_assets.api.monitoring_ingestion.update_device_location
 
 	Args:
 		asset_id: Asset ID

@@ -1,0 +1,22 @@
+{
+ "content": null,
+ "creation": "2025-12-05 12:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2025-12-05 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Access Control",
+ "name": "access-command-center",
+ "owner": "Administrator",
+ "page_name": "access-command-center",
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "Security Manager"},
+  {"role": "Security Operator"}
+ ],
+ "standard": "Yes",
+ "system_page": 0,
+ "title": "Access Control Command Center"
+}
+

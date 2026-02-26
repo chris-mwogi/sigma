@@ -1,0 +1,513 @@
+{
+ "app": "sigma",
+ "charts": [],
+ "content": "[{\"id\": \"header-main\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h3\\\"><b>Guarding Services</b></span>\", \"col\": 12}}, {\"id\": \"para-main\", \"type\": \"paragraph\", \"data\": {\"text\": \"<p>Manage guard deployments, patrol schedules, compliance tracking, and security operations.</p>\", \"col\": 12}}, {\"id\": \"spacer-1\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"header-shortcuts\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Quick Actions</b></span>\", \"col\": 12}}, {\"id\": \"shortcut-resource\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Security Resource\"}}, {\"id\": \"shortcut-deployment\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Resource Deployment\"}}, {\"id\": \"shortcut-patrol\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Patrol Schedule\"}}, {\"id\": \"shortcut-incident\", \"type\": \"shortcut\", \"data\": {\"col\": 3, \"shortcut_name\": \"Guard Incident\"}}, {\"id\": \"spacer-2\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"header-dashboards\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Dashboards</b></span>\", \"col\": 12}}, {\"id\": \"dashboard-executive\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"Executive Security Dashboard\"}}, {\"id\": \"dashboard-soc\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"SOC Dashboard\"}}, {\"id\": \"dashboard-risk\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"Combined Security Risk Dashboard\"}}, {\"id\": \"dashboard-gatehouse\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"Gatehouse Dashboard\"}}, {\"id\": \"dashboard-guard\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"Guard Force Performance Dashboard\"}}, {\"id\": \"dashboard-incident\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"Incident Escalation Dashboard\"}}, {\"id\": \"dashboard-k9\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"K9 Unit Dashboard\"}}, {\"id\": \"dashboard-patrol\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"Patrol Monitoring Dashboard\"}}, {\"id\": \"dashboard-post\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"Post Compliance Dashboard\"}}, {\"id\": \"dashboard-vendor\", \"type\": \"shortcut\", \"data\": {\"col\": 4, \"shortcut_name\": \"Vendor Management Dashboard\"}}, {\"id\": \"spacer-3\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"header-cards\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Guard Management</b></span>\", \"col\": 12}}, {\"id\": \"card-planning\", \"type\": \"card\", \"data\": {\"card_name\": \"Planning & Assessment\", \"col\": 4}}, {\"id\": \"card-operations\", \"type\": \"card\", \"data\": {\"card_name\": \"Operations & Monitoring\", \"col\": 4}}, {\"id\": \"card-resources\", \"type\": \"card\", \"data\": {\"card_name\": \"Resource Management\", \"col\": 4}}, {\"id\": \"spacer-4\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"card-procurement\", \"type\": \"card\", \"data\": {\"card_name\": \"Service Procurement\", \"col\": 4}}, {\"id\": \"card-compliance\", \"type\": \"card\", \"data\": {\"card_name\": \"Compliance & Quality\", \"col\": 4}}, {\"id\": \"card-reports\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports & Analytics\", \"col\": 4}}]",
+ "creation": "2026-02-13 19:46:54.419245",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "shield",
+ "idx": 0,
+ "indicator_color": "orange",
+ "is_hidden": 0,
+ "label": "Guarding Services",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Planning & Assessment",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Resource Requisition",
+   "link_count": 0,
+   "link_to": "Resource Requisition",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Location Security Assessment",
+   "link_count": 0,
+   "link_to": "Location Security Assessment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Guard Deployment Schedule",
+   "link_count": 0,
+   "link_to": "Guard Deployment Schedule",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Location Type",
+   "link_count": 0,
+   "link_to": "Location Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Location Subtype",
+   "link_count": 0,
+   "link_to": "Location Subtype",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Operations & Monitoring",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Guard Shift",
+   "link_count": 0,
+   "link_to": "Guard Shift",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Guard Activity",
+   "link_count": 0,
+   "link_to": "Guard Activity",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Patrol Schedule",
+   "link_count": 0,
+   "link_to": "Patrol Schedule",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Patrol Checkpoint",
+   "link_count": 0,
+   "link_to": "Patrol Checkpoint",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Patrol Verification Record",
+   "link_count": 0,
+   "link_to": "Patrol Verification Record",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Guard Incident",
+   "link_count": 0,
+   "link_to": "Guard Incident",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Emergency Evacuation Tracking",
+   "link_count": 0,
+   "link_to": "Emergency Evacuation Tracking",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Resource Management",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Security Resource",
+   "link_count": 0,
+   "link_to": "Security Resource",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Resource Certification",
+   "link_count": 0,
+   "link_to": "Resource Certification",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Resource Availability",
+   "link_count": 0,
+   "link_to": "Resource Availability",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Resource Deployment",
+   "link_count": 0,
+   "link_to": "Resource Deployment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Site Allocation",
+   "link_count": 0,
+   "link_to": "Site Allocation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Manning Allocation",
+   "link_count": 0,
+   "link_to": "Manning Allocation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Guard Assignment",
+   "link_count": 0,
+   "link_to": "Guard Assignment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Visitor Guard Assignment",
+   "link_count": 0,
+   "link_to": "Visitor Guard Assignment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Service Procurement",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Supplier",
+   "link_count": 0,
+   "link_to": "Supplier",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Request for Quotation",
+   "link_count": 0,
+   "link_to": "Request for Quotation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Supplier Quotation",
+   "link_count": 0,
+   "link_to": "Supplier Quotation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contract",
+   "link_count": 0,
+   "link_to": "Contract",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Compliance & Quality",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "SLA Compliance Record",
+   "link_count": 0,
+   "link_to": "SLA Compliance Record",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Compliance Notice",
+   "link_count": 0,
+   "link_to": "Compliance Notice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Discrepancy Report",
+   "link_count": 0,
+   "link_to": "Discrepancy Report",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Surcharge Record",
+   "link_count": 0,
+   "link_to": "Surcharge Record",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports & Analytics",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Guard Performance Report",
+   "link_count": 0,
+   "link_to": "Guard Performance Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "SLA Compliance Report",
+   "link_count": 0,
+   "link_to": "SLA Compliance Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Resource Utilization Report",
+   "link_count": 0,
+   "link_to": "Resource Utilization Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Incident Trend Analysis",
+   "link_count": 0,
+   "link_to": "Incident Trend Analysis",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-02-13 19:46:54.419245",
+ "modified_by": "Administrator",
+ "module": "Sigma Guard Services",
+ "name": "Guarding Services",
+ "number_cards": [],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 25.0,
+ "shortcuts": [
+  {
+   "doc_view": "",
+   "label": "Security Resource",
+   "link_to": "Security Resource",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Resource Deployment",
+   "link_to": "Resource Deployment",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Manning Allocation",
+   "link_to": "Manning Allocation",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Guard Assignment",
+   "link_to": "Guard Assignment",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Patrol Schedule",
+   "link_to": "Patrol Schedule",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Guard Incident",
+   "link_to": "Guard Incident",
+   "type": "DocType"
+  },
+  {
+   "color": "orange",
+   "doc_view": "",
+   "label": "Executive Security Dashboard",
+   "link_to": "Executive Security Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "blue",
+   "doc_view": "",
+   "label": "SOC Dashboard",
+   "link_to": "SOC Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "red",
+   "doc_view": "",
+   "label": "Combined Security Risk Dashboard",
+   "link_to": "Combined Security Risk Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "green",
+   "doc_view": "",
+   "label": "Gatehouse Dashboard",
+   "link_to": "Gatehouse Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "purple",
+   "doc_view": "",
+   "label": "Guard Force Performance Dashboard",
+   "link_to": "Guard Force Performance Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "yellow",
+   "doc_view": "",
+   "label": "Incident Escalation Dashboard",
+   "link_to": "Incident Escalation Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "cyan",
+   "doc_view": "",
+   "label": "K9 Unit Dashboard",
+   "link_to": "K9 Unit Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "pink",
+   "doc_view": "",
+   "label": "Patrol Monitoring Dashboard",
+   "link_to": "Patrol Monitoring Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "teal",
+   "doc_view": "",
+   "label": "Post Compliance Dashboard",
+   "link_to": "Post Compliance Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "brown",
+   "doc_view": "",
+   "label": "Vendor Management Dashboard",
+   "link_to": "Vendor Management Dashboard",
+   "type": "Dashboard"
+  }
+ ],
+ "title": "Guarding Services",
+ "type": "Workspace"
+}

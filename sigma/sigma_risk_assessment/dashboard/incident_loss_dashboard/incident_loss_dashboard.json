@@ -1,0 +1,43 @@
+{
+ "cards": [
+  {
+   "card": "Open Incidents"
+  },
+  {
+   "card": "Total Risks"
+  },
+  {
+   "card": "High Risks"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Incidents by Status",
+   "width": "Half"
+  },
+  {
+   "chart": "Incidents by Type",
+   "width": "Half"
+  },
+  {
+   "chart": "Incidents by Impact Level",
+   "width": "Half"
+  },
+  {
+   "chart": "Incidents Trend",
+   "width": "Half"
+  }
+ ],
+ "creation": "2025-12-14 18:00:00.000000",
+ "dashboard_name": "Incident Loss Dashboard",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2025-12-14 18:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Risk Assessment",
+ "name": "Incident Loss Dashboard",
+ "owner": "Administrator"
+}

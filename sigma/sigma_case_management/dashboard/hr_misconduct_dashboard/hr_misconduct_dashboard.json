@@ -1,0 +1,46 @@
+{
+ "cards": [
+  {
+   "card": "Open Cases"
+  },
+  {
+   "card": "Under Investigation Cases"
+  },
+  {
+   "card": "Cases This Month"
+  },
+  {
+   "card": "Pending Case Assignments"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "HR Misconduct by Department",
+   "width": "Full"
+  },
+  {
+   "chart": "Cases by Category",
+   "width": "Half"
+  },
+  {
+   "chart": "Cases by Status",
+   "width": "Half"
+  },
+  {
+   "chart": "Case Trend Monthly",
+   "width": "Full"
+  }
+ ],
+ "creation": "2025-12-11 11:50:41.648660",
+ "dashboard_name": "HR Misconduct Dashboard",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2025-12-11 11:50:41.648660",
+ "modified_by": "Administrator",
+ "module": "Sigma Case Management",
+ "name": "HR Misconduct Dashboard",
+ "owner": "Administrator"
+}

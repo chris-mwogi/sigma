@@ -45,7 +45,9 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Human Profile",
-   "options": "Human Profile"
+   "options": "Human Profile",
+   "link_filters": "[[\"Human Profile\", \"person_type\", \"in\", [\"Employee\", \"Contractor\"]]]",
+   "description": "Company employees and contractor staff only"
   },
   {
    "fieldname": "breach_type",

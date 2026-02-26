@@ -1,0 +1,24 @@
+{
+  "aggregate_function_based_on": "",
+  "color": "#ef4444",
+  "creation": "2025-12-11 00:00:00.000000",
+  "docstatus": 0,
+  "doctype": "Number Card",
+  "document_type": "Guard Shift",
+  "dynamic_filters_json": "[]",
+  "filters_json": "[[\"Guard Shift\",\"check_in_time\",\"Timespan\",\"today\"]]",
+  "function": "Count",
+  "idx": 0,
+  "is_public": 1,
+  "is_standard": 1,
+  "label": "Late Check-ins Today",
+  "modified": "2025-12-11 17:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sigma Guard Services",
+  "name": "Late Check-ins Today",
+  "owner": "Administrator",
+  "show_percentage_stats": 1,
+  "stats_time_interval": "Daily",
+  "type": "Document Type"
+}
+

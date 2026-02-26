@@ -1,0 +1,65 @@
+[
+ {
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Location Subtype",
+  "location_type": "Office",
+  "modified": "2025-11-15 12:48:43",
+  "name": "Branch Office",
+  "title": "Branch Office"
+ },
+ {
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Location Subtype",
+  "location_type": "Substation",
+  "modified": "2025-11-15 12:48:43",
+  "name": "Distribution Substation",
+  "title": "Distribution Substation"
+ },
+ {
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Location Subtype",
+  "location_type": "Office",
+  "modified": "2025-11-15 12:48:43",
+  "name": "Head Office",
+  "title": "Head Office"
+ },
+ {
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Location Subtype",
+  "location_type": "Office",
+  "modified": "2025-11-15 12:48:43",
+  "name": "Regional Office",
+  "title": "Regional Office"
+ },
+ {
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Location Subtype",
+  "location_type": "Office",
+  "modified": "2025-11-15 12:48:43",
+  "name": "Service Center",
+  "title": "Service Center"
+ },
+ {
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Location Subtype",
+  "location_type": "Substation",
+  "modified": "2025-11-15 12:48:43",
+  "name": "Switching Station",
+  "title": "Switching Station"
+ },
+ {
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Location Subtype",
+  "location_type": "Substation",
+  "modified": "2025-11-15 12:48:43",
+  "name": "Transmission Substation",
+  "title": "Transmission Substation"
+ }
+]

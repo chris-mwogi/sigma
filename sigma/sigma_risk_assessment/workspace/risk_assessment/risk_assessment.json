@@ -1,0 +1,523 @@
+{
+ "actions": [],
+ "app": "sigma",
+ "charts": [],
+ "content": "[{\"id\":\"header-main\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h3\\\"><b>Risk Assessment & Management</b></span>\",\"col\":12}},{\"id\":\"para-main\",\"type\":\"paragraph\",\"data\":{\"text\":\"<p>ISO 31000 compliant risk management system.</p>\",\"col\":12}},{\"id\":\"spacer-1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"header-shortcuts\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quick Actions</b></span>\",\"col\":12}},{\"id\":\"shortcut-register\",\"type\":\"shortcut\",\"data\":{\"col\":3,\"shortcut_name\":\"Risk Register\"}},{\"id\":\"shortcut-assessment\",\"type\":\"shortcut\",\"data\":{\"col\":3,\"shortcut_name\":\"Risk Assessment\"}},{\"id\":\"shortcut-treatment\",\"type\":\"shortcut\",\"data\":{\"col\":3,\"shortcut_name\":\"Risk Treatment Plan\"}},{\"id\":\"shortcut-incident\",\"type\":\"shortcut\",\"data\":{\"col\":3,\"shortcut_name\":\"Risk Incident\"}},{\"id\":\"spacer-2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"header-dashboards\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Dashboards</b></span>\",\"col\":12}},{\"id\":\"d1\",\"type\":\"shortcut\",\"data\":{\"col\":4,\"shortcut_name\":\"Risk Overview Dashboard\"}},{\"id\":\"d2\",\"type\":\"shortcut\",\"data\":{\"col\":4,\"shortcut_name\":\"Risk Register Dashboard\"}},{\"id\":\"d3\",\"type\":\"shortcut\",\"data\":{\"col\":4,\"shortcut_name\":\"Risk Incident Dashboard\"}},{\"id\":\"d4\",\"type\":\"shortcut\",\"data\":{\"col\":4,\"shortcut_name\":\"KRI Monitoring Dashboard\"}},{\"id\":\"d5\",\"type\":\"shortcut\",\"data\":{\"col\":4,\"shortcut_name\":\"Risk Treatment Dashboard\"}},{\"id\":\"d6\",\"type\":\"shortcut\",\"data\":{\"col\":4,\"shortcut_name\":\"Risk Control Dashboard\"}},{\"id\":\"d7\",\"type\":\"shortcut\",\"data\":{\"col\":4,\"shortcut_name\":\"Enterprise Risk Dashboard\"}},{\"id\":\"d8\",\"type\":\"shortcut\",\"data\":{\"col\":4,\"shortcut_name\":\"Departmental Risk Dashboard\"}},{\"id\":\"d9\",\"type\":\"shortcut\",\"data\":{\"col\":4,\"shortcut_name\":\"Risk Heatmap Dashboard\"}},{\"id\":\"d10\",\"type\":\"shortcut\",\"data\":{\"col\":4,\"shortcut_name\":\"Compliance Risk Dashboard\"}},{\"id\":\"d11\",\"type\":\"shortcut\",\"data\":{\"col\":4,\"shortcut_name\":\"Audit Assurance Dashboard\"}},{\"id\":\"d12\",\"type\":\"shortcut\",\"data\":{\"col\":4,\"shortcut_name\":\"ICT Risk Dashboard\"}},{\"id\":\"d13\",\"type\":\"shortcut\",\"data\":{\"col\":4,\"shortcut_name\":\"Risk Performance Dashboard\"}},{\"id\":\"d14\",\"type\":\"shortcut\",\"data\":{\"col\":4,\"shortcut_name\":\"Incident Loss Dashboard\"}},{\"id\":\"spacer-3\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"header-cards\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Risk Management</b></span>\",\"col\":12}},{\"id\":\"card-register\",\"type\":\"card\",\"data\":{\"card_name\":\"Risk Register & Assessment\",\"col\":4}},{\"id\":\"card-controls\",\"type\":\"card\",\"data\":{\"card_name\":\"Controls & Treatment\",\"col\":4}},{\"id\":\"card-monitoring\",\"type\":\"card\",\"data\":{\"card_name\":\"Monitoring & Incidents\",\"col\":4}},{\"id\":\"card-reports\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports & Analytics\",\"col\":6}},{\"id\":\"card-settings\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings & Configuration\",\"col\":6}},{\"id\":\"card-dashboards\",\"type\":\"card\",\"data\":{\"card_name\":\"Dashboards\",\"col\":12}}]",
+ "custom_blocks": [],
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "alert-triangle",
+ "indicator_color": "orange",
+ "is_hidden": 0,
+ "label": "Risk Management",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Register & Assessment",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Register",
+   "link_to": "Risk Register",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Assessment",
+   "link_to": "Risk Assessment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Controls & Treatment",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Control",
+   "link_to": "Risk Control",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Treatment Plan",
+   "link_to": "Risk Treatment Plan",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Monitoring & Incidents",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Key Risk Indicator",
+   "link_to": "Key Risk Indicator",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Incident",
+   "link_to": "Risk Incident",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Compliance Requirement",
+   "link_to": "Compliance Requirement",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Business Process Register",
+   "link_to": "Business Process Register",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports & Analytics",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Risk Register Report",
+   "link_to": "Risk Register Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Risk Heat Map",
+   "link_to": "Risk Heat Map",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Risk Treatment Status Report",
+   "link_to": "Risk Treatment Status Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Compliance Status Report",
+   "link_to": "Compliance Status Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "KRI Dashboard Report",
+   "link_to": "KRI Dashboard Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Risk Incident Analysis",
+   "link_to": "Risk Incident Analysis",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Settings & Configuration",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Category",
+   "link_to": "Risk Category",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Impact Matrix",
+   "link_to": "Risk Impact Matrix",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Likelihood Matrix",
+   "link_to": "Risk Likelihood Matrix",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Dashboard Settings",
+   "link_to": "Risk Dashboard Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Alert Recipient",
+   "link_to": "Risk Alert Recipient",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Dashboards",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Overview Dashboard",
+   "link_to": "Risk Overview Dashboard",
+   "link_type": "Dashboard",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Register Dashboard",
+   "link_to": "Risk Register Dashboard",
+   "link_type": "Dashboard",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Incident Loss Dashboard",
+   "link_to": "Incident Loss Dashboard",
+   "link_type": "Dashboard",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "KRI Monitoring Dashboard",
+   "link_to": "KRI Monitoring Dashboard",
+   "link_type": "Dashboard",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Treatment Dashboard",
+   "link_to": "Risk Treatment Dashboard",
+   "link_type": "Dashboard",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Control Dashboard",
+   "link_to": "Risk Control Dashboard",
+   "link_type": "Dashboard",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Enterprise Risk Dashboard",
+   "link_to": "Enterprise Risk Dashboard",
+   "link_type": "Dashboard",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Departmental Risk Dashboard",
+   "link_to": "Departmental Risk Dashboard",
+   "link_type": "Dashboard",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Heatmap Dashboard",
+   "link_to": "Risk Heatmap Dashboard",
+   "link_type": "Dashboard",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Compliance Risk Dashboard",
+   "link_to": "Compliance Risk Dashboard",
+   "link_type": "Dashboard",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Audit Assurance Dashboard",
+   "link_to": "Audit Assurance Dashboard",
+   "link_type": "Dashboard",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "ICT Risk Dashboard",
+   "link_to": "ICT Risk Dashboard",
+   "link_type": "Dashboard",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Performance Dashboard",
+   "link_to": "Risk Performance Dashboard",
+   "link_type": "Dashboard",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "module": "Sigma Risk Assessment",
+ "name": "Risk Management",
+ "number_cards": [],
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 33.0,
+ "shortcuts": [
+  {
+   "color": "Red",
+   "format": "{} Active",
+   "label": "Risk Register",
+   "link_to": "Risk Register",
+   "stats_filter": "{\"status\": \"Active\"}",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "format": "{} Submitted",
+   "label": "Risk Assessment",
+   "link_to": "Risk Assessment",
+   "stats_filter": "{\"docstatus\": 1}",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "format": "{} Active",
+   "label": "Risk Control",
+   "link_to": "Risk Control",
+   "stats_filter": "{\"implementation_status\": \"Implemented\"}",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "format": "{} In Progress",
+   "label": "Risk Treatment Plan",
+   "link_to": "Risk Treatment Plan",
+   "stats_filter": "{\"plan_status\": \"In Progress\"}",
+   "type": "DocType"
+  },
+  {
+   "color": "Purple",
+   "format": "{} Active",
+   "label": "Key Risk Indicator",
+   "link_to": "Key Risk Indicator",
+   "stats_filter": "{\"status\": \"Active\"}",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "format": "{} Critical",
+   "label": "KRI Critical",
+   "link_to": "Key Risk Indicator",
+   "stats_filter": "{\"current_status\": \"Critical\"}",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "format": "{} Open",
+   "label": "Risk Incident",
+   "link_to": "Risk Incident",
+   "stats_filter": "{\"incident_status\": [\"in\", [\"Reported\", \"Under Investigation\", \"Contained\"]]}",
+   "type": "DocType"
+  },
+  {
+   "color": "Cyan",
+   "format": "{} Active",
+   "label": "Compliance",
+   "link_to": "Compliance Requirement",
+   "stats_filter": "{\"compliance_status\": [\"in\", [\"In Progress\", \"Compliant\"]]}",
+   "type": "DocType"
+  },
+  {
+   "label": "Risk Register Report",
+   "link_to": "Risk Register Report",
+   "type": "Report"
+  },
+  {
+   "label": "Risk Heat Map",
+   "link_to": "Risk Heat Map",
+   "type": "Report"
+  },
+  {
+   "color": "blue",
+   "doc_view": "",
+   "label": "Risk Overview Dashboard",
+   "link_to": "Risk Overview Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "orange",
+   "doc_view": "",
+   "label": "Risk Register Dashboard",
+   "link_to": "Risk Register Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "red",
+   "doc_view": "",
+   "label": "Incident Loss Dashboard",
+   "link_to": "Incident Loss Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "green",
+   "doc_view": "",
+   "label": "KRI Monitoring Dashboard",
+   "link_to": "KRI Monitoring Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "purple",
+   "doc_view": "",
+   "label": "Risk Treatment Dashboard",
+   "link_to": "Risk Treatment Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "cyan",
+   "doc_view": "",
+   "label": "Risk Control Dashboard",
+   "link_to": "Risk Control Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "blue",
+   "doc_view": "",
+   "label": "Enterprise Risk Dashboard",
+   "link_to": "Enterprise Risk Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "blue",
+   "doc_view": "",
+   "label": "Departmental Risk Dashboard",
+   "link_to": "Departmental Risk Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "blue",
+   "doc_view": "",
+   "label": "Risk Heatmap Dashboard",
+   "link_to": "Risk Heatmap Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "blue",
+   "doc_view": "",
+   "label": "Compliance Risk Dashboard",
+   "link_to": "Compliance Risk Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "blue",
+   "doc_view": "",
+   "label": "Audit Assurance Dashboard",
+   "link_to": "Audit Assurance Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "blue",
+   "doc_view": "",
+   "label": "ICT Risk Dashboard",
+   "link_to": "ICT Risk Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "blue",
+   "doc_view": "",
+   "label": "Risk Performance Dashboard",
+   "link_to": "Risk Performance Dashboard",
+   "type": "Dashboard"
+  }
+ ],
+ "title": "Risk Management",
+ "type": "Workspace"
+}

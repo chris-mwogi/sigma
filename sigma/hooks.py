@@ -60,7 +60,10 @@ fixtures = [
     "Client Script",
     {"dt": "Module Def", "filters": [["app_name", "=", "sigma"]]},
     {"dt": "Location Type"},
-    {"dt": "Location Subtype"}
+    {"dt": "Location Subtype"},
+    {"dt": "Dashboard", "filters": [["module", "in", ["Sigma Case Management", "Sigma Risk Assessment"]]]},
+    {"dt": "Dashboard Chart", "filters": [["module", "in", ["Sigma Case Management", "Sigma Risk Assessment"]]]},
+    {"dt": "Number Card", "filters": [["module", "in", ["Sigma Case Management", "Sigma Risk Assessment"]]]}
 ]
 
 # Apps
@@ -315,23 +318,23 @@ scheduler_events = {
 		"sigma.sigma_erpnext_integrations.sync_handlers.scheduled_sync.sync_maintenance_schedules",
 		"sigma.sigma_case_management.automation.check_sla_breaches",
 		# Asset Management Automation
-		"sigma.sigma_asset_integrations.automation.scheduled_jobs.auto_escalate_critical_alerts",
-		"sigma.sigma_asset_integrations.automation.scheduled_jobs.auto_update_asset_health",
+		"sigma.sigma_assets.automation.scheduled_jobs.auto_escalate_critical_alerts",
+		"sigma.sigma_assets.automation.scheduled_jobs.auto_update_asset_health",
 		# Advanced Automation - Phase 2
-		"sigma.sigma_asset_integrations.automation.work_order_assignment.auto_assign_work_orders",
+		"sigma.sigma_assets.automation.work_order_assignment.auto_assign_work_orders",
 	],
 	"daily": [
 		"sigma.api.integrations.generate_reports",
 		"sigma.sigma_erpnext_integrations.sync_handlers.scheduled_sync.sync_all_integrations",
 		"sigma.sigma_erpnext_integrations.sync_handlers.scheduled_sync.cleanup_old_logs",
 		# Asset Management Automation
-		"sigma.sigma_asset_integrations.automation.scheduled_jobs.auto_generate_maintenance_schedules",
-		"sigma.sigma_asset_integrations.automation.contract_automation.check_contract_expiry",
-		"sigma.sigma_asset_integrations.automation.contract_automation.update_contract_performance",
-		"sigma.sigma_asset_integrations.automation.contract_automation.check_vendor_compliance",
+		"sigma.sigma_assets.automation.scheduled_jobs.auto_generate_maintenance_schedules",
+		"sigma.sigma_assets.automation.contract_automation.check_contract_expiry",
+		"sigma.sigma_assets.automation.contract_automation.update_contract_performance",
+		"sigma.sigma_assets.automation.contract_automation.check_vendor_compliance",
 		# Advanced Automation - Phase 2
-		"sigma.sigma_asset_integrations.automation.predictive_maintenance.generate_predictive_alerts",
-		"sigma.sigma_asset_integrations.automation.spare_parts_automation.check_spare_parts_inventory",
+		"sigma.sigma_assets.automation.predictive_maintenance.generate_predictive_alerts",
+		"sigma.sigma_assets.automation.spare_parts_automation.check_spare_parts_inventory",
 	],
 }
 

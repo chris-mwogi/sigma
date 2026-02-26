@@ -122,10 +122,7 @@
                 <span class="action-icon">🔐</span>
                 <span>Access Control</span>
               </router-link>
-              <router-link to="/guard-monitoring" class="action-item">
-                <span class="action-icon">👮</span>
-                <span>Guard Monitoring</span>
-              </router-link>
+
             </div>
           </div>
         </div>
@@ -152,19 +149,33 @@ export default {
     const recentCases = ref([])
 
     const modules = [
-      { id: 'cases', name: 'Cases', icon: '📋', description: 'Manage security cases and incidents', route: '/cases' },
-      { id: 'incidents', name: 'Incidents', icon: '⚠️', description: 'Track and report incidents', route: '/incidents' },
-      { id: 'access-control', name: 'Access Control', icon: '🔐', description: 'Manage access permissions', route: '/access-control' },
-      { id: 'guard-monitoring', name: 'Guard Monitoring', icon: '👮', description: 'Monitor guard activities', route: '/guard-monitoring' },
-      { id: 'assets', name: 'Assets', icon: '🏢', description: 'Track company assets', route: '/assets' },
-      { id: 'risk-assessment', name: 'Risk Assessment', icon: '📊', description: 'Assess security risks', route: '/risk-assessment' },
-      { id: 'vehicle-management', name: 'Vehicle Management', icon: '🚗', description: 'Manage fleet vehicles', route: '/vehicle-management' },
-      { id: 'visitor-management', name: 'Visitor Management', icon: '👥', description: 'Track visitor access', route: '/visitor-management' },
-      { id: 'helpdesk', name: 'Helpdesk', icon: '💬', description: 'Support ticket management', route: '/helpdesk' },
-      { id: 'support', name: 'Support', icon: '🆘', description: 'Technical support system', route: '/support' },
-      { id: 'telephony', name: 'Telephony', icon: '☎️', description: 'Communication management', route: '/telephony' },
-      { id: 'projects', name: 'Projects', icon: '📁', description: 'Project management', route: '/projects' },
-      { id: 'crm', name: 'CRM', icon: '👔', description: 'Customer relationship management', route: '/crm' }
+      // Enterprise Guarding Dashboards
+      { id: 'executive-security', name: 'Executive Security', icon: '🛡️', description: 'Strategic security overview', route: '/dashboards/executive-security' },
+      { id: 'soc', name: 'SOC Dashboard', icon: '🎯', description: 'Real-time security operations', route: '/dashboards/soc' },
+      { id: 'guard-supervisor', name: 'Guard Supervisor', icon: '👷', description: 'Daily ops management', route: '/dashboards/guard-supervisor' },
+      { id: 'guard-performance', name: 'Guard Performance', icon: '🏆', description: 'Performance tracking', route: '/dashboards/guard-performance' },
+      { id: 'patrol-monitoring', name: 'Patrol Monitoring', icon: '🚶', description: 'Patrol compliance tracking', route: '/dashboards/patrol-monitoring' },
+      { id: 'vendor-management', name: 'Vendor Management', icon: '📋', description: 'Contract & vendor tracking', route: '/dashboards/vendor-management' },
+      { id: 'post-compliance', name: 'Post Compliance', icon: '📜', description: 'Post orders & compliance', route: '/dashboards/post-compliance' },
+      { id: 'incident-escalation', name: 'Incident Management', icon: '🚨', description: 'Incidents & escalations', route: '/dashboards/incident-escalation' },
+      { id: 'gatehouse', name: 'Gatehouse', icon: '🚪', description: 'Access control & visitors', route: '/dashboards/gatehouse' },
+      { id: 'k9-unit', name: 'K9 Unit', icon: '🐕', description: 'K9 deployment tracking', route: '/dashboards/k9-unit' },
+      { id: 'security-risk', name: 'Security & Risk', icon: '🧩', description: 'Combined risk analysis', route: '/dashboards/security-risk' },
+      // Vehicle Management Dashboards
+      { id: 'gate-traffic', name: 'Gate & Traffic', icon: '🔵', description: 'Live gate monitoring', route: '/dashboards/gate-traffic' },
+      { id: 'fleet-operations', name: 'Fleet Operations', icon: '🛣️', description: 'Company fleet tracking', route: '/dashboards/fleet-operations' },
+      { id: 'staff-vehicle', name: 'Staff Vehicles', icon: '🚗', description: 'Staff parking & access', route: '/dashboards/staff-vehicle' },
+      { id: 'visitor-vehicle', name: 'Visitor Vehicles', icon: '🟡', description: 'Visitor vehicle mgmt', route: '/dashboards/visitor-vehicle' },
+      { id: 'vehicle-access', name: 'Vehicle Access', icon: '🔐', description: 'ISO compliant access', route: '/dashboards/vehicle-access-control' },
+      { id: 'vehicle-maintenance', name: 'Maintenance', icon: '⚙️', description: 'Fleet maintenance', route: '/dashboards/vehicle-maintenance' },
+      { id: 'vehicle-security', name: 'Vehicle Security', icon: '🚨', description: 'Security incidents', route: '/dashboards/vehicle-security' },
+      { id: 'parking', name: 'Parking Mgmt', icon: '🅿️', description: 'Parking zones & violations', route: '/dashboards/parking-management' },
+      // Other Modules
+      { id: 'cases', name: 'Cases', icon: '📋', description: 'Manage security cases', route: '/cases' },
+      { id: 'incidents', name: 'Incidents', icon: '⚠️', description: 'Track incidents', route: '/incidents' },
+      { id: 'access-control', name: 'Access Control', icon: '🔐', description: 'Access permissions', route: '/access-control' },
+      { id: 'assets', name: 'Assets', icon: '🏢', description: 'Track assets', route: '/assets' },
+      { id: 'visitor-management', name: 'Visitor Management', icon: '👥', description: 'Visitor access', route: '/visitor-management' }
     ]
 
     const getStatusClass = (status) => {

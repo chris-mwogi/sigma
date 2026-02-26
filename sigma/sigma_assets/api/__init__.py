@@ -11,7 +11,7 @@
 # - update_device_heartbeat() → Webhook auto-updates last_seen
 # - decommission_iot_device() → Update Monitored Device.status directly
 #
-# See: sigma.sigma_asset_integrations.api.monitoring_ingestion
+# See: sigma.sigma_assets.api.monitoring_ingestion
 
 __all__ = []
 

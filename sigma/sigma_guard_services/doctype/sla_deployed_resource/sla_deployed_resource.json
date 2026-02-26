@@ -1,0 +1,63 @@
+{
+  "creation": "2025-10-24 00:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "Document",
+  "engine": "InnoDB",
+  "field_order": [
+    "resource",
+    "resource_type",
+    "check_in_time",
+    "check_out_time",
+    "status",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "resource",
+      "fieldtype": "Link",
+      "label": "Resource",
+      "options": "Security Resource",
+      "reqd": 1
+    },
+    {
+      "fieldname": "resource_type",
+      "fieldtype": "Select",
+      "label": "Resource Type",
+      "options": "Guard\nGuard Dog\nSecurity Vehicle\nSecurity Equipment\nStations",
+      "read_only": 1
+    },
+    {
+      "fieldname": "check_in_time",
+      "fieldtype": "Datetime",
+      "label": "Check In Time"
+    },
+    {
+      "fieldname": "check_out_time",
+      "fieldtype": "Datetime",
+      "label": "Check Out Time"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Deployed\nCompleted\nAbsent\nLate"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ],
+  "istable": 1,
+  "links": [],
+  "modified": "2025-10-24 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sigma Guard Services",
+  "name": "SLA Deployed Resource",
+  "owner": "Administrator",
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1
+}
+

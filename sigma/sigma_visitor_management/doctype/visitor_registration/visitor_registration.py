@@ -28,8 +28,8 @@ class VisitorRegistration(Document):
 		self.validate_compliance()
 	
 	def validate_visitor(self):
-		"""Validate visitor exists"""
-		if not frappe.db.exists("Visitor", self.visitor):
+		"""Validate visitor exists (using Human Profile)"""
+		if not frappe.db.exists("Human Profile", self.visitor):
 			frappe.throw(f"Visitor {self.visitor} not found")
 	
 	def validate_dates(self):
@@ -49,12 +49,12 @@ class VisitorRegistration(Document):
 		if not self.visitor:
 			return
 
-		# Get visitor details
-		visitor = frappe.get_doc("Visitor", self.visitor)
+		# Get visitor details (now using Human Profile)
+		visitor = frappe.get_doc("Human Profile", self.visitor)
 
 		# Check watchlist by name and ID
 		watchlist_entry = frappe.db.exists("Visitor Watchlist", {
-			"person_name": f"{visitor.first_name} {visitor.last_name}",
+			"person_name": visitor.full_name,
 			"is_active": 1
 		})
 
@@ -118,7 +118,7 @@ class VisitorRegistration(Document):
 
 		# Unknown company adds 15 points
 		if self.visitor:
-			visitor = frappe.get_doc("Visitor", self.visitor)
+			visitor = frappe.get_doc("Human Profile", self.visitor)
 			if not visitor.company_name or visitor.company_name == "Unknown":
 				risk_score += 15
 
@@ -179,16 +179,16 @@ class VisitorRegistration(Document):
 						recipients.append(email)
 
 				if recipients:
-					visitor = frappe.get_doc("Visitor", self.visitor)
+					visitor = frappe.get_doc("Human Profile", self.visitor)
 					frappe.sendmail(
 						recipients=recipients,
-						subject=f"🚨 WATCHLIST ALERT: {visitor.first_name} {visitor.last_name}",
+						subject=f"🚨 WATCHLIST ALERT: {visitor.full_name}",
 						message=f"""
 						<div style="background-color: #ffebee; padding: 20px; border-left: 5px solid #f44336;">
 							<h2 style="color: #c62828;">⚠️ SECURITY WATCHLIST ALERT</h2>
 							<p><strong>A visitor on the security watchlist has been registered:</strong></p>
 							<ul>
-								<li><strong>Visitor:</strong> {visitor.first_name} {visitor.last_name}</li>
+								<li><strong>Visitor:</strong> {visitor.full_name}</li>
 								<li><strong>ID Number:</strong> {visitor.identification_number or 'N/A'}</li>
 								<li><strong>Company:</strong> {visitor.company_name or 'Unknown'}</li>
 								<li><strong>Expected Arrival:</strong> {self.expected_arrival_date} {self.expected_arrival_time or ''}</li>
@@ -227,16 +227,16 @@ class VisitorRegistration(Document):
 						recipients.append(email)
 
 				if recipients:
-					visitor = frappe.get_doc("Visitor", self.visitor)
+					visitor = frappe.get_doc("Human Profile", self.visitor)
 					frappe.sendmail(
 						recipients=recipients,
-						subject=f"⚠️ HIGH RISK VISITOR: {visitor.first_name} {visitor.last_name}",
+						subject=f"⚠️ HIGH RISK VISITOR: {visitor.full_name}",
 						message=f"""
 						<div style="background-color: #fff3e0; padding: 20px; border-left: 5px solid #ff9800;">
 							<h2 style="color: #e65100;">⚠️ HIGH RISK VISITOR ALERT</h2>
 							<p><strong>A high-risk visitor has been registered:</strong></p>
 							<ul>
-								<li><strong>Visitor:</strong> {visitor.first_name} {visitor.last_name}</li>
+								<li><strong>Visitor:</strong> {visitor.full_name}</li>
 								<li><strong>Company:</strong> {visitor.company_name or 'Unknown'}</li>
 								<li><strong>Risk Score:</strong> {self.risk_score}</li>
 								<li><strong>Risk Band:</strong> {self.risk_band}</li>
@@ -257,119 +257,119 @@ class VisitorRegistration(Document):
 			# Log error but don't fail the transaction
 			frappe.log_error(f"Failed to send high-risk notification: {str(e)}", "High Risk Notification Error")
 
-def create_security_case(self):
-	"""Auto-create security case for high-risk visitor - ISO 27001 A.11.1.1"""
-	try:
-		# Check if case already exists for this registration
-		existing_case = frappe.db.exists("Case", {
-			"linked_visitor": self.visitor,
-			"case_type": "Visitor Security Incident",
-			"status": ["in", ["Open", "Under Investigation"]]
-		})
+	def create_security_case(self):
+		"""Auto-create security case for high-risk visitor - ISO 27001 A.11.1.1"""
+		try:
+			# Check if case already exists for this registration
+			existing_case = frappe.db.exists("Case", {
+				"linked_visitor": self.visitor,
+				"case_type": "Visitor Security Incident",
+				"status": ["in", ["Open", "Under Investigation"]]
+			})
 
-		if existing_case:
-			frappe.msgprint(f"Security case already exists: {existing_case}", alert=True)
-			return
+			if existing_case:
+				frappe.msgprint(f"Security case already exists: {existing_case}", alert=True)
+				return
 
-		# Get visitor details
-		visitor = frappe.get_doc("Visitor", self.visitor)
+			# Get visitor details
+			visitor = frappe.get_doc("Human Profile", self.visitor)
 
-		# Determine severity based on risk score
-		if self.risk_score >= 80:
-			severity = "Critical"
-		elif self.risk_score >= 60:
-			severity = "High"
-		else:
-			severity = "Medium"
+			# Determine severity based on risk score
+			if self.risk_score >= 80:
+				severity = "Critical"
+			elif self.risk_score >= 60:
+				severity = "High"
+			else:
+				severity = "Medium"
 
-		# Get case category and source
-		case_category = frappe.db.get_value("Case Category", {"category_code": "SEC"}, "name")
-		if not case_category:
-			case_category = frappe.db.get_value("Case Category", {}, "name")  # Get any category
+			# Get case category and source
+			case_category = frappe.db.get_value("Case Category", {"category_code": "SEC"}, "name")
+			if not case_category:
+				case_category = frappe.db.get_value("Case Category", {}, "name")  # Get any category
 
-		case_source = frappe.db.get_value("Case Source", {"source_name": "Security Alert"}, "name")
-		if not case_source:
-			case_source = frappe.db.get_value("Case Source", {}, "name")  # Get any source
+			case_source = frappe.db.get_value("Case Source", {"source_name": "Security Alert"}, "name")
+			if not case_source:
+				case_source = frappe.db.get_value("Case Source", {}, "name")  # Get any source
 
-		# Build case description
-		description = f"""
-		<h3>High-Risk Visitor Security Alert</h3>
-		<p><strong>Auto-generated case for high-risk visitor registration.</strong></p>
+			# Build case description
+			description = f"""
+			<h3>High-Risk Visitor Security Alert</h3>
+			<p><strong>Auto-generated case for high-risk visitor registration.</strong></p>
 
-		<h4>Visitor Information:</h4>
-		<ul>
-			<li><strong>Name:</strong> {visitor.first_name} {visitor.last_name}</li>
-			<li><strong>Company:</strong> {visitor.company_name or 'Unknown'}</li>
-			<li><strong>ID Number:</strong> {visitor.id_number or 'Not provided'}</li>
-			<li><strong>Phone:</strong> {visitor.phone_number or 'Not provided'}</li>
-			<li><strong>Email:</strong> {visitor.email or 'Not provided'}</li>
-		</ul>
+			<h4>Visitor Information:</h4>
+			<ul>
+				<li><strong>Name:</strong> {visitor.full_name}</li>
+				<li><strong>Company:</strong> {visitor.company_name or 'Unknown'}</li>
+				<li><strong>ID Number:</strong> {visitor.identification_number or 'Not provided'}</li>
+				<li><strong>Phone:</strong> {visitor.phone or 'Not provided'}</li>
+				<li><strong>Email:</strong> {visitor.email or 'Not provided'}</li>
+			</ul>
 
-		<h4>Risk Assessment:</h4>
-		<ul>
-			<li><strong>Risk Score:</strong> {self.risk_score}</li>
-			<li><strong>Risk Band:</strong> {self.risk_band}</li>
-			<li><strong>On Watchlist:</strong> {'Yes' if self.on_watchlist else 'No'}</li>
-			<li><strong>First Time Visitor:</strong> {'Yes' if self.is_first_time_visitor else 'No'}</li>
-			<li><strong>Visitor Type:</strong> {self.visitor_type}</li>
-		</ul>
+			<h4>Risk Assessment:</h4>
+			<ul>
+				<li><strong>Risk Score:</strong> {self.risk_score}</li>
+				<li><strong>Risk Band:</strong> {self.risk_band}</li>
+				<li><strong>On Watchlist:</strong> {'Yes' if self.on_watchlist else 'No'}</li>
+				<li><strong>First Time Visitor:</strong> {'Yes' if self.is_first_time_visitor else 'No'}</li>
+				<li><strong>Visitor Type:</strong> {self.visitor_type}</li>
+			</ul>
 
-		<h4>Visit Details:</h4>
-		<ul>
-			<li><strong>Purpose:</strong> {self.purpose_of_visit}</li>
-			<li><strong>Expected Arrival:</strong> {self.expected_arrival_date}</li>
-			<li><strong>Location:</strong> {self.location}</li>
-			<li><strong>Access Level:</strong> {self.access_level}</li>
-			<li><strong>Host Employee:</strong> {self.host_employee or 'Not assigned'}</li>
-		</ul>
+			<h4>Visit Details:</h4>
+			<ul>
+				<li><strong>Purpose:</strong> {self.purpose_of_visit}</li>
+				<li><strong>Expected Arrival:</strong> {self.expected_arrival_date}</li>
+				<li><strong>Location:</strong> {self.location}</li>
+				<li><strong>Access Level:</strong> {self.access_level}</li>
+				<li><strong>Host Employee:</strong> {self.host_employee or 'Not assigned'}</li>
+			</ul>
 
-		<h4>Recommended Actions:</h4>
-		<ul>
-			<li>Verify visitor identity and credentials</li>
-			<li>Review watchlist status and reasons</li>
-			<li>Conduct enhanced security screening</li>
-			<li>Assign security escort if approved</li>
-			<li>Monitor visitor activities during visit</li>
-		</ul>
+			<h4>Recommended Actions:</h4>
+			<ul>
+				<li>Verify visitor identity and credentials</li>
+				<li>Review watchlist status and reasons</li>
+				<li>Conduct enhanced security screening</li>
+				<li>Assign security escort if approved</li>
+				<li>Monitor visitor activities during visit</li>
+			</ul>
 
-		<p><strong>Registration Reference:</strong> <a href="/app/visitor-registration/{self.name}">{self.name}</a></p>
-		"""
+			<p><strong>Registration Reference:</strong> <a href="/app/visitor-registration/{self.name}">{self.name}</a></p>
+			"""
 
-		# Create case
-		case = frappe.get_doc({
-			"doctype": "Case",
-			"case_title": f"High-Risk Visitor: {visitor.first_name} {visitor.last_name}",
-			"case_type": "Visitor Security Incident",
-			"case_category": case_category,
-			"case_source": case_source,
-			"status": "Open",
-			"severity": severity,
-			"confidentiality_level": "Restricted",
-			"description": description,
-			"linked_visitor": self.visitor,
-			"date_reported": frappe.utils.today(),
-			"assigned_case_manager": frappe.session.user
-		})
+			# Create case
+			case = frappe.get_doc({
+				"doctype": "Case",
+				"case_title": f"High-Risk Visitor: {visitor.full_name}",
+				"case_type": "Visitor Security Incident",
+				"case_category": case_category,
+				"case_source": case_source,
+				"status": "Open",
+				"severity": severity,
+				"confidentiality_level": "Restricted",
+				"description": description,
+				"linked_visitor": self.visitor,
+				"date_reported": frappe.utils.today(),
+				"assigned_case_manager": frappe.session.user
+			})
 
-		case.insert(ignore_permissions=True)
-		frappe.db.commit()
+			case.insert(ignore_permissions=True)
+			frappe.db.commit()
 
-		frappe.msgprint(f"Security case created: {case.name}", alert=True, indicator="orange")
+			frappe.msgprint(f"Security case created: {case.name}", alert=True, indicator="orange")
 
-	except Exception as e:
-		# Log error but don't fail the transaction
-		frappe.log_error(f"Failed to create security case: {str(e)}", "Auto Case Creation Error")
+		except Exception as e:
+			# Log error but don't fail the transaction
+			frappe.log_error(f"Failed to create security case: {str(e)}", "Auto Case Creation Error")
 
 	def send_confirmation_notification(self):
 		"""Send confirmation notification"""
 		try:
-			visitor = frappe.get_doc("Visitor", self.visitor)
+			visitor = frappe.get_doc("Human Profile", self.visitor)
 			if visitor.email:
 				frappe.sendmail(
 					recipients=[visitor.email],
 					subject=f"Visitor Registration Confirmed - {self.location}",
 					message=f"""
-					Dear {visitor.first_name} {visitor.last_name},
+					Dear {visitor.full_name},
 
 					Your visitor registration has been confirmed for {self.expected_arrival_date}.
 

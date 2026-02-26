@@ -44,13 +44,15 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Primary Person",
-   "options": "Human Profile"
+   "options": "Human Profile",
+   "link_filters": "[[\"Human Profile\", \"person_type\", \"=\", \"Employee\"]]"
   },
   {
    "fieldname": "tailgating_person",
    "fieldtype": "Link",
    "label": "Tailgating Person",
-   "options": "Human Profile"
+   "options": "Human Profile",
+   "link_filters": "[[\"Human Profile\", \"person_type\", \"=\", \"Employee\"]]"
   },
   {
    "fieldname": "alert_section",

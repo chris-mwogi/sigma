@@ -129,8 +129,8 @@ def link_vms_to_visitor(vms_event_id, visitor_id):
 	try:
 		if not frappe.db.exists("VMS Event", vms_event_id):
 			return {"status": "error", "message": f"VMS Event {vms_event_id} not found"}
-		
-		if not frappe.db.exists("Visitor", visitor_id):
+
+		if not frappe.db.exists("Human Profile", visitor_id):
 			return {"status": "error", "message": f"Visitor {visitor_id} not found"}
 		
 		vms_event = frappe.get_doc("VMS Event", vms_event_id)

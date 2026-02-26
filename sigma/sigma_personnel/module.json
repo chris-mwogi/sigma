@@ -7,7 +7,7 @@
   "description": "Personnel Tracking Module (PTM) for KPLC - ISO 27001, ISO 45001, ISO 31000, ISO 22301 compliant",
   "developer": "Prismod Technologies Limited",
   "icon": "icon-user-check",
-  "label": "Personnel Tracking",
+  "label": "Sigma Personnel",
   "module_name": "Sigma Personnel",
   "name": "sigma_personnel",
   "type": "module",

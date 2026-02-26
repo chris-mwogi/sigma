@@ -1,2 +1,0 @@
-# Guarding Services Workspace
-

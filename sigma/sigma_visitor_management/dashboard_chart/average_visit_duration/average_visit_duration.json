@@ -1,0 +1,27 @@
+{
+ "chart_name": "Average Visit Duration",
+ "chart_type": "Group By",
+ "creation": "2025-12-11 12:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "document_type": "Visitor Checkin Checkout",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[[\"Visitor Checkin Checkout\", \"status\", \"=\", \"Checked Out\"]]",
+ "group_by_based_on": "location",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "modified": "2025-12-11 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Visitor Management",
+ "name": "Average Visit Duration",
+ "number_of_groups": 10,
+ "owner": "Administrator",
+ "source": "",
+ "time_interval": "Daily",
+ "timeseries": 0,
+ "timespan": "Last Month",
+ "type": "Bar"
+}
+

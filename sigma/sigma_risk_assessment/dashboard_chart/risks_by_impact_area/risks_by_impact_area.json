@@ -1,0 +1,27 @@
+{
+ "chart_name": "Risks by Impact Area",
+ "chart_type": "Group By",
+ "creation": "2025-12-14 12:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "document_type": "Risk Register",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[]",
+ "group_by_based_on": "impact_area",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "modified": "2025-12-14 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Risk Assessment",
+ "name": "Risks by Impact Area",
+ "number_of_groups": 10,
+ "owner": "Administrator",
+ "source": "",
+ "time_interval": "Daily",
+ "timeseries": 0,
+ "timespan": "Last Year",
+ "type": "Pie"
+}
+

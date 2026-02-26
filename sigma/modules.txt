@@ -4,7 +4,7 @@ Sigma Access Control
 Sigma Assets
 Sigma Case Management
 Sigma Erpnext Integrations
-Sigma Guard Monitoring
+Sigma Guard Services
 Sigma Human Tracking
 Sigma Personnel
 Sigma Risk Assessment

@@ -1,0 +1,44 @@
+{
+ "cards": [
+  {
+   "card": "Missed Patrols"
+  },
+  {
+   "card": "Guards on Duty"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Patrol Schedules by Status",
+   "width": "Half"
+  },
+  {
+   "chart": "Patrol Completion Status",
+   "width": "Half"
+  },
+  {
+   "chart": "Patrols Completed Over Time",
+   "width": "Full"
+  },
+  {
+   "chart": "Patrol Verifications by Location",
+   "width": "Half"
+  },
+  {
+   "chart": "Discrepancy Reports by Status",
+   "width": "Half"
+  }
+ ],
+ "creation": "2025-12-11 15:13:52.890720",
+ "dashboard_name": "Patrol Monitoring Dashboard",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2025-12-11 16:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Guard Services",
+ "name": "Patrol Monitoring Dashboard",
+ "owner": "Administrator"
+}

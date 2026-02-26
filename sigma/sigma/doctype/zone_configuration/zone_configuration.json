@@ -1,0 +1,238 @@
+{
+  "actions": [],
+  "autoname": "field:zone_code",
+  "creation": "2025-01-20 00:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "Document",
+  "engine": "InnoDB",
+  "field_order": [
+    "zone_name",
+    "zone_code",
+    "zone_type",
+    "location",
+    "column_break_3",
+    "hazard_level",
+    "clearance_level_required",
+    "section_break_safety",
+    "max_duration_minutes",
+    "requires_escort",
+    "requires_gas_monitoring",
+    "is_confined_space",
+    "column_break_safety",
+    "max_occupancy",
+    "lone_worker_alert_minutes",
+    "emergency_assembly_point",
+    "section_break_ppe",
+    "ppe_requirements",
+    "section_break_location",
+    "parent_zone",
+    "zone_supervisor",
+    "column_break_location",
+    "latitude",
+    "longitude",
+    "geofence_radius_meters",
+    "section_break_status",
+    "is_active",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "zone_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Zone Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "zone_code",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Zone Code",
+      "reqd": 1,
+      "unique": 1,
+      "description": "Unique zone identifier (e.g., SUB-001, GEN-PLANT-A)"
+    },
+    {
+      "fieldname": "zone_type",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Zone Type",
+      "options": "Office\nSubstation\nGeneration Plant\nFeeder Room\nTransformer Yard\nControl Room\nSCADA Room\nWarehouse\nParking\nMuster Point\nConfined Space\nHazardous Area",
+      "reqd": 1
+    },
+    {
+      "fieldname": "location",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Location",
+      "options": "Location",
+      "reqd": 1,
+      "description": "Parent location (facility/site) where this zone is located"
+    },
+    {
+      "fieldname": "column_break_3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "hazard_level",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Hazard Level",
+      "options": "Low\nMedium\nHigh\nCritical",
+      "reqd": 1,
+      "description": "ISO 45001 hazard classification"
+    },
+    {
+      "fieldname": "clearance_level_required",
+      "fieldtype": "Select",
+      "label": "Clearance Level Required",
+      "options": "Low\nMedium\nHigh\nCritical",
+      "reqd": 1,
+      "description": "Minimum clearance level required (IEC 62443)"
+    },
+    {
+      "fieldname": "section_break_safety",
+      "fieldtype": "Section Break",
+      "label": "Safety Configuration"
+    },
+    {
+      "fieldname": "max_duration_minutes",
+      "fieldtype": "Int",
+      "label": "Max Duration (Minutes)",
+      "description": "Maximum time personnel can stay in this zone (0 = unlimited)"
+    },
+    {
+      "fieldname": "requires_escort",
+      "fieldtype": "Check",
+      "label": "Requires Escort"
+    },
+    {
+      "fieldname": "requires_gas_monitoring",
+      "fieldtype": "Check",
+      "label": "Requires Gas Monitoring"
+    },
+    {
+      "fieldname": "is_confined_space",
+      "fieldtype": "Check",
+      "label": "Is Confined Space"
+    },
+    {
+      "fieldname": "column_break_safety",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "max_occupancy",
+      "fieldtype": "Int",
+      "label": "Max Occupancy",
+      "description": "Maximum number of personnel allowed simultaneously"
+    },
+    {
+      "fieldname": "lone_worker_alert_minutes",
+      "fieldtype": "Int",
+      "label": "Lone Worker Alert (Minutes)",
+      "description": "Alert if lone worker exceeds this duration (ISO 45001)"
+    },
+    {
+      "fieldname": "emergency_assembly_point",
+      "fieldtype": "Link",
+      "label": "Emergency Assembly Point",
+      "options": "Zone Configuration",
+      "description": "Muster point for evacuation (ISO 22301)"
+    },
+    {
+      "fieldname": "section_break_ppe",
+      "fieldtype": "Section Break",
+      "label": "PPE Requirements"
+    },
+    {
+      "fieldname": "ppe_requirements",
+      "fieldtype": "Small Text",
+      "label": "PPE Requirements",
+      "description": "Required PPE items (comma-separated): Hard Hat, Safety Boots, Gloves, Goggles, Arc Flash Suit, etc."
+    },
+    {
+      "fieldname": "section_break_location",
+      "fieldtype": "Section Break",
+      "label": "Location & Hierarchy"
+    },
+    {
+      "fieldname": "parent_zone",
+      "fieldtype": "Link",
+      "label": "Parent Zone",
+      "options": "Zone Configuration",
+      "description": "Parent zone in hierarchy"
+    },
+    {
+      "fieldname": "zone_supervisor",
+      "fieldtype": "Link",
+      "label": "Zone Supervisor",
+      "options": "Employee",
+      "description": "Responsible supervisor for this zone"
+    },
+    {
+      "fieldname": "column_break_location",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "latitude",
+      "fieldtype": "Float",
+      "label": "Latitude",
+      "precision": "8"
+    },
+    {
+      "fieldname": "longitude",
+      "fieldtype": "Float",
+      "label": "Longitude",
+      "precision": "8"
+    },
+    {
+      "fieldname": "geofence_radius_meters",
+      "fieldtype": "Int",
+      "label": "Geofence Radius (Meters)",
+      "description": "Radius for geofence alerts"
+    },
+    {
+      "fieldname": "section_break_status",
+      "fieldtype": "Section Break",
+      "label": "Status & Notes"
+    },
+    {
+      "fieldname": "is_active",
+      "fieldtype": "Check",
+      "label": "Is Active",
+      "default": "1"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text",
+      "label": "Notes"
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "links": [],
+  "modified": "2025-01-20 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sigma",
+  "name": "Zone Configuration",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1
+}
+

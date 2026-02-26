@@ -1,0 +1,275 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:RR-{YYYY}-{#####}",
+ "creation": "2025-11-18 13:30:00.000000",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "requisition_details_section",
+  "requisition_date",
+  "requesting_department",
+  "requested_by",
+  "column_break_1",
+  "priority",
+  "status",
+  "location_section",
+  "location",
+  "site_description",
+  "resource_requirements_section",
+  "resources_table",
+  "schedule_section",
+  "start_date",
+  "end_date",
+  "column_break_2",
+  "shift_pattern",
+  "duration_days",
+  "justification_section",
+  "purpose",
+  "justification",
+  "approval_section",
+  "approval_status",
+  "approved_by",
+  "approval_date",
+  "column_break_3",
+  "rejected_reason",
+  "notes_section",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "requisition_details_section",
+   "fieldtype": "Section Break",
+   "label": "Requisition Details"
+  },
+  {
+   "fieldname": "requisition_date",
+   "fieldtype": "Date",
+   "label": "Requisition Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "requesting_department",
+   "fieldtype": "Link",
+   "label": "Requesting Department",
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "default": "user",
+   "fieldname": "requested_by",
+   "fieldtype": "Link",
+   "label": "Requested By",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Medium",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nUrgent",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Draft\nPending Approval\nApproved\nRejected\nFulfilled\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "location_section",
+   "fieldtype": "Section Break",
+   "label": "Location Details"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "site_description",
+   "fieldtype": "Small Text",
+   "label": "Site Description"
+  },
+  {
+   "fieldname": "resource_requirements_section",
+   "fieldtype": "Section Break",
+   "label": "Resource Requirements"
+  },
+  {
+   "fieldname": "resources_table",
+   "fieldtype": "Table",
+   "label": "Required Resources",
+   "options": "Resource Requisition Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "schedule_section",
+   "fieldtype": "Section Break",
+   "label": "Schedule"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shift_pattern",
+   "fieldtype": "Select",
+   "label": "Shift Pattern",
+   "options": "Day Shift (8 hours)\nNight Shift (8 hours)\n12 Hour Shift\n24 Hour Coverage\nCustom"
+  },
+  {
+   "fieldname": "duration_days",
+   "fieldtype": "Int",
+   "label": "Duration (Days)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "justification_section",
+   "fieldtype": "Section Break",
+   "label": "Justification"
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Select",
+   "label": "Purpose",
+   "options": "Regular Security\nEvent Security\nEmergency Response\nTemporary Coverage\nProject Security\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "justification",
+   "fieldtype": "Text Editor",
+   "label": "Justification",
+   "reqd": 1
+  },
+  {
+   "fieldname": "approval_section",
+   "fieldtype": "Section Break",
+   "label": "Approval"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Approval Status",
+   "options": "Pending\nApproved\nRejected",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "approval_date",
+   "fieldtype": "Datetime",
+   "label": "Approval Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "rejected_reason",
+   "fieldtype": "Text",
+   "label": "Rejection Reason"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  }
+ ],
+ "idx": 0,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-11-18 13:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Guard Services",
+ "name": "Resource Requisition",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Security Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Department Manager"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "requesting_department",
+ "track_changes": 1
+}
+

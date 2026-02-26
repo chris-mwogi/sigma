@@ -1,0 +1,29 @@
+{
+ "cards": [
+  {
+   "card": "KRI Alerts"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "KRI by Status",
+   "width": "Half"
+  },
+  {
+   "chart": "KRI by Category",
+   "width": "Half"
+  }
+ ],
+ "creation": "2025-12-14 17:39:07.474886",
+ "dashboard_name": "KRI Monitoring Dashboard",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2025-12-14 17:39:07.474886",
+ "modified_by": "Administrator",
+ "module": "Sigma Risk Assessment",
+ "name": "KRI Monitoring Dashboard",
+ "owner": "Administrator"
+}

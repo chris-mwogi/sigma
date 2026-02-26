@@ -1,0 +1,27 @@
+{
+ "chart_name": "Visitors by Host",
+ "chart_type": "Group By",
+ "creation": "2025-12-11 12:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "document_type": "Visitor Registration",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[]",
+ "group_by_based_on": "host_department",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "modified": "2025-12-11 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Visitor Management",
+ "name": "Visitors by Host",
+ "number_of_groups": 10,
+ "owner": "Administrator",
+ "source": "",
+ "time_interval": "Daily",
+ "timeseries": 0,
+ "timespan": "Last Month",
+ "type": "Bar"
+}
+

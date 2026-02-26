@@ -19,8 +19,8 @@ class VisitorAccessLog(Document):
 		self.validate_timestamp()
 	
 	def validate_visitor(self):
-		"""Validate visitor exists"""
-		if not frappe.db.exists("Visitor", self.visitor):
+		"""Validate visitor exists (using Human Profile)"""
+		if not frappe.db.exists("Human Profile", self.visitor):
 			frappe.throw(f"Visitor {self.visitor} not found")
 	
 	def validate_timestamp(self):

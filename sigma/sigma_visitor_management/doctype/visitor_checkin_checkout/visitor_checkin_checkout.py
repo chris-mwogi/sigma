@@ -28,10 +28,10 @@ class VisitorCheckinCheckout(Document):
 	
 	def validate_visitor(self):
 		"""Validate visitor exists and is not blacklisted"""
-		if not frappe.db.exists("Visitor", self.visitor):
+		if not frappe.db.exists("Human Profile", self.visitor):
 			frappe.throw(f"Visitor {self.visitor} not found")
-		
-		visitor = frappe.get_doc("Visitor", self.visitor)
+
+		visitor = frappe.get_doc("Human Profile", self.visitor)
 		if visitor.is_blacklisted:
 			frappe.throw(f"Visitor {self.visitor} is blacklisted: {visitor.blacklist_reason}")
 	
@@ -51,7 +51,7 @@ class VisitorCheckinCheckout(Document):
 	
 	def check_blacklist(self):
 		"""Check if visitor is blacklisted"""
-		visitor = frappe.get_doc("Visitor", self.visitor)
+		visitor = frappe.get_doc("Human Profile", self.visitor)
 		if visitor.is_blacklisted:
 			frappe.throw(f"Cannot check in blacklisted visitor: {visitor.blacklist_reason}")
 	
@@ -101,7 +101,7 @@ class VisitorCheckinCheckout(Document):
 	
 	def get_visitor_details(self):
 		"""Get visitor details"""
-		return frappe.get_doc("Visitor", self.visitor)
+		return frappe.get_doc("Human Profile", self.visitor)
 	
 	def get_guard_details(self):
 		"""Get guard details"""

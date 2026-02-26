@@ -1,0 +1,27 @@
+{
+  "name": "Vehicle Access Control Dashboard",
+  "label": "Vehicle Access Control Dashboard",
+  "module": "Sigma Vehicle Management",
+  "icon": "🔐",
+  "description": "ISO 27001 & ISO 18788 Compliant - access control for all vehicle categories",
+  "is_default": 0,
+  "charts": [
+    {"chart": "Access Trends by Type", "width": "Half"},
+    {"chart": "Denial Reasons", "width": "Half"},
+    {"chart": "Access by Vehicle Category", "width": "Half"},
+    {"chart": "Security Events Timeline", "width": "Half"}
+  ],
+  "shortcuts": [
+    {"label": "Access Logs", "link_to": "Vehicle Access Log", "type": "DocType"},
+    {"label": "Vehicle Passes", "link_to": "Vehicle Pass", "type": "DocType"},
+    {"label": "Blacklisted Vehicles", "link_to": "Vehicle", "type": "DocType"}
+  ],
+  "cards": [
+    {"card": "Successful Entries"},
+    {"card": "Denied Entries"},
+    {"card": "Suspicious Attempts"},
+    {"card": "ANPR Mismatches"},
+    {"card": "Expired Unauthorized"}
+  ]
+}
+

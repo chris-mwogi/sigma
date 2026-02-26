@@ -29,39 +29,37 @@ def register_visitor(first_name, last_name, visitor_type, location, email=None, 
 		Success/error response with visitor ID
 	"""
 	try:
-		# Check if visitor already exists
+		# Check if visitor already exists (using Human Profile with Visitor type)
+		full_name = f"{first_name} {last_name}".strip()
 		existing = frappe.get_all(
-			"Visitor",
+			"Human Profile",
 			filters={
-				"first_name": first_name,
-				"last_name": last_name,
+				"full_name": full_name,
+				"person_type": "Visitor",
 				"email": email or ""
 			},
 			limit_page_length=1
 		)
-		
+
 		if existing:
 			visitor_id = existing[0]["name"]
-			visitor = frappe.get_doc("Visitor", visitor_id)
+			visitor = frappe.get_doc("Human Profile", visitor_id)
 		else:
-			# Create new visitor
-			visitor = frappe.new_doc("Visitor")
-			visitor.first_name = first_name
-			visitor.last_name = last_name
+			# Create new visitor as Human Profile
+			visitor = frappe.new_doc("Human Profile")
+			visitor.full_name = full_name
+			visitor.person_type = "Visitor"
 			visitor.visitor_type = visitor_type
-			visitor.created_at_location = location
-			visitor.created_by_guard = frappe.session.user
-		
+
 		# Update visitor details
 		visitor.email = email
 		visitor.phone = phone
 		visitor.company_name = company_name
-		visitor.purpose_of_visit = purpose_of_visit
 		visitor.identification_type = identification_type
 		visitor.identification_number = identification_number
-		
+
 		visitor.insert(ignore_permissions=True)
-		
+
 		return {
 			"status": "success",
 			"message": "Visitor registered successfully",
@@ -91,11 +89,11 @@ def check_in_visitor(visitor_id, location, guard_id, check_in_method="Guard-Init
 		Success/error response with check-in record ID
 	"""
 	try:
-		# Validate visitor
-		if not frappe.db.exists("Visitor", visitor_id):
+		# Validate visitor (now using Human Profile)
+		if not frappe.db.exists("Human Profile", visitor_id):
 			return {"status": "error", "message": f"Visitor {visitor_id} not found"}
-		
-		visitor = frappe.get_doc("Visitor", visitor_id)
+
+		visitor = frappe.get_doc("Human Profile", visitor_id)
 		if visitor.is_blacklisted:
 			return {"status": "error", "message": f"Visitor is blacklisted: {visitor.blacklist_reason}"}
 		

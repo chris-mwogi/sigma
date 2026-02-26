@@ -1,0 +1,25 @@
+{
+  "aggregate_function_based_on": "",
+  "color": "#ef4444",
+  "creation": "2025-12-11 00:00:00.000000",
+  "docstatus": 0,
+  "doctype": "Number Card",
+  "document_type": "",
+  "dynamic_filters_json": "[]",
+  "filters_json": "[]",
+  "function": "",
+  "idx": 0,
+  "is_public": 1,
+  "is_standard": 1,
+  "label": "Unmanned Posts",
+  "method": "sigma.sigma_guard_services.api.guarding_dashboard_api.get_unmanned_posts_count",
+  "modified": "2025-12-11 16:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sigma Guard Services",
+  "name": "Unmanned Posts",
+  "owner": "Administrator",
+  "show_percentage_stats": 1,
+  "stats_time_interval": "Daily",
+  "type": "Custom"
+}
+

@@ -1,0 +1,221 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "autoname": "SR-{resource_type}-{####}",
+  "creation": "2025-10-24 10:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "Document",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "resource_type",
+    "resource_name",
+    "supplier",
+    "status",
+    "resource_details_section",
+    "guard_details",
+    "employee_id",
+    "certifications",
+    "k9_details",
+    "breed",
+    "handler",
+    "vehicle_details",
+    "vehicle_type",
+    "registration_number",
+    "gps_device_id",
+    "equipment_details",
+    "equipment_category",
+    "serial_number",
+    "station_details",
+    "location",
+    "station_type"
+  ],
+  "fields": [
+    {
+      "fieldname": "resource_type",
+      "fieldtype": "Select",
+      "label": "Resource Type",
+      "options": "Security Guard\nSecurity Supervisor\nK9 Handler\nArmed Guard\nAccess Controller\nGuard Dog\nSecurity Vehicle\nSecurity Equipment\nStations",
+      "reqd": 1,
+      "description": "Type of security resource"
+    },
+    {
+      "fieldname": "resource_name",
+      "fieldtype": "Data",
+      "label": "Resource Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "supplier",
+      "fieldtype": "Link",
+      "label": "Service Provider",
+      "options": "Supplier",
+      "reqd": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Available\nDeployed\nOn Leave\nInactive\nMaintenance\nRetired",
+      "default": "Available"
+    },
+    {
+      "fieldname": "resource_details_section",
+      "fieldtype": "Section Break",
+      "label": "Resource Details"
+    },
+    {
+      "fieldname": "guard_details",
+      "fieldtype": "Section Break",
+      "label": "Guard Details",
+      "depends_on": "eval:['Security Guard', 'Security Supervisor', 'K9 Handler', 'Armed Guard', 'Access Controller'].includes(doc.resource_type)"
+    },
+    {
+      "fieldname": "employee_id",
+      "fieldtype": "Link",
+      "label": "Employee ID",
+      "options": "Employee",
+      "depends_on": "eval:['Security Guard', 'Security Supervisor', 'K9 Handler', 'Armed Guard', 'Access Controller'].includes(doc.resource_type)"
+    },
+    {
+      "fieldname": "certifications",
+      "fieldtype": "Table",
+      "label": "Certifications",
+      "options": "Resource Certification",
+      "depends_on": "eval:['Security Guard', 'Security Supervisor', 'K9 Handler', 'Armed Guard', 'Access Controller'].includes(doc.resource_type)"
+    },
+    {
+      "fieldname": "k9_details",
+      "fieldtype": "Section Break",
+      "label": "K9 Details",
+      "depends_on": "resource_type == 'Guard Dog'"
+    },
+    {
+      "fieldname": "breed",
+      "fieldtype": "Data",
+      "label": "Breed",
+      "depends_on": "resource_type == 'Guard Dog'"
+    },
+    {
+      "fieldname": "handler",
+      "fieldtype": "Link",
+      "label": "Handler",
+      "options": "Security Resource",
+      "depends_on": "resource_type == 'Guard Dog'"
+    },
+    {
+      "fieldname": "vehicle_details",
+      "fieldtype": "Section Break",
+      "label": "Vehicle Details",
+      "depends_on": "resource_type == 'Security Vehicle'"
+    },
+    {
+      "fieldname": "vehicle_type",
+      "fieldtype": "Select",
+      "label": "Vehicle Type",
+      "options": "Sedan\nSUV\nVan\nTruck",
+      "depends_on": "resource_type == 'Security Vehicle'"
+    },
+    {
+      "fieldname": "registration_number",
+      "fieldtype": "Data",
+      "label": "Registration Number",
+      "depends_on": "resource_type == 'Security Vehicle'"
+    },
+    {
+      "fieldname": "gps_device_id",
+      "fieldtype": "Data",
+      "label": "GPS Device ID",
+      "depends_on": "resource_type == 'Security Vehicle'"
+    },
+    {
+      "fieldname": "equipment_details",
+      "fieldtype": "Section Break",
+      "label": "Equipment Details",
+      "depends_on": "resource_type == 'Security Equipment'"
+    },
+    {
+      "fieldname": "equipment_category",
+      "fieldtype": "Select",
+      "label": "Equipment Category",
+      "options": "Radio\nCamera\nMetal Detector\nAccess Control\nOther",
+      "depends_on": "resource_type == 'Security Equipment'"
+    },
+    {
+      "fieldname": "serial_number",
+      "fieldtype": "Data",
+      "label": "Serial Number",
+      "depends_on": "resource_type == 'Security Equipment'"
+    },
+    {
+      "fieldname": "station_details",
+      "fieldtype": "Section Break",
+      "label": "Station Details",
+      "depends_on": "resource_type == 'Stations'"
+    },
+    {
+      "fieldname": "location",
+      "fieldtype": "Link",
+      "label": "Location",
+      "options": "Location",
+      "depends_on": "resource_type == 'Stations'"
+    },
+    {
+      "fieldname": "station_type",
+      "fieldtype": "Select",
+      "label": "Station Type",
+      "options": "Guard Post\nCheckpoint\nControl Room\nGate",
+      "depends_on": "resource_type == 'Stations'"
+    }
+  ],
+  "idx": 1,
+  "is_submittable": 1,
+  "links": [],
+  "modified": "2025-10-24 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sigma Guard Services",
+  "name": "Security Resource",
+  "naming_rule": "NAMING_SERIES",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Compliance Officer",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Service Provider"
+    }
+  ],
+  "quick_entry": 1,
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1
+}
+

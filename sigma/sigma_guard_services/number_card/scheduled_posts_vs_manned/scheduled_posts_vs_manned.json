@@ -1,0 +1,21 @@
+{
+  "aggregate_function_based_on": "",
+  "creation": "2025-12-07 00:00:00.000000",
+  "docstatus": 0,
+  "doctype": "Number Card",
+  "document_type": "Patrol Checkpoint",
+  "dynamic_filters_json": "[]",
+  "filters_json": "[[\"Patrol Checkpoint\",\"docstatus\",\"!=\",2]]",
+  "function": "Count",
+  "idx": 0,
+  "is_public": 1,
+  "is_standard": 1,
+  "label": "Scheduled Posts vs Manned",
+  "modified": "2025-12-07 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Sigma Guard Services",
+  "name": "Scheduled Posts vs Manned",
+  "owner": "Administrator",
+  "show_percentage_stats": 1,
+  "type": "Document Type"
+}

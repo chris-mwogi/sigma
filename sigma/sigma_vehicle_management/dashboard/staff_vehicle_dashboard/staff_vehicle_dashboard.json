@@ -1,0 +1,26 @@
+{
+  "name": "Staff Vehicle Dashboard",
+  "label": "Staff Vehicle Dashboard",
+  "module": "Sigma Vehicle Management",
+  "icon": "🚗",
+  "description": "Employee personal vehicles - parking occupancy, access management, department analytics",
+  "is_default": 0,
+  "charts": [
+    {"chart": "Entry Frequency per Department", "width": "Half"},
+    {"chart": "Gate Load by Staff Vehicles", "width": "Half"},
+    {"chart": "Staff Parking Heatmap", "width": "Half"},
+    {"chart": "Zone Occupancy", "width": "Half"}
+  ],
+  "shortcuts": [
+    {"label": "Staff Vehicles", "link_to": "Vehicle Registration", "type": "DocType"},
+    {"label": "Parking Zones", "link_to": "Parking Zone", "type": "DocType"},
+    {"label": "Access Logs", "link_to": "Vehicle Access Log", "type": "DocType"}
+  ],
+  "cards": [
+    {"card": "Parking Occupancy Percent"},
+    {"card": "Staff Vehicles Inside"},
+    {"card": "Past Allowed Time"},
+    {"card": "Gate Usage Per Hour"}
+  ]
+}
+

@@ -1,0 +1,46 @@
+{
+ "cards": [
+  {
+   "card": "Visitors Currently Onsite"
+  },
+  {
+   "card": "Total Visitors"
+  },
+  {
+   "card": "Active Visitor Badges"
+  },
+  {
+   "card": "Blacklisted Visitors"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Visitors Today By Status",
+   "width": "Half"
+  },
+  {
+   "chart": "Visitor Check-ins Trend",
+   "width": "Half"
+  },
+  {
+   "chart": "Visitors by Check-in Method",
+   "width": "Half"
+  },
+  {
+   "chart": "Visitor Badges by Status",
+   "width": "Half"
+  }
+ ],
+ "creation": "2025-12-10 19:06:30.421919",
+ "dashboard_name": "Visitor Dashboard",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2025-12-10 19:06:30.421919",
+ "modified_by": "Administrator",
+ "module": "Sigma Visitor Management",
+ "name": "Visitor Dashboard",
+ "owner": "Administrator"
+}

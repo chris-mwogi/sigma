@@ -1,0 +1,27 @@
+{
+  "name": "Vehicle Maintenance Dashboard",
+  "label": "Vehicle Maintenance & Health Dashboard",
+  "module": "Sigma Vehicle Management",
+  "icon": "⚙️",
+  "description": "Company fleet maintenance - service schedules, fuel costs, OBD fault codes, battery health",
+  "is_default": 0,
+  "charts": [
+    {"chart": "Maintenance Cost by Department", "width": "Half"},
+    {"chart": "Fuel Consumption Trend", "width": "Half"},
+    {"chart": "Fuel Cost per Vehicle", "width": "Half"},
+    {"chart": "Service Schedule Calendar", "width": "Half"}
+  ],
+  "shortcuts": [
+    {"label": "Vehicles", "link_to": "Vehicle", "type": "DocType"},
+    {"label": "Inspections", "link_to": "Vehicle Inspection Checklist", "type": "DocType"},
+    {"label": "Maintenance History", "link_to": "Vehicle Inspection Checklist", "type": "DocType"}
+  ],
+  "cards": [
+    {"card": "Due for Service"},
+    {"card": "Avg Fuel Cost Per Vehicle"},
+    {"card": "Maintenance Cost MTD"},
+    {"card": "OBD Fault Alerts"},
+    {"card": "Battery Health Issues"}
+  ]
+}
+

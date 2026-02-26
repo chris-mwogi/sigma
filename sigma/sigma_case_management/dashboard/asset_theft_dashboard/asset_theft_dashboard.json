@@ -1,0 +1,50 @@
+{
+ "cards": [
+  {
+   "card": "Total Asset Thefts"
+  },
+  {
+   "card": "Total Cases"
+  },
+  {
+   "card": "High Severity Cases"
+  },
+  {
+   "card": "Under Investigation Cases"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Asset Theft Trend",
+   "width": "Full"
+  },
+  {
+   "chart": "Asset Theft by Type",
+   "width": "Half"
+  },
+  {
+   "chart": "Cases by Region",
+   "width": "Half"
+  },
+  {
+   "chart": "Cases by Status",
+   "width": "Half"
+  },
+  {
+   "chart": "Cases by Severity",
+   "width": "Half"
+  }
+ ],
+ "creation": "2025-12-11 11:50:40.238079",
+ "dashboard_name": "Asset Theft Dashboard",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2025-12-11 11:50:40.238079",
+ "modified_by": "Administrator",
+ "module": "Sigma Case Management",
+ "name": "Asset Theft Dashboard",
+ "owner": "Administrator"
+}

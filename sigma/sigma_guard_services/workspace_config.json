@@ -1,0 +1,129 @@
+{
+  "name": "Sigma Guard Services",
+  "label": "Sigma Guard Services",
+  "icon": "octicon octicon-shield",
+  "indicator_color": "blue",
+  "sidebar_items": [
+    {
+      "type": "Link",
+      "label": "Dashboard",
+      "icon": "icon-bar-chart",
+      "link": "/app/sigma-guard-monitoring-dashboard"
+    },
+    {
+      "type": "Link",
+      "label": "Provider Performance",
+      "icon": "icon-line-chart",
+      "link": "/app/provider-performance-scorecard"
+    },
+    {
+      "type": "Link",
+      "label": "SLA Compliance",
+      "icon": "icon-line-chart",
+      "link": "/app/sla-compliance-trends"
+    },
+    {
+      "type": "Link",
+      "label": "Financial Report",
+      "icon": "icon-bar-chart",
+      "link": "/app/financial-impact-report"
+    },
+    {
+      "type": "Link",
+      "label": "Patrol Summary",
+      "icon": "icon-bar-chart",
+      "link": "/app/patrol-summary-report"
+    },
+    {
+      "type": "Divider"
+    },
+    {
+      "type": "Link",
+      "label": "Security Resources",
+      "icon": "icon-list",
+      "link": "/app/security-resource"
+    },
+    {
+      "type": "Link",
+      "label": "Resource Deployments",
+      "icon": "icon-list",
+      "link": "/app/resource-deployment"
+    },
+    {
+      "type": "Link",
+      "label": "SLA Compliance Records",
+      "icon": "icon-list",
+      "link": "/app/sla-compliance-record"
+    },
+    {
+      "type": "Link",
+      "label": "Compliance Notices",
+      "icon": "icon-list",
+      "link": "/app/compliance-notice"
+    },
+    {
+      "type": "Link",
+      "label": "Patrol Schedules",
+      "icon": "icon-list",
+      "link": "/app/patrol-schedule"
+    },
+    {
+      "type": "Link",
+      "label": "Patrol Verification",
+      "icon": "icon-list",
+      "link": "/app/patrol-verification-record"
+    },
+    {
+      "type": "Link",
+      "label": "Visitor Assignments",
+      "icon": "icon-list",
+      "link": "/app/visitor-guard-assignment"
+    },
+    {
+      "type": "Link",
+      "label": "Evacuations",
+      "icon": "icon-list",
+      "link": "/app/emergency-evacuation-tracking"
+    },
+    {
+      "type": "Divider"
+    },
+    {
+      "type": "Link",
+      "label": "Reports",
+      "icon": "icon-file-text",
+      "link": "/app/query-report"
+    }
+  ],
+  "cards": [
+    {
+      "name": "Active Deployments",
+      "label": "Active Deployments",
+      "icon": "icon-check",
+      "color": "blue",
+      "link": "/app/resource-deployment?status=Active"
+    },
+    {
+      "name": "Pending Compliance",
+      "label": "Pending Compliance",
+      "icon": "icon-alert",
+      "color": "orange",
+      "link": "/app/compliance-notice?status=Open"
+    },
+    {
+      "name": "Active Patrols",
+      "label": "Active Patrols",
+      "icon": "icon-play",
+      "color": "green",
+      "link": "/app/patrol-schedule?status=In Progress"
+    },
+    {
+      "name": "Active Visitors",
+      "label": "Active Visitors",
+      "icon": "icon-users",
+      "color": "purple",
+      "link": "/app/visitor-guard-assignment?status=Escorting"
+    }
+  ]
+}
+

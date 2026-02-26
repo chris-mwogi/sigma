@@ -1,0 +1,51 @@
+{
+ "cards": [
+  {
+   "card": "Total Visitors"
+  },
+  {
+   "card": "Visitors This Month"
+  },
+  {
+   "card": "Average Daily Visitors"
+  },
+  {
+   "card": "Repeat Visitors"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Visitor Volume Trend",
+   "width": "Full"
+  },
+  {
+   "chart": "Visitors by Purpose",
+   "width": "Half"
+  },
+  {
+   "chart": "Visitors by Host",
+   "width": "Half"
+  },
+  {
+   "chart": "Visitors by Location",
+   "width": "Half"
+  },
+  {
+   "chart": "Average Visit Duration",
+   "width": "Half"
+  }
+ ],
+ "creation": "2025-12-11 12:00:00.000000",
+ "dashboard_name": "Visitor Analytics Dashboard",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2025-12-11 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sigma Visitor Management",
+ "name": "Visitor Analytics Dashboard",
+ "owner": "Administrator"
+}
+
